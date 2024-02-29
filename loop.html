@@ -1,0 +1,323 @@
+<h3>Errors: 54</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 66</h3>
+<hr>
+<h1>loop.wast</h1>
+<pre>{"type":"module","line":3,"filename":"loop.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":430,"action":{"type":"invoke","field":"empty"}}</pre>
+<pre>(assert_return (invoke "empty"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":431,"action":{"type":"invoke","field":"singular"},"expected":[{"type":"i32","value":"7"}]}</pre>
+<pre>(assert_return (invoke "singular") (i32.const 7))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":432,"action":{"type":"invoke","field":"multi"},"expected":[{"type":"i32","value":"8"}]}</pre>
+<pre>(assert_return (invoke "multi") (i32.const 8))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":433,"action":{"type":"invoke","field":"nested"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":434,"action":{"type":"invoke","field":"deep"},"expected":[{"type":"i32","value":"150"}]}</pre>
+<pre>(assert_return (invoke "deep") (i32.const 150))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":436,"action":{"type":"invoke","field":"as-select-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-select-first") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":437,"action":{"type":"invoke","field":"as-select-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-select-mid") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":438,"action":{"type":"invoke","field":"as-select-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-select-last") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":440,"action":{"type":"invoke","field":"as-if-condition"}}</pre>
+<pre>(assert_return (invoke "as-if-condition"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":441,"action":{"type":"invoke","field":"as-if-then"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-then") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":442,"action":{"type":"invoke","field":"as-if-else"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-if-else") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":444,"action":{"type":"invoke","field":"as-br_if-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-first") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":445,"action":{"type":"invoke","field":"as-br_if-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-last") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":447,"action":{"type":"invoke","field":"as-br_table-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-first") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":448,"action":{"type":"invoke","field":"as-br_table-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-last") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":450,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-first") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":451,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-mid") (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":452,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-last") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":454,"action":{"type":"invoke","field":"as-store-first"}}</pre>
+<pre>(assert_return (invoke "as-store-first"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":455,"action":{"type":"invoke","field":"as-store-last"}}</pre>
+<pre>(assert_return (invoke "as-store-last"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":457,"action":{"type":"invoke","field":"as-memory.grow-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-memory.grow-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":458,"action":{"type":"invoke","field":"as-call-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-call-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":459,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-return-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":460,"action":{"type":"invoke","field":"as-drop-operand"}}</pre>
+<pre>(assert_return (invoke "as-drop-operand"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":461,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":462,"action":{"type":"invoke","field":"as-local.set-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-local.set-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":463,"action":{"type":"invoke","field":"as-local.tee-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":464,"action":{"type":"invoke","field":"as-global.set-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-global.set-value") (i32.const 1))</pre>
+<p style="background-color: red">error, wrong result, expected 1, got 0</p>
+<pre>{"type":"assert_return","line":465,"action":{"type":"invoke","field":"as-load-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-load-operand") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":467,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-unary-operand") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":468,"action":{"type":"invoke","field":"as-binary-operand"},"expected":[{"type":"i32","value":"12"}]}</pre>
+<pre>(assert_return (invoke "as-binary-operand") (i32.const 12))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":469,"action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-test-operand") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":470,"action":{"type":"invoke","field":"as-compare-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-compare-operand") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":471,"action":{"type":"invoke","field":"as-binary-operands"},"expected":[{"type":"i32","value":"12"}]}</pre>
+<pre>(assert_return (invoke "as-binary-operands") (i32.const 12))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":472,"action":{"type":"invoke","field":"as-compare-operands"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-compare-operands") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":473,"action":{"type":"invoke","field":"as-mixed-operands"},"expected":[{"type":"i32","value":"27"}]}</pre>
+<pre>(assert_return (invoke "as-mixed-operands") (i32.const 27))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":475,"action":{"type":"invoke","field":"break-bare"},"expected":[{"type":"i32","value":"19"}]}</pre>
+<pre>(assert_return (invoke "break-bare") (i32.const 19))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":476,"action":{"type":"invoke","field":"break-value"},"expected":[{"type":"i32","value":"18"}]}</pre>
+<pre>(assert_return (invoke "break-value") (i32.const 18))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":477,"action":{"type":"invoke","field":"break-multi-value"},"expected":[{"type":"i32","value":"18"},{"type":"i32","value":"4294967278"},{"type":"i64","value":"18"}]}</pre>
+<pre>(assert_return (invoke "break-multi-value")</pre>
+<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<pre>{"type":"assert_return","line":480,"action":{"type":"invoke","field":"break-repeated"},"expected":[{"type":"i32","value":"18"}]}</pre>
+<pre>(assert_return (invoke "break-repeated") (i32.const 18))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":481,"action":{"type":"invoke","field":"break-inner"},"expected":[{"type":"i32","value":"31"}]}</pre>
+<pre>(assert_return (invoke "break-inner") (i32.const 0x1f))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":483,"action":{"type":"invoke","field":"param"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "param") (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":484,"action":{"type":"invoke","field":"params"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "params") (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":485,"action":{"type":"invoke","field":"params-id"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "params-id") (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":486,"action":{"type":"invoke","field":"param-break"},"expected":[{"type":"i32","value":"13"}]}</pre>
+<pre>(assert_return (invoke "param-break") (i32.const 13))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":487,"action":{"type":"invoke","field":"params-break"},"expected":[{"type":"i32","value":"12"}]}</pre>
+<pre>(assert_return (invoke "params-break") (i32.const 12))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":488,"action":{"type":"invoke","field":"params-id-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "params-id-break") (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":490,"action":{"type":"invoke","field":"effects"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "effects") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":492,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "while" (i64.const 0)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":493,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "while" (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":494,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "while" (i64.const 2)) (i64.const 2))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":495,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"3"}]},"expected":[{"type":"i64","value":"6"}]}</pre>
+<pre>(assert_return (invoke "while" (i64.const 3)) (i64.const 6))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":496,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
+<pre>(assert_return (invoke "while" (i64.const 5)) (i64.const 120))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":497,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"20"}]},"expected":[{"type":"i64","value":"2432902008176640000"}]}</pre>
+<pre>(assert_return (invoke "while" (i64.const 20)) (i64.const 2432902008176640000))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":499,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "for" (i64.const 0)) (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<pre>{"type":"assert_return","line":500,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "for" (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<pre>{"type":"assert_return","line":501,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "for" (i64.const 2)) (i64.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<pre>{"type":"assert_return","line":502,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"3"}]},"expected":[{"type":"i64","value":"6"}]}</pre>
+<pre>(assert_return (invoke "for" (i64.const 3)) (i64.const 6))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<pre>{"type":"assert_return","line":503,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
+<pre>(assert_return (invoke "for" (i64.const 5)) (i64.const 120))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<pre>{"type":"assert_return","line":504,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"20"}]},"expected":[{"type":"i64","value":"2432902008176640000"}]}</pre>
+<pre>(assert_return (invoke "for" (i64.const 20)) (i64.const 2432902008176640000))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<pre>{"type":"assert_return","line":506,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"0"},{"type":"f32","value":"1088421888"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 0) (f32.const 7)) (f32.const 0))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7E+0</p>
+<pre>{"type":"assert_return","line":507,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 0)) (f32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":508,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 1)) (f32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":509,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1073741824"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 2)) (f32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":510,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1082130432"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 3)) (f32.const 4))</pre>
+<p style="background-color: red">error, wrong result, expected 1082130432, got 1077936128</p>
+<pre>{"type":"assert_return","line":511,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1082130432"}]},"expected":[{"type":"f32","value":"1086324736"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 4)) (f32.const 6))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4E+0</p>
+<pre>{"type":"assert_return","line":512,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1159684096"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 100)) (f32.const 2550))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1E+2</p>
+<pre>{"type":"assert_return","line":513,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 101)) (f32.const 2601))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.01E+2</p>
+<pre>{"type":"assert_return","line":514,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 1)) (f32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":515,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1077936128"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 3) (f32.const 1)) (f32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":516,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1092616192"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 10) (f32.const 1)) (f32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":517,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1077936128"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 2)) (f32.const 3))</pre>
+<p style="background-color: red">error, wrong result, expected 1077936128, got 1073741824</p>
+<pre>{"type":"assert_return","line":518,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1082130432"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 3)) (f32.const 4))</pre>
+<p style="background-color: red">error, wrong result, expected 1082130432, got 1077936128</p>
+<pre>{"type":"assert_return","line":519,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1082130432"}]},"expected":[{"type":"f32","value":"1092940751"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 4)) (f32.const 10.3095235825))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4E+0</p>
+<pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1166601314"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 100)) (f32.const 4381.54785156))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1E+2</p>
+<pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
+<pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 101)) (f32.const 2601))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.01E+2</p>
+<pre>{"type":"assert_return","line":523,"action":{"type":"invoke","field":"type-use"}}</pre>
+<pre>(assert_return (invoke "type-use"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_malformed","line":526,"filename":"loop.1.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":533,"filename":"loop.2.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":540,"filename":"loop.3.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":547,"filename":"loop.4.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":554,"filename":"loop.5.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":561,"filename":"loop.6.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":568,"filename":"loop.7.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":572,"filename":"loop.8.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":579,"filename":"loop.9.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":586,"filename":"loop.10.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":593,"filename":"loop.11.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_invalid","line":601,"filename":"loop.12.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":609,"filename":"loop.13.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":613,"filename":"loop.14.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":617,"filename":"loop.15.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":621,"filename":"loop.16.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":626,"filename":"loop.17.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":632,"filename":"loop.18.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":638,"filename":"loop.19.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":644,"filename":"loop.20.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":650,"filename":"loop.21.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":656,"filename":"loop.22.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":662,"filename":"loop.23.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":668,"filename":"loop.24.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":674,"filename":"loop.25.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":680,"filename":"loop.26.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":686,"filename":"loop.27.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":693,"filename":"loop.28.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":702,"filename":"loop.29.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":711,"filename":"loop.30.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":721,"filename":"loop.31.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":727,"filename":"loop.32.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":733,"filename":"loop.33.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":739,"filename":"loop.34.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":745,"filename":"loop.35.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":751,"filename":"loop.36.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":757,"filename":"loop.37.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":763,"filename":"loop.38.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_malformed","line":770,"filename":"loop.39.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":774,"filename":"loop.40.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":779,"filename":"loop.41.wat","text":"mismatching label"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":783,"filename":"loop.42.wat","text":"mismatching label"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<p>Generated at 2024-02-29T15:02:48</p>

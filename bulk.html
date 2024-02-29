@@ -1,0 +1,292 @@
+<h3>Errors: 51</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 52</h3>
+<hr>
+<h1>bulk.wast</h1>
+<pre>{"type":"module","line":2,"filename":"bulk.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"module","line":6,"filename":"bulk.1.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"module","line":13,"filename":"bulk.2.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":27,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"1"},{"type":"i32","value":"255"},{"type":"i32","value":"3"}]}}</pre>
+<pre>{"type":"assert_return","line":28,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"255"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 1)) (i32.const 0xff))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"255"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 2)) (i32.const 0xff))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"255"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 3)) (i32.const 0xff))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 4)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":35,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"0"},{"type":"i32","value":"48042"},{"type":"i32","value":"2"}]}}</pre>
+<pre>{"type":"assert_return","line":36,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"170"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0xaa))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":37,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"170"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 1)) (i32.const 0xaa))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":40,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"},{"type":"i32","value":"65536"}]}}</pre>
+<p style="background-color: red">exception: zcl_wasm_memory_fill, refactor to iteration instead of recursion</p>
+<pre>{"type":"assert_trap","line":43,"text":"out of bounds memory access","action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"65280"},{"type":"i32","value":"1"},{"type":"i32","value":"257"}]}}</pre>
+<pre>(assert_trap (invoke "fill" (i32.const 0xff00) (i32.const 1) (i32.const 0x101))</pre>
+<p style="background-color: green">ok, got error: memory_fill: trap</p>
+<pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"65280"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0xff00)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"65535"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0xffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":49,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"65536"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>{"type":"assert_trap","line":52,"text":"out of bounds memory access","action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"65537"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "fill" (i32.const 0x10001) (i32.const 0) (i32.const 0))</pre>
+<p style="background-color: green">ok, got error: memory_fill: trap</p>
+<pre>{"type":"module","line":57,"filename":"bulk.3.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":71,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"10"},{"type":"i32","value":"0"},{"type":"i32","value":"4"}]}}</pre>
+<pre>{"type":"assert_return","line":73,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 9)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":74,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"170"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 10)) (i32.const 0xaa))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":75,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"11"}]},"expected":[{"type":"i32","value":"187"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 11)) (i32.const 0xbb))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"12"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 12)) (i32.const 0xcc))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":77,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"221"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 13)) (i32.const 0xdd))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":78,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 14)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":81,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"8"},{"type":"i32","value":"10"},{"type":"i32","value":"4"}]}}</pre>
+<pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"i32","value":"170"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 8)) (i32.const 0xaa))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"i32","value":"187"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 9)) (i32.const 0xbb))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":84,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 10)) (i32.const 0xcc))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":85,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"11"}]},"expected":[{"type":"i32","value":"221"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 11)) (i32.const 0xdd))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":86,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"12"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 12)) (i32.const 0xcc))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"221"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 13)) (i32.const 0xdd))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":90,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"10"},{"type":"i32","value":"7"},{"type":"i32","value":"6"}]}}</pre>
+<pre>{"type":"assert_return","line":91,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 10)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":92,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"11"}]},"expected":[{"type":"i32","value":"170"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 11)) (i32.const 0xaa))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":93,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"12"}]},"expected":[{"type":"i32","value":"187"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 12)) (i32.const 0xbb))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":94,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 13)) (i32.const 0xcc))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":95,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"221"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 14)) (i32.const 0xdd))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":96,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 15)) (i32.const 0xcc))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":97,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 16)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":100,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"65280"},{"type":"i32","value":"0"},{"type":"i32","value":"256"}]}}</pre>
+<pre>{"type":"action","line":101,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"65024"},{"type":"i32","value":"65280"},{"type":"i32","value":"256"}]}}</pre>
+<pre>{"type":"action","line":104,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"65536"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: Range out of bounds</p>
+<pre>{"type":"action","line":105,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: linear_get: negative or zero length</p>
+<pre>{"type":"assert_trap","line":108,"text":"out of bounds memory access","action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"65537"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "copy" (i32.const 0x10001) (i32.const 0) (i32.const 0))</pre>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
+<pre>{"type":"assert_trap","line":110,"text":"out of bounds memory access","action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65537"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "copy" (i32.const 0) (i32.const 0x10001) (i32.const 0))</pre>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
+<pre>{"type":"module","line":115,"filename":"bulk.4.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":129,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"2"}]}}</pre>
+<pre>{"type":"assert_return","line":130,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"187"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0xbb))</pre>
+<p style="background-color: red">error, wrong result, expected 187, got 170</p>
+<pre>{"type":"assert_return","line":131,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 1)) (i32.const 0xcc))</pre>
+<p style="background-color: red">error, wrong result, expected 204, got 187</p>
+<pre>{"type":"assert_return","line":132,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 2)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":135,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"65532"},{"type":"i32","value":"0"},{"type":"i32","value":"4"}]}}</pre>
+<pre>{"type":"assert_trap","line":138,"text":"out of bounds memory access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"65534"},{"type":"i32","value":"0"},{"type":"i32","value":"3"}]}}</pre>
+<pre>(assert_trap (invoke "init" (i32.const 0xfffe) (i32.const 0) (i32.const 3))</pre>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
+<pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"65534"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0xfffe)) (i32.const 0xcc))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":141,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"65535"}]},"expected":[{"type":"i32","value":"221"}]}</pre>
+<pre>(assert_return (invoke "load8_u" (i32.const 0xffff)) (i32.const 0xdd))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":144,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"65536"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>{"type":"action","line":145,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"4"},{"type":"i32","value":"0"}]}}</pre>
+<pre>{"type":"assert_trap","line":148,"text":"out of bounds memory access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"65537"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "init" (i32.const 0x10001) (i32.const 0) (i32.const 0))</pre>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
+<pre>{"type":"assert_trap","line":150,"text":"out of bounds memory access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"5"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "init" (i32.const 0) (i32.const 5) (i32.const 0))</pre>
+<p style="background-color: red">error, expected trap</p>
+<pre>{"type":"module","line":154,"filename":"bulk.5.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":168,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>{"type":"action","line":169,"action":{"type":"invoke","field":"drop_passive"}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_data_drop</p>
+<pre>{"type":"action","line":170,"action":{"type":"invoke","field":"drop_passive"}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_data_drop</p>
+<pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "init_passive" (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":172,"text":"out of bounds memory access","action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_trap (invoke "init_passive" (i32.const 1)) "out of bounds memory access")</pre>
+<p style="background-color: red">error, expected trap</p>
+<pre>{"type":"action","line":173,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>{"type":"action","line":174,"action":{"type":"invoke","field":"drop_active"}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_data_drop</p>
+<pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"init_active","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "init_active" (i32.const 0)))</pre>
+<p style="background-color: red">exception: get_passive, dataidx: 1 not found</p>
+<pre>{"type":"assert_trap","line":176,"text":"out of bounds memory access","action":{"type":"invoke","field":"init_active","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_trap (invoke "init_active" (i32.const 1)) "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: get_passive, dataidx: 1 not found</p>
+<pre>{"type":"action","line":177,"action":{"type":"invoke","field":"init_active","args":[{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: get_passive, dataidx: 1 not found</p>
+<pre>{"type":"module","line":181,"filename":"bulk.6.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"module","line":196,"filename":"bulk.7.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"module","line":199,"filename":"bulk.8.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_trap","line":219,"text":"out of bounds table access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"2"},{"type":"i32","value":"0"},{"type":"i32","value":"2"}]}}</pre>
+<pre>(assert_trap (invoke "init" (i32.const 2) (i32.const 0) (i32.const 2))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"assert_trap","line":221,"text":"uninitialized element 2","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call" (i32.const 2))</pre>
+<p style="background-color: red">assert_trap, todo: call todo</p>
+<pre>{"type":"action","line":224,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"2"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"assert_return","line":225,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_trap","line":227,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call" (i32.const 2)) "uninitialized element")</pre>
+<p style="background-color: red">assert_trap, todo: call todo</p>
+<pre>{"type":"action","line":230,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"2"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"action","line":233,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"3"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"action","line":234,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"4"},{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"assert_trap","line":237,"text":"out of bounds table access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"4"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "init" (i32.const 4) (i32.const 0) (i32.const 0))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"assert_trap","line":239,"text":"out of bounds table access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"5"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "init" (i32.const 0) (i32.const 5) (i32.const 0))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"module","line":244,"filename":"bulk.9.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":261,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"1"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"action","line":262,"action":{"type":"invoke","field":"drop_passive"}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_elem_drop</p>
+<pre>{"type":"action","line":263,"action":{"type":"invoke","field":"drop_passive"}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_elem_drop</p>
+<pre>{"type":"assert_return","line":264,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "init_passive" (i32.const 0)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"assert_trap","line":265,"text":"out of bounds table access","action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_trap (invoke "init_passive" (i32.const 1)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"action","line":266,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"action","line":267,"action":{"type":"invoke","field":"drop_active"}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_elem_drop</p>
+<pre>{"type":"assert_return","line":268,"action":{"type":"invoke","field":"init_active","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "init_active" (i32.const 0)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"assert_trap","line":269,"text":"out of bounds table access","action":{"type":"invoke","field":"init_active","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_trap (invoke "init_active" (i32.const 1)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"action","line":270,"action":{"type":"invoke","field":"init_active","args":[{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
+<pre>{"type":"module","line":274,"filename":"bulk.10.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"module","line":297,"filename":"bulk.11.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"module","line":300,"filename":"bulk.12.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":319,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"3"},{"type":"i32","value":"0"},{"type":"i32","value":"3"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"assert_return","line":321,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 3)) (i32.const 0))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 4)) (i32.const 1))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":323,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 5)) (i32.const 2))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"action","line":326,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"3"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 1)) (i32.const 2))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 2)) (i32.const 0))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"action","line":333,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"2"},{"type":"i32","value":"0"},{"type":"i32","value":"3"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"assert_return","line":335,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 2)) (i32.const 1))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":336,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 3)) (i32.const 2))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"assert_return","line":337,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "call" (i32.const 4)) (i32.const 0))</pre>
+<p style="background-color: red">exception: call todo</p>
+<pre>{"type":"action","line":340,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"6"},{"type":"i32","value":"8"},{"type":"i32","value":"2"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"action","line":341,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"8"},{"type":"i32","value":"6"},{"type":"i32","value":"2"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"action","line":344,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"10"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"action","line":345,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"10"},{"type":"i32","value":"0"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"assert_trap","line":348,"text":"out of bounds table access","action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"11"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "copy" (i32.const 11) (i32.const 0) (i32.const 0))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_copy</p>
+<pre>{"type":"assert_trap","line":350,"text":"out of bounds table access","action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"11"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "copy" (i32.const 0) (i32.const 11) (i32.const 0))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_copy</p>
+<p>Generated at 2024-02-29T15:02:13</p>

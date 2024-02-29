@@ -1,0 +1,76 @@
+<h3>Errors: 25</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 1</h3>
+<hr>
+<h1>table_set.wast</h1>
+<pre>{"type":"module","line":1,"filename":"table_set.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get-externref" (i32.const 0)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"set-externref","args":[{"type":"i32","value":"0"},{"type":"externref","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "set-externref" (i32.const 0) (ref.extern 1)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get-externref" (i32.const 0)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"set-externref","args":[{"type":"i32","value":"0"},{"type":"externref","value":"null"}]}}</pre>
+<pre>(assert_return (invoke "set-externref" (i32.const 0) (ref.null extern)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_return","line":33,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get-externref" (i32.const 0)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":35,"action":{"type":"invoke","field":"get-funcref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"funcref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get-funcref" (i32.const 0)) (ref.null func))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":36,"action":{"type":"invoke","field":"set-funcref-from","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "set-funcref-from" (i32.const 0) (i32.const 1)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":37,"action":{"type":"invoke","field":"is_null-funcref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "is_null-funcref" (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":38,"action":{"type":"invoke","field":"set-funcref","args":[{"type":"i32","value":"0"},{"type":"funcref","value":"null"}]}}</pre>
+<pre>(assert_return (invoke "set-funcref" (i32.const 0) (ref.null func)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_return","line":39,"action":{"type":"invoke","field":"get-funcref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"funcref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get-funcref" (i32.const 0)) (ref.null func))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":41,"text":"out of bounds table access","action":{"type":"invoke","field":"set-externref","args":[{"type":"i32","value":"2"},{"type":"externref","value":"null"}]}}</pre>
+<pre>(assert_trap (invoke "set-externref" (i32.const 2) (ref.null extern)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_trap","line":42,"text":"out of bounds table access","action":{"type":"invoke","field":"set-funcref","args":[{"type":"i32","value":"3"},{"type":"funcref","value":"null"}]}}</pre>
+<pre>(assert_trap (invoke "set-funcref" (i32.const 3) (ref.null func)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_trap","line":43,"text":"out of bounds table access","action":{"type":"invoke","field":"set-externref","args":[{"type":"i32","value":"4294967295"},{"type":"externref","value":"null"}]}}</pre>
+<pre>(assert_trap (invoke "set-externref" (i32.const -1) (ref.null extern)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_trap","line":44,"text":"out of bounds table access","action":{"type":"invoke","field":"set-funcref","args":[{"type":"i32","value":"4294967295"},{"type":"funcref","value":"null"}]}}</pre>
+<pre>(assert_trap (invoke "set-funcref" (i32.const -1) (ref.null func)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_trap","line":46,"text":"out of bounds table access","action":{"type":"invoke","field":"set-externref","args":[{"type":"i32","value":"2"},{"type":"externref","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "set-externref" (i32.const 2) (ref.extern 0)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_trap","line":47,"text":"out of bounds table access","action":{"type":"invoke","field":"set-funcref-from","args":[{"type":"i32","value":"3"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_trap (invoke "set-funcref-from" (i32.const 3) (i32.const 1)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":48,"text":"out of bounds table access","action":{"type":"invoke","field":"set-externref","args":[{"type":"i32","value":"4294967295"},{"type":"externref","value":"0"}]}}</pre>
+<pre>(assert_trap (invoke "set-externref" (i32.const -1) (ref.extern 0)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_trap","line":49,"text":"out of bounds table access","action":{"type":"invoke","field":"set-funcref-from","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_trap (invoke "set-funcref-from" (i32.const -1) (i32.const 1)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_invalid","line":55,"filename":"table_set.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":64,"filename":"table_set.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":73,"filename":"table_set.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":82,"filename":"table_set.4.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":91,"filename":"table_set.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":101,"filename":"table_set.6.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":112,"filename":"table_set.7.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:04:47</p>

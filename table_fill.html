@@ -1,0 +1,131 @@
+<h3>Errors: 44</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 1</h3>
+<hr>
+<h1>table_fill.wast</h1>
+<pre>{"type":"module","line":1,"filename":"table_fill.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":17,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 1)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 2)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 3)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 4)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 5)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":23,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"2"},{"type":"externref","value":"1"},{"type":"i32","value":"3"}]}}</pre>
+<pre>(assert_return (invoke "fill" (i32.const 2) (ref.extern 1) (i32.const 3)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 1)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":25,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 2)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 3)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 4)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":28,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 5)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"4"},{"type":"externref","value":"2"},{"type":"i32","value":"2"}]}}</pre>
+<pre>(assert_return (invoke "fill" (i32.const 4) (ref.extern 2) (i32.const 2)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 3)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"externref","value":"2"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 4)) (ref.extern 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":33,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"externref","value":"2"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 5)) (ref.extern 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":34,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 6)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":36,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"4"},{"type":"externref","value":"3"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "fill" (i32.const 4) (ref.extern 3) (i32.const 0)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":37,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 3)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":38,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"externref","value":"2"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 4)) (ref.extern 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":39,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"externref","value":"2"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 5)) (ref.extern 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":41,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"8"},{"type":"externref","value":"4"},{"type":"i32","value":"2"}]}}</pre>
+<pre>(assert_return (invoke "fill" (i32.const 8) (ref.extern 4) (i32.const 2)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":42,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 7)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"externref","value":"4"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 8)) (ref.extern 4))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"externref","value":"4"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 9)) (ref.extern 4))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"fill-abbrev","args":[{"type":"i32","value":"9"},{"type":"externref","value":"null"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "fill-abbrev" (i32.const 9) (ref.null extern) (i32.const 1)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"externref","value":"4"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 8)) (ref.extern 4))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":48,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 9)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":50,"action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"10"},{"type":"externref","value":"5"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "fill" (i32.const 10) (ref.extern 5) (i32.const 0)))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 9)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":54,"text":"out of bounds table access","action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"8"},{"type":"externref","value":"6"},{"type":"i32","value":"3"}]}}</pre>
+<pre>  (invoke "fill" (i32.const 8) (ref.extern 6) (i32.const 3))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 7)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"externref","value":"4"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 8)) (ref.extern 4))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get" (i32.const 9)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":62,"text":"out of bounds table access","action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"11"},{"type":"externref","value":"null"},{"type":"i32","value":"0"}]}}</pre>
+<pre>  (invoke "fill" (i32.const 11) (ref.null extern) (i32.const 0))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_trap","line":67,"text":"out of bounds table access","action":{"type":"invoke","field":"fill","args":[{"type":"i32","value":"11"},{"type":"externref","value":"null"},{"type":"i32","value":"10"}]}}</pre>
+<pre>  (invoke "fill" (i32.const 11) (ref.null extern) (i32.const 10))</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_fill</p>
+<pre>{"type":"assert_invalid","line":75,"filename":"table_fill.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":84,"filename":"table_fill.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":93,"filename":"table_fill.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":102,"filename":"table_fill.4.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":111,"filename":"table_fill.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":120,"filename":"table_fill.6.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":129,"filename":"table_fill.7.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":139,"filename":"table_fill.8.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":150,"filename":"table_fill.9.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:04:46</p>

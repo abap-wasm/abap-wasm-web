@@ -1,0 +1,282 @@
+<h3>Errors: 15</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 81</h3>
+<hr>
+<h1>memory_grow.wast</h1>
+<pre>{"type":"module","line":1,"filename":"memory_grow.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":14,"action":{"type":"invoke","field":"size"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "size") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":15,"text":"out of bounds memory access","action":{"type":"invoke","field":"store_at_zero"}}</pre>
+<pre>(assert_trap (invoke "store_at_zero") "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: Range out of bounds</p>
+<pre>{"type":"assert_trap","line":16,"text":"out of bounds memory access","action":{"type":"invoke","field":"load_at_zero"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "load_at_zero") "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<pre>{"type":"assert_trap","line":17,"text":"out of bounds memory access","action":{"type":"invoke","field":"store_at_page_size"}}</pre>
+<pre>(assert_trap (invoke "store_at_page_size") "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: Range out of bounds</p>
+<pre>{"type":"assert_trap","line":18,"text":"out of bounds memory access","action":{"type":"invoke","field":"load_at_page_size"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "load_at_page_size") "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"size"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "size") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"load_at_zero"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load_at_zero") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":22,"action":{"type":"invoke","field":"store_at_zero"}}</pre>
+<pre>(assert_return (invoke "store_at_zero"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":23,"action":{"type":"invoke","field":"load_at_zero"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "load_at_zero") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":24,"text":"out of bounds memory access","action":{"type":"invoke","field":"store_at_page_size"}}</pre>
+<pre>(assert_trap (invoke "store_at_page_size") "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: Range out of bounds</p>
+<pre>{"type":"assert_trap","line":25,"text":"out of bounds memory access","action":{"type":"invoke","field":"load_at_page_size"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "load_at_page_size") "out of bounds memory access")</pre>
+<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 4)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"size"},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "size") (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":28,"action":{"type":"invoke","field":"load_at_zero"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "load_at_zero") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"store_at_zero"}}</pre>
+<pre>(assert_return (invoke "store_at_zero"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"load_at_zero"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "load_at_zero") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"load_at_page_size"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "load_at_page_size") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"store_at_page_size"}}</pre>
+<pre>(assert_return (invoke "store_at_page_size"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":33,"action":{"type":"invoke","field":"load_at_page_size"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "load_at_page_size") (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"module","line":36,"filename":"memory_grow.1.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":41,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":42,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 2)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"800"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 800)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"65536"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 0x10000)) (i32.const -1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: linear_grow, max pages reached</p>
+<pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"64736"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 64736)) (i32.const -1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: linear_grow, max pages reached</p>
+<pre>{"type":"assert_return","line":48,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"803"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 803))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"module","line":50,"filename":"memory_grow.2.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 2)) (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 6)) (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":60,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"10"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 10))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const -1))</pre>
+<p style="background-color: red">error, wrong result, expected 4294967295, got 10</p>
+<pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"65536"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 0x10000)) (i32.const -1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: linear_grow, max pages reached</p>
+<pre>{"type":"module","line":66,"filename":"memory_grow.3.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"check-memory-zero","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65535"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "check-memory-zero" (i32.const 0) (i32.const 0xffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":88,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":89,"action":{"type":"invoke","field":"check-memory-zero","args":[{"type":"i32","value":"65536"},{"type":"i32","value":"131071"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "check-memory-zero" (i32.const 0x10000) (i32.const 0x1_ffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result, 6967ms</p>
+<pre>{"type":"assert_return","line":90,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":91,"action":{"type":"invoke","field":"check-memory-zero","args":[{"type":"i32","value":"131072"},{"type":"i32","value":"196607"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "check-memory-zero" (i32.const 0x20000) (i32.const 0x2_ffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result, 13925ms</p>
+<pre>{"type":"assert_return","line":92,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":93,"action":{"type":"invoke","field":"check-memory-zero","args":[{"type":"i32","value":"196608"},{"type":"i32","value":"262143"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "check-memory-zero" (i32.const 0x30000) (i32.const 0x3_ffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result, 20736ms</p>
+<pre>{"type":"assert_return","line":94,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":95,"action":{"type":"invoke","field":"check-memory-zero","args":[{"type":"i32","value":"262144"},{"type":"i32","value":"327679"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "check-memory-zero" (i32.const 0x40000) (i32.const 0x4_ffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result, 26864ms</p>
+<pre>{"type":"assert_return","line":96,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":97,"action":{"type":"invoke","field":"check-memory-zero","args":[{"type":"i32","value":"327680"},{"type":"i32","value":"393215"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "check-memory-zero" (i32.const 0x50000) (i32.const 0x5_ffff)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result, 33453ms</p>
+<pre>{"type":"module","line":101,"filename":"memory_grow.4.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":259,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":261,"action":{"type":"invoke","field":"as-br_if-cond"}}</pre>
+<pre>(assert_return (invoke "as-br_if-cond"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":262,"action":{"type":"invoke","field":"as-br_if-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":263,"action":{"type":"invoke","field":"as-br_if-value-cond"},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value-cond") (i32.const 6))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":265,"action":{"type":"invoke","field":"as-br_table-index"}}</pre>
+<pre>(assert_return (invoke "as-br_table-index"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":266,"action":{"type":"invoke","field":"as-br_table-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":267,"action":{"type":"invoke","field":"as-br_table-value-index"},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-value-index") (i32.const 6))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":269,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-return-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":271,"action":{"type":"invoke","field":"as-if-cond"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-if-cond") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":272,"action":{"type":"invoke","field":"as-if-then"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-then") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":273,"action":{"type":"invoke","field":"as-if-else"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-else") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-select-first" (i32.const 0) (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":276,"action":{"type":"invoke","field":"as-select-second","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-select-second" (i32.const 0) (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":277,"action":{"type":"invoke","field":"as-select-cond"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-select-cond") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":279,"action":{"type":"invoke","field":"as-call-first"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call-first") (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":280,"action":{"type":"invoke","field":"as-call-mid"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call-mid") (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":281,"action":{"type":"invoke","field":"as-call-last"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call-last") (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":283,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-first") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":284,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-mid") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":285,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-last") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":286,"text":"undefined element","action":{"type":"invoke","field":"as-call_indirect-index"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-call_indirect-index") "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"as-local.set-value"}}</pre>
+<pre>(assert_return (invoke "as-local.set-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":289,"action":{"type":"invoke","field":"as-local.tee-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":290,"action":{"type":"invoke","field":"as-global.set-value"}}</pre>
+<pre>(assert_return (invoke "as-global.set-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":292,"action":{"type":"invoke","field":"as-load-address"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-load-address") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":293,"action":{"type":"invoke","field":"as-loadN-address"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-loadN-address") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":294,"action":{"type":"invoke","field":"as-store-address"}}</pre>
+<pre>(assert_return (invoke "as-store-address"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":295,"action":{"type":"invoke","field":"as-store-value"}}</pre>
+<pre>(assert_return (invoke "as-store-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":296,"action":{"type":"invoke","field":"as-storeN-address"}}</pre>
+<pre>(assert_return (invoke "as-storeN-address"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":297,"action":{"type":"invoke","field":"as-storeN-value"}}</pre>
+<pre>(assert_return (invoke "as-storeN-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":299,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"i32","value":"31"}]}</pre>
+<pre>(assert_return (invoke "as-unary-operand") (i32.const 31))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":301,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "as-binary-left") (i32.const 11))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":302,"action":{"type":"invoke","field":"as-binary-right"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "as-binary-right") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":304,"action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-test-operand") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":306,"action":{"type":"invoke","field":"as-compare-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-left") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":307,"action":{"type":"invoke","field":"as-compare-right"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-right") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":309,"action":{"type":"invoke","field":"as-memory.grow-size"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-memory.grow-size") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_invalid","line":313,"filename":"memory_grow.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":322,"filename":"memory_grow.6.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":332,"filename":"memory_grow.7.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":342,"filename":"memory_grow.8.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":353,"filename":"memory_grow.9.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":363,"filename":"memory_grow.10.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":372,"filename":"memory_grow.11.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:04:40</p>

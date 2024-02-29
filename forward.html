@@ -1,0 +1,20 @@
+<h3>Errors: 0</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 5</h3>
+<hr>
+<h1>forward.wast</h1>
+<pre>{"type":"module","line":1,"filename":"forward.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":17,"action":{"type":"invoke","field":"even","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "even" (i32.const 13)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"even","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "even" (i32.const 20)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "odd" (i32.const 13)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "odd" (i32.const 20)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<p>Generated at 2024-02-29T15:02:44</p>

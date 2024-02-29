@@ -1,0 +1,197 @@
+<h3>Errors: 0</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 64</h3>
+<hr>
+<h1>unreachable.wast</h1>
+<pre>{"type":"module","line":3,"filename":"unreachable.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_trap","line":221,"text":"unreachable","action":{"type":"invoke","field":"type-i32"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "type-i32") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":222,"text":"unreachable","action":{"type":"invoke","field":"type-i64"},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "type-i64") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":223,"text":"unreachable","action":{"type":"invoke","field":"type-f32"},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "type-f32") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":224,"text":"unreachable","action":{"type":"invoke","field":"type-f64"},"expected":[{"type":"f64"}]}</pre>
+<pre>(assert_trap (invoke "type-f64") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":226,"text":"unreachable","action":{"type":"invoke","field":"as-func-first"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-func-first") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":227,"text":"unreachable","action":{"type":"invoke","field":"as-func-mid"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-func-mid") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":228,"text":"unreachable","action":{"type":"invoke","field":"as-func-last"}}</pre>
+<pre>(assert_trap (invoke "as-func-last") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":229,"text":"unreachable","action":{"type":"invoke","field":"as-func-value"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-func-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":231,"text":"unreachable","action":{"type":"invoke","field":"as-block-first"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-block-first") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":232,"text":"unreachable","action":{"type":"invoke","field":"as-block-mid"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-block-mid") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":233,"text":"unreachable","action":{"type":"invoke","field":"as-block-last"}}</pre>
+<pre>(assert_trap (invoke "as-block-last") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":234,"text":"unreachable","action":{"type":"invoke","field":"as-block-value"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-block-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":235,"action":{"type":"invoke","field":"as-block-broke"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-block-broke") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":237,"text":"unreachable","action":{"type":"invoke","field":"as-loop-first"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-loop-first") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":238,"text":"unreachable","action":{"type":"invoke","field":"as-loop-mid"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-loop-mid") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":239,"text":"unreachable","action":{"type":"invoke","field":"as-loop-last"}}</pre>
+<pre>(assert_trap (invoke "as-loop-last") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"as-loop-broke"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-loop-broke") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":242,"text":"unreachable","action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":244,"text":"unreachable","action":{"type":"invoke","field":"as-br_if-cond"}}</pre>
+<pre>(assert_trap (invoke "as-br_if-cond") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":245,"text":"unreachable","action":{"type":"invoke","field":"as-br_if-value"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br_if-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":246,"text":"unreachable","action":{"type":"invoke","field":"as-br_if-value-cond"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br_if-value-cond") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":248,"text":"unreachable","action":{"type":"invoke","field":"as-br_table-index"}}</pre>
+<pre>(assert_trap (invoke "as-br_table-index") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":249,"text":"unreachable","action":{"type":"invoke","field":"as-br_table-value"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br_table-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":250,"text":"unreachable","action":{"type":"invoke","field":"as-br_table-value-2"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br_table-value-2") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":251,"text":"unreachable","action":{"type":"invoke","field":"as-br_table-value-index"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br_table-value-index") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":252,"text":"unreachable","action":{"type":"invoke","field":"as-br_table-value-and-index"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-br_table-value-and-index") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":254,"text":"unreachable","action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "as-return-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":256,"text":"unreachable","action":{"type":"invoke","field":"as-if-cond"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-if-cond") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":257,"text":"unreachable","action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-if-then" (i32.const 1) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":258,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "as-if-then" (i32.const 0) (i32.const 6)) (i32.const 6))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":259,"text":"unreachable","action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-if-else" (i32.const 0) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":260,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "as-if-else" (i32.const 1) (i32.const 6)) (i32.const 6))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":261,"text":"unreachable","action":{"type":"invoke","field":"as-if-then-no-else","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-if-then-no-else" (i32.const 1) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":262,"action":{"type":"invoke","field":"as-if-then-no-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "as-if-then-no-else" (i32.const 0) (i32.const 6)) (i32.const 6))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":264,"text":"unreachable","action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-select-first" (i32.const 0) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":265,"text":"unreachable","action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-select-first" (i32.const 1) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":266,"text":"unreachable","action":{"type":"invoke","field":"as-select-second","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-select-second" (i32.const 0) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":267,"text":"unreachable","action":{"type":"invoke","field":"as-select-second","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-select-second" (i32.const 1) (i32.const 6)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":268,"text":"unreachable","action":{"type":"invoke","field":"as-select-cond"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-select-cond") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":270,"text":"unreachable","action":{"type":"invoke","field":"as-call-first"}}</pre>
+<pre>(assert_trap (invoke "as-call-first") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":271,"text":"unreachable","action":{"type":"invoke","field":"as-call-mid"}}</pre>
+<pre>(assert_trap (invoke "as-call-mid") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":272,"text":"unreachable","action":{"type":"invoke","field":"as-call-last"}}</pre>
+<pre>(assert_trap (invoke "as-call-last") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":274,"text":"unreachable","action":{"type":"invoke","field":"as-call_indirect-func"}}</pre>
+<pre>(assert_trap (invoke "as-call_indirect-func") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":275,"text":"unreachable","action":{"type":"invoke","field":"as-call_indirect-first"}}</pre>
+<pre>(assert_trap (invoke "as-call_indirect-first") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":276,"text":"unreachable","action":{"type":"invoke","field":"as-call_indirect-mid"}}</pre>
+<pre>(assert_trap (invoke "as-call_indirect-mid") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":277,"text":"unreachable","action":{"type":"invoke","field":"as-call_indirect-last"}}</pre>
+<pre>(assert_trap (invoke "as-call_indirect-last") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":279,"text":"unreachable","action":{"type":"invoke","field":"as-local.set-value"}}</pre>
+<pre>(assert_trap (invoke "as-local.set-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":280,"text":"unreachable","action":{"type":"invoke","field":"as-local.tee-value"},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "as-local.tee-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":281,"text":"unreachable","action":{"type":"invoke","field":"as-global.set-value"},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "as-global.set-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":283,"text":"unreachable","action":{"type":"invoke","field":"as-load-address"},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "as-load-address") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":284,"text":"unreachable","action":{"type":"invoke","field":"as-loadN-address"},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "as-loadN-address") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":286,"text":"unreachable","action":{"type":"invoke","field":"as-store-address"}}</pre>
+<pre>(assert_trap (invoke "as-store-address") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":287,"text":"unreachable","action":{"type":"invoke","field":"as-store-value"}}</pre>
+<pre>(assert_trap (invoke "as-store-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":288,"text":"unreachable","action":{"type":"invoke","field":"as-storeN-address"}}</pre>
+<pre>(assert_trap (invoke "as-storeN-address") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":289,"text":"unreachable","action":{"type":"invoke","field":"as-storeN-value"}}</pre>
+<pre>(assert_trap (invoke "as-storeN-value") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":291,"text":"unreachable","action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "as-unary-operand") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":293,"text":"unreachable","action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-binary-left") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":294,"text":"unreachable","action":{"type":"invoke","field":"as-binary-right"},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "as-binary-right") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":296,"text":"unreachable","action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-test-operand") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":298,"text":"unreachable","action":{"type":"invoke","field":"as-compare-left"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-compare-left") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":299,"text":"unreachable","action":{"type":"invoke","field":"as-compare-right"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-compare-right") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":301,"text":"unreachable","action":{"type":"invoke","field":"as-convert-operand"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-convert-operand") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":303,"text":"unreachable","action":{"type":"invoke","field":"as-memory.grow-size"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-memory.grow-size") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<p>Generated at 2024-02-29T15:04:47</p>

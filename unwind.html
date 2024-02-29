@@ -1,0 +1,155 @@
+<h3>Errors: 6</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 44</h3>
+<hr>
+<h1>unwind.wast</h1>
+<pre>{"type":"module","line":3,"filename":"unwind.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_trap","line":212,"text":"unreachable","action":{"type":"invoke","field":"func-unwind-by-unreachable"}}</pre>
+<pre>(assert_trap (invoke "func-unwind-by-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":213,"action":{"type":"invoke","field":"func-unwind-by-br"}}</pre>
+<pre>(assert_return (invoke "func-unwind-by-br"))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"func-unwind-by-br-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "func-unwind-by-br-value") (i32.const 9))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":215,"action":{"type":"invoke","field":"func-unwind-by-br_if"}}</pre>
+<pre>(assert_return (invoke "func-unwind-by-br_if"))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"func-unwind-by-br_if-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "func-unwind-by-br_if-value") (i32.const 9))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"func-unwind-by-br_table"}}</pre>
+<pre>(assert_return (invoke "func-unwind-by-br_table"))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":218,"action":{"type":"invoke","field":"func-unwind-by-br_table-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "func-unwind-by-br_table-value") (i32.const 9))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"func-unwind-by-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "func-unwind-by-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":221,"text":"unreachable","action":{"type":"invoke","field":"block-unwind-by-unreachable"}}</pre>
+<pre>(assert_trap (invoke "block-unwind-by-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":222,"action":{"type":"invoke","field":"block-unwind-by-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":223,"action":{"type":"invoke","field":"block-unwind-by-br-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-br-value") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":224,"action":{"type":"invoke","field":"block-unwind-by-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":225,"action":{"type":"invoke","field":"block-unwind-by-br_if-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-br_if-value") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"block-unwind-by-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":227,"action":{"type":"invoke","field":"block-unwind-by-br_table-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-br_table-value") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":228,"action":{"type":"invoke","field":"block-unwind-by-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-unwind-by-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":230,"text":"unreachable","action":{"type":"invoke","field":"block-nested-unwind-by-unreachable"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "block-nested-unwind-by-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":231,"action":{"type":"invoke","field":"block-nested-unwind-by-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":232,"action":{"type":"invoke","field":"block-nested-unwind-by-br-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-br-value") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":233,"action":{"type":"invoke","field":"block-nested-unwind-by-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":234,"action":{"type":"invoke","field":"block-nested-unwind-by-br_if-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-br_if-value") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":235,"action":{"type":"invoke","field":"block-nested-unwind-by-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":236,"action":{"type":"invoke","field":"block-nested-unwind-by-br_table-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-br_table-value") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":237,"action":{"type":"invoke","field":"block-nested-unwind-by-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-nested-unwind-by-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":239,"text":"unreachable","action":{"type":"invoke","field":"unary-after-unreachable"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "unary-after-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"unary-after-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "unary-after-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":241,"action":{"type":"invoke","field":"unary-after-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "unary-after-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":242,"action":{"type":"invoke","field":"unary-after-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "unary-after-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":243,"action":{"type":"invoke","field":"unary-after-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "unary-after-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":245,"text":"unreachable","action":{"type":"invoke","field":"binary-after-unreachable"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "binary-after-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":246,"action":{"type":"invoke","field":"binary-after-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "binary-after-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":247,"action":{"type":"invoke","field":"binary-after-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "binary-after-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":248,"action":{"type":"invoke","field":"binary-after-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "binary-after-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":249,"action":{"type":"invoke","field":"binary-after-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "binary-after-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":251,"text":"unreachable","action":{"type":"invoke","field":"select-after-unreachable"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "select-after-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":252,"action":{"type":"invoke","field":"select-after-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "select-after-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":253,"action":{"type":"invoke","field":"select-after-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "select-after-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":254,"action":{"type":"invoke","field":"select-after-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "select-after-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":255,"action":{"type":"invoke","field":"select-after-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "select-after-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":257,"text":"unreachable","action":{"type":"invoke","field":"block-value-after-unreachable"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "block-value-after-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":258,"action":{"type":"invoke","field":"block-value-after-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-value-after-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":259,"action":{"type":"invoke","field":"block-value-after-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-value-after-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":260,"action":{"type":"invoke","field":"block-value-after-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-value-after-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":261,"action":{"type":"invoke","field":"block-value-after-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "block-value-after-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_trap","line":263,"text":"unreachable","action":{"type":"invoke","field":"loop-value-after-unreachable"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "loop-value-after-unreachable") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_return","line":264,"action":{"type":"invoke","field":"loop-value-after-br"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "loop-value-after-br") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":265,"action":{"type":"invoke","field":"loop-value-after-br_if"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "loop-value-after-br_if") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":266,"action":{"type":"invoke","field":"loop-value-after-br_table"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "loop-value-after-br_table") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":267,"action":{"type":"invoke","field":"loop-value-after-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "loop-value-after-return") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<p>Generated at 2024-02-29T15:04:48</p>

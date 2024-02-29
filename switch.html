@@ -1,0 +1,88 @@
+<h3>Errors: 21</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 7</h3>
+<hr>
+<h1>switch.wast</h1>
+<pre>{"type":"module","line":1,"filename":"switch.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":120,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":121,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 1)) (i32.const -1))</pre>
+<p style="background-color: red">error, wrong result, expected 4294967295, got 0</p>
+<pre>{"type":"assert_return","line":122,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4294967294"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 2)) (i32.const -2))</pre>
+<p style="background-color: red">error, wrong result, expected 4294967294, got 0</p>
+<pre>{"type":"assert_return","line":123,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4294967293"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 3)) (i32.const -3))</pre>
+<p style="background-color: red">error, wrong result, expected 4294967293, got 0</p>
+<pre>{"type":"assert_return","line":124,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"100"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 4)) (i32.const 100))</pre>
+<p style="background-color: red">error, wrong result, expected 100, got 0</p>
+<pre>{"type":"assert_return","line":125,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"101"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 5)) (i32.const 101))</pre>
+<p style="background-color: red">error, wrong result, expected 101, got 0</p>
+<pre>{"type":"assert_return","line":126,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"102"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 6)) (i32.const 102))</pre>
+<p style="background-color: red">error, wrong result, expected 102, got 0</p>
+<pre>{"type":"assert_return","line":127,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"100"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const 7)) (i32.const 100))</pre>
+<p style="background-color: red">error, wrong result, expected 100, got 0</p>
+<pre>{"type":"assert_return","line":128,"action":{"type":"invoke","field":"stmt","args":[{"type":"i32","value":"4294967286"}]},"expected":[{"type":"i32","value":"102"}]}</pre>
+<pre>(assert_return (invoke "stmt" (i32.const -10)) (i32.const 102))</pre>
+<p style="background-color: red">error, wrong result, expected 102, got 0</p>
+<pre>{"type":"assert_return","line":130,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const 0)) (i64.const 0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<pre>{"type":"assert_return","line":131,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const 1)) (i64.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<pre>{"type":"assert_return","line":132,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"18446744073709551614"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const 2)) (i64.const -2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<pre>{"type":"assert_return","line":133,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"3"}]},"expected":[{"type":"i64","value":"18446744073709551613"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const 3)) (i64.const -3))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<pre>{"type":"assert_return","line":134,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"6"}]},"expected":[{"type":"i64","value":"101"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const 6)) (i64.const 101))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<pre>{"type":"assert_return","line":135,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"7"}]},"expected":[{"type":"i64","value":"18446744073709551611"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const 7)) (i64.const -5))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<pre>{"type":"assert_return","line":136,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"18446744073709551606"}]},"expected":[{"type":"i64","value":"100"}]}</pre>
+<pre>(assert_return (invoke "expr" (i64.const -10)) (i64.const 100))</pre>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"110"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 0)) (i32.const 110))</pre>
+<p style="background-color: red">error, wrong result, expected 110, got 1100</p>
+<pre>{"type":"assert_return","line":139,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"12"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 1)) (i32.const 12))</pre>
+<p style="background-color: red">error, wrong result, expected 12, got 1002</p>
+<pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 2)) (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":141,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1116"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 3)) (i32.const 1116))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":142,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"118"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 4)) (i32.const 118))</pre>
+<p style="background-color: red">error, wrong result, expected 118, got 1108</p>
+<pre>{"type":"assert_return","line":143,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 5)) (i32.const 20))</pre>
+<p style="background-color: red">error, wrong result, expected 20, got 1010</p>
+<pre>{"type":"assert_return","line":144,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"12"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 6)) (i32.const 12))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":145,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"1124"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 7)) (i32.const 1124))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":146,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"i32","value":"126"}]}</pre>
+<pre>(assert_return (invoke "arg" (i32.const 8)) (i32.const 126))</pre>
+<p style="background-color: red">error, wrong result, expected 126, got 1116</p>
+<pre>{"type":"assert_return","line":148,"action":{"type":"invoke","field":"corner"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "corner") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_invalid","line":150,"filename":"switch.1.wasm","text":"unknown label"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:04:42</p>

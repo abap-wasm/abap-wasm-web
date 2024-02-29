@@ -1,0 +1,330 @@
+<h3>Errors: 43</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 75</h3>
+<hr>
+<h1>br_if.wast</h1>
+<pre>{"type":"module","line":3,"filename":"br_if.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":372,"action":{"type":"invoke","field":"type-i32"}}</pre>
+<pre>(assert_return (invoke "type-i32"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":373,"action":{"type":"invoke","field":"type-i64"}}</pre>
+<pre>(assert_return (invoke "type-i64"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":374,"action":{"type":"invoke","field":"type-f32"}}</pre>
+<pre>(assert_return (invoke "type-f32"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":375,"action":{"type":"invoke","field":"type-f64"}}</pre>
+<pre>(assert_return (invoke "type-f64"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":377,"action":{"type":"invoke","field":"type-i32-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "type-i32-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":378,"action":{"type":"invoke","field":"type-i64-value"},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "type-i64-value") (i64.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":379,"action":{"type":"invoke","field":"type-f32-value"},"expected":[{"type":"f32","value":"1077936128"}]}</pre>
+<pre>(assert_return (invoke "type-f32-value") (f32.const 3))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.888996032682045E-39</p>
+<pre>{"type":"assert_return","line":380,"action":{"type":"invoke","field":"type-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
+<pre>(assert_return (invoke "type-f64-value") (f64.const 4))</pre>
+<p style="background-color: red">unknown type, assert_return: f64</p>
+<pre>{"type":"assert_return","line":382,"action":{"type":"invoke","field":"as-block-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-block-first" (i32.const 0)) (i32.const 2))</pre>
+<p style="background-color: red">error, wrong result, expected 2, got 3</p>
+<pre>{"type":"assert_return","line":383,"action":{"type":"invoke","field":"as-block-first","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-block-first" (i32.const 1)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":384,"action":{"type":"invoke","field":"as-block-mid","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-block-mid" (i32.const 0)) (i32.const 2))</pre>
+<p style="background-color: red">error, wrong result, expected 2, got 3</p>
+<pre>{"type":"assert_return","line":385,"action":{"type":"invoke","field":"as-block-mid","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-block-mid" (i32.const 1)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":386,"action":{"type":"invoke","field":"as-block-last","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "as-block-last" (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":387,"action":{"type":"invoke","field":"as-block-last","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "as-block-last" (i32.const 1)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":389,"action":{"type":"invoke","field":"as-block-first-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "as-block-first-value" (i32.const 0)) (i32.const 11))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":390,"action":{"type":"invoke","field":"as-block-first-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"10"}]}</pre>
+<pre>(assert_return (invoke "as-block-first-value" (i32.const 1)) (i32.const 10))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":391,"action":{"type":"invoke","field":"as-block-mid-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"21"}]}</pre>
+<pre>(assert_return (invoke "as-block-mid-value" (i32.const 0)) (i32.const 21))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":392,"action":{"type":"invoke","field":"as-block-mid-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
+<pre>(assert_return (invoke "as-block-mid-value" (i32.const 1)) (i32.const 20))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":393,"action":{"type":"invoke","field":"as-block-last-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "as-block-last-value" (i32.const 0)) (i32.const 11))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":394,"action":{"type":"invoke","field":"as-block-last-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "as-block-last-value" (i32.const 1)) (i32.const 11))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":396,"action":{"type":"invoke","field":"as-loop-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-loop-first" (i32.const 0)) (i32.const 2))</pre>
+<p style="background-color: red">error, wrong result, expected 2, got 3</p>
+<pre>{"type":"assert_return","line":397,"action":{"type":"invoke","field":"as-loop-first","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-loop-first" (i32.const 1)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":398,"action":{"type":"invoke","field":"as-loop-mid","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-loop-mid" (i32.const 0)) (i32.const 2))</pre>
+<p style="background-color: red">error, wrong result, expected 2, got 4</p>
+<pre>{"type":"assert_return","line":399,"action":{"type":"invoke","field":"as-loop-mid","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "as-loop-mid" (i32.const 1)) (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":400,"action":{"type":"invoke","field":"as-loop-last","args":[{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "as-loop-last" (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":401,"action":{"type":"invoke","field":"as-loop-last","args":[{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "as-loop-last" (i32.const 1)))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":403,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":405,"action":{"type":"invoke","field":"as-br_if-cond"}}</pre>
+<pre>(assert_return (invoke "as-br_if-cond"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":406,"action":{"type":"invoke","field":"as-br_if-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":407,"action":{"type":"invoke","field":"as-br_if-value-cond","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value-cond" (i32.const 0)) (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":408,"action":{"type":"invoke","field":"as-br_if-value-cond","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value-cond" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":410,"action":{"type":"invoke","field":"as-br_table-index"}}</pre>
+<pre>(assert_return (invoke "as-br_table-index"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":411,"action":{"type":"invoke","field":"as-br_table-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":412,"action":{"type":"invoke","field":"as-br_table-value-index"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-value-index") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":414,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-return-value") (i64.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":416,"action":{"type":"invoke","field":"as-if-cond","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-if-cond" (i32.const 0)) (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":417,"action":{"type":"invoke","field":"as-if-cond","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-cond" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":418,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "as-if-then" (i32.const 0) (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":419,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"4"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "as-if-then" (i32.const 4) (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":420,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "as-if-then" (i32.const 0) (i32.const 1)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":421,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"4"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "as-if-then" (i32.const 4) (i32.const 1)))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":422,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "as-if-else" (i32.const 0) (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":423,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"3"},{"type":"i32","value":"0"}]}}</pre>
+<pre>(assert_return (invoke "as-if-else" (i32.const 3) (i32.const 0)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":424,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "as-if-else" (i32.const 0) (i32.const 1)))</pre>
+<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<pre>{"type":"assert_return","line":425,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"3"},{"type":"i32","value":"1"}]}}</pre>
+<pre>(assert_return (invoke "as-if-else" (i32.const 3) (i32.const 1)))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":427,"action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-select-first" (i32.const 0)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":428,"action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-select-first" (i32.const 1)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":429,"action":{"type":"invoke","field":"as-select-second","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-select-second" (i32.const 0)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":430,"action":{"type":"invoke","field":"as-select-second","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-select-second" (i32.const 1)) (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":431,"action":{"type":"invoke","field":"as-select-cond"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "as-select-cond") (i32.const 3))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":433,"action":{"type":"invoke","field":"as-call-first"},"expected":[{"type":"i32","value":"12"}]}</pre>
+<pre>(assert_return (invoke "as-call-first") (i32.const 12))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":434,"action":{"type":"invoke","field":"as-call-mid"},"expected":[{"type":"i32","value":"13"}]}</pre>
+<pre>(assert_return (invoke "as-call-mid") (i32.const 13))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":435,"action":{"type":"invoke","field":"as-call-last"},"expected":[{"type":"i32","value":"14"}]}</pre>
+<pre>(assert_return (invoke "as-call-last") (i32.const 14))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":437,"action":{"type":"invoke","field":"as-call_indirect-func"},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-func") (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":438,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-first") (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":439,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-mid") (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":440,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-last") (i32.const 4))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":442,"action":{"type":"invoke","field":"as-local.set-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-local.set-value" (i32.const 0)) (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":443,"action":{"type":"invoke","field":"as-local.set-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"17"}]}</pre>
+<pre>(assert_return (invoke "as-local.set-value" (i32.const 1)) (i32.const 17))</pre>
+<p style="background-color: red">error, wrong result, expected 17, got 4294967295</p>
+<pre>{"type":"assert_return","line":445,"action":{"type":"invoke","field":"as-local.tee-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value" (i32.const 0)) (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":446,"action":{"type":"invoke","field":"as-local.tee-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":448,"action":{"type":"invoke","field":"as-global.set-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-global.set-value" (i32.const 0)) (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":449,"action":{"type":"invoke","field":"as-global.set-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-global.set-value" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":451,"action":{"type":"invoke","field":"as-load-address"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-load-address") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":452,"action":{"type":"invoke","field":"as-loadN-address"},"expected":[{"type":"i32","value":"30"}]}</pre>
+<pre>(assert_return (invoke "as-loadN-address") (i32.const 30))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":454,"action":{"type":"invoke","field":"as-store-address"},"expected":[{"type":"i32","value":"30"}]}</pre>
+<pre>(assert_return (invoke "as-store-address") (i32.const 30))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":455,"action":{"type":"invoke","field":"as-store-value"},"expected":[{"type":"i32","value":"31"}]}</pre>
+<pre>(assert_return (invoke "as-store-value") (i32.const 31))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":456,"action":{"type":"invoke","field":"as-storeN-address"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "as-storeN-address") (i32.const 32))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":457,"action":{"type":"invoke","field":"as-storeN-value"},"expected":[{"type":"i32","value":"33"}]}</pre>
+<pre>(assert_return (invoke "as-storeN-value") (i32.const 33))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":459,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "as-unary-operand") (f64.const 1.0))</pre>
+<p style="background-color: red">unknown type, assert_return: f64</p>
+<pre>{"type":"assert_return","line":460,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-binary-left") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":461,"action":{"type":"invoke","field":"as-binary-right"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-binary-right") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":462,"action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-test-operand") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":463,"action":{"type":"invoke","field":"as-compare-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-left") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":464,"action":{"type":"invoke","field":"as-compare-right"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-right") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":465,"action":{"type":"invoke","field":"as-memory.grow-size"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-memory.grow-size") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":467,"action":{"type":"invoke","field":"nested-block-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"21"}]}</pre>
+<pre>(assert_return (invoke "nested-block-value" (i32.const 0)) (i32.const 21))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":468,"action":{"type":"invoke","field":"nested-block-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested-block-value" (i32.const 1)) (i32.const 9))</pre>
+<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<pre>{"type":"assert_return","line":469,"action":{"type":"invoke","field":"nested-br-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "nested-br-value" (i32.const 0)) (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":470,"action":{"type":"invoke","field":"nested-br-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested-br-value" (i32.const 1)) (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":471,"action":{"type":"invoke","field":"nested-br_if-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "nested-br_if-value" (i32.const 0)) (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":472,"action":{"type":"invoke","field":"nested-br_if-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested-br_if-value" (i32.const 1)) (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":473,"action":{"type":"invoke","field":"nested-br_if-value-cond","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "nested-br_if-value-cond" (i32.const 0)) (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":474,"action":{"type":"invoke","field":"nested-br_if-value-cond","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested-br_if-value-cond" (i32.const 1)) (i32.const 9))</pre>
+<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<pre>{"type":"assert_return","line":475,"action":{"type":"invoke","field":"nested-br_table-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "nested-br_table-value" (i32.const 0)) (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":476,"action":{"type":"invoke","field":"nested-br_table-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested-br_table-value" (i32.const 1)) (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":477,"action":{"type":"invoke","field":"nested-br_table-value-index","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "nested-br_table-value-index" (i32.const 0)) (i32.const 5))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":478,"action":{"type":"invoke","field":"nested-br_table-value-index","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "nested-br_table-value-index" (i32.const 1)) (i32.const 9))</pre>
+<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<pre>{"type":"assert_invalid","line":481,"filename":"br_if.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":485,"filename":"br_if.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":489,"filename":"br_if.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":493,"filename":"br_if.4.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":498,"filename":"br_if.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":502,"filename":"br_if.6.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":506,"filename":"br_if.7.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":510,"filename":"br_if.8.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":515,"filename":"br_if.9.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":521,"filename":"br_if.10.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":527,"filename":"br_if.11.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":533,"filename":"br_if.12.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":540,"filename":"br_if.13.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":546,"filename":"br_if.14.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":552,"filename":"br_if.15.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":560,"filename":"br_if.16.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":569,"filename":"br_if.17.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":575,"filename":"br_if.18.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":581,"filename":"br_if.19.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":587,"filename":"br_if.20.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":593,"filename":"br_if.21.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":599,"filename":"br_if.22.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":606,"filename":"br_if.23.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":618,"filename":"br_if.24.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":630,"filename":"br_if.25.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":641,"filename":"br_if.26.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":654,"filename":"br_if.27.wasm","text":"unknown label"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":658,"filename":"br_if.28.wasm","text":"unknown label"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":662,"filename":"br_if.29.wasm","text":"unknown label"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:02:12</p>

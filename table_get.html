@@ -1,0 +1,47 @@
+<h3>Errors: 15</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 1</h3>
+<hr>
+<h1>table_get.wast</h1>
+<pre>{"type":"module","line":1,"filename":"table_get.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"action","line":24,"action":{"type":"invoke","field":"init","args":[{"type":"externref","value":"1"}]}}</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
+<pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get-externref" (i32.const 0)) (ref.null extern))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
+<pre>(assert_return (invoke "get-externref" (i32.const 1)) (ref.extern 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"get-funcref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"funcref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "get-funcref" (i32.const 0)) (ref.null func))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"is_null-funcref","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "is_null-funcref" (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"is_null-funcref","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "is_null-funcref" (i32.const 2)) (i32.const 0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":33,"text":"out of bounds table access","action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"externref"}]}</pre>
+<pre>(assert_trap (invoke "get-externref" (i32.const 2)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":34,"text":"out of bounds table access","action":{"type":"invoke","field":"get-funcref","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"funcref"}]}</pre>
+<pre>(assert_trap (invoke "get-funcref" (i32.const 3)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":35,"text":"out of bounds table access","action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"externref"}]}</pre>
+<pre>(assert_trap (invoke "get-externref" (i32.const -1)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_trap","line":36,"text":"out of bounds table access","action":{"type":"invoke","field":"get-funcref","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"funcref"}]}</pre>
+<pre>(assert_trap (invoke "get-funcref" (i32.const -1)) "out of bounds table access")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_get</p>
+<pre>{"type":"assert_invalid","line":42,"filename":"table_get.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":51,"filename":"table_get.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":61,"filename":"table_get.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":70,"filename":"table_get.4.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":80,"filename":"table_get.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:04:46</p>

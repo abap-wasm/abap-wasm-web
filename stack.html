@@ -1,0 +1,25 @@
+<h3>Errors: 5</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 2</h3>
+<hr>
+<h1>stack.wast</h1>
+<pre>{"type":"module","line":1,"filename":"stack.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":146,"action":{"type":"invoke","field":"fac-expr","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
+<pre>(assert_return (invoke "fac-expr" (i64.const 25)) (i64.const 7034535277573963776))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":147,"action":{"type":"invoke","field":"fac-stack","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
+<pre>(assert_return (invoke "fac-stack" (i64.const 25)) (i64.const 7034535277573963776))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":148,"action":{"type":"invoke","field":"fac-mixed","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
+<pre>(assert_return (invoke "fac-mixed" (i64.const 25)) (i64.const 7034535277573963776))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":150,"action":{"type":"invoke","field":"not-quite-a-tree"},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "not-quite-a-tree") (i32.const 3))</pre>
+<p style="background-color: red">error, wrong result, expected 3, got 1</p>
+<pre>{"type":"assert_return","line":151,"action":{"type":"invoke","field":"not-quite-a-tree"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "not-quite-a-tree") (i32.const 9))</pre>
+<p style="background-color: red">error, wrong result, expected 9, got 1</p>
+<pre>{"type":"module","line":156,"filename":"stack.1.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<p>Generated at 2024-02-29T15:04:42</p>

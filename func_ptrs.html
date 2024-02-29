@@ -1,0 +1,103 @@
+<h3>Errors: 30</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 6</h3>
+<hr>
+<h1>func_ptrs.wast</h1>
+<pre>{"type":"module","line":1,"filename":"func_ptrs.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"one"},"expected":[{"type":"i32","value":"13"}]}</pre>
+<pre>(assert_return (invoke "one") (i32.const 13))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":28,"action":{"type":"invoke","field":"two","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"14"}]}</pre>
+<pre>(assert_return (invoke "two" (i32.const 13)) (i32.const 14))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"three","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "three" (i32.const 13)) (i32.const 11))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"action","line":30,"action":{"type":"invoke","field":"four","args":[{"type":"i32","value":"83"}]}}</pre>
+<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<pre>{"type":"assert_invalid","line":32,"filename":"func_ptrs.1.wasm","text":"unknown table"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":33,"filename":"func_ptrs.2.wasm","text":"unknown table"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":36,"filename":"func_ptrs.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":40,"filename":"func_ptrs.4.wasm","text":"constant expression required"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":44,"filename":"func_ptrs.5.wasm","text":"constant expression required"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":48,"filename":"func_ptrs.6.wasm","text":"unknown type"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":49,"filename":"func_ptrs.7.wasm","text":"unknown type"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"module","line":51,"filename":"func_ptrs.8.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":71,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":72,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 1)) (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":73,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 2)) (i32.const 3))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":74,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 3)) (i32.const 4))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":75,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 4)) (i32.const 5))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 5)) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":77,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 6)) (i32.const 3))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":78,"text":"undefined element","action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "callt" (i32.const 7)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":79,"text":"undefined element","action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "callt" (i32.const 100)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":80,"text":"undefined element","action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "callt" (i32.const -1)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 1)) (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":84,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 2)) (i32.const 3))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":85,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 3)) (i32.const 4))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":86,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 4)) (i32.const 5))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 5)) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":88,"action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
+<pre>(assert_return (invoke "callu" (i32.const 6)) (i32.const 3))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":89,"text":"undefined element","action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "callu" (i32.const 7)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":90,"text":"undefined element","action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "callu" (i32.const 100)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":91,"text":"undefined element","action":{"type":"invoke","field":"callu","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "callu" (i32.const -1)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"module","line":93,"filename":"func_ptrs.9.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":105,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "callt" (i32.const 1)) (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p>Generated at 2024-02-29T15:02:44</p>

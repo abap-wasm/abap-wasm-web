@@ -1,0 +1,237 @@
+<h3>Errors: 50</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 47</h3>
+<hr>
+<h1>load.wast</h1>
+<pre>{"type":"module","line":3,"filename":"load.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":161,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":163,"action":{"type":"invoke","field":"as-br_if-cond"}}</pre>
+<pre>(assert_return (invoke "as-br_if-cond"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":164,"action":{"type":"invoke","field":"as-br_if-value"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":165,"action":{"type":"invoke","field":"as-br_if-value-cond"},"expected":[{"type":"i32","value":"7"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-value-cond") (i32.const 7))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":167,"action":{"type":"invoke","field":"as-br_table-index"}}</pre>
+<pre>(assert_return (invoke "as-br_table-index"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"as-br_table-value"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-value") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"as-br_table-value-index"},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-value-index") (i32.const 6))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-return-value") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":173,"action":{"type":"invoke","field":"as-if-cond"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-cond") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":174,"action":{"type":"invoke","field":"as-if-then"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-if-then") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"as-if-else"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-if-else") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":177,"action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-select-first" (i32.const 0) (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":178,"action":{"type":"invoke","field":"as-select-second","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-select-second" (i32.const 0) (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":179,"action":{"type":"invoke","field":"as-select-cond"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-select-cond") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":181,"action":{"type":"invoke","field":"as-call-first"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call-first") (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":182,"action":{"type":"invoke","field":"as-call-mid"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call-mid") (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":183,"action":{"type":"invoke","field":"as-call-last"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call-last") (i32.const -1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":185,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-first") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":186,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-mid") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":187,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-last") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"as-call_indirect-index"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-index") (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":190,"action":{"type":"invoke","field":"as-local.set-value"}}</pre>
+<pre>(assert_return (invoke "as-local.set-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":191,"action":{"type":"invoke","field":"as-local.tee-value"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":192,"action":{"type":"invoke","field":"as-global.set-value"}}</pre>
+<pre>(assert_return (invoke "as-global.set-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":194,"action":{"type":"invoke","field":"as-load-address"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-load-address") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":195,"action":{"type":"invoke","field":"as-loadN-address"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-loadN-address") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":196,"action":{"type":"invoke","field":"as-store-address"}}</pre>
+<pre>(assert_return (invoke "as-store-address"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":197,"action":{"type":"invoke","field":"as-store-value"}}</pre>
+<pre>(assert_return (invoke "as-store-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":198,"action":{"type":"invoke","field":"as-storeN-address"}}</pre>
+<pre>(assert_return (invoke "as-storeN-address"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":199,"action":{"type":"invoke","field":"as-storeN-value"}}</pre>
+<pre>(assert_return (invoke "as-storeN-value"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":201,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "as-unary-operand") (i32.const 32))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"10"}]}</pre>
+<pre>(assert_return (invoke "as-binary-left") (i32.const 10))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"as-binary-right"},"expected":[{"type":"i32","value":"10"}]}</pre>
+<pre>(assert_return (invoke "as-binary-right") (i32.const 10))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-test-operand") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":208,"action":{"type":"invoke","field":"as-compare-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-left") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"as-compare-right"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-right") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":211,"action":{"type":"invoke","field":"as-memory.grow-size"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-memory.grow-size") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_malformed","line":214,"filename":"load.1.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":221,"filename":"load.2.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":228,"filename":"load.3.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":235,"filename":"load.4.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":242,"filename":"load.5.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":249,"filename":"load.6.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":257,"filename":"load.7.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":264,"filename":"load.8.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":271,"filename":"load.9.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":279,"filename":"load.10.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":286,"filename":"load.11.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":294,"filename":"load.12.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":301,"filename":"load.13.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_invalid","line":312,"filename":"load.14.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":316,"filename":"load.15.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":320,"filename":"load.16.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":324,"filename":"load.17.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":328,"filename":"load.18.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":332,"filename":"load.19.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":336,"filename":"load.20.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":340,"filename":"load.21.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":344,"filename":"load.22.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":348,"filename":"load.23.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":352,"filename":"load.24.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":356,"filename":"load.25.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":360,"filename":"load.26.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":364,"filename":"load.27.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":371,"filename":"load.28.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":372,"filename":"load.29.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":373,"filename":"load.30.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":374,"filename":"load.31.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":375,"filename":"load.32.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":376,"filename":"load.33.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":377,"filename":"load.34.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":378,"filename":"load.35.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":379,"filename":"load.36.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":380,"filename":"load.37.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":381,"filename":"load.38.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":382,"filename":"load.39.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":383,"filename":"load.40.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":384,"filename":"load.41.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":388,"filename":"load.42.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":397,"filename":"load.43.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":407,"filename":"load.44.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":417,"filename":"load.45.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":427,"filename":"load.46.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":437,"filename":"load.47.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":447,"filename":"load.48.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":457,"filename":"load.49.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":467,"filename":"load.50.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":476,"filename":"load.51.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":485,"filename":"load.52.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":495,"filename":"load.53.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":512,"filename":"load.54.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":522,"filename":"load.55.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":532,"filename":"load.56.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":542,"filename":"load.57.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":551,"filename":"load.58.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":560,"filename":"load.59.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:02:48</p>

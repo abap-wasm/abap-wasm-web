@@ -1,0 +1,14 @@
+<h3>Errors: 0</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 3</h3>
+<hr>
+<h1>ref_null.wast</h1>
+<pre>{"type":"module","line":1,"filename":"ref_null.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":9,"action":{"type":"invoke","field":"externref"},"expected":[{"type":"externref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "externref") (ref.null extern))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":10,"action":{"type":"invoke","field":"funcref"},"expected":[{"type":"funcref","value":"null"}]}</pre>
+<pre>(assert_return (invoke "funcref") (ref.null func))</pre>
+<p style="background-color: green">ok, result</p>
+<p>Generated at 2024-02-29T15:04:41</p>

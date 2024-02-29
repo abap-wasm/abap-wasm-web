@@ -1,0 +1,478 @@
+<h3>Errors: 149</h3>
+<h3>Warnings: 2</h3>
+<h3>Successes: 19</h3>
+<hr>
+<h1>call_indirect.wast</h1>
+<pre>{"type":"module","line":3,"filename":"call_indirect.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":471,"action":{"type":"invoke","field":"type-i32"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "type-i32") (i32.const 0x132))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":472,"action":{"type":"invoke","field":"type-i64"},"expected":[{"type":"i64","value":"356"}]}</pre>
+<pre>(assert_return (invoke "type-i64") (i64.const 0x164))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":473,"action":{"type":"invoke","field":"type-f32"},"expected":[{"type":"f32","value":"1165172736"}]}</pre>
+<pre>(assert_return (invoke "type-f32") (f32.const 0xf32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":474,"action":{"type":"invoke","field":"type-f64"},"expected":[{"type":"f64","value":"4660882566700597248"}]}</pre>
+<pre>(assert_return (invoke "type-f64") (f64.const 0xf64))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":475,"action":{"type":"invoke","field":"type-f64-i32"},"expected":[{"type":"f64","value":"4660882566700597248"},{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "type-f64-i32") (f64.const 0xf64) (i32.const 32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":477,"action":{"type":"invoke","field":"type-index"},"expected":[{"type":"i64","value":"100"}]}</pre>
+<pre>(assert_return (invoke "type-index") (i64.const 100))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":479,"action":{"type":"invoke","field":"type-first-i32"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "type-first-i32") (i32.const 32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":480,"action":{"type":"invoke","field":"type-first-i64"},"expected":[{"type":"i64","value":"64"}]}</pre>
+<pre>(assert_return (invoke "type-first-i64") (i64.const 64))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":481,"action":{"type":"invoke","field":"type-first-f32"},"expected":[{"type":"f32","value":"1068037571"}]}</pre>
+<pre>(assert_return (invoke "type-first-f32") (f32.const 1.32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":482,"action":{"type":"invoke","field":"type-first-f64"},"expected":[{"type":"f64","value":"4610064722561534525"}]}</pre>
+<pre>(assert_return (invoke "type-first-f64") (f64.const 1.64))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":484,"action":{"type":"invoke","field":"type-second-i32"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "type-second-i32") (i32.const 32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":485,"action":{"type":"invoke","field":"type-second-i64"},"expected":[{"type":"i64","value":"64"}]}</pre>
+<pre>(assert_return (invoke "type-second-i64") (i64.const 64))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":486,"action":{"type":"invoke","field":"type-second-f32"},"expected":[{"type":"f32","value":"1107296256"}]}</pre>
+<pre>(assert_return (invoke "type-second-f32") (f32.const 32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":487,"action":{"type":"invoke","field":"type-second-f64"},"expected":[{"type":"f64","value":"4634211053438658150"}]}</pre>
+<pre>(assert_return (invoke "type-second-f64") (f64.const 64.1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":489,"action":{"type":"invoke","field":"type-all-f64-i32"},"expected":[{"type":"f64","value":"4660882566700597248"},{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "type-all-f64-i32") (f64.const 0xf64) (i32.const 32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":490,"action":{"type":"invoke","field":"type-all-i32-f64"},"expected":[{"type":"i32","value":"1"},{"type":"f64","value":"4611686018427387904"}]}</pre>
+<pre>(assert_return (invoke "type-all-i32-f64") (i32.const 1) (f64.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":491,"action":{"type":"invoke","field":"type-all-i32-i64"},"expected":[{"type":"i64","value":"2"},{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "type-all-i32-i64") (i64.const 2) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":493,"action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"5"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "dispatch" (i32.const 5) (i64.const 2)) (i64.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":494,"action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"5"},{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"5"}]}</pre>
+<pre>(assert_return (invoke "dispatch" (i32.const 5) (i64.const 5)) (i64.const 5))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":495,"action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"12"},{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
+<pre>(assert_return (invoke "dispatch" (i32.const 12) (i64.const 5)) (i64.const 120))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":496,"action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"13"},{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"8"}]}</pre>
+<pre>(assert_return (invoke "dispatch" (i32.const 13) (i64.const 5)) (i64.const 8))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":497,"action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"20"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "dispatch" (i32.const 20) (i64.const 2)) (i64.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":498,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"0"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch" (i32.const 0) (i64.const 2)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":499,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"15"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch" (i32.const 15) (i64.const 2)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":500,"text":"undefined element","action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"32"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch" (i32.const 32) (i64.const 2)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":501,"text":"undefined element","action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"4294967295"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch" (i32.const -1) (i64.const 2)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":502,"text":"undefined element","action":{"type":"invoke","field":"dispatch","args":[{"type":"i32","value":"1213432423"},{"type":"i64","value":"2"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch" (i32.const 1213432423) (i64.const 2)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":504,"action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i64","value":"9"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i64" (i32.const 5)) (i64.const 9))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":505,"action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"12"}]},"expected":[{"type":"i64","value":"362880"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i64" (i32.const 12)) (i64.const 362880))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":506,"action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i64","value":"55"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i64" (i32.const 13)) (i64.const 55))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":507,"action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i64","value":"9"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i64" (i32.const 20)) (i64.const 9))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":508,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"11"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-i64" (i32.const 11)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":509,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"22"}]},"expected":[{"type":"i64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-i64" (i32.const 22)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":511,"action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i32" (i32.const 4)) (i32.const 9))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":512,"action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"23"}]},"expected":[{"type":"i32","value":"362880"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i32" (i32.const 23)) (i32.const 362880))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":513,"action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"26"}]},"expected":[{"type":"i32","value":"55"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i32" (i32.const 26)) (i32.const 55))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":514,"action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"19"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-i32" (i32.const 19)) (i32.const 9))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":515,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"9"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-i32" (i32.const 9)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":516,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"21"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-i32" (i32.const 21)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":518,"action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"f32","value":"1091567616"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f32" (i32.const 6)) (f32.const 9.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":519,"action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"24"}]},"expected":[{"type":"f32","value":"1219571712"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f32" (i32.const 24)) (f32.const 362880.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"27"}]},"expected":[{"type":"f32","value":"1113325568"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f32" (i32.const 27)) (f32.const 55.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"21"}]},"expected":[{"type":"f32","value":"1091567616"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f32" (i32.const 21)) (f32.const 9.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":522,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-f32" (i32.const 8)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":523,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"19"}]},"expected":[{"type":"f32"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-f32" (i32.const 19)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":525,"action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f64" (i32.const 7)) (f64.const 9.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":526,"action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"25"}]},"expected":[{"type":"f64","value":"4689977843394805760"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f64" (i32.const 25)) (f64.const 362880.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":527,"action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"28"}]},"expected":[{"type":"f64","value":"4632937379169042432"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f64" (i32.const 28)) (f64.const 55.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":528,"action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"22"}]},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
+<pre>(assert_return (invoke "dispatch-structural-f64" (i32.const 22)) (f64.const 9.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":529,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"f64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-f64" (i32.const 10)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":530,"text":"indirect call type mismatch","action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"18"}]},"expected":[{"type":"f64"}]}</pre>
+<pre>(assert_trap (invoke "dispatch-structural-f64" (i32.const 18)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":532,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac-i64" (i64.const 0)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":533,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac-i64" (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":534,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
+<pre>(assert_return (invoke "fac-i64" (i64.const 5)) (i64.const 120))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":535,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
+<pre>(assert_return (invoke "fac-i64" (i64.const 25)) (i64.const 7034535277573963776))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":537,"action":{"type":"invoke","field":"fac-i32","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac-i32" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":538,"action":{"type":"invoke","field":"fac-i32","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac-i32" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":539,"action":{"type":"invoke","field":"fac-i32","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"120"}]}</pre>
+<pre>(assert_return (invoke "fac-i32" (i32.const 5)) (i32.const 120))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":540,"action":{"type":"invoke","field":"fac-i32","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"3628800"}]}</pre>
+<pre>(assert_return (invoke "fac-i32" (i32.const 10)) (i32.const 3628800))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":542,"action":{"type":"invoke","field":"fac-f32","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "fac-f32" (f32.const 0.0)) (f32.const 1.0))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.900474769052562E-39</p>
+<pre>{"type":"assert_return","line":543,"action":{"type":"invoke","field":"fac-f32","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "fac-f32" (f32.const 1.0)) (f32.const 1.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":544,"action":{"type":"invoke","field":"fac-f32","args":[{"type":"f32","value":"1084227584"}]},"expected":[{"type":"f32","value":"1123024896"}]}</pre>
+<pre>(assert_return (invoke "fac-f32" (f32.const 5.0)) (f32.const 120.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":545,"action":{"type":"invoke","field":"fac-f32","args":[{"type":"f32","value":"1092616192"}]},"expected":[{"type":"f32","value":"1247640576"}]}</pre>
+<pre>(assert_return (invoke "fac-f32" (f32.const 10.0)) (f32.const 3628800.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":547,"action":{"type":"invoke","field":"fac-f64","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "fac-f64" (f64.const 0.0)) (f64.const 1.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":548,"action":{"type":"invoke","field":"fac-f64","args":[{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "fac-f64" (f64.const 1.0)) (f64.const 1.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":549,"action":{"type":"invoke","field":"fac-f64","args":[{"type":"f64","value":"4617315517961601024"}]},"expected":[{"type":"f64","value":"4638144666238189568"}]}</pre>
+<pre>(assert_return (invoke "fac-f64" (f64.const 5.0)) (f64.const 120.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":550,"action":{"type":"invoke","field":"fac-f64","args":[{"type":"f64","value":"4621819117588971520"}]},"expected":[{"type":"f64","value":"4705047200009289728"}]}</pre>
+<pre>(assert_return (invoke "fac-f64" (f64.const 10.0)) (f64.const 3628800.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":552,"action":{"type":"invoke","field":"fib-i64","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fib-i64" (i64.const 0)) (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":553,"action":{"type":"invoke","field":"fib-i64","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fib-i64" (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":554,"action":{"type":"invoke","field":"fib-i64","args":[{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "fib-i64" (i64.const 2)) (i64.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":555,"action":{"type":"invoke","field":"fib-i64","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"8"}]}</pre>
+<pre>(assert_return (invoke "fib-i64" (i64.const 5)) (i64.const 8))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":556,"action":{"type":"invoke","field":"fib-i64","args":[{"type":"i64","value":"20"}]},"expected":[{"type":"i64","value":"10946"}]}</pre>
+<pre>(assert_return (invoke "fib-i64" (i64.const 20)) (i64.const 10946))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":558,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fib-i32" (i32.const 0)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":559,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fib-i32" (i32.const 1)) (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":560,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "fib-i32" (i32.const 2)) (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":561,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"8"}]}</pre>
+<pre>(assert_return (invoke "fib-i32" (i32.const 5)) (i32.const 8))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":562,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32","value":"10946"}]}</pre>
+<pre>(assert_return (invoke "fib-i32" (i32.const 20)) (i32.const 10946))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":564,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "fib-f32" (f32.const 0.0)) (f32.const 1.0))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.900474769052562E-39</p>
+<pre>{"type":"assert_return","line":565,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "fib-f32" (f32.const 1.0)) (f32.const 1.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":566,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1073741824"}]}</pre>
+<pre>(assert_return (invoke "fib-f32" (f32.const 2.0)) (f32.const 2.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":567,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1084227584"}]},"expected":[{"type":"f32","value":"1090519040"}]}</pre>
+<pre>(assert_return (invoke "fib-f32" (f32.const 5.0)) (f32.const 8.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":568,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1101004800"}]},"expected":[{"type":"f32","value":"1177225216"}]}</pre>
+<pre>(assert_return (invoke "fib-f32" (f32.const 20.0)) (f32.const 10946.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":570,"action":{"type":"invoke","field":"fib-f64","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "fib-f64" (f64.const 0.0)) (f64.const 1.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":571,"action":{"type":"invoke","field":"fib-f64","args":[{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "fib-f64" (f64.const 1.0)) (f64.const 1.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":572,"action":{"type":"invoke","field":"fib-f64","args":[{"type":"f64","value":"4611686018427387904"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
+<pre>(assert_return (invoke "fib-f64" (f64.const 2.0)) (f64.const 2.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":573,"action":{"type":"invoke","field":"fib-f64","args":[{"type":"f64","value":"4617315517961601024"}]},"expected":[{"type":"f64","value":"4620693217682128896"}]}</pre>
+<pre>(assert_return (invoke "fib-f64" (f64.const 5.0)) (f64.const 8.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":574,"action":{"type":"invoke","field":"fib-f64","args":[{"type":"f64","value":"4626322717216342016"}]},"expected":[{"type":"f64","value":"4667243241467281408"}]}</pre>
+<pre>(assert_return (invoke "fib-f64" (f64.const 20.0)) (f64.const 10946.0))</pre>
+<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<pre>{"type":"assert_return","line":576,"action":{"type":"invoke","field":"even","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "even" (i32.const 0)) (i32.const 44))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":577,"action":{"type":"invoke","field":"even","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "even" (i32.const 1)) (i32.const 99))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":578,"action":{"type":"invoke","field":"even","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "even" (i32.const 100)) (i32.const 44))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":579,"action":{"type":"invoke","field":"even","args":[{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "even" (i32.const 77)) (i32.const 99))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":580,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "odd" (i32.const 0)) (i32.const 99))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":581,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "odd" (i32.const 1)) (i32.const 44))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":582,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"200"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "odd" (i32.const 200)) (i32.const 99))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":583,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "odd" (i32.const 77)) (i32.const 44))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_exhaustion","line":585,"text":"call stack exhausted","action":{"type":"invoke","field":"runaway"}}</pre>
+<p style="background-color: yellow">todo, assert_exhaustion</p>
+<pre>{"type":"assert_exhaustion","line":586,"text":"call stack exhausted","action":{"type":"invoke","field":"mutual-runaway"}}</pre>
+<p style="background-color: yellow">todo, assert_exhaustion</p>
+<pre>{"type":"assert_return","line":588,"action":{"type":"invoke","field":"as-select-first"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-select-first") (i32.const 0x132))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":589,"action":{"type":"invoke","field":"as-select-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-select-mid") (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":590,"action":{"type":"invoke","field":"as-select-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-select-last") (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":592,"action":{"type":"invoke","field":"as-if-condition"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-condition") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":594,"action":{"type":"invoke","field":"as-br_if-first"},"expected":[{"type":"i64","value":"356"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-first") (i64.const 0x164))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":595,"action":{"type":"invoke","field":"as-br_if-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-last") (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":597,"action":{"type":"invoke","field":"as-br_table-first"},"expected":[{"type":"f32","value":"1165172736"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-first") (f32.const 0xf32))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":598,"action":{"type":"invoke","field":"as-br_table-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-last") (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":600,"action":{"type":"invoke","field":"as-store-first"}}</pre>
+<pre>(assert_return (invoke "as-store-first"))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":601,"action":{"type":"invoke","field":"as-store-last"}}</pre>
+<pre>(assert_return (invoke "as-store-last"))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":603,"action":{"type":"invoke","field":"as-memory.grow-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-memory.grow-value") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":604,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-return-value") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":605,"action":{"type":"invoke","field":"as-drop-operand"}}</pre>
+<pre>(assert_return (invoke "as-drop-operand"))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":606,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (f32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":607,"action":{"type":"invoke","field":"as-local.set-value"},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "as-local.set-value") (f64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":608,"action":{"type":"invoke","field":"as-local.tee-value"},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value") (f64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":609,"action":{"type":"invoke","field":"as-global.set-value"},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "as-global.set-value") (f64.const 1.0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":610,"action":{"type":"invoke","field":"as-load-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-load-operand") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":612,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"f32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-unary-operand") (f32.const 0x0p+0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":613,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "as-binary-left") (i32.const 11))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":614,"action":{"type":"invoke","field":"as-binary-right"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "as-binary-right") (i32.const 9))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":615,"action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-test-operand") (i32.const 0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":616,"action":{"type":"invoke","field":"as-compare-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-left") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":617,"action":{"type":"invoke","field":"as-compare-right"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-right") (i32.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":618,"action":{"type":"invoke","field":"as-convert-operand"},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-convert-operand") (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"module","line":623,"filename":"call_indirect.1.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":650,"action":{"type":"invoke","field":"call-1","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
+<pre>(assert_return (invoke "call-1" (i32.const 2) (i32.const 3) (i32.const 0)) (i32.const 5))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":651,"action":{"type":"invoke","field":"call-1","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "call-1" (i32.const 2) (i32.const 3) (i32.const 1)) (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":652,"text":"undefined element","action":{"type":"invoke","field":"call-1","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"2"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call-1" (i32.const 2) (i32.const 3) (i32.const 2)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":654,"action":{"type":"invoke","field":"call-2","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "call-2" (i32.const 2) (i32.const 3) (i32.const 0)) (i32.const 6))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":655,"action":{"type":"invoke","field":"call-2","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "call-2" (i32.const 2) (i32.const 3) (i32.const 1)) (i32.const 0))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":656,"action":{"type":"invoke","field":"call-2","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "call-2" (i32.const 2) (i32.const 3) (i32.const 2)) (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":657,"text":"undefined element","action":{"type":"invoke","field":"call-2","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"3"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call-2" (i32.const 2) (i32.const 3) (i32.const 3)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":659,"action":{"type":"invoke","field":"call-3","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
+<pre>(assert_return (invoke "call-3" (i32.const 2) (i32.const 3) (i32.const 0)) (i32.const -1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":660,"action":{"type":"invoke","field":"call-3","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
+<pre>(assert_return (invoke "call-3" (i32.const 2) (i32.const 3) (i32.const 1)) (i32.const 6))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":661,"text":"uninitialized element","action":{"type":"invoke","field":"call-3","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"2"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call-3" (i32.const 2) (i32.const 3) (i32.const 2)) "uninitialized element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":662,"text":"indirect call type mismatch","action":{"type":"invoke","field":"call-3","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"3"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call-3" (i32.const 2) (i32.const 3) (i32.const 3)) "indirect call type mismatch")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":663,"text":"undefined element","action":{"type":"invoke","field":"call-3","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"},{"type":"i32","value":"4"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "call-3" (i32.const 2) (i32.const 3) (i32.const 4)) "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_malformed","line":669,"filename":"call_indirect.2.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":681,"filename":"call_indirect.3.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":693,"filename":"call_indirect.4.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":705,"filename":"call_indirect.5.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":717,"filename":"call_indirect.6.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":729,"filename":"call_indirect.7.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":739,"filename":"call_indirect.8.wat","text":"unexpected token"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":746,"filename":"call_indirect.9.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":756,"filename":"call_indirect.10.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":766,"filename":"call_indirect.11.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":776,"filename":"call_indirect.12.wat","text":"inline function type"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_invalid","line":791,"filename":"call_indirect.13.wasm","text":"unknown table"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":799,"filename":"call_indirect.14.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":807,"filename":"call_indirect.15.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":816,"filename":"call_indirect.16.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":824,"filename":"call_indirect.17.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":832,"filename":"call_indirect.18.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":840,"filename":"call_indirect.19.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":851,"filename":"call_indirect.20.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":859,"filename":"call_indirect.21.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":868,"filename":"call_indirect.22.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":878,"filename":"call_indirect.23.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":888,"filename":"call_indirect.24.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":898,"filename":"call_indirect.25.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":909,"filename":"call_indirect.26.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":922,"filename":"call_indirect.27.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":935,"filename":"call_indirect.28.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":948,"filename":"call_indirect.29.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":961,"filename":"call_indirect.30.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":977,"filename":"call_indirect.31.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":997,"filename":"call_indirect.32.wasm","text":"unknown type"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":1004,"filename":"call_indirect.33.wasm","text":"unknown type"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":1015,"filename":"call_indirect.34.wasm","text":"unknown function"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"module","line":1024,"filename":"call_indirect.35.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<p>Generated at 2024-02-29T15:02:13</p>

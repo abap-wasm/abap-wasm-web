@@ -1,0 +1,25 @@
+<h3>Errors: 0</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 7</h3>
+<hr>
+<h1>unreached-valid.wast</h1>
+<pre>{"type":"module","line":1,"filename":"unreached-valid.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_trap","line":42,"text":"unreachable","action":{"type":"invoke","field":"select-trap-left","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "select-trap-left" (i32.const 1)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":43,"text":"unreachable","action":{"type":"invoke","field":"select-trap-left","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "select-trap-left" (i32.const 0)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":44,"text":"unreachable","action":{"type":"invoke","field":"select-trap-right","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "select-trap-right" (i32.const 1)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"assert_trap","line":45,"text":"unreachable","action":{"type":"invoke","field":"select-trap-right","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "select-trap-right" (i32.const 0)) "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<pre>{"type":"module","line":49,"filename":"unreached-valid.1.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_trap","line":63,"text":"unreachable","action":{"type":"invoke","field":"meet-bottom"}}</pre>
+<pre>(assert_trap (invoke "meet-bottom") "unreachable")</pre>
+<p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
+<p>Generated at 2024-02-29T15:04:48</p>

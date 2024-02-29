@@ -1,0 +1,258 @@
+<h3>Errors: 56</h3>
+<h3>Warnings: 2</h3>
+<h3>Successes: 33</h3>
+<hr>
+<h1>call.wast</h1>
+<pre>{"type":"module","line":3,"filename":"call.0.wasm"}</pre>
+<p style="background-color: green">loaded</p>
+<pre>{"type":"assert_return","line":285,"action":{"type":"invoke","field":"type-i32"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "type-i32") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":286,"action":{"type":"invoke","field":"type-i64"},"expected":[{"type":"i64","value":"356"}]}</pre>
+<pre>(assert_return (invoke "type-i64") (i64.const 0x164))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":287,"action":{"type":"invoke","field":"type-f32"},"expected":[{"type":"f32","value":"1165172736"}]}</pre>
+<pre>(assert_return (invoke "type-f32") (f32.const 0xf32))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.367515150831177E-39</p>
+<pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"type-f64"},"expected":[{"type":"f64","value":"4660882566700597248"}]}</pre>
+<pre>(assert_return (invoke "type-f64") (f64.const 0xf64))</pre>
+<p style="background-color: red">unknown type, assert_return: f64</p>
+<pre>{"type":"assert_return","line":289,"action":{"type":"invoke","field":"type-i32-i64"},"expected":[{"type":"i32","value":"306"},{"type":"i64","value":"356"}]}</pre>
+<pre>(assert_return (invoke "type-i32-i64") (i32.const 0x132) (i64.const 0x164))</pre>
+<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<pre>{"type":"assert_return","line":291,"action":{"type":"invoke","field":"type-first-i32"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "type-first-i32") (i32.const 32))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":292,"action":{"type":"invoke","field":"type-first-i64"},"expected":[{"type":"i64","value":"64"}]}</pre>
+<pre>(assert_return (invoke "type-first-i64") (i64.const 64))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":293,"action":{"type":"invoke","field":"type-first-f32"},"expected":[{"type":"f32","value":"1068037571"}]}</pre>
+<pre>(assert_return (invoke "type-first-f32") (f32.const 1.32))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -4.913144226074219E+2</p>
+<pre>{"type":"assert_return","line":294,"action":{"type":"invoke","field":"type-first-f64"},"expected":[{"type":"f64","value":"4610064722561534525"}]}</pre>
+<pre>(assert_return (invoke "type-first-f64") (f64.const 1.64))</pre>
+<p style="background-color: red">unknown type, assert_return: f64</p>
+<pre>{"type":"assert_return","line":296,"action":{"type":"invoke","field":"type-second-i32"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "type-second-i32") (i32.const 32))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":297,"action":{"type":"invoke","field":"type-second-i64"},"expected":[{"type":"i64","value":"64"}]}</pre>
+<pre>(assert_return (invoke "type-second-i64") (i64.const 64))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"type-second-f32"},"expected":[{"type":"f32","value":"1107296256"}]}</pre>
+<pre>(assert_return (invoke "type-second-f32") (f32.const 32))</pre>
+<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.87751799696076E-39</p>
+<pre>{"type":"assert_return","line":299,"action":{"type":"invoke","field":"type-second-f64"},"expected":[{"type":"f64","value":"4634211053438658150"}]}</pre>
+<pre>(assert_return (invoke "type-second-f64") (f64.const 64.1))</pre>
+<p style="background-color: red">unknown type, assert_return: f64</p>
+<pre>{"type":"assert_return","line":301,"action":{"type":"invoke","field":"type-all-i32-f64"},"expected":[{"type":"i32","value":"32"},{"type":"f64","value":"4610064722561534525"}]}</pre>
+<pre>(assert_return (invoke "type-all-i32-f64") (i32.const 32) (f64.const 1.64))</pre>
+<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<pre>{"type":"assert_return","line":302,"action":{"type":"invoke","field":"type-all-i32-i32"},"expected":[{"type":"i32","value":"2"},{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "type-all-i32-i32") (i32.const 2) (i32.const 1))</pre>
+<p style="background-color: red">error, wrong result, expected 2, got 1</p>
+<pre>{"type":"assert_return","line":303,"action":{"type":"invoke","field":"type-all-f32-f64"},"expected":[{"type":"f64","value":"4611686018427387904"},{"type":"f32","value":"1065353216"}]}</pre>
+<pre>(assert_return (invoke "type-all-f32-f64") (f64.const 2) (f32.const 1))</pre>
+<p style="background-color: red">unknown type, assert_return: f64</p>
+<pre>{"type":"assert_return","line":304,"action":{"type":"invoke","field":"type-all-f64-i32"},"expected":[{"type":"i32","value":"2"},{"type":"f64","value":"4607182418800017408"}]}</pre>
+<pre>(assert_return (invoke "type-all-f64-i32") (i32.const 2) (f64.const 1))</pre>
+<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<pre>{"type":"assert_return","line":306,"action":{"type":"invoke","field":"as-binary-all-operands"},"expected":[{"type":"i32","value":"7"}]}</pre>
+<pre>(assert_return (invoke "as-binary-all-operands") (i32.const 7))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":307,"action":{"type":"invoke","field":"as-mixed-operands"},"expected":[{"type":"i32","value":"32"}]}</pre>
+<pre>(assert_return (invoke "as-mixed-operands") (i32.const 32))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":308,"action":{"type":"invoke","field":"as-call-all-operands"},"expected":[{"type":"i32","value":"3"},{"type":"i32","value":"4"}]}</pre>
+<pre>(assert_return (invoke "as-call-all-operands") (i32.const 3) (i32.const 4))</pre>
+<p style="background-color: red">error, wrong result, expected 3, got 4</p>
+<pre>{"type":"assert_return","line":310,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac" (i64.const 0)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":311,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac" (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":312,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
+<pre>(assert_return (invoke "fac" (i64.const 5)) (i64.const 120))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":313,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
+<pre>(assert_return (invoke "fac" (i64.const 25)) (i64.const 7034535277573963776))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":314,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"0"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac-acc" (i64.const 0) (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":315,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"1"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fac-acc" (i64.const 1) (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":316,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"5"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
+<pre>(assert_return (invoke "fac-acc" (i64.const 5) (i64.const 1)) (i64.const 120))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"25"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
+<pre>  (invoke "fac-acc" (i64.const 25) (i64.const 1))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"fib","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fib" (i64.const 0)) (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":323,"action":{"type":"invoke","field":"fib","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "fib" (i64.const 1)) (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":324,"action":{"type":"invoke","field":"fib","args":[{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
+<pre>(assert_return (invoke "fib" (i64.const 2)) (i64.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":325,"action":{"type":"invoke","field":"fib","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"8"}]}</pre>
+<pre>(assert_return (invoke "fib" (i64.const 5)) (i64.const 8))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":326,"action":{"type":"invoke","field":"fib","args":[{"type":"i64","value":"20"}]},"expected":[{"type":"i64","value":"10946"}]}</pre>
+<pre>(assert_return (invoke "fib" (i64.const 20)) (i64.const 10946))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "even" (i64.const 0)) (i32.const 44))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "even" (i64.const 1)) (i32.const 99))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"100"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "even" (i64.const 100)) (i32.const 44))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":331,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"77"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "even" (i64.const 77)) (i32.const 99))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":332,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "odd" (i64.const 0)) (i32.const 99))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":333,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "odd" (i64.const 1)) (i32.const 44))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":334,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"200"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
+<pre>(assert_return (invoke "odd" (i64.const 200)) (i32.const 99))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_return","line":335,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"77"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
+<pre>(assert_return (invoke "odd" (i64.const 77)) (i32.const 44))</pre>
+<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<pre>{"type":"assert_exhaustion","line":337,"text":"call stack exhausted","action":{"type":"invoke","field":"runaway"}}</pre>
+<p style="background-color: yellow">todo, assert_exhaustion</p>
+<pre>{"type":"assert_exhaustion","line":338,"text":"call stack exhausted","action":{"type":"invoke","field":"mutual-runaway"}}</pre>
+<p style="background-color: yellow">todo, assert_exhaustion</p>
+<pre>{"type":"assert_return","line":340,"action":{"type":"invoke","field":"as-select-first"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-select-first") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":341,"action":{"type":"invoke","field":"as-select-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-select-mid") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":342,"action":{"type":"invoke","field":"as-select-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-select-last") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":344,"action":{"type":"invoke","field":"as-if-condition"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-if-condition") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":346,"action":{"type":"invoke","field":"as-br_if-first"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-first") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":347,"action":{"type":"invoke","field":"as-br_if-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_if-last") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":349,"action":{"type":"invoke","field":"as-br_table-first"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-first") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":350,"action":{"type":"invoke","field":"as-br_table-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-br_table-last") (i32.const 2))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":352,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-first") (i32.const 0x132))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":353,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
+<pre>(assert_return (invoke "as-call_indirect-mid") (i32.const 2))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_trap","line":354,"text":"undefined element","action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32"}]}</pre>
+<pre>(assert_trap (invoke "as-call_indirect-last") "undefined element")</pre>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<pre>{"type":"assert_return","line":356,"action":{"type":"invoke","field":"as-store-first"}}</pre>
+<pre>(assert_return (invoke "as-store-first"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":357,"action":{"type":"invoke","field":"as-store-last"}}</pre>
+<pre>(assert_return (invoke "as-store-last"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":359,"action":{"type":"invoke","field":"as-memory.grow-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-memory.grow-value") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":360,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-return-value") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":361,"action":{"type":"invoke","field":"as-drop-operand"}}</pre>
+<pre>(assert_return (invoke "as-drop-operand"))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":362,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":363,"action":{"type":"invoke","field":"as-local.set-value"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-local.set-value") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":364,"action":{"type":"invoke","field":"as-local.tee-value"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-local.tee-value") (i32.const 0x132))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":365,"action":{"type":"invoke","field":"as-global.set-value"},"expected":[{"type":"i32","value":"306"}]}</pre>
+<pre>(assert_return (invoke "as-global.set-value") (i32.const 0x132))</pre>
+<p style="background-color: red">error, wrong result, expected 306, got 10</p>
+<pre>{"type":"assert_return","line":366,"action":{"type":"invoke","field":"as-load-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-load-operand") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":368,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"f32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-unary-operand") (f32.const 0x0p+0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":369,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"11"}]}</pre>
+<pre>(assert_return (invoke "as-binary-left") (i32.const 11))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":370,"action":{"type":"invoke","field":"as-binary-right"},"expected":[{"type":"i32","value":"9"}]}</pre>
+<pre>(assert_return (invoke "as-binary-right") (i32.const 9))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":371,"action":{"type":"invoke","field":"as-test-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-test-operand") (i32.const 0))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":372,"action":{"type":"invoke","field":"as-compare-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-left") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":373,"action":{"type":"invoke","field":"as-compare-right"},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-compare-right") (i32.const 1))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_return","line":374,"action":{"type":"invoke","field":"as-convert-operand"},"expected":[{"type":"i64","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-convert-operand") (i64.const 1))</pre>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_extend_i32_s</p>
+<pre>{"type":"assert_return","line":376,"action":{"type":"invoke","field":"return-from-long-argument-list","args":[{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"42"}]}</pre>
+<pre>(assert_return (invoke "return-from-long-argument-list" (i32.const 42)) (i32.const 42))</pre>
+<p style="background-color: green">ok, result</p>
+<pre>{"type":"assert_invalid","line":381,"filename":"call.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":388,"filename":"call.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":396,"filename":"call.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":403,"filename":"call.4.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":410,"filename":"call.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":417,"filename":"call.6.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":425,"filename":"call.7.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":432,"filename":"call.8.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":439,"filename":"call.9.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":446,"filename":"call.10.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":454,"filename":"call.11.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":463,"filename":"call.12.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":472,"filename":"call.13.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":481,"filename":"call.14.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":490,"filename":"call.15.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":499,"filename":"call.16.wasm","text":"type mismatch"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":512,"filename":"call.17.wasm","text":"unknown function"}</pre>
+<p style="background-color: red">expected invalid</p>
+<pre>{"type":"assert_invalid","line":516,"filename":"call.18.wasm","text":"unknown function"}</pre>
+<p style="background-color: red">expected invalid</p>
+<p>Generated at 2024-02-29T15:02:13</p>
