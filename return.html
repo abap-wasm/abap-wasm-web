@@ -25,7 +25,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":231,"action":{"type":"invoke","field":"type-f32-value"},"expected":[{"type":"f32","value":"1077936128"}]}</pre>
 <pre>(assert_return (invoke "type-f32-value") (f32.const 3))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.888996032682045E-39</p>
+<p style="background-color: red">error, wrong result, expected 1077936128, got 1056964608</p>
 <pre>{"type":"assert_return","line":232,"action":{"type":"invoke","field":"type-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
 <pre>(assert_return (invoke "type-f64-value") (f64.const 4))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -154,7 +154,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"as-load-address"},"expected":[{"type":"f32","value":"1071225242"}]}</pre>
 <pre>(assert_return (invoke "as-load-address") (f32.const 1.7))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.363029685425755E-23</p>
+<p style="background-color: red">error, wrong result, expected 1071225242, got 3204448256</p>
 <pre>{"type":"assert_return","line":289,"action":{"type":"invoke","field":"as-loadN-address"},"expected":[{"type":"i64","value":"30"}]}</pre>
 <pre>(assert_return (invoke "as-loadN-address") (i64.const 30))</pre>
 <p style="background-color: green">ok, result</p>
@@ -172,7 +172,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":296,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"f32","value":"1079613850"}]}</pre>
 <pre>(assert_return (invoke "as-unary-operand") (f32.const 3.4))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.342350801200653E-23</p>
+<p style="background-color: red">error, wrong result, expected 1079613850, got 3204448256</p>
 <pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "as-binary-left") (i32.const 3))</pre>
 <p style="background-color: green">ok, result</p>
@@ -234,4 +234,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":476,"filename":"return.20.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-01T12:30:43</p>
+<p>Generated at 2024-03-01T17:07:54</p>

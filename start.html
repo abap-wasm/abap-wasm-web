@@ -26,7 +26,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":74,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"68"}]}</pre>
 <pre>(assert_return (invoke "get") (i32.const 68))</pre>
-<p style="background-color: red">error, wrong result, expected 68, got 65, 16ms</p>
+<p style="background-color: red">error, wrong result, expected 68, got 65</p>
 <pre>{"type":"action","line":75,"action":{"type":"invoke","field":"inc"}}</pre>
 <pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"69"}]}</pre>
 <pre>(assert_return (invoke "get") (i32.const 69))</pre>
@@ -45,4 +45,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":103,"filename":"start.9.wat","text":"multiple start sections"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T12:30:43</p>
+<p>Generated at 2024-03-01T17:07:54</p>

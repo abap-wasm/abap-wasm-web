@@ -193,34 +193,34 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
 <pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"f32-dec-sep1"},"expected":[{"type":"f32","value":"1232348160"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep1") (f32.const 1000000))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.551368311947522E-39</p>
+<p style="background-color: red">error, wrong result, expected 1232348160, got 1056964608</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"f32-dec-sep2"},"expected":[{"type":"f32","value":"1148846080"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep2") (f32.const 1000))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.899402075078121E-39</p>
+<p style="background-color: red">error, wrong result, expected 1148846080, got 1056964608</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"f32-dec-sep3"},"expected":[{"type":"f32","value":"1148897552"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep3") (f32.const 1003.141592))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.946890099739706E-29</p>
+<p style="background-color: red">error, wrong result, expected 1148897552, got 1056964608</p>
 <pre>{"type":"assert_return","line":172,"action":{"type":"invoke","field":"f32-dec-sep4"},"expected":[{"type":"f32","value":"1482758550"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep4") (f32.const 99e+13))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.238995784577568E-25</p>
+<p style="background-color: red">error, wrong result, expected 1482758550, got 3204448256</p>
 <pre>{"type":"assert_return","line":173,"action":{"type":"invoke","field":"f32-dec-sep5"},"expected":[{"type":"f32","value":"1847438964"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep5") (f32.const 122000.11354e23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.1035846659685577E+32</p>
+<p style="background-color: red">error, wrong result, expected 1847438964, got 1957567854</p>
 <pre>{"type":"assert_return","line":174,"action":{"type":"invoke","field":"f32-hex-sep1"},"expected":[{"type":"f32","value":"1294004234"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep1") (f32.const 0xa0f0099))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.3123309536130517E-32</p>
+<p style="background-color: red">error, wrong result, expected 1294004234, got 1056964608</p>
 <pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"f32-hex-sep2"},"expected":[{"type":"f32","value":"1205143424"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep2") (f32.const 0x1aa0f))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.237150738091242E-39</p>
+<p style="background-color: red">error, wrong result, expected 1205143424, got 3204448256</p>
 <pre>{"type":"assert_return","line":176,"action":{"type":"invoke","field":"f32-hex-sep3"},"expected":[{"type":"f32","value":"1193345009"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep3") (f32.const 0xa0ff.f141a59a))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.5266463493981102E+30</p>
+<p style="background-color: red">error, wrong result, expected 1193345009, got 4060028999</p>
 <pre>{"type":"assert_return","line":177,"action":{"type":"invoke","field":"f32-hex-sep4"},"expected":[{"type":"f32","value":"1240465408"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep4") (f32.const 0xf0P+13))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.920570790329444E-39</p>
+<p style="background-color: red">error, wrong result, expected 1240465408, got 1056964608</p>
 <pre>{"type":"assert_return","line":178,"action":{"type":"invoke","field":"f32-hex-sep5"},"expected":[{"type":"f32","value":"1437319208"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep5") (f32.const 0x2af00a.1f3eep23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.1390585497002047E-14</p>
+<p style="background-color: red">error, wrong result, expected 1437319208, got 1056964608</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"f64-dec-sep1"},"expected":[{"type":"f64","value":"4696837146684686336"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep1") (f64.const 1000000))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -412,4 +412,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":513,"filename":"float_literals.79.wat","text":"constant out of range"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T12:28:45</p>
+<p>Generated at 2024-03-01T17:05:59</p>

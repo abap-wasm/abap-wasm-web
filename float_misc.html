@@ -1,22 +1,22 @@
-<a href="./index.html">Home</a><br><h3>Errors: 432</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 374</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 9</h3>
+<h3>Successes: 67</h3>
 <hr>
 <h1>float_misc.wast</h1>
 <pre>{"type":"module","line":17,"filename":"float_misc.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":50,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1066388847"},{"type":"f32","value":"789036054"}]},"expected":[{"type":"f32","value":"1066388847"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 1.1234567890) (f32.const 1.2345e-10)) (f32.const 1.123456789))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.123456835870215E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"4607738418748954166"},{"type":"f64","value":"4458835772027226175"}]},"expected":[{"type":"f64","value":"4607738418749510135"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 1.1234567890) (f64.const 1.2345e-10)) (f64.const 0x1.1f9add37c11f7p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"864026624"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 1.0) (f32.const 0x1p-24)) (f32.const 0x1.0p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000000596046448E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"864026625"}]},"expected":[{"type":"f32","value":"1065353217"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 1.0) (f32.const 0x1.000002p-24)) (f32.const 0x1.000002p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000000596046519E+0</p>
+<p style="background-color: red">error, wrong result, expected 1065353217, got 1065353216</p>
 <pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"4368491638549381120"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 1.0) (f64.const 0x1p-53)) (f64.const 0x1.0p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -25,13 +25,13 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1"},{"type":"f32","value":"8388607"}]},"expected":[{"type":"f32","value":"8388608"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1p-149) (f32.const 0x1.fffffcp-127)) (f32.const 0x1p-126))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.7632415262334313E-38</p>
+<p style="background-color: red">error, wrong result, expected 8388608, got 1056964608</p>
 <pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"1"},{"type":"f64","value":"4503599627370495"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x0.0000000000001p-1022) (f64.const 0x0.fffffffffffffp-1022)) (f64.const 0x1p-1022))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":67,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1325400064"},{"type":"f32","value":"1149241344"}]},"expected":[{"type":"f32","value":"1325400068"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1p+31) (f32.const 1024.25)) (f32.const 0x1.000008p+31))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.14748467225E+9</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":68,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"4890909195324358656"},{"type":"f64","value":"4652219514585350144"}]},"expected":[{"type":"f64","value":"4890909195324358657"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1p+63) (f64.const 1024.25)) (f64.const 0x1.0000000000001p+63))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -46,10 +46,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":81,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1258291200"},{"type":"f32","value":"1056964608"}]},"expected":[{"type":"f32","value":"1258291200"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1p23) (f32.const 0x1p-1)) (f32.const 0x1p23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.3886085E+6</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1258291201"},{"type":"f32","value":"1056964608"}]},"expected":[{"type":"f32","value":"1258291202"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.000002p+23) (f32.const 0x1p-1)) (f32.const 0x1.000004p+23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.3886095E+6</p>
+<p style="background-color: red">error, wrong result, expected 1258291202, got 1258291201</p>
 <pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"4841369599423283200"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"4841369599423283200"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1p52) (f64.const 0x1p-1)) (f64.const 0x1p52))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -58,19 +58,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"4070355885"},{"type":"f32","value":"238773414"}]},"expected":[{"type":"f32","value":"4070355885"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.39675ap+102) (f32.const 0x1.76c94cp-99)) (f32.const -0x1.39675ap+102))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.207600156575025E+30</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":88,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1630930834"},{"type":"f32","value":"3650472296"}]},"expected":[{"type":"f32","value":"1630930534"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.6c0f24p+67) (f32.const -0x1.2b92dp+52)) (f32.const 0x1.6c0cccp+67))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.0986053734249477E+20</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":89,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"376639884"},{"type":"f32","value":"24880479"}]},"expected":[{"type":"f32","value":"376639884"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.e62318p-83) (f32.const 0x1.f74abep-125)) (f32.const 0x1.e62318p-83))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.9634920494278623E-25</p>
+<p style="background-color: red">error, wrong result, expected 376639884, got 1056964608</p>
 <pre>{"type":"assert_return","line":90,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1393899754"},{"type":"f32","value":"3680827526"}]},"expected":[{"type":"f32","value":"3680827377"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.2a71d4p+39) (f32.const -0x1.c9f10cp+55)) (f32.const -0x1.c9efe2p+55))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.444890819434906E+16</p>
+<p style="background-color: red">error, wrong result, expected 3680827377, got 3680827376</p>
 <pre>{"type":"assert_return","line":91,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"947682203"},{"type":"f32","value":"1958603311"}]},"expected":[{"type":"f32","value":"1958603311"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.f8f736p-15) (f32.const 0x1.7bd45ep+106)) (f32.const 0x1.7bd45ep+106))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.2037279221606141E+32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":92,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"2751474943031650218"},{"type":"f64","value":"14953834855654151696"}]},"expected":[{"type":"f64","value":"14953834855654151696"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.f33e1fbca27aap-413) (f64.const -0x1.6b192891ed61p+249)) (f64.const -0x1.6b192891ed61p+249))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -88,19 +88,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":99,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1670249659"},{"type":"f32","value":"3384781876"}]},"expected":[{"type":"f32","value":"1670249659"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.1bf976p+72) (f32.const -0x1.7f5868p+20)) (f32.const 0x1.1bf976p+72))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.238404127822498E+21</p>
+<p style="background-color: red">error, wrong result, expected 1670249659, got 1670249658</p>
 <pre>{"type":"assert_return","line":100,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"692047414"},{"type":"f32","value":"2564611463"}]},"expected":[{"type":"f32","value":"692047414"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.7f9c6cp-45) (f32.const -0x1.b9bb0ep-78)) (f32.const 0x1.7f9c6cp-45))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4.2589379012113965E-14</p>
+<p style="background-color: red">error, wrong result, expected 692047414, got 1056964608</p>
 <pre>{"type":"assert_return","line":101,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2862180574"},{"type":"f32","value":"2122049802"}]},"expected":[{"type":"f32","value":"2122049802"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.32d1bcp-42) (f32.const 0x1.f7d214p+125)) (f32.const 0x1.f7d214p+125))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.371155873353713E+37</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":102,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2848402951"},{"type":"f32","value":"2325576998"}]},"expected":[{"type":"f32","value":"2848402951"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.8e5c0ep-44) (f32.const -0x1.3afa4cp-106)) (f32.const -0x1.8e5c0ep-44))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.845359747390244E-14</p>
+<p style="background-color: red">error, wrong result, expected 2848402951, got 3204448256</p>
 <pre>{"type":"assert_return","line":103,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"982116028"},{"type":"f32","value":"2317187467"}]},"expected":[{"type":"f32","value":"982116028"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.13cd78p-10) (f32.const -0x1.3af316p-107)) (f32.const 0x1.13cd78p-10))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0521034710109234E-3</p>
+<p style="background-color: red">error, wrong result, expected 982116028, got 982115328</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"5417704807092288842"},{"type":"f64","value":"11458115339210975423"}]},"expected":[{"type":"f64","value":"5417704807092288842"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.f8dd15ca97d4ap+179) (f64.const -0x1.367317d1fe8bfp-527)) (f64.const 0x1.f8dd15ca97d4ap+179))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -118,19 +118,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":111,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2231979500"},{"type":"f32","value":"711174153"}]},"expected":[{"type":"f32","value":"711174153"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.129bd8p-117) (f32.const 0x1.c75012p-43)) (f32.const 0x1.c75012p-43))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.0219949033260104E-13</p>
+<p style="background-color: red">error, wrong result, expected 711174153, got 1056964608</p>
 <pre>{"type":"assert_return","line":112,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"3084976721"},{"type":"f32","value":"843077785"}]},"expected":[{"type":"f32","value":"3084970566"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.c204a2p-16) (f32.const 0x1.80b132p-27)) (f32.const -0x1.c1d48cp-16))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.681197279397196E-5</p>
+<p style="background-color: red">error, wrong result, expected 3084970566, got 3204448256</p>
 <pre>{"type":"assert_return","line":113,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"3522127374"},{"type":"f32","value":"157500525"}]},"expected":[{"type":"f32","value":"3522127374"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.decc1cp+36) (f32.const 0x1.c688dap-109)) (f32.const -0x1.decc1cp+36))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.2852617216E+11</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":114,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"78702389"},{"type":"f32","value":"3468399689"}]},"expected":[{"type":"f32","value":"3468399689"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.61ce6ap-118) (f32.const -0x1.772892p+30)) (f32.const -0x1.772892p+30))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.573528704E+9</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":115,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2208228371"},{"type":"f32","value":"1870536627"}]},"expected":[{"type":"f32","value":"1870536627"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.3dc826p-120) (f32.const 0x1.fc3f66p+95)) (f32.const 0x1.fc3f66p+95))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.8647514498630135E+28</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":116,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"1111252809067936271"},{"type":"f64","value":"18353849863141451174"}]},"expected":[{"type":"f64","value":"18353849863141451174"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.bf68acc263a0fp-777) (f64.const -0x1.5f9352965e5a6p+1004)) (f64.const -0x1.5f9352965e5a6p+1004))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -178,19 +178,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":137,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2039859408"},{"type":"f32","value":"2137384617"}]},"expected":[{"type":"f32","value":"2137389410"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.2b91ap+116) (f32.const 0x1.cbcd52p+127)) (f32.const 0x1.cbf2c4p+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.056880826885943E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2135652809"},{"type":"f32","value":"4113932278"}]},"expected":[{"type":"f32","value":"2135652798"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.96f392p+127) (f32.const -0x1.6b3fecp+107)) (f32.const 0x1.96f37cp+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.7046539759170413E+38</p>
+<p style="background-color: red">error, wrong result, expected 2135652798, got 2135652797</p>
 <pre>{"type":"assert_return","line":139,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2055837582"},{"type":"f32","value":"4281461529"}]},"expected":[{"type":"f32","value":"4281443917"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.132f1cp+118) (f32.const -0x1.63d632p+127)) (f32.const -0x1.634c9ap+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.3613684279399164E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"4220448050"},{"type":"f32","value":"4286022000"}]},"expected":[{"type":"f32","value":"4286095178"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.1dda64p+120) (f32.const -0x1.ef02ep+127)) (f32.const -0x1.f13e94p+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -3.304756269762931E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":141,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"4280642669"},{"type":"f32","value":"4269109313"}]},"expected":[{"type":"f32","value":"4284663933"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.4ad8dap+127) (f32.const -0x1.eae082p+125)) (f32.const -0x1.c590fap+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -3.014465267909008E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":142,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"9214390167692528523"},{"type":"f64","value":"9025765862177526868"}]},"expected":[{"type":"f64","value":"9214390167692529673"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.017099f2a4b8bp+1023) (f64.const 0x1.1f63b28f05454p+981)) (f64.const 0x1.017099f2a5009p+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -208,19 +208,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":149,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"5932680"},{"type":"f32","value":"623"}]},"expected":[{"type":"f32","value":"5933303"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.6a1a2p-127) (f32.const 0x1.378p-140)) (f32.const 0x1.6a23dcp-127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.591210769935979E-38</p>
+<p style="background-color: red">error, wrong result, expected 5933303, got 1056964608</p>
 <pre>{"type":"assert_return","line":150,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"37"},{"type":"f32","value":"2147483650"}]},"expected":[{"type":"f32","value":"35"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.28p-144) (f32.const -0x1p-148)) (f32.const 0x1.18p-144))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.45227231256843E-44</p>
+<p style="background-color: red">error, wrong result, expected 35, got 1056964608</p>
 <pre>{"type":"assert_return","line":151,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2147483656"},{"type":"f32","value":"3701056"}]},"expected":[{"type":"f32","value":"3701048"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1p-146) (f32.const 0x1.c3cap-128)) (f32.const 0x1.c3c9cp-128))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.5931364393962178E-39</p>
+<p style="background-color: red">error, wrong result, expected 3701048, got 1056964608</p>
 <pre>{"type":"assert_return","line":152,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2147483668"},{"type":"f32","value":"44113961"}]},"expected":[{"type":"f32","value":"44113960"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const -0x1.4p-145) (f32.const 0x1.424052p-122)) (f32.const 0x1.42405p-122))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.3087534257999786E-37</p>
+<p style="background-color: red">error, wrong result, expected 44113960, got 1056964608</p>
 <pre>{"type":"assert_return","line":153,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"453"},{"type":"f32","value":"2147507390"}]},"expected":[{"type":"f32","value":"2147506937"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.c5p-141) (f32.const -0x1.72f8p-135)) (f32.const -0x1.6be4p-135))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.6317419967830332E-41</p>
+<p style="background-color: red">error, wrong result, expected 2147506937, got 3204448256</p>
 <pre>{"type":"assert_return","line":154,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"5760669582171681"},{"type":"f64","value":"9233067416817195210"}]},"expected":[{"type":"f64","value":"9227994927942701939"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.4774c681d1e21p-1022) (f64.const -0x1.271e58e9f58cap-1021)) (f64.const -0x1.06c7eb5219373p-1022))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -238,22 +238,22 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":162,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2139095038"},{"type":"f32","value":"1937768448"}]},"expected":[{"type":"f32","value":"2139095039"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.fffffcp+127) (f32.const 0x1p+104)) (f32.const 0x1.fffffep+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.4028234663852886E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":163,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"9218868437227405310"},{"type":"f64","value":"8980177656976769024"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.ffffffffffffep+1023) (f64.const 0x1p+971)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":166,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1082130432"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 2.0) (f32.const 2.0)) (f32.const 4.0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":167,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"4611686018427387904"}]},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 2.0) (f64.const 2.0)) (f64.const 4.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2139095039"},{"type":"f32","value":"1929379839"}]},"expected":[{"type":"f32","value":"2139095039"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.fffffep+127) (f32.const 0x1.fffffep+102)) (f32.const 0x1.fffffep+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.4028235677973306E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"f32.add","args":[{"type":"f32","value":"2139095039"},{"type":"f32","value":"1929379840"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.add" (f32.const 0x1.fffffep+127) (f32.const 0x1p+103)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.4028235677973366E+38</p>
+<p style="background-color: red">error, wrong result, expected 2139095040, got 2139095039</p>
 <pre>{"type":"assert_return","line":172,"action":{"type":"invoke","field":"f64.add","args":[{"type":"f64","value":"9218868437227405311"},{"type":"f64","value":"8975674057349398527"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64.add" (f64.const 0x1.fffffffffffffp+1023) (f64.const 0x1.fffffffffffffp+969)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -262,16 +262,16 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":177,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1199570944"},{"type":"f32","value":"754974720"}]},"expected":[{"type":"f32","value":"1199570944"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 65536.0) (f32.const 0x1p-37)) (f32.const 65536.0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.553599999999999E+4</p>
+<p style="background-color: red">error, wrong result, expected 1199570944, got 1199570943</p>
 <pre>{"type":"assert_return","line":178,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"4679240012837945344"},{"type":"f64","value":"4440549232587309056"}]},"expected":[{"type":"f64","value":"4679240012837945343"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const 65536.0) (f64.const 0x1p-37)) (f64.const 0x1.fffffffffffffp+15))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":182,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"855638016"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 1.0) (f32.const 0x1p-25)) (f32.const 0x1.0p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999701976776E-1</p>
+<p style="background-color: red">error, wrong result, expected 1065353216, got 1065353214</p>
 <pre>{"type":"assert_return","line":183,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"855638017"}]},"expected":[{"type":"f32","value":"1065353215"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 1.0) (f32.const 0x1.000002p-25)) (f32.const 0x1.fffffep-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999701976741E-1</p>
+<p style="background-color: red">error, wrong result, expected 1065353215, got 1065353214</p>
 <pre>{"type":"assert_return","line":184,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"4363988038922010624"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const 1.0) (f64.const 0x1p-54)) (f64.const 0x1.0p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -280,19 +280,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"183964211"},{"type":"f32","value":"4211807167"}]},"expected":[{"type":"f32","value":"2064323519"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.ee2466p-106) (f32.const -0x1.16277ep+119)) (f32.const 0x1.16277ep+119))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.221297616978506E+35</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":189,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"4213323727"},{"type":"f32","value":"3575761746"}]},"expected":[{"type":"f32","value":"4213323727"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.446f9ep+119) (f32.const -0x1.4396a4p+43)) (f32.const -0x1.446f9ep+119))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.422840238404834E+35</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":190,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1069169566"},{"type":"f32","value":"2530290313"}]},"expected":[{"type":"f32","value":"1069169566"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.74773cp+0) (f32.const -0x1.a25512p-82)) (f32.const 0x1.74773cp+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.454944372177124E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":191,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"88711906"},{"type":"f32","value":"431212897"}]},"expected":[{"type":"f32","value":"2578696545"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.9345c4p-117) (f32.const 0x1.6792c2p-76)) (f32.const -0x1.6792c2p-76))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.8589502498358232E-23</p>
+<p style="background-color: red">error, wrong result, expected 2578696545, got 3204448256</p>
 <pre>{"type":"assert_return","line":192,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"919562194"},{"type":"f32","value":"2319656354"}]},"expected":[{"type":"f32","value":"919562194"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.9ecfa4p-18) (f32.const -0x1.864b44p-107)) (f32.const 0x1.9ecfa4p-18))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.18116700934479E-6</p>
+<p style="background-color: red">error, wrong result, expected 919562194, got 919339008</p>
 <pre>{"type":"assert_return","line":193,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"12332465020357998661"},{"type":"f64","value":"9766989582560416510"}]},"expected":[{"type":"f64","value":"12332465020357998661"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const -0x1.5b798875e7845p-333) (f64.const -0x1.b5147117452fep-903)) (f64.const -0x1.5b798875e7845p-333))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -310,19 +310,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":200,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"4122014001"},{"type":"f32","value":"4158487026"}]},"expected":[{"type":"f32","value":"2010278623"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.61e262p+108) (f32.const -0x1.baf3e4p+112)) (f32.const 0x1.a4d5bep+112))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.53554639561548E+33</p>
+<p style="background-color: red">error, wrong result, expected 2010278623, got 2010278622</p>
 <pre>{"type":"assert_return","line":201,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"4130431355"},{"type":"f32","value":"1119299749"}]},"expected":[{"type":"f32","value":"4130431355"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.62c2f6p+109) (f32.const 0x1.6e514ap+6)) (f32.const -0x1.62c2f6p+109))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.994274245666093E+32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"2517909066"},{"type":"f32","value":"864524238"}]},"expected":[{"type":"f32","value":"3012007886"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.287c94p-83) (f32.const 0x1.0f2f9cp-24)) (f32.const -0x1.0f2f9cp-24))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.314040490451589E-8</p>
+<p style="background-color: red">error, wrong result, expected 3012007886, got 3204448256</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"2573484334"},{"type":"f32","value":"3114628459"}]},"expected":[{"type":"f32","value":"967144811"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.c8825cp-77) (f32.const -0x1.4aead6p-12)) (f32.const 0x1.4aead6p-12))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.1558735645376146E-4</p>
+<p style="background-color: red">error, wrong result, expected 967144811, got 967143424</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"4044667730"},{"type":"f32","value":"576942556"}]},"expected":[{"type":"f32","value":"4044667730"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.2976a4p+99) (f32.const 0x1.c6e3b8p-59)) (f32.const -0x1.2976a4p+99))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -7.364838050540576E+29</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"14742371419310964805"},{"type":"f64","value":"17888404506408184249"}]},"expected":[{"type":"f64","value":"8665032469553408441"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const -0x1.76cb28ae6c045p+202) (f64.const -0x1.0611f2af4e9b9p+901)) (f64.const 0x1.0611f2af4e9b9p+901))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -340,19 +340,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":212,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1869943590"},{"type":"f32","value":"943887556"}]},"expected":[{"type":"f32","value":"1869943590"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.ea264cp+95) (f32.const 0x1.852988p-15)) (f32.const 0x1.ea264cp+95))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.584697644672857E+28</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":213,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"3372906046"},{"type":"f32","value":"2919590399"}]},"expected":[{"type":"f32","value":"3372906046"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.14ec7cp+19) (f32.const -0x1.0ad3fep-35)) (f32.const -0x1.14ec7cp+19))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -5.67139875E+5</p>
+<p style="background-color: red">error, wrong result, expected 3372906046, got 3372906032</p>
 <pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"2912495853"},{"type":"f32","value":"2745492671"}]},"expected":[{"type":"f32","value":"2912495843"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.3251dap-36) (f32.const -0x1.49c97ep-56)) (f32.const -0x1.3251c6p-36))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.7412242991471694E-11</p>
+<p style="background-color: red">error, wrong result, expected 2912495843, got 3204448256</p>
 <pre>{"type":"assert_return","line":215,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"3096029999"},{"type":"f32","value":"957859028"}]},"expected":[{"type":"f32","value":"3109853804"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.13565ep-14) (f32.const 0x1.2f89a8p-13)) (f32.const -0x1.b934d8p-13))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.1038360864622518E-4</p>
+<p style="background-color: red">error, wrong result, expected 3109853804, got 3204448256</p>
 <pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"2939165019"},{"type":"f32","value":"2346559691"}]},"expected":[{"type":"f32","value":"2939165019"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const -0x1.6032b6p-33) (f32.const -0x1.bb5196p-104)) (f32.const -0x1.6032b6p-33))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.601611482326959E-10</p>
+<p style="background-color: red">error, wrong result, expected 2939165019, got 3204448256</p>
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"13126685627069188368"},{"type":"f64","value":"17084005755352353256"}]},"expected":[{"type":"f64","value":"7860633718497577448"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const -0x1.b5b0797af491p-157) (f64.const -0x1.694b8348189e8p+722)) (f64.const 0x1.694b8348189e8p+722))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -400,7 +400,7 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":239,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1102651427"},{"type":"f32","value":"1078530011"}]},"expected":[{"type":"f32","value":"1101004328"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.724046p+4) (f32.const 0x1.921fb6p+1)) (f32.const 0x1.3ffc5p+4))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.9999099016189575E+1</p>
+<p style="background-color: red">error, wrong result, expected 1101004328, got 1101004327</p>
 <pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"4627206743602008890"},{"type":"f64","value":"4614256656552045848"}]},"expected":[{"type":"f64","value":"4626322463883005335"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const 0x1.724046eb0933ap+4) (f64.const 0x1.921fb54442d18p+1)) (f64.const 0x1.3ffc504280d97p+4))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -409,7 +409,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":244,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1240736760"},{"type":"f32","value":"1240736728"}]},"expected":[{"type":"f32","value":"1082130432"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 1999999) (f32.const 1999995)) (f32.const 4.0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":245,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1240736760"},{"type":"f32","value":"1240736712"}]},"expected":[{"type":"f32","value":"1086324736"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 1999999) (f32.const 1999993)) (f32.const 6.0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -436,19 +436,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":255,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"8388608"},{"type":"f32","value":"8388607"}]},"expected":[{"type":"f32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1p-126) (f32.const 0x1.fffffcp-127)) (f32.const 0x1p-149))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.006492321624085E-46</p>
+<p style="background-color: red">error, wrong result, expected 1, got 1056964608</p>
 <pre>{"type":"assert_return","line":256,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"4503599627370495"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const 0x1p-1022) (f64.const 0x0.fffffffffffffp-1022)) (f64.const 0x0.0000000000001p-1022))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":259,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1065353217"},{"type":"f32","value":"1065353215"}]},"expected":[{"type":"f32","value":"876609536"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.000002p+0) (f32.const 0x1.fffffep-1)) (f32.const 0x1.8p-23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.7881393432617188E-7</p>
+<p style="background-color: red">error, wrong result, expected 876609536, got 1056964608</p>
 <pre>{"type":"assert_return","line":260,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1065353217"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"872415232"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.000002p+0) (f32.const 0x1.0p+0)) (f32.const 0x1p-23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.1920928955078125E-7</p>
+<p style="background-color: red">error, wrong result, expected 872415232, got 1056964608</p>
 <pre>{"type":"assert_return","line":261,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1065353215"}]},"expected":[{"type":"f32","value":"864026624"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1p+0) (f32.const 0x1.fffffep-1)) (f32.const 0x1p-24))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.960464477539063E-8</p>
+<p style="background-color: red">error, wrong result, expected 864026624, got 1056964608</p>
 <pre>{"type":"assert_return","line":262,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"4607182418800017409"},{"type":"f64","value":"4607182418800017407"}]},"expected":[{"type":"f64","value":"4375247037990436864"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const 0x1.0000000000001p+0) (f64.const 0x1.fffffffffffffp-1)) (f64.const 0x1.8p-52))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -460,10 +460,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":268,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"2139095039"},{"type":"f32","value":"1929379839"}]},"expected":[{"type":"f32","value":"2139095039"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.fffffep+127) (f32.const 0x1.fffffep+102)) (f32.const 0x1.fffffep+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.4028233649732466E+38</p>
+<p style="background-color: red">error, wrong result, expected 2139095039, got 2139095038</p>
 <pre>{"type":"assert_return","line":269,"action":{"type":"invoke","field":"f32.sub","args":[{"type":"f32","value":"2139095039"},{"type":"f32","value":"1929379840"}]},"expected":[{"type":"f32","value":"2139095038"}]}</pre>
 <pre>(assert_return (invoke "f32.sub" (f32.const 0x1.fffffep+127) (f32.const 0x1p+103)) (f32.const 0x1.fffffcp+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.4028233649732406E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":270,"action":{"type":"invoke","field":"f64.sub","args":[{"type":"f64","value":"9218868437227405311"},{"type":"f64","value":"8975674057349398527"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64.sub" (f64.const 0x1.fffffffffffffp+1023) (f64.const 0x1.fffffffffffffp+969)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -472,13 +472,13 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":274,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1482907561"},{"type":"f32","value":"1482907561"}]},"expected":[{"type":"f32","value":"1900671689"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 1e15) (f32.const 1e15)) (f32.const 0x1.93e592p+99))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999739822082E+29</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1621981420"},{"type":"f32","value":"1621981420"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 1e20) (f32.const 1e20)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000000400817551E+40</p>
+<p style="background-color: red">exception: exponent too large: 259</p>
 <pre>{"type":"assert_return","line":276,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1761892689"},{"type":"f32","value":"1761892689"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 1e25) (f32.const 1e25)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999124047072E+49</p>
+<p style="background-color: red">exception: exponent too large: 293</p>
 <pre>{"type":"assert_return","line":277,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"4831355200913801216"},{"type":"f64","value":"4831355200913801216"}]},"expected":[{"type":"f64","value":"5055640609639927018"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 1e15) (f64.const 1e15)) (f64.const 0x1.93e5939a08ceap+99))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -490,31 +490,31 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":284,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1323067183"},{"type":"f32","value":"1351920719"}]},"expected":[{"type":"f32","value":"1610612737"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 1848874880.0) (f32.const 19954563072.0)) (f32.const 0x1.000002p+65))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.689349040519643E+19</p>
+<p style="background-color: red">error, wrong result, expected 1610612737, got 1610612736</p>
 <pre>{"type":"assert_return","line":285,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"4745541551160033280"},{"type":"f64","value":"4761032175258435584"}]},"expected":[{"type":"f64","value":"4899916394579099649"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 1848874847.0) (f64.const 19954562207.0)) (f64.const 3.6893488147419111424e+19))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":289,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1117401907"},{"type":"f32","value":"1146388480"}]},"expected":[{"type":"f32","value":"1199570688"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 77.1) (f32.const 850)) (f32.const 65535))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.553499870300293E+4</p>
+<p style="background-color: red">error, wrong result, expected 1199570688, got 1199570687</p>
 <pre>{"type":"assert_return","line":290,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"4635125847112967782"},{"type":"f64","value":"4650687894887858176"}]},"expected":[{"type":"f64","value":"4679239875398991871"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 77.1) (f64.const 850)) (f64.const 65534.99999999999272404))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":293,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3725225879"},{"type":"f32","value":"767181884"}]},"expected":[{"type":"f32","value":"3427365876"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.14df2ep+61) (f32.const 0x1.748878p-36)) (f32.const -0x1.92e7e8p+25))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -5.2809678383226395E+7</p>
+<p style="background-color: red">error, wrong result, expected 3427365876, got 3427365875</p>
 <pre>{"type":"assert_return","line":294,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"4071298289"},{"type":"f32","value":"2363594761"}]},"expected":[{"type":"f32","value":"1075233538"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.5629e2p+102) (f32.const -0x1.c33012p-102)) (f32.const 0x1.2d8604p+1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.3556523954774917E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":295,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3990403914"},{"type":"f32","value":"2406636213"}]},"expected":[{"type":"f32","value":"1036856791"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.b17694p+92) (f32.const -0x1.e4b56ap-97)) (f32.const 0x1.9a5baep-4))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.001850890587912E-1</p>
+<p style="background-color: red">error, wrong result, expected 1036856791, got 1036856784</p>
 <pre>{"type":"assert_return","line":296,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3876262739"},{"type":"f32","value":"2590162616"}]},"expected":[{"type":"f32","value":"1106664791"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.1626a6p+79) (f32.const -0x1.c57d7p-75)) (f32.const 0x1.ecbaaep+4))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.0795576386017274E+1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":297,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1513973689"},{"type":"f32","value":"1110852822"}]},"expected":[{"type":"f32","value":"1560730283"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.7acf72p+53) (f32.const 0x1.6c89acp+5)) (f32.const 0x1.0db556p+59))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.073292255318753E+17</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"15745248579468343268"},{"type":"f64","value":"8867411559652116184"}]},"expected":[{"type":"f64","value":"18442240474082181120"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const -0x1.25c293f6f37e4p+425) (f64.const 0x1.f5fd4fa41c6d8p+945)) (f64.const -inf))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -532,19 +532,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":305,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"2468326353"},{"type":"f32","value":"3984723636"}]},"expected":[{"type":"f32","value":"1092762840"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.3f57a2p-89) (f32.const -0x1.041d68p+92)) (f32.const 0x1.4479bp+3))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0139854045496122E+1</p>
+<p style="background-color: red">error, wrong result, expected 1092762840, got 1092762839</p>
 <pre>{"type":"assert_return","line":306,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1680245441"},{"type":"f32","value":"1228341789"}]},"expected":[{"type":"f32","value":"1844318640"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.4d0582p+73) (f32.const 0x1.6e043ap+19)) (f32.const 0x1.dc236p+92))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.209851723233283E+27</p>
+<p style="background-color: red">error, wrong result, expected 1844318640, got 1844318639</p>
 <pre>{"type":"assert_return","line":307,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"2945969408"},{"type":"f32","value":"3840981390"}]},"expected":[{"type":"f32","value":"1427037263"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.2fdap-32) (f32.const -0x1.e1731cp+74)) (f32.const 0x1.1db89ep+43))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.817303852896E+12</p>
+<p style="background-color: red">error, wrong result, expected 1427037263, got 1427037262</p>
 <pre>{"type":"assert_return","line":308,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1631446143"},{"type":"f32","value":"3340593865"}]},"expected":[{"type":"f32","value":"3907618991"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.7bc8fep+67) (f32.const -0x1.3ad592p+15)) (f32.const -0x1.d3115ep+82))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.822662170299058E+24</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":309,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1321841569"},{"type":"f32","value":"3771977928"}]},"expected":[{"type":"f32","value":"4029080461"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.936742p+30) (f32.const -0x1.a7a19p+66)) (f32.const -0x1.4dc71ap+97))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.0659841887081388E+29</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":310,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"10956034376207055635"},{"type":"f64","value":"3195464683520095288"}]},"expected":[{"type":"f64","value":"9544600684599159351"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const -0x1.ba737b4ca3b13p-639) (f64.const 0x1.8923309857438p-314)) (f64.const -0x1.53bc0d07baa37p-952))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -562,19 +562,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":317,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3603447621"},{"type":"f32","value":"4012809012"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.907e8ap+46) (f32.const -0x1.5d3668p+95)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.948885379519918E+42</p>
+<p style="background-color: red">exception: exponent too large: 269</p>
 <pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3192278970"},{"type":"f32","value":"242309673"}]},"expected":[{"type":"f32","value":"2369451750"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.8c9f74p-3) (f32.const 0x1.e2b452p-99)) (f32.const -0x1.75edccp-101))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -5.761286781736413E-31</p>
+<p style="background-color: red">error, wrong result, expected 2369451750, got 3204448256</p>
 <pre>{"type":"assert_return","line":319,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3060150317"},{"type":"f32","value":"1953896717"}]},"expected":[{"type":"f32","value":"3948759250"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.cc605ap-19) (f32.const 0x1.ec321ap+105)) (f32.const -0x1.ba91a4p+87))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.675164836250387E+26</p>
+<p style="background-color: red">error, wrong result, expected 3948759250, got 3948759249</p>
 <pre>{"type":"assert_return","line":320,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3685735869"},{"type":"f32","value":"265571119"}]},"expected":[{"type":"f32","value":"2886850375"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.5fbb7ap+56) (f32.const 0x1.a8965ep-96)) (f32.const -0x1.23ae8ep-39))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.0725241761363714E-12</p>
+<p style="background-color: red">error, wrong result, expected 2886850375, got 3204448256</p>
 <pre>{"type":"assert_return","line":321,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3355295625"},{"type":"f32","value":"69023757"}]},"expected":[{"type":"f32","value":"2359023110"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.fb7f12p+16) (f32.const 0x1.3a701ap-119)) (f32.const -0x1.37ac0cp-102))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -2.4010341519387696E-31</p>
+<p style="background-color: red">error, wrong result, expected 2359023110, got 3204448256</p>
 <pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"11598370094301102699"},{"type":"f64","value":"15783697741936198553"}]},"expected":[{"type":"f64","value":"4328598597203697163"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const -0x1.5b0266454c26bp-496) (f64.const -0x1.af5787e3e0399p+433)) (f64.const 0x1.2457d81949e0bp-62))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -637,10 +637,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":350,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"436207616"},{"type":"f32","value":"436207616"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1p-75) (f32.const 0x1p-75)) (f32.const 0x0p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.006492321624085E-46</p>
+<p style="background-color: red">error, wrong result, expected 0, got 1056964608</p>
 <pre>{"type":"assert_return","line":351,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"436207617"},{"type":"f32","value":"436207617"}]},"expected":[{"type":"f32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.000002p-75) (f32.const 0x1.000002p-75)) (f32.const 0x1p-149))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.006493992102129E-46</p>
+<p style="background-color: red">error, wrong result, expected 1, got 1056964608</p>
 <pre>{"type":"assert_return","line":352,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"2186111271319845836"},{"type":"f64","value":"2186111271319845836"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 0x1.6a09e667f3bccp-538) (f64.const 0x1.6a09e667f3bccp-538)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -649,10 +649,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":356,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1602224127"},{"type":"f32","value":"1602224127"}]},"expected":[{"type":"f32","value":"2139095038"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.fffffep+63) (f32.const 0x1.fffffep+63)) (f32.const 0x1.fffffcp+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.4028232635612047E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":357,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1602224128"},{"type":"f32","value":"1602224128"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1p+64) (f32.const 0x1p+64)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.402823669209385E+38</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":358,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"6913025428013711359"},{"type":"f64","value":"6913025428013711359"}]},"expected":[{"type":"f64","value":"9218868437227405310"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 0x1.fffffffffffffp+511) (f64.const 0x1.fffffffffffffp+511)) (f64.const 0x1.ffffffffffffep+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -661,10 +661,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":362,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1065353217"},{"type":"f32","value":"1065353217"}]},"expected":[{"type":"f32","value":"1065353218"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.000002p+0) (f32.const 0x1.000002p+0)) (f32.const 0x1.000004p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000002384185933E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":363,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1065353215"},{"type":"f32","value":"1065353215"}]},"expected":[{"type":"f32","value":"1065353214"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.fffffep-1) (f32.const 0x1.fffffep-1)) (f32.const 0x1.fffffcp-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.99999880790714E-1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":364,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"4607182418800017409"},{"type":"f64","value":"4607182418800017409"}]},"expected":[{"type":"f64","value":"4607182418800017410"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 0x1.0000000000001p+0) (f64.const 0x1.0000000000001p+0)) (f64.const 0x1.0000000000002p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -673,10 +673,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":368,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1065353217"},{"type":"f32","value":"1065353215"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.000002p+0) (f32.const 0x1.fffffep-1)) (f32.const 0x1p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000000596046377E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":369,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"1065353218"},{"type":"f32","value":"1065353214"}]},"expected":[{"type":"f32","value":"1065353217"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1.000004p+0) (f32.const 0x1.fffffcp-1)) (f32.const 0x1.000002p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000001192092611E+0</p>
+<p style="background-color: red">error, wrong result, expected 1065353217, got 1065353216</p>
 <pre>{"type":"assert_return","line":370,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"4607182418800017409"},{"type":"f64","value":"4607182418800017407"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 0x1.0000000000001p+0) (f64.const 0x1.fffffffffffffp-1)) (f64.const 0x1p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -685,28 +685,28 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":375,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"8388608"},{"type":"f32","value":"872415232"}]},"expected":[{"type":"f32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const 0x1p-126) (f32.const 0x1p-23)) (f32.const 0x1p-149))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.401298464324817E-45</p>
+<p style="background-color: red">error, wrong result, expected 1, got 1056964608</p>
 <pre>{"type":"assert_return","line":376,"action":{"type":"invoke","field":"f64.mul","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"4372995238176751616"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.mul" (f64.const 0x1p-1022) (f64.const 0x1p-52)) (f64.const 0x0.0000000000001p-1022))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":379,"action":{"type":"invoke","field":"f32.mul","args":[{"type":"f32","value":"3246392064"},{"type":"f32","value":"212992"}]},"expected":[{"type":"f32","value":"2150891832"}]}</pre>
 <pre>(assert_return (invoke "f32.mul" (f32.const -0x1.0006p+4) (f32.const 0x1.ap-132)) (f32.const -0x1.a009cp-128))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -9.643609914621602E-38</p>
+<p style="background-color: red">error, wrong result, expected 2150891832, got 3204448256</p>
 <pre>{"type":"assert_return","line":382,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1066388847"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1010307378"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 1.123456789) (f32.const 100)) (f32.const 0x1.702264p-7))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.1234568357467651E-2</p>
+<p style="background-color: red">error, wrong result, expected 1010307378, got 1010307328</p>
 <pre>{"type":"assert_return","line":383,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1258294259"},{"type":"f32","value":"1262485497"}]},"expected":[{"type":"f32","value":"1059764896"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 8391667.0) (f32.const 12582905.0)) (f32.const 0x1.55754p-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.669101451532854E-1</p>
+<p style="background-color: red">error, wrong result, expected 1059764896, got 1059764894</p>
 <pre>{"type":"assert_return","line":384,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1199570944"},{"type":"f32","value":"754974720"}]},"expected":[{"type":"f32","value":"1509949440"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 65536.0) (f32.const 0x1p-37)) (f32.const 0x1p+53))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.007199254740992E+15</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":385,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1072586677"},{"type":"f32","value":"2139095039"}]},"expected":[{"type":"f32","value":"3905517"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.dcbf6ap+0) (f32.const 0x1.fffffep+127)) (f32.const 0x1.dcbf68p-128))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.4727956510231235E-39</p>
+<p style="background-color: red">error, wrong result, expected 3905517, got 1056964608</p>
 <pre>{"type":"assert_return","line":386,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1082130432"},{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1068149419"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 4) (f32.const 3)) (f32.const 0x1.555556p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.3333333333333333E+0</p>
+<p style="background-color: red">error, wrong result, expected 1068149419, got 1068149418</p>
 <pre>{"type":"assert_return","line":387,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4607738418748954166"},{"type":"f64","value":"4636737291354636288"}]},"expected":[{"type":"f64","value":"4577629909238726725"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 1.123456789) (f64.const 100)) (f64.const 0.01123456789))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -724,25 +724,25 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":395,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1249905654"},{"type":"f32","value":"1245708284"}]},"expected":[{"type":"f32","value":"1068153505"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 4195835) (f32.const 3145727)) (f32.const 0x1.557542p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.333820449136241E+0</p>
+<p style="background-color: red">error, wrong result, expected 1068153505, got 1068153504</p>
 <pre>{"type":"assert_return","line":396,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4706263254500900864"},{"type":"f64","value":"4704009808640999424"}]},"expected":[{"type":"f64","value":"4608685812450356035"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 4195835) (f64.const 3145727)) (f64.const 0x1.557541c7c6b43p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":399,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"666187309"},{"type":"f32","value":"2138899896"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.6a6c5ap-48) (f32.const 0x1.fa0b7p+127)) (f32.const 0x0p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.4954708280496991E-53</p>
+<p style="background-color: red">error, wrong result, expected 0, got 1056964608</p>
 <pre>{"type":"assert_return","line":400,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"338737113"},{"type":"f32","value":"1637454009"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.616fb2p-87) (f32.const 0x1.332172p+68)) (f32.const 0x0p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.519641096905226E-47</p>
+<p style="background-color: red">error, wrong result, expected 0, got 1056964608</p>
 <pre>{"type":"assert_return","line":401,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"3351999420"},{"type":"f32","value":"401966635"}]},"expected":[{"type":"f32","value":"4015268357"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.96e778p+16) (f32.const 0x1.eb0c56p-80)) (f32.const -0x1.a8440ap+95))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -6.565194806912247E+28</p>
+<p style="background-color: red">error, wrong result, expected 4015268357, got 4015268356</p>
 <pre>{"type":"assert_return","line":402,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"2582720800"},{"type":"f32","value":"2197197239"}]},"expected":[{"type":"f32","value":"1450863298"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.e2624p-76) (f32.const -0x1.ed236ep-122)) (f32.const 0x1.f4d584p+45))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.8834107503229516E+13</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":403,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"3564182439"},{"type":"f32","value":"397999726"}]},"expected":[{"type":"f32","value":"4230402947"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.e2374ep+41) (f32.const 0x1.71fcdcp-80)) (f32.const -0x1.4da706p+121))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -3.464844896200729E+36</p>
+<p style="background-color: red">error, wrong result, expected 4230402947, got 4230402946</p>
 <pre>{"type":"assert_return","line":404,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"5269602717919885505"},{"type":"f64","value":"5615431061534361830"}]},"expected":[{"type":"f64","value":"4261119458085367075"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x1.163c09d0c38c1p+147) (f64.const 0x1.e04cc737348e6p+223)) (f64.const 0x1.289921caeed23p-77))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -760,19 +760,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":411,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"3798033061"},{"type":"f32","value":"2491443361"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.c2c54ap+69) (f32.const -0x1.00d142p-86)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.016420714202711E+46</p>
+<p style="background-color: red">exception: exponent too large: 282</p>
 <pre>{"type":"assert_return","line":412,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"686927199"},{"type":"f32","value":"1440960248"}]},"expected":[{"type":"f32","value":"310908762"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.e35abep-46) (f32.const 0x1.c69dfp+44)) (f32.const 0x1.102eb4p-90))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.588562973622194E-28</p>
+<p style="background-color: red">error, wrong result, expected 310908762, got 1056964608</p>
 <pre>{"type":"assert_return","line":413,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1067646869"},{"type":"f32","value":"3960423338"}]},"expected":[{"type":"f32","value":"2467406247"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.45ff2ap+0) (f32.const -0x1.1e8754p+89)) (f32.const -0x1.23434ep-89))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.83812744448891E-27</p>
+<p style="background-color: red">error, wrong result, expected 2467406247, got 3204448256</p>
 <pre>{"type":"assert_return","line":414,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"642177221"},{"type":"f32","value":"2685135"}]},"expected":[{"type":"f32","value":"1713065419"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.8db18ap-51) (f32.const 0x1.47c678p-128)) (f32.const 0x1.369b96p+77))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.891676858003326E+22</p>
+<p style="background-color: red">error, wrong result, expected 1713065419, got 1704370560</p>
 <pre>{"type":"assert_return","line":415,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1824271560"},{"type":"f32","value":"1797890210"}]},"expected":[{"type":"f32","value":"1091436270"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.78599p+90) (f32.const 0x1.534144p+87)) (f32.const 0x1.1bfddcp+3))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.87473825429943E+0</p>
+<p style="background-color: red">error, wrong result, expected 1091436270, got 1091436269</p>
 <pre>{"type":"assert_return","line":416,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4278321332874065"},{"type":"f64","value":"15464375907975098426"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x0.f331c4f47eb51p-1022) (f64.const -0x1.c7ff45bf6f03ap+362)) (f64.const -0x0p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -790,19 +790,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":423,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1286756690"},{"type":"f32","value":"74754985"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.64b2a4p+26) (f32.const 0x1.e95752p-119)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.2511584110290897E+43</p>
+<p style="background-color: red">exception: exponent too large: 271</p>
 <pre>{"type":"assert_return","line":424,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"3861505243"},{"type":"f32","value":"1298875600"}]},"expected":[{"type":"f32","value":"3627605330"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.53c9b6p+77) (f32.const 0x1.d689ap+27)) (f32.const -0x1.71baa4p+49))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.130427927760544E+14</p>
+<p style="background-color: red">error, wrong result, expected 3627605330, got 3627605329</p>
 <pre>{"type":"assert_return","line":425,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1387472197"},{"type":"f32","value":"4021087697"}]},"expected":[{"type":"f32","value":"2726599162"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.664a8ap+38) (f32.const -0x1.59dba2p+96)) (f32.const -0x1.0933f4p-58))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -3.5941699041122496E-18</p>
+<p style="background-color: red">error, wrong result, expected 2726599162, got 3204448256</p>
 <pre>{"type":"assert_return","line":426,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"4149014653"},{"type":"f32","value":"3294714580"}]},"expected":[{"type":"f32","value":"1919471347"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.99e0fap+111) (f32.const -0x1.c2b5a8p+9)) (f32.const 0x1.d19de6p+101))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4.6112453034157913E+30</p>
+<p style="background-color: red">error, wrong result, expected 1919471347, got 1919471346</p>
 <pre>{"type":"assert_return","line":427,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"3987554477"},{"type":"f32","value":"3327836421"}]},"expected":[{"type":"f32","value":"1724563548"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.5a815ap+92) (f32.const -0x1.b5820ap+13)) (f32.const 0x1.9580b8p+78))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4.7873320316095985E+23</p>
+<p style="background-color: red">error, wrong result, expected 1724563548, got 1724563547</p>
 <pre>{"type":"assert_return","line":428,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"10882983485852580843"},{"type":"f64","value":"1499380901194126188"}]},"expected":[{"type":"f64","value":"13990715555071506017"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const -0x1.81fd1e2af7bebp-655) (f64.const 0x1.edefc4eae536cp-691)) (f64.const -0x1.901abdd91b661p+35))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -853,19 +853,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":450,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1817629909"},{"type":"f32","value":"1421132838"}]},"expected":[{"type":"f32","value":"1461198615"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.ada9aap+89) (f32.const 0x1.69884cp+42)) (f32.const 0x1.303e2ep+47))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.672592959639172E+14</p>
+<p style="background-color: red">error, wrong result, expected 1461198615, got 1461198614</p>
 <pre>{"type":"assert_return","line":451,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1824604388"},{"type":"f32","value":"4105258014"}]},"expected":[{"type":"f32","value":"3079375694"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.8281c8p+90) (f32.const -0x1.62883cp+106)) (f32.const -0x1.17169cp-16))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.6634959298142706E-5</p>
+<p style="background-color: red">error, wrong result, expected 3079375694, got 3204448256</p>
 <pre>{"type":"assert_return","line":452,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1747858929"},{"type":"f32","value":"1063784191"}]},"expected":[{"type":"f32","value":"1749036825"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.5c6be2p+81) (f32.const 0x1.d01dfep-1)) (f32.const 0x1.805e32p+81))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.6302527589573416E+24</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"3378374953"},{"type":"f32","value":"3497907368"}]},"expected":[{"type":"f32","value":"945802923"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.bbd252p+19) (f32.const -0x1.fba95p+33)) (f32.const 0x1.bf9d56p-15))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.335981762369464E-5</p>
+<p style="background-color: red">error, wrong result, expected 945802923, got 945782784</p>
 <pre>{"type":"assert_return","line":454,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"2861015275"},{"type":"f32","value":"3684669151"}]},"expected":[{"type":"f32","value":"240750700"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const -0x1.0f41d6p-42) (f32.const -0x1.3f2dbep+56)) (f32.const 0x1.b320d8p-99))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.6816851010084575E-30</p>
+<p style="background-color: red">error, wrong result, expected 240750700, got 1056964608</p>
 <pre>{"type":"assert_return","line":455,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4885037015672297625"},{"type":"f64","value":"9954263091431620051"}]},"expected":[{"type":"f64","value":"17984289216286432053"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x1.b2348a1c81899p+61) (f64.const -0x1.4a58aad903dd3p-861)) (f64.const -0x1.507c1e2a41b35p+922))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -898,10 +898,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":469,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"8388608"},{"type":"f32","value":"8388607"}]},"expected":[{"type":"f32","value":"1065353217"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1p-126) (f32.const 0x1.fffffcp-127)) (f32.const 0x1.000002p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000000596046483E+0</p>
+<p style="background-color: red">error, wrong result, expected 1065353217, got 1065353216</p>
 <pre>{"type":"assert_return","line":470,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"8388607"},{"type":"f32","value":"8388608"}]},"expected":[{"type":"f32","value":"1065353214"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.fffffcp-127) (f32.const 0x1p-126)) (f32.const 0x1.fffffcp-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999403953552E-1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":471,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"4503599627370495"}]},"expected":[{"type":"f64","value":"4607182418800017409"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x1p-1022) (f64.const 0x0.fffffffffffffp-1022)) (f64.const 0x1.0000000000001p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -910,10 +910,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":475,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"880803839"},{"type":"f32","value":"2139095039"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.fffffep-23) (f32.const 0x1.fffffep+127)) (f32.const 0x0p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.006492321624085E-46</p>
+<p style="background-color: red">error, wrong result, expected 0, got 1056964608</p>
 <pre>{"type":"assert_return","line":476,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"880803840"},{"type":"f32","value":"2139095039"}]},"expected":[{"type":"f32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1p-22) (f32.const 0x1.fffffep+127)) (f32.const 0x1p-149))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 7.006492739243596E-46</p>
+<p style="background-color: red">error, wrong result, expected 1, got 1056964608</p>
 <pre>{"type":"assert_return","line":477,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4377498837804122111"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x1.fffffffffffffp-52) (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -922,10 +922,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":481,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"2097152"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 1.0) (f32.const 0x1p-128)) (f32.const inf))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.361129467683754E+38</p>
+<p style="background-color: red">error, wrong result, expected 2139095040, got 2127350988</p>
 <pre>{"type":"assert_return","line":482,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"2097153"}]},"expected":[{"type":"f32","value":"2139095032"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 1.0) (f32.const 0x1.000008p-128)) (f32.const 0x1.fffffp+127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.3611293378763448E+38</p>
+<p style="background-color: red">error, wrong result, expected 2139095032, got 2127350987</p>
 <pre>{"type":"assert_return","line":483,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"1125899906842624"}]},"expected":[{"type":"f64","value":"9218868437227405312"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 1.0) (f64.const 0x0.4p-1022)) (f64.const inf))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -934,10 +934,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":487,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"2122317825"}]},"expected":[{"type":"f32","value":"8388607"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 1.0) (f32.const 0x1.000002p+126)) (f32.const 0x1.fffffcp-127))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.1754942106924578E-38</p>
+<p style="background-color: red">error, wrong result, expected 8388607, got 1056964608</p>
 <pre>{"type":"assert_return","line":488,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"2122317824"}]},"expected":[{"type":"f32","value":"8388608"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 1.0) (f32.const 0x1p+126)) (f32.const 0x1p-126))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.1754943508222875E-38</p>
+<p style="background-color: red">error, wrong result, expected 8388608, got 1056964608</p>
 <pre>{"type":"assert_return","line":489,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"9209861237972664321"}]},"expected":[{"type":"f64","value":"4503599627370495"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 1.0) (f64.const 0x1.0000000000001p+1022)) (f64.const 0x0.fffffffffffffp-1022))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -946,13 +946,13 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":500,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1051372203"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1p+0) (f32.const 0x1.8p+1)) (f32.const 0x1.555556p-2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.333333333333333E-1</p>
+<p style="background-color: red">error, wrong result, expected 1051372203, got 1051372200</p>
 <pre>{"type":"assert_return","line":501,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1077936128"},{"type":"f32","value":"1091567616"}]},"expected":[{"type":"f32","value":"1051372203"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x3p+0) (f32.const 0x1.2p+3)) (f32.const 0x1.555556p-2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.333333333333333E-1</p>
+<p style="background-color: red">error, wrong result, expected 1051372203, got 1051372200</p>
 <pre>{"type":"assert_return","line":502,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1091567616"},{"type":"f32","value":"1104674816"}]},"expected":[{"type":"f32","value":"1051372203"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.2p+3) (f32.const 0x1.bp+4)) (f32.const 0x1.555556p-2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.333333333333333E-1</p>
+<p style="background-color: red">error, wrong result, expected 1051372203, got 1051372200</p>
 <pre>{"type":"assert_return","line":503,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"4613937818241073152"}]},"expected":[{"type":"f64","value":"4599676419421066581"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x1p+0) (f64.const 0x1.8p+1)) (f64.const 0x1.5555555555555p-2))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -964,16 +964,16 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":508,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353217"},{"type":"f32","value":"1065353215"}]},"expected":[{"type":"f32","value":"1065353218"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.000002p+0) (f32.const 0x1.fffffep-1)) (f32.const 0x1.000004p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.000000178813945E+0</p>
+<p style="background-color: red">error, wrong result, expected 1065353218, got 1065353217</p>
 <pre>{"type":"assert_return","line":509,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353215"},{"type":"f32","value":"1065353217"}]},"expected":[{"type":"f32","value":"1065353213"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.fffffep-1) (f32.const 0x1.000002p+0)) (f32.const 0x1.fffffap-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.99999821186087E-1</p>
+<p style="background-color: red">error, wrong result, expected 1065353213, got 1065353212</p>
 <pre>{"type":"assert_return","line":510,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1065353215"}]},"expected":[{"type":"f32","value":"1065353217"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.0p+0) (f32.const 0x1.fffffep-1)) (f32.const 0x1.000002p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000000596046483E+0</p>
+<p style="background-color: red">error, wrong result, expected 1065353217, got 1065353216</p>
 <pre>{"type":"assert_return","line":511,"action":{"type":"invoke","field":"f32.div","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1065353217"}]},"expected":[{"type":"f32","value":"1065353214"}]}</pre>
 <pre>(assert_return (invoke "f32.div" (f32.const 0x1.0p+0) (f32.const 0x1.000002p+0)) (f32.const 0x1.fffffcp-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999998807907247E-1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":512,"action":{"type":"invoke","field":"f64.div","args":[{"type":"f64","value":"4607182418800017409"},{"type":"f64","value":"4607182418800017407"}]},"expected":[{"type":"f64","value":"4607182418800017410"}]}</pre>
 <pre>(assert_return (invoke "f64.div" (f64.const 0x1.0000000000001p+0) (f64.const 0x1.fffffffffffffp-1)) (f64.const 0x1.0000000000002p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -988,10 +988,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":519,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1126891520"}]},"expected":[{"type":"f32","value":"1095842342"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.56p+7)) (f32.const 0x1.a2744cp+3))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.3076696830622021E+1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"875341566"}]},"expected":[{"type":"f32","value":"970079310"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.594dfcp-23)) (f32.const 0x1.a4789cp-12))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4.009925147342992E-4</p>
+<p style="background-color: red">error, wrong result, expected 970079310, got 970076160</p>
 <pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"f64.sqrt","args":[{"type":"f64","value":"4640220544191430656"}]},"expected":[{"type":"f64","value":"4623551143926461685"}]}</pre>
 <pre>(assert_return (invoke "f64.sqrt" (f64.const 0x1.56p+7)) (f64.const 0x1.a2744ce9674f5p+3))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1018,19 +1018,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":536,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1040498738"}]},"expected":[{"type":"f32","value":"1052268824"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.098064p-3)) (f32.const 0x1.70b23p-2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.6005474157836015E-1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":537,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1911349112"}]},"expected":[{"type":"f32","value":"1487806505"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.d9befp+100)) (f32.const 0x1.5c4052p+50))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.5316252226660615E+15</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":538,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1033984731"}]},"expected":[{"type":"f32","value":"1049605767"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.42b5b6p-4)) (f32.const 0x1.1f6d0ep-2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.8068946240303333E-1</p>
+<p style="background-color: red">error, wrong result, expected 1049605767, got 1049605764</p>
 <pre>{"type":"assert_return","line":539,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"471548520"}]},"expected":[{"type":"f32","value":"768040305"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.3684dp-71)) (f32.const 0x1.8ebae2p-36))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.2665177264865095E-11</p>
+<p style="background-color: red">error, wrong result, expected 768040305, got 1056964608</p>
 <pre>{"type":"assert_return","line":540,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"980180519"}]},"expected":[{"type":"f32","value":"1022754037"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.d8bc4ep-11)) (f32.const 0x1.ebf9eap-6))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 3.002784597566894E-2</p>
+<p style="background-color: red">error, wrong result, expected 1022754037, got 1022753984</p>
 <pre>{"type":"assert_return","line":541,"action":{"type":"invoke","field":"f64.sqrt","args":[{"type":"f64","value":"447478826231748356"}]},"expected":[{"type":"f64","value":"2527268346316778217"}]}</pre>
 <pre>(assert_return (invoke "f64.sqrt" (f64.const 0x1.5c39f220d5704p-924)) (f64.const 0x1.2a92bc24ceae9p-462))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1048,19 +1048,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":548,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1293112087"}]},"expected":[{"type":"f32","value":"1178743848"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.26a62ep+27)) (f32.const 0x1.84685p+13))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.2429038900896561E+4</p>
+<p style="background-color: red">error, wrong result, expected 1178743848, got 1178743847</p>
 <pre>{"type":"assert_return","line":549,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"118173697"}]},"expected":[{"type":"f32","value":"591184817"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.166002p-113)) (f32.const 0x1.798762p-57))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0232939374915029E-17</p>
+<p style="background-color: red">error, wrong result, expected 591184817, got 1056964608</p>
 <pre>{"type":"assert_return","line":550,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"941555112"}]},"expected":[{"type":"f32","value":"1003077404"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.3dfb5p-15)) (f32.const 0x1.937e38p-8))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.156815028069642E-3</p>
+<p style="background-color: red">error, wrong result, expected 1003077404, got 1003077376</p>
 <pre>{"type":"assert_return","line":551,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"60323222"}]},"expected":[{"type":"f32","value":"562803203"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.30eb2cp-120)) (f32.const 0x1.176406p-60))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.466125645441314E-19</p>
+<p style="background-color: red">error, wrong result, expected 562803203, got 1056964608</p>
 <pre>{"type":"assert_return","line":552,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"40220718"}]},"expected":[{"type":"f32","value":"552763653"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.cb705cp-123)) (f32.const 0x1.e5020ap-62))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 4.1081771960588946E-19</p>
+<p style="background-color: red">error, wrong result, expected 552763653, got 1056964608</p>
 <pre>{"type":"assert_return","line":553,"action":{"type":"invoke","field":"f64.sqrt","args":[{"type":"f64","value":"7741365502393472048"}]},"expected":[{"type":"f64","value":"6174272493021072850"}]}</pre>
 <pre>(assert_return (invoke "f64.sqrt" (f64.const 0x1.edae8aea0543p+695)) (f64.const 0x1.f6c1ea4fc8dd2p+347))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1078,19 +1078,19 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":560,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"2058533950"}]},"expected":[{"type":"f32","value":"1561805138"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.65787cp+118)) (f32.const 0x1.2e82a4p+59))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 6.811926474833539E+17</p>
+<p style="background-color: red">error, wrong result, expected 1561805138, got 1561805137</p>
 <pre>{"type":"assert_return","line":561,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1194962978"}]},"expected":[{"type":"f32","value":"1129973536"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.736044p+15)) (f32.const 0x1.b40e4p+7))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 2.1802782577574817E+2</p>
+<p style="background-color: red">error, wrong result, expected 1129973536, got 1129973535</p>
 <pre>{"type":"assert_return","line":562,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1062209384"}]},"expected":[{"type":"f32","value":"1063699830"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.a00edp-1)) (f32.const 0x1.cd8aecp-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.014505035810308E-1</p>
+<p style="background-color: red">error, wrong result, expected 1063699830, got 1063699828</p>
 <pre>{"type":"assert_return","line":563,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"339551808"}]},"expected":[{"type":"f32","value":"702287090"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.7a4c8p-87)) (f32.const 0x1.b819e4p-44))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.772208037060783E-14</p>
+<p style="background-color: red">error, wrong result, expected 702287090, got 1056964608</p>
 <pre>{"type":"assert_return","line":564,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"279876202"}]},"expected":[{"type":"f32","value":"672496559"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.5d24d4p-94)) (f32.const 0x1.2af75ep-47))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.297980798726069E-15</p>
+<p style="background-color: red">error, wrong result, expected 672496559, got 1056964608</p>
 <pre>{"type":"assert_return","line":565,"action":{"type":"invoke","field":"f64.sqrt","args":[{"type":"f64","value":"7933654283200418420"}]},"expected":[{"type":"f64","value":"6270248298536475417"}]}</pre>
 <pre>(assert_return (invoke "f64.sqrt" (f64.const 0x1.a008948ead274p+738)) (f64.const 0x1.4659b37c39b19p+369))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1123,10 +1123,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":579,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1065353217"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.000002p+0)) (f32.const 0x1p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.000000059604643E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":580,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1065353218"}]},"expected":[{"type":"f32","value":"1065353217"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.000004p+0)) (f32.const 0x1.000002p+0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.0000001192092824E+0</p>
+<p style="background-color: red">error, wrong result, expected 1065353217, got 1065353216</p>
 <pre>{"type":"assert_return","line":581,"action":{"type":"invoke","field":"f64.sqrt","args":[{"type":"f64","value":"4607182418800017409"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.sqrt" (f64.const 0x1.0000000000001p+0)) (f64.const 0x1p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1135,10 +1135,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":585,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1065353214"}]},"expected":[{"type":"f32","value":"1065353215"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.fffffcp-1)) (f32.const 0x1.fffffep-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999403953534E-1</p>
+<p style="background-color: red">error, wrong result, expected 1065353215, got 1065353214</p>
 <pre>{"type":"assert_return","line":586,"action":{"type":"invoke","field":"f32.sqrt","args":[{"type":"f32","value":"1065353213"}]},"expected":[{"type":"f32","value":"1065353214"}]}</pre>
 <pre>(assert_return (invoke "f32.sqrt" (f32.const 0x1.fffffap-1)) (f32.const 0x1.fffffcp-1))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 9.999999105930288E-1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":587,"action":{"type":"invoke","field":"f64.sqrt","args":[{"type":"f64","value":"4607182418800017406"}]},"expected":[{"type":"f64","value":"4607182418800017407"}]}</pre>
 <pre>(assert_return (invoke "f64.sqrt" (f64.const 0x1.ffffffffffffep-1)) (f64.const 0x1.fffffffffffffp-1))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1147,10 +1147,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":592,"action":{"type":"invoke","field":"f32.abs","args":[{"type":"f32","value":"2139156962"}]},"expected":[{"type":"f32","value":"2139156962"}]}</pre>
 <pre>(assert_return (invoke "f32.abs" (f32.const nan:0x0f1e2)) (f32.const nan:0x0f1e2))</pre>
-<p style="background-color: red">error, wrong result, expected 2139156962, got 1077936128</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":593,"action":{"type":"invoke","field":"f32.abs","args":[{"type":"f32","value":"4286640610"}]},"expected":[{"type":"f32","value":"2139156962"}]}</pre>
 <pre>(assert_return (invoke "f32.abs" (f32.const -nan:0x0f1e2)) (f32.const nan:0x0f1e2))</pre>
-<p style="background-color: red">error, wrong result, expected 2139156962, got 1077936128</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":594,"action":{"type":"invoke","field":"f64.abs","args":[{"type":"f64","value":"9218868441285556843"}]},"expected":[{"type":"f64","value":"9218868441285556843"}]}</pre>
 <pre>(assert_return (invoke "f64.abs" (f64.const nan:0x0f1e27a6b)) (f64.const nan:0x0f1e27a6b))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1171,16 +1171,16 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":602,"action":{"type":"invoke","field":"f32.copysign","args":[{"type":"f32","value":"2139156962"},{"type":"f32","value":"2143289344"}]},"expected":[{"type":"f32","value":"2139156962"}]}</pre>
 <pre>(assert_return (invoke "f32.copysign" (f32.const nan:0x0f1e2) (f32.const nan)) (f32.const nan:0x0f1e2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.104235503814077E+38</p>
+<p style="background-color: red">error, wrong result, expected 2139156962, got 2143289344</p>
 <pre>{"type":"assert_return","line":603,"action":{"type":"invoke","field":"f32.copysign","args":[{"type":"f32","value":"2139156962"},{"type":"f32","value":"4290772992"}]},"expected":[{"type":"f32","value":"4286640610"}]}</pre>
 <pre>(assert_return (invoke "f32.copysign" (f32.const nan:0x0f1e2) (f32.const -nan)) (f32.const -nan:0x0f1e2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -5.104235503814077E+38</p>
+<p style="background-color: red">error, wrong result, expected 4286640610, got 4290772992</p>
 <pre>{"type":"assert_return","line":604,"action":{"type":"invoke","field":"f32.copysign","args":[{"type":"f32","value":"4286640610"},{"type":"f32","value":"2143289344"}]},"expected":[{"type":"f32","value":"2139156962"}]}</pre>
 <pre>(assert_return (invoke "f32.copysign" (f32.const -nan:0x0f1e2) (f32.const nan)) (f32.const nan:0x0f1e2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 5.104235503814077E+38</p>
+<p style="background-color: red">error, wrong result, expected 2139156962, got 2143289344</p>
 <pre>{"type":"assert_return","line":605,"action":{"type":"invoke","field":"f32.copysign","args":[{"type":"f32","value":"4286640610"},{"type":"f32","value":"4290772992"}]},"expected":[{"type":"f32","value":"4286640610"}]}</pre>
 <pre>(assert_return (invoke "f32.copysign" (f32.const -nan:0x0f1e2) (f32.const -nan)) (f32.const -nan:0x0f1e2))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -5.104235503814077E+38</p>
+<p style="background-color: red">error, wrong result, expected 4286640610, got 4290772992</p>
 <pre>{"type":"assert_return","line":606,"action":{"type":"invoke","field":"f64.copysign","args":[{"type":"f64","value":"9218868441285556843"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"f64","value":"9218868441285556843"}]}</pre>
 <pre>(assert_return (invoke "f64.copysign" (f64.const nan:0x0f1e27a6b) (f64.const nan)) (f64.const nan:0x0f1e27a6b))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1207,10 +1207,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":618,"action":{"type":"invoke","field":"f32.ceil","args":[{"type":"f32","value":"1258291199"}]},"expected":[{"type":"f32","value":"1258291200"}]}</pre>
 <pre>(assert_return (invoke "f32.ceil" (f32.const 0x1.fffffep+22)) (f32.const 0x1p+23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.388608E+6</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":619,"action":{"type":"invoke","field":"f32.ceil","args":[{"type":"f32","value":"3405774847"}]},"expected":[{"type":"f32","value":"3405774846"}]}</pre>
 <pre>(assert_return (invoke "f32.ceil" (f32.const -0x1.fffffep+22)) (f32.const -0x1.fffffcp+22))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.388607E+6</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":620,"action":{"type":"invoke","field":"f64.ceil","args":[{"type":"f64","value":"4841369599423283199"}]},"expected":[{"type":"f64","value":"4841369599423283200"}]}</pre>
 <pre>(assert_return (invoke "f64.ceil" (f64.const 0x1.fffffffffffffp+51)) (f64.const 0x1p+52))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1219,10 +1219,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":625,"action":{"type":"invoke","field":"f32.ceil","args":[{"type":"f32","value":"1266679807"}]},"expected":[{"type":"f32","value":"1266679807"}]}</pre>
 <pre>(assert_return (invoke "f32.ceil" (f32.const 0x1.fffffep+23)) (f32.const 0x1.fffffep+23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 1.6777215E+7</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":626,"action":{"type":"invoke","field":"f32.ceil","args":[{"type":"f32","value":"3414163455"}]},"expected":[{"type":"f32","value":"3414163455"}]}</pre>
 <pre>(assert_return (invoke "f32.ceil" (f32.const -0x1.fffffep+23)) (f32.const -0x1.fffffep+23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -1.6777215E+7</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":627,"action":{"type":"invoke","field":"f64.ceil","args":[{"type":"f64","value":"4845873199050653695"}]},"expected":[{"type":"f64","value":"4845873199050653695"}]}</pre>
 <pre>(assert_return (invoke "f64.ceil" (f64.const 0x1.fffffffffffffp+52)) (f64.const 0x1.fffffffffffffp+52))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1243,10 +1243,10 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":637,"action":{"type":"invoke","field":"f32.floor","args":[{"type":"f32","value":"3405774847"}]},"expected":[{"type":"f32","value":"3405774848"}]}</pre>
 <pre>(assert_return (invoke "f32.floor" (f32.const -0x1.fffffep+22)) (f32.const -0x1p+23))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8.388608E+6</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":638,"action":{"type":"invoke","field":"f32.floor","args":[{"type":"f32","value":"1258291199"}]},"expected":[{"type":"f32","value":"1258291198"}]}</pre>
 <pre>(assert_return (invoke "f32.floor" (f32.const 0x1.fffffep+22)) (f32.const 0x1.fffffcp+22))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.388607E+6</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":639,"action":{"type":"invoke","field":"f64.floor","args":[{"type":"f64","value":"14064741636278059007"}]},"expected":[{"type":"f64","value":"14064741636278059008"}]}</pre>
 <pre>(assert_return (invoke "f64.floor" (f64.const -0x1.fffffffffffffp+51)) (f64.const -0x1p+52))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1255,16 +1255,16 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":644,"action":{"type":"invoke","field":"f32.floor","args":[{"type":"f32","value":"1202524032"}]},"expected":[{"type":"f32","value":"1202524032"}]}</pre>
 <pre>(assert_return (invoke "f32.floor" (f32.const 88607.0)) (f32.const 88607.0))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8.8607E+4</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":645,"action":{"type":"invoke","field":"f64.floor","args":[{"type":"f64","value":"4680825439885721600"}]},"expected":[{"type":"f64","value":"4680825439885721600"}]}</pre>
 <pre>(assert_return (invoke "f64.floor" (f64.const 88607.0)) (f64.const 88607.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":648,"action":{"type":"invoke","field":"f32.trunc","args":[{"type":"f32","value":"3405774847"}]},"expected":[{"type":"f32","value":"3405774846"}]}</pre>
 <pre>(assert_return (invoke "f32.trunc" (f32.const -0x1.fffffep+22)) (f32.const -0x1.fffffcp+22))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, -8E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":649,"action":{"type":"invoke","field":"f32.trunc","args":[{"type":"f32","value":"1258291199"}]},"expected":[{"type":"f32","value":"1258291198"}]}</pre>
 <pre>(assert_return (invoke "f32.trunc" (f32.const 0x1.fffffep+22)) (f32.const 0x1.fffffcp+22))</pre>
-<p style="background-color: red">exception: todo: zcl_wasm_f32, to_hex, 8E+0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":650,"action":{"type":"invoke","field":"f64.trunc","args":[{"type":"f64","value":"14064741636278059007"}]},"expected":[{"type":"f64","value":"14064741636278059006"}]}</pre>
 <pre>(assert_return (invoke "f64.trunc" (f64.const -0x1.fffffffffffffp+51)) (f64.const -0x1.ffffffffffffep+51))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -1325,4 +1325,4 @@
 <pre>{"type":"assert_return","line":678,"action":{"type":"invoke","field":"f64.nearest","args":[{"type":"f64","value":"4841369599423283199"}]},"expected":[{"type":"f64","value":"4841369599423283200"}]}</pre>
 <pre>(assert_return (invoke "f64.nearest" (f64.const 0x1.fffffffffffffp+51)) (f64.const 0x1p+52))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-01T12:28:46</p>
+<p>Generated at 2024-03-01T17:06:00</p>
