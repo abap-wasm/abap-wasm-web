@@ -1,19 +1,19 @@
-<h3>Errors: 12</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 9</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 24</h3>
+<h3>Successes: 27</h3>
 <hr>
 <h1>traps.wast</h1>
 <pre>{"type":"module","line":5,"filename":"traps.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":16,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i32.div_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i32.div_s" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: green">ok, got error: Division by zero.</p>
+<p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":17,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i32.div_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i32.div_u" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: green">ok, got error: Division by zero.</p>
+<p style="background-color: green">ok, got error: i32.div_u, division by zero</p>
 <pre>{"type":"assert_trap","line":18,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i64.div_s","args":[{"type":"i64","value":"1"},{"type":"i64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.div_s" (i64.const 1) (i64.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_div_s</p>
+<p style="background-color: green">ok, got error: i64.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":19,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i64.div_u","args":[{"type":"i64","value":"1"},{"type":"i64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.div_u" (i64.const 1) (i64.const 0)) "integer divide by zero")</pre>
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_div_u</p>
@@ -27,10 +27,10 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":34,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i32.rem_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i32.rem_s" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.rem_s, division by zero</p>
 <pre>{"type":"assert_trap","line":35,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i32.rem_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i32.rem_u" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.rem_u, division by zero</p>
 <pre>{"type":"assert_trap","line":36,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i64.rem_s","args":[{"type":"i64","value":"1"},{"type":"i64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.rem_s" (i64.const 1) (i64.const 0)) "integer divide by zero")</pre>
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_rem_s</p>
@@ -107,4 +107,4 @@
 <pre>{"type":"assert_trap","line":91,"text":"out of bounds memory access","action":{"type":"invoke","field":"no_dce.f64.load","args":[{"type":"i32","value":"65536"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.f64.load" (i32.const 65536)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds</p>
-<p>Generated at 2024-02-29T15:04:47</p>
+<p>Generated at 2024-03-01T04:57:15</p>

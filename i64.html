@@ -1,16 +1,16 @@
-<h3>Errors: 413</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 408</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 3</h3>
+<h3>Successes: 8</h3>
 <hr>
 <h1>i64.wast</h1>
 <pre>{"type":"module","line":3,"filename":"i64.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":38,"action":{"type":"invoke","field":"add","args":[{"type":"i64","value":"1"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
 <pre>(assert_return (invoke "add" (i64.const 1) (i64.const 1)) (i64.const 2))</pre>
-<p style="background-color: red">exception: i32 add, wrong types on stack</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":39,"action":{"type":"invoke","field":"add","args":[{"type":"i64","value":"1"},{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "add" (i64.const 1) (i64.const 0)) (i64.const 1))</pre>
-<p style="background-color: red">exception: i32 add, wrong types on stack</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":40,"action":{"type":"invoke","field":"add","args":[{"type":"i64","value":"18446744073709551615"},{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551614"}]}</pre>
 <pre>(assert_return (invoke "add" (i64.const -1) (i64.const -1)) (i64.const -2))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
@@ -28,7 +28,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"add","args":[{"type":"i64","value":"1073741823"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1073741824"}]}</pre>
 <pre>(assert_return (invoke "add" (i64.const 0x3fffffff) (i64.const 1)) (i64.const 0x40000000))</pre>
-<p style="background-color: red">exception: i32 add, wrong types on stack</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"sub","args":[{"type":"i64","value":"1"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "sub" (i64.const 1) (i64.const 1)) (i64.const 0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
@@ -79,10 +79,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_trap","line":65,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i64","value":"1"},{"type":"i64","value":"0"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i64.const 1) (i64.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_div_s</p>
+<p style="background-color: green">ok, got error: i64.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":66,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i64","value":"0"},{"type":"i64","value":"0"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i64.const 0) (i64.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_div_s</p>
+<p style="background-color: green">ok, got error: i64.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":67,"text":"integer overflow","action":{"type":"invoke","field":"div_s","args":[{"type":"i64","value":"9223372036854775808"},{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i64.const 0x8000000000000000) (i64.const -1)) "integer overflow")</pre>
 <p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo</p>
@@ -1219,4 +1219,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":492,"filename":"i64.31.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-02-29T15:02:46</p>
+<p>Generated at 2024-03-01T04:55:16</p>

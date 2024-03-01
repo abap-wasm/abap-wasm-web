@@ -1,6 +1,6 @@
-<h3>Errors: 171</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 127</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 289</h3>
+<h3>Successes: 333</h3>
 <hr>
 <h1>i32.wast</h1>
 <pre>{"type":"module","line":3,"filename":"i32.0.wasm"}</pre>
@@ -79,16 +79,16 @@
 <p style="background-color: red">error, wrong result, expected 1, got 4611686014132420600</p>
 <pre>{"type":"assert_trap","line":64,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: green">ok, got error: Division by zero.</p>
+<p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":65,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 0) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":66,"text":"integer overflow","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 0x80000000) (i32.const -1)) "integer overflow")</pre>
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":67,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 0x80000000) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: green">ok, got error: Division by zero.</p>
+<p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
 <pre>{"type":"assert_return","line":68,"action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "div_s" (i32.const 1) (i32.const 1)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -139,10 +139,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":85,"text":"integer divide by zero","action":{"type":"invoke","field":"div_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_u" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: green">ok, got error: Division by zero.</p>
+<p style="background-color: green">ok, got error: i32.div_u, division by zero</p>
 <pre>{"type":"assert_trap","line":86,"text":"integer divide by zero","action":{"type":"invoke","field":"div_u","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_u" (i32.const 0) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.div_u, division by zero</p>
 <pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"div_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "div_u" (i32.const 1) (i32.const 1)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -187,10 +187,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":102,"text":"integer divide by zero","action":{"type":"invoke","field":"rem_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "rem_s" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.rem_s, division by zero</p>
 <pre>{"type":"assert_trap","line":103,"text":"integer divide by zero","action":{"type":"invoke","field":"rem_s","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "rem_s" (i32.const 0) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.rem_s, division by zero</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"rem_s","args":[{"type":"i32","value":"2147483647"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "rem_s" (i32.const 0x7fffffff) (i32.const -1)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -247,10 +247,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":123,"text":"integer divide by zero","action":{"type":"invoke","field":"rem_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "rem_u" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.rem_u, division by zero</p>
 <pre>{"type":"assert_trap","line":124,"text":"integer divide by zero","action":{"type":"invoke","field":"rem_u","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "rem_u" (i32.const 0) (i32.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.rem_u, division by zero</p>
 <pre>{"type":"assert_return","line":125,"action":{"type":"invoke","field":"rem_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "rem_u" (i32.const 1) (i32.const 1)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -394,118 +394,118 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":176,"action":{"type":"invoke","field":"shl","args":[{"type":"i32","value":"1"},{"type":"i32","value":"32"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shl" (i32.const 1) (i32.const 32)) (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 4294967296</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":177,"action":{"type":"invoke","field":"shl","args":[{"type":"i32","value":"1"},{"type":"i32","value":"33"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "shl" (i32.const 1) (i32.const 33)) (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 8589934592</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":178,"action":{"type":"invoke","field":"shl","args":[{"type":"i32","value":"1"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"2147483648"}]}</pre>
 <pre>(assert_return (invoke "shl" (i32.const 1) (i32.const -1)) (i32.const 0x80000000))</pre>
-<p style="background-color: red">error, wrong result, expected 2147483648, got 1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":179,"action":{"type":"invoke","field":"shl","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"2147483648"}]}</pre>
 <pre>(assert_return (invoke "shl" (i32.const 1) (i32.const 0x7fffffff)) (i32.const 0x80000000))</pre>
-<p style="background-color: red">exception: shl, large shift, todo</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":181,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const 1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":182,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":183,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const -1) (i32.const 1)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":184,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"2147483647"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1073741823"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 0x7fffffff) (i32.const 1)) (i32.const 0x3fffffff))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":185,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3221225472"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 0x80000000) (i32.const 1)) (i32.const 0xc0000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":186,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1073741824"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"536870912"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 0x40000000) (i32.const 1)) (i32.const 0x20000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":187,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"32"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const 32)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"33"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const 33)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":189,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const -1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":190,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const 0x7fffffff)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":191,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 1) (i32.const 0x80000000)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":192,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"31"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const 0x80000000) (i32.const 31)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":193,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"32"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const -1) (i32.const 32)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":194,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"33"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const -1) (i32.const 33)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":195,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const -1) (i32.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":196,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const -1) (i32.const 0x7fffffff)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":197,"action":{"type":"invoke","field":"shr_s","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_s" (i32.const -1) (i32.const 0x80000000)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":199,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const 1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":200,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":201,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2147483647"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const -1) (i32.const 1)) (i32.const 0x7fffffff))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"2147483647"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1073741823"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 0x7fffffff) (i32.const 1)) (i32.const 0x3fffffff))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1073741824"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 0x80000000) (i32.const 1)) (i32.const 0x40000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1073741824"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"536870912"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 0x40000000) (i32.const 1)) (i32.const 0x20000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"32"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const 32)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"33"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const 33)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const -1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":208,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const 0x7fffffff)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 1) (i32.const 0x80000000)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":210,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"31"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const 0x80000000) (i32.const 31)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":211,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"32"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const -1) (i32.const 32)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":212,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"33"}]},"expected":[{"type":"i32","value":"2147483647"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const -1) (i32.const 33)) (i32.const 0x7fffffff))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":213,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const -1) (i32.const -1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const -1) (i32.const 0x7fffffff)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":215,"action":{"type":"invoke","field":"shr_u","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "shr_u" (i32.const -1) (i32.const 0x80000000)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"rotl","args":[{"type":"i32","value":"1"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "rotl" (i32.const 1) (i32.const 1)) (i32.const 2))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_rotl</p>
@@ -1297,4 +1297,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":983,"filename":"i32.85.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-02-29T15:02:46</p>
+<p>Generated at 2024-03-01T04:55:15</p>

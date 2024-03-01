@@ -1,4 +1,4 @@
-<h3>Errors: 6</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 6</h3>
 <h3>Warnings: 0</h3>
 <h3>Successes: 45</h3>
 <hr>
@@ -58,7 +58,7 @@
 <p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
 <pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"i64.inc_smin"},"expected":[{"type":"i64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "i64.inc_smin") (i64.const -9223372036854775807))</pre>
-<p style="background-color: red">exception: i32 add, wrong types on stack</p>
+<p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
 <pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"i64.neg_zero"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.neg_zero") (i64.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -135,4 +135,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":149,"filename":"int_literals.20.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-02-29T15:02:47</p>
+<p>Generated at 2024-03-01T04:55:16</p>
