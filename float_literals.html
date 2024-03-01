@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 83</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 73</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 80</h3>
+<h3>Successes: 90</h3>
 <hr>
 <h1>float_literals.wast</h1>
 <pre>{"type":"module","line":3,"filename":"float_literals.0.wasm"}</pre>
@@ -193,34 +193,34 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
 <pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"f32-dec-sep1"},"expected":[{"type":"f32","value":"1232348160"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep1") (f32.const 1000000))</pre>
-<p style="background-color: red">error, wrong result, expected 1232348160, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"f32-dec-sep2"},"expected":[{"type":"f32","value":"1148846080"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep2") (f32.const 1000))</pre>
-<p style="background-color: red">error, wrong result, expected 1148846080, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"f32-dec-sep3"},"expected":[{"type":"f32","value":"1148897552"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep3") (f32.const 1003.141592))</pre>
-<p style="background-color: red">error, wrong result, expected 1148897552, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":172,"action":{"type":"invoke","field":"f32-dec-sep4"},"expected":[{"type":"f32","value":"1482758550"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep4") (f32.const 99e+13))</pre>
-<p style="background-color: red">error, wrong result, expected 1482758550, got 3204448256</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":173,"action":{"type":"invoke","field":"f32-dec-sep5"},"expected":[{"type":"f32","value":"1847438964"}]}</pre>
 <pre>(assert_return (invoke "f32-dec-sep5") (f32.const 122000.11354e23))</pre>
-<p style="background-color: red">error, wrong result, expected 1847438964, got 1957567854</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":174,"action":{"type":"invoke","field":"f32-hex-sep1"},"expected":[{"type":"f32","value":"1294004234"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep1") (f32.const 0xa0f0099))</pre>
-<p style="background-color: red">error, wrong result, expected 1294004234, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"f32-hex-sep2"},"expected":[{"type":"f32","value":"1205143424"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep2") (f32.const 0x1aa0f))</pre>
-<p style="background-color: red">error, wrong result, expected 1205143424, got 3204448256</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":176,"action":{"type":"invoke","field":"f32-hex-sep3"},"expected":[{"type":"f32","value":"1193345009"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep3") (f32.const 0xa0ff.f141a59a))</pre>
-<p style="background-color: red">error, wrong result, expected 1193345009, got 4060028999</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":177,"action":{"type":"invoke","field":"f32-hex-sep4"},"expected":[{"type":"f32","value":"1240465408"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep4") (f32.const 0xf0P+13))</pre>
-<p style="background-color: red">error, wrong result, expected 1240465408, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":178,"action":{"type":"invoke","field":"f32-hex-sep5"},"expected":[{"type":"f32","value":"1437319208"}]}</pre>
 <pre>(assert_return (invoke "f32-hex-sep5") (f32.const 0x2af00a.1f3eep23))</pre>
-<p style="background-color: red">error, wrong result, expected 1437319208, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"f64-dec-sep1"},"expected":[{"type":"f64","value":"4696837146684686336"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep1") (f64.const 1000000))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -412,4 +412,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":513,"filename":"float_literals.79.wat","text":"constant out of range"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T17:05:59</p>
+<p>Generated at 2024-03-01T20:08:09</p>

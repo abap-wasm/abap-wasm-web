@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 53</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 52</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 44</h3>
+<h3>Successes: 45</h3>
 <hr>
 <h1>local_tee.wast</h1>
 <pre>{"type":"module","line":3,"filename":"local_tee.0.wasm"}</pre>
@@ -25,7 +25,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":287,"action":{"type":"invoke","field":"type-param-f32","args":[{"type":"f32","value":"1082969293"}]},"expected":[{"type":"f32","value":"1093769626"}]}</pre>
 <pre>(assert_return (invoke "type-param-f32" (f32.const 4.4)) (f32.const 11.1))</pre>
-<p style="background-color: red">error, wrong result, expected 1093769626, got 3204448256</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"type-param-f64","args":[{"type":"f64","value":"4617878467915022336"}]},"expected":[{"type":"f64","value":"4623057607486498406"}]}</pre>
 <pre>(assert_return (invoke "type-param-f64" (f64.const 5.5)) (f64.const 12.2))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -252,4 +252,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":637,"filename":"local_tee.41.wasm","text":"unknown local"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-01T17:06:04</p>
+<p>Generated at 2024-03-01T20:08:14</p>

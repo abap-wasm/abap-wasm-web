@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 75</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 72</h3>
 <h3>Warnings: 21</h3>
-<h3>Successes: 36</h3>
+<h3>Successes: 39</h3>
 <hr>
 <h1>linking.wast</h1>
 <pre>{"type":"module","line":3,"filename":"linking.0.wasm"}</pre>
@@ -11,16 +11,16 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":17,"action":{"type":"invoke","field":"call"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Mf "call") (i32.const 2))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">error, wrong result, expected 2, got 3</p>
 <pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"Mf.call"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Nf "Mf.call") (i32.const 2))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"call"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke $Nf "call") (i32.const 3))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"call Mf.call"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Nf "call Mf.call") (i32.const 2))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
 <pre>{"type":"module","line":22,"filename":"linking.2.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":26,"as":"reexport_f"}</pre>
@@ -106,63 +106,63 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 2)) (i32.const 4))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Nt "Mt.call" (i32.const 2)) (i32.const 4))</pre>
 <p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 2)) (i32.const 5))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Nt "call Mt.call" (i32.const 2)) (i32.const 4))</pre>
 <p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_trap","line":173,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 1)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":174,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 1)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 1)) (i32.const 5))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":176,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 1)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_trap","line":178,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":179,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 0)) (i32.const 5))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":181,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_trap","line":183,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 20)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":184,"text":"undefined element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 20)) "undefined element")</pre>
 <p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_trap","line":185,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call" (i32.const 7)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":186,"text":"undefined element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 20)) "undefined element")</pre>
 <p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4294967292"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 3)) (i32.const -4))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":189,"text":"indirect call type mismatch","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call" (i32.const 4)) "indirect call type mismatch")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"module","line":191,"filename":"linking.17.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 3)) (i32.const 4))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Nt "Mt.call" (i32.const 3)) (i32.const 4))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: Mt.call</p>
@@ -171,55 +171,55 @@
 <p style="background-color: red">exception: get_export_by_name, not found: call Mt.call</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Ot "call" (i32.const 3)) (i32.const 4))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4294967292"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 2)) (i32.const -4))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":210,"action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4294967292"}]}</pre>
 <pre>(assert_return (invoke $Nt "Mt.call" (i32.const 2)) (i32.const -4))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: Mt.call</p>
 <pre>{"type":"assert_return","line":211,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 2)) (i32.const 5))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":212,"action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4294967292"}]}</pre>
 <pre>(assert_return (invoke $Nt "call Mt.call" (i32.const 2)) (i32.const -4))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: call Mt.call</p>
 <pre>{"type":"assert_return","line":213,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4294967292"}]}</pre>
 <pre>(assert_return (invoke $Ot "call" (i32.const 2)) (i32.const -4))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":215,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 1)) (i32.const 6))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke $Nt "Mt.call" (i32.const 1)) (i32.const 6))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: Mt.call</p>
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 1)) (i32.const 5))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":218,"action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke $Nt "call Mt.call" (i32.const 1)) (i32.const 6))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: call Mt.call</p>
 <pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke $Ot "call" (i32.const 1)) (i32.const 6))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":221,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":222,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_export_by_name, not found: Mt.call</p>
 <pre>{"type":"assert_return","line":223,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 0)) (i32.const 5))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":224,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_export_by_name, not found: call Mt.call</p>
 <pre>{"type":"assert_trap","line":225,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Ot "call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_trap","line":227,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Ot "call" (i32.const 20)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"module","line":229,"filename":"linking.18.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":235,"filename":"linking.19.wasm"}</pre>
@@ -237,20 +237,20 @@
 <p style="background-color: yellow">todo, assert_unlinkable</p>
 <pre>{"type":"assert_trap","line":262,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 7)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: green">ok, got error: get_export_by_name, not found: call</p>
 <pre>{"type":"assert_uninstantiable","line":267,"filename":"linking.23.wasm","text":"out of bounds table access"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 7)) (i32.const 0))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: get_export_by_name, not found: call</p>
 <pre>{"type":"assert_trap","line":276,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 8)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: call todo</p>
+<p style="background-color: green">ok, got error: get_export_by_name, not found: call</p>
 <pre>{"type":"assert_uninstantiable","line":279,"filename":"linking.24.wasm","text":"out of bounds memory access"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 7)) (i32.const 0))</pre>
-<p style="background-color: red">exception: call todo</p>
+<p style="background-color: red">exception: get_export_by_name, not found: call</p>
 <pre>{"type":"module","line":291,"filename":"linking.25.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":295,"as":"Mtable_ex"}</pre>
@@ -350,4 +350,4 @@
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"get table[0]"},"expected":[{"type":"i32","value":"57005"}]}</pre>
 <pre>(assert_return (invoke $Ms "get table[0]") (i32.const 0xdead))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
-<p>Generated at 2024-03-01T17:06:03</p>
+<p>Generated at 2024-03-01T20:08:14</p>

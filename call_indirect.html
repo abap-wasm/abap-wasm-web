@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 149</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 146</h3>
 <h3>Warnings: 2</h3>
-<h3>Successes: 19</h3>
+<h3>Successes: 22</h3>
 <hr>
 <h1>call_indirect.wast</h1>
 <pre>{"type":"module","line":3,"filename":"call_indirect.0.wasm"}</pre>
@@ -184,7 +184,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":542,"action":{"type":"invoke","field":"fac-f32","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "fac-f32" (f32.const 0.0)) (f32.const 1.0))</pre>
-<p style="background-color: red">error, wrong result, expected 1065353216, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":543,"action":{"type":"invoke","field":"fac-f32","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "fac-f32" (f32.const 1.0)) (f32.const 1.0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
@@ -238,10 +238,10 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":564,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "fib-f32" (f32.const 0.0)) (f32.const 1.0))</pre>
-<p style="background-color: red">error, wrong result, expected 1065353216, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":565,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "fib-f32" (f32.const 1.0)) (f32.const 1.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":566,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1073741824"}]}</pre>
 <pre>(assert_return (invoke "fib-f32" (f32.const 2.0)) (f32.const 2.0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
@@ -475,4 +475,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":1024,"filename":"call_indirect.35.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-01T17:05:30</p>
+<p>Generated at 2024-03-01T20:07:39</p>

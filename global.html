@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 83</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 81</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 27</h3>
+<h3>Successes: 29</h3>
 <hr>
 <h1>global.wast</h1>
 <pre>{"type":"module","line":3,"filename":"global.0.wasm"}</pre>
@@ -31,13 +31,13 @@
 <p style="background-color: red">error, wrong result, expected 666, got 0</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"get-3"},"expected":[{"type":"f32","value":"3225419776"}]}</pre>
 <pre>(assert_return (invoke "get-3") (f32.const -3))</pre>
-<p style="background-color: red">error, wrong result, expected 3225419776, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"get-4"},"expected":[{"type":"f64","value":"13839561654909534208"}]}</pre>
 <pre>(assert_return (invoke "get-4") (f64.const -4))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"get-7"},"expected":[{"type":"f32","value":"3243245568"}]}</pre>
 <pre>(assert_return (invoke "get-7") (f32.const -13))</pre>
-<p style="background-color: red">error, wrong result, expected 3243245568, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":208,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"13847442954257432576"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const -14))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -61,7 +61,7 @@
 <p style="background-color: red">error, wrong result, expected 7, got 18446744073709551601</p>
 <pre>{"type":"assert_return","line":218,"action":{"type":"invoke","field":"get-7"},"expected":[{"type":"f32","value":"1090519040"}]}</pre>
 <pre>(assert_return (invoke "get-7") (f32.const 8))</pre>
-<p style="background-color: red">error, wrong result, expected 1090519040, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1090519040, got 3243245568</p>
 <pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const 9))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -82,7 +82,7 @@
 <p style="background-color: red">error, wrong result, expected 7, got 18446744073709551601</p>
 <pre>{"type":"assert_return","line":227,"action":{"type":"invoke","field":"get-7"},"expected":[{"type":"f32","value":"1090519040"}]}</pre>
 <pre>(assert_return (invoke "get-7") (f32.const 8))</pre>
-<p style="background-color: red">error, wrong result, expected 1090519040, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1090519040, got 3243245568</p>
 <pre>{"type":"assert_return","line":228,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const 9))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -281,4 +281,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":630,"filename":"global.51.wat","text":"duplicate global"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T17:06:00</p>
+<p>Generated at 2024-03-01T20:08:11</p>

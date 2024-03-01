@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 106</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 104</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 66</h3>
+<h3>Successes: 68</h3>
 <hr>
 <h1>func.wast</h1>
 <pre>{"type":"module","line":3,"filename":"func.0.wasm"}</pre>
@@ -94,7 +94,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":302,"action":{"type":"invoke","field":"value-f32"},"expected":[{"type":"f32","value":"1117480550"}]}</pre>
 <pre>(assert_return (invoke "value-f32") (f32.const 77.7))</pre>
-<p style="background-color: red">error, wrong result, expected 1117480550, got 1718000450</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":303,"action":{"type":"invoke","field":"value-f64"},"expected":[{"type":"f64","value":"4635172994171566817"}]}</pre>
 <pre>(assert_return (invoke "value-f64") (f64.const 77.77))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -124,7 +124,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":315,"action":{"type":"invoke","field":"return-f32"},"expected":[{"type":"f32","value":"1117611622"}]}</pre>
 <pre>(assert_return (invoke "return-f32") (f32.const 78.7))</pre>
-<p style="background-color: red">error, wrong result, expected 1117611622, got 1718000962</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":316,"action":{"type":"invoke","field":"return-f64"},"expected":[{"type":"f64","value":"4635244066603186258"}]}</pre>
 <pre>(assert_return (invoke "return-f64") (f64.const 78.78))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -443,4 +443,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":960,"filename":"func.75.wat","text":"duplicate local"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T17:06:00</p>
+<p>Generated at 2024-03-01T20:08:11</p>

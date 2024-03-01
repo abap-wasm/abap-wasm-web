@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 747</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 733</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 153</h3>
+<h3>Successes: 167</h3>
 <hr>
 <h1>float_exprs.wast</h1>
 <pre>{"type":"module","line":6,"filename":"float_exprs.0.wasm"}</pre>
@@ -240,19 +240,19 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"f32.no_fold_div_3","args":[{"type":"f32","value":"3634023955"}]},"expected":[{"type":"f32","value":"3620628505"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_3" (f32.const -0x1.359c26p+50)) (f32.const -0x1.9cd032p+48))</pre>
-<p style="background-color: red">exception: exponent too large: 304</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":241,"action":{"type":"invoke","field":"f32.no_fold_div_3","args":[{"type":"f32","value":"4000459555"}]},"expected":[{"type":"f32","value":"3986780695"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_3" (f32.const -0x1.e45646p+93)) (f32.const -0x1.42e42ep+92))</pre>
-<p style="background-color: red">exception: exponent too large: 347</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":242,"action":{"type":"invoke","field":"f32.no_fold_div_3","args":[{"type":"f32","value":"2517965963"}]},"expected":[{"type":"f32","value":"2504446137"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_3" (f32.const -0x1.2a3916p-83)) (f32.const -0x1.8da172p-85))</pre>
-<p style="background-color: red">error, wrong result, expected 2504446137, got 3583300055</p>
+<p style="background-color: red">error, wrong result, expected 2504446137, got 3204448256</p>
 <pre>{"type":"assert_return","line":243,"action":{"type":"invoke","field":"f32.no_fold_div_3","args":[{"type":"f32","value":"2173683100"}]},"expected":[{"type":"f32","value":"2160046629"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_3" (f32.const -0x1.1f8b38p-124)) (f32.const -0x1.7f644ap-126))</pre>
-<p style="background-color: red">error, wrong result, expected 2160046629, got 3238002688</p>
+<p style="background-color: red">error, wrong result, expected 2160046629, got 3204448256</p>
 <pre>{"type":"assert_return","line":244,"action":{"type":"invoke","field":"f32.no_fold_div_3","args":[{"type":"f32","value":"2750097330"}]},"expected":[{"type":"f32","value":"2736571681"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_3" (f32.const -0x1.d64f64p-56)) (f32.const -0x1.398a42p-57))</pre>
-<p style="background-color: red">error, wrong result, expected 2736571681, got 3815420387</p>
+<p style="background-color: red">error, wrong result, expected 2736571681, got 3204448256</p>
 <pre>{"type":"assert_return","line":245,"action":{"type":"invoke","field":"f64.no_fold_div_3","args":[{"type":"f64","value":"16679796490173820099"}]},"expected":[{"type":"f64","value":"16672802667330368301"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_div_3" (f64.const -0x1.a8a88d29e2cc3p+632)) (f64.const -0x1.1b1b08c69732dp+631))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -514,16 +514,16 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":406,"action":{"type":"invoke","field":"f32.no_fold_div_neg0","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"4286578688"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_neg0" (f32.const 1.0)) (f32.const -inf))</pre>
-<p style="background-color: red">error, wrong result, expected 4286578688, got 2130706176</p>
+<p style="background-color: red">error, wrong result, expected 4286578688, got 4278190080</p>
 <pre>{"type":"assert_return","line":407,"action":{"type":"invoke","field":"f32.no_fold_div_neg0","args":[{"type":"f32","value":"3212836864"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_neg0" (f32.const -1.0)) (f32.const inf))</pre>
-<p style="background-color: red">error, wrong result, expected 2139095040, got 4278189824</p>
+<p style="background-color: red">error, wrong result, expected 2139095040, got 2130706432</p>
 <pre>{"type":"assert_return","line":408,"action":{"type":"invoke","field":"f32.no_fold_div_neg0","args":[{"type":"f32","value":"2139095040"}]},"expected":[{"type":"f32","value":"4286578688"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_neg0" (f32.const inf)) (f32.const -inf))</pre>
-<p style="background-color: red">exception: exponent too large: 381</p>
+<p style="background-color: red">exception: exponent too large: 382</p>
 <pre>{"type":"assert_return","line":409,"action":{"type":"invoke","field":"f32.no_fold_div_neg0","args":[{"type":"f32","value":"4286578688"}]},"expected":[{"type":"f32","value":"2139095040"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_neg0" (f32.const -inf)) (f32.const inf))</pre>
-<p style="background-color: red">exception: exponent too large: 381</p>
+<p style="background-color: red">exception: exponent too large: 382</p>
 <pre>{"type":"assert_return","line":410,"action":{"type":"invoke","field":"f32.no_fold_div_neg0","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"nan:canonical"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_div_neg0" (f32.const 0)) (f32.const nan:canonical))</pre>
 <p style="background-color: red">exception: Conversion no number</p>
@@ -596,36 +596,36 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":452,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal","args":[{"type":"f32","value":"3130294363"}]},"expected":[{"type":"f32","value":"3294406762"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal" (f32.const -0x1.2900b6p-10)) (f32.const -0x1.b950d4p+9))</pre>
-<p style="background-color: red">error, wrong result, expected 3294406762, got 3204448256</p>
+<p style="background-color: red">error, wrong result, expected 3294406762, got 3294396416</p>
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal","args":[{"type":"f32","value":"2138280080"}]},"expected":[{"type":"f32","value":"2204223"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal" (f32.const 0x1.e7212p+127)) (f32.const 0x1.0d11f8p-128))</pre>
 <p style="background-color: red">error, wrong result, expected 2204223, got 1056964608</p>
 <pre>{"type":"assert_return","line":454,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal","args":[{"type":"f32","value":"2434880051"}]},"expected":[{"type":"f32","value":"3989512051"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal" (f32.const -0x1.42a466p-93)) (f32.const -0x1.963ee6p+92))</pre>
-<p style="background-color: red">error, wrong result, expected 3989512051, got 3204448256</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":455,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal","args":[{"type":"f32","value":"1705936409"}]},"expected":[{"type":"f32","value":"423346609"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal" (f32.const 0x1.5d0c32p+76)) (f32.const 0x1.778362p-77))</pre>
 <p style="background-color: red">error, wrong result, expected 423346609, got 1056964608</p>
 <pre>{"type":"assert_return","line":456,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal","args":[{"type":"f32","value":"2528120561"}]},"expected":[{"type":"f32","value":"3896123071"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal" (f32.const -0x1.601de2p-82)) (f32.const -0x1.743d7ep+81))</pre>
-<p style="background-color: red">error, wrong result, expected 3896123071, got 3204448256</p>
+<p style="background-color: red">error, wrong result, expected 3896123071, got 3896123070</p>
 <pre>{"type":"module","line":460,"filename":"float_exprs.27.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":467,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal_sqrt","args":[{"type":"f32","value":"708147349"}]},"expected":[{"type":"f32","value":"1243088746"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal_sqrt" (f32.const 0x1.6af12ap-43)) (f32.const 0x1.300ed4p+21))</pre>
-<p style="background-color: red">error, wrong result, expected 1243088746, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1243088746, got 1243088745</p>
 <pre>{"type":"assert_return","line":468,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal_sqrt","args":[{"type":"f32","value":"1005852643"}]},"expected":[{"type":"f32","value":"1094279611"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal_sqrt" (f32.const 0x1.e82fc6p-8)) (f32.const 0x1.72c376p+3))</pre>
-<p style="background-color: red">error, wrong result, expected 1094279611, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":469,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal_sqrt","args":[{"type":"f32","value":"517799246"}]},"expected":[{"type":"f32","value":"1338168541"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal_sqrt" (f32.const 0x1.b9fa9cp-66)) (f32.const 0x1.85a9bap+32))</pre>
-<p style="background-color: red">error, wrong result, expected 1338168541, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1338168541, got 1338168540</p>
 <pre>{"type":"assert_return","line":470,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal_sqrt","args":[{"type":"f32","value":"704281251"}]},"expected":[{"type":"f32","value":"1245118689"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal_sqrt" (f32.const 0x1.f4f546p-44)) (f32.const 0x1.6e01c2p+21))</pre>
-<p style="background-color: red">error, wrong result, expected 1245118689, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":471,"action":{"type":"invoke","field":"f32.no_approximate_reciprocal_sqrt","args":[{"type":"f32","value":"347001813"}]},"expected":[{"type":"f32","value":"1423641701"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_reciprocal_sqrt" (f32.const 0x1.5da7aap-86)) (f32.const 0x1.b618cap+42))</pre>
-<p style="background-color: red">error, wrong result, expected 1423641701, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1423641701, got 1423641700</p>
 <pre>{"type":"assert_return","line":473,"action":{"type":"invoke","field":"f64.no_fuse_reciprocal_sqrt","args":[{"type":"f64","value":"8611259114887405475"}]},"expected":[{"type":"f64","value":"2604695339663988000"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fuse_reciprocal_sqrt" (f64.const 0x1.1568a63b55fa3p+889)) (f64.const 0x1.5bc9c74c9952p-445))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -648,13 +648,13 @@
 <p style="background-color: red">error, wrong result, expected 810003811, got 1056964608</p>
 <pre>{"type":"assert_return","line":487,"action":{"type":"invoke","field":"f32.no_approximate_sqrt_reciprocal","args":[{"type":"f32","value":"992487567"}]},"expected":[{"type":"f32","value":"1100869283"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_sqrt_reciprocal" (f32.const 0x1.50511ep-9)) (f32.const 0x1.3bdd46p+4))</pre>
-<p style="background-color: red">error, wrong result, expected 1100869283, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":488,"action":{"type":"invoke","field":"f32.no_approximate_sqrt_reciprocal","args":[{"type":"f32","value":"1644769121"}]},"expected":[{"type":"f32","value":"774822585"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_sqrt_reciprocal" (f32.const 0x1.125ec2p+69)) (f32.const 0x1.5db572p-35))</pre>
 <p style="background-color: red">error, wrong result, expected 774822585, got 1056964608</p>
 <pre>{"type":"assert_return","line":489,"action":{"type":"invoke","field":"f32.no_approximate_sqrt_reciprocal","args":[{"type":"f32","value":"1180509736"}]},"expected":[{"type":"f32","value":"1007269771"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_sqrt_reciprocal" (f32.const 0x1.ba4c5p+13)) (f32.const 0x1.136f16p-7))</pre>
-<p style="background-color: red">error, wrong result, expected 1007269771, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1007269771, got 1007269760</p>
 <pre>{"type":"assert_return","line":490,"action":{"type":"invoke","field":"f32.no_approximate_sqrt_reciprocal","args":[{"type":"f32","value":"1940205041"}]},"expected":[{"type":"f32","value":"627137240"}]}</pre>
 <pre>(assert_return (invoke "f32.no_approximate_sqrt_reciprocal" (f32.const 0x1.4a5be2p+104)) (f32.const 0x1.c2b5bp-53))</pre>
 <p style="background-color: red">error, wrong result, expected 627137240, got 1056964608</p>
@@ -1523,7 +1523,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
 <pre>{"type":"assert_return","line":1105,"action":{"type":"invoke","field":"f32.no_fold_le_if_to_abs","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"2147483648"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_le_if_to_abs" (f32.const 0.0)) (f32.const -0.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
+<p style="background-color: red">error, wrong result, expected 2147483648, got 0</p>
 <pre>{"type":"assert_return","line":1106,"action":{"type":"invoke","field":"f32.no_fold_le_if_to_abs","args":[{"type":"f32","value":"2147483648"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_le_if_to_abs" (f32.const -0.0)) (f32.const 0.0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
@@ -1535,10 +1535,10 @@
 <p style="background-color: red">error, wrong result, expected 2143289344, got 4290772992</p>
 <pre>{"type":"assert_return","line":1109,"action":{"type":"invoke","field":"f32.no_fold_gt_if_to_abs","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"2147483648"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_gt_if_to_abs" (f32.const 0.0)) (f32.const -0.0))</pre>
-<p style="background-color: red">error, wrong result, expected 2147483648, got 0</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
 <pre>{"type":"assert_return","line":1110,"action":{"type":"invoke","field":"f32.no_fold_gt_if_to_abs","args":[{"type":"f32","value":"2147483648"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_gt_if_to_abs" (f32.const -0.0)) (f32.const 0.0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 3204448256</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
 <pre>{"type":"assert_return","line":1111,"action":{"type":"invoke","field":"f32.no_fold_ge_if_to_abs","args":[{"type":"f32","value":"2141192192"}]},"expected":[{"type":"f32","value":"4288675840"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_ge_if_to_abs" (f32.const nan:0x200000)) (f32.const -nan:0x200000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
@@ -1621,7 +1621,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1197,"action":{"type":"invoke","field":"llvm_pr26746","args":[{"type":"f32","value":"2147483648"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "llvm_pr26746" (f32.const -0.0)) (f32.const 0.0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 3204448256</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":1202,"filename":"float_exprs.51.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1208,"action":{"type":"invoke","field":"llvm_pr27153","args":[{"type":"i32","value":"33554434"}]},"expected":[{"type":"f32","value":"1270874112"}]}</pre>
@@ -1647,12 +1647,12 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1257,"action":{"type":"invoke","field":"inverse","args":[{"type":"f32","value":"1119879168"}]},"expected":[{"type":"f32","value":"1009429163"}]}</pre>
 <pre>(assert_return (invoke "inverse" (f32.const 96.0)) (f32.const 0x1.555556p-7))</pre>
-<p style="background-color: red">error, wrong result, expected 1009429163, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1009429163, got 1009429120</p>
 <pre>{"type":"module","line":1262,"filename":"float_exprs.55.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1272,"action":{"type":"invoke","field":"f32_sqrt_minus_2","args":[{"type":"f32","value":"1082130432"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32_sqrt_minus_2" (f32.const 4.0)) (f32.const 0.0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1073741824</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1273,"action":{"type":"invoke","field":"f64_sqrt_minus_2","args":[{"type":"f64","value":"4616189618054758400"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64_sqrt_minus_2" (f64.const 4.0)) (f64.const 0.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -2247,7 +2247,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1934,"action":{"type":"invoke","field":"f32.no_distribute_exact","args":[{"type":"f32","value":"2147483648"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.no_distribute_exact" (f32.const -0.0)) (f32.const 0.0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 3204448256</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1935,"action":{"type":"invoke","field":"f64.no_distribute_exact","args":[{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.no_distribute_exact" (f64.const -0.0)) (f64.const 0.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -2299,7 +2299,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":2069,"action":{"type":"invoke","field":"f32.compute_radix","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1073741824"}]}</pre>
 <pre>(assert_return (invoke "f32.compute_radix" (f32.const 1.0) (f32.const 1.0)) (f32.const 2.0))</pre>
-<p style="background-color: red">error, wrong result, expected 1073741824, got 1065353216</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":2070,"action":{"type":"invoke","field":"f64.compute_radix","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
 <pre>(assert_return (invoke "f64.compute_radix" (f64.const 1.0) (f64.const 1.0)) (f64.const 2.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -2307,7 +2307,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":2083,"action":{"type":"invoke","field":"f32.no_fold_sub1_mul_add","args":[{"type":"f32","value":"796917760"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.no_fold_sub1_mul_add" (f32.const 0x1p-32) (f32.const 1.0)) (f32.const 0x0p+0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1065353216</p>
+<p style="background-color: red">error, wrong result, expected 0, got 1056964608</p>
 <pre>{"type":"assert_return","line":2084,"action":{"type":"invoke","field":"f64.no_fold_sub1_mul_add","args":[{"type":"f64","value":"4318952042648305664"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_sub1_mul_add" (f64.const 0x1p-64) (f64.const 1.0)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -2355,7 +2355,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":2157,"action":{"type":"invoke","field":"f32.epsilon"},"expected":[{"type":"f32","value":"3019898880"}]}</pre>
 <pre>(assert_return (invoke "f32.epsilon") (f32.const -0x1p-23))</pre>
-<p style="background-color: red">error, wrong result, expected 3019898880, got 3204448256</p>
+<p style="background-color: red">error, wrong result, expected 3019898880, got 1056964608</p>
 <pre>{"type":"assert_return","line":2158,"action":{"type":"invoke","field":"f64.epsilon"},"expected":[{"type":"f64","value":"4372995238176751616"}]}</pre>
 <pre>(assert_return (invoke "f64.epsilon") (f64.const 0x1p-52))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_div</p>
@@ -2363,7 +2363,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":2212,"action":{"type":"invoke","field":"f32.epsilon"},"expected":[{"type":"f32","value":"872415232"}]}</pre>
 <pre>(assert_return (invoke "f32.epsilon") (f32.const 0x1p-23))</pre>
-<p style="background-color: red">error, wrong result, expected 872415232, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 872415232, got 1065353216</p>
 <pre>{"type":"assert_return","line":2213,"action":{"type":"invoke","field":"f64.epsilon"},"expected":[{"type":"f64","value":"4372995238176751616"}]}</pre>
 <pre>(assert_return (invoke "f64.epsilon") (f64.const 0x1p-52))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_mul</p>
@@ -2542,22 +2542,22 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":2462,"action":{"type":"invoke","field":"f32.silver_means","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "f32.silver_means" (f32.const 0.0)) (f32.const 1.0))</pre>
-<p style="background-color: red">error, wrong result, expected 1065353216, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":2463,"action":{"type":"invoke","field":"f32.silver_means","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1070537661"}]}</pre>
 <pre>(assert_return (invoke "f32.silver_means" (f32.const 1.0)) (f32.const 1.6180340))</pre>
-<p style="background-color: red">error, wrong result, expected 1070537661, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1070537661, got 1070537660</p>
 <pre>{"type":"assert_return","line":2464,"action":{"type":"invoke","field":"f32.silver_means","args":[{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1075479162"}]}</pre>
 <pre>(assert_return (invoke "f32.silver_means" (f32.const 2.0)) (f32.const 2.4142136))</pre>
-<p style="background-color: red">error, wrong result, expected 1075479162, got 1056964608</p>
+<p style="background-color: red">error, wrong result, expected 1075479162, got 1075479161</p>
 <pre>{"type":"assert_return","line":2465,"action":{"type":"invoke","field":"f32.silver_means","args":[{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1079206061"}]}</pre>
 <pre>(assert_return (invoke "f32.silver_means" (f32.const 3.0)) (f32.const 3.3027756))</pre>
-<p style="background-color: red">error, wrong result, expected 1079206061, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":2466,"action":{"type":"invoke","field":"f32.silver_means","args":[{"type":"f32","value":"1082130432"}]},"expected":[{"type":"f32","value":"1082625502"}]}</pre>
 <pre>(assert_return (invoke "f32.silver_means" (f32.const 4.0)) (f32.const 4.2360680))</pre>
-<p style="background-color: red">error, wrong result, expected 1082625502, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":2467,"action":{"type":"invoke","field":"f32.silver_means","args":[{"type":"f32","value":"1084227584"}]},"expected":[{"type":"f32","value":"1084631458"}]}</pre>
 <pre>(assert_return (invoke "f32.silver_means" (f32.const 5.0)) (f32.const 5.1925821))</pre>
-<p style="background-color: red">error, wrong result, expected 1084631458, got 1056964608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":2468,"action":{"type":"invoke","field":"f64.silver_means","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.silver_means" (f64.const 0.0)) (f64.const 1.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -2597,4 +2597,4 @@
 <pre>{"type":"assert_return","line":2570,"action":{"type":"invoke","field":"f64.no_fold_conditional_inc","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_conditional_inc" (f64.const -0.0) (f64.const -1.0)) (f64.const -0.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-01T17:05:59</p>
+<p>Generated at 2024-03-01T20:08:09</p>
