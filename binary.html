@@ -78,11 +78,11 @@
 <pre>{"type":"assert_malformed","line":52,"filename":"binary.36.wasm","text":"malformed section id"}</pre>
 <p style="background-color: green">got error: unknown section: FF</p>
 <pre>{"type":"assert_malformed","line":56,"filename":"binary.37.wasm","text":"END opcode expected"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":77,"filename":"binary.38.wasm","text":"unexpected end of section or function"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":93,"filename":"binary.39.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":113,"filename":"binary.40.wasm","text":"illegal opcode"}</pre>
 <p style="background-color: green">got error: parse_global, expected end</p>
 <pre>{"type":"assert_malformed","line":126,"filename":"binary.41.wasm","text":"zero byte expected"}</pre>
@@ -106,39 +106,39 @@
 <pre>{"type":"assert_malformed","line":298,"filename":"binary.50.wasm","text":"zero byte expected"}</pre>
 <p style="background-color: green">got error: zero byte expected</p>
 <pre>{"type":"assert_malformed","line":317,"filename":"binary.51.wasm","text":"integer too large"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":334,"filename":"binary.52.wasm","text":"integer too large"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":351,"filename":"binary.53.wasm","text":"too many locals"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":367,"filename":"binary.54.wasm","text":"too many locals"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":385,"filename":"binary.55.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":401,"filename":"binary.56.wasm","text":"function and code section have inconsistent lengths"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":411,"filename":"binary.57.wasm","text":"function and code section have inconsistent lengths"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":420,"filename":"binary.58.wasm","text":"function and code section have inconsistent lengths"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":431,"filename":"binary.59.wasm","text":"function and code section have inconsistent lengths"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":441,"filename":"binary.60.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":447,"filename":"binary.61.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":454,"filename":"binary.62.wasm","text":"data count and data section have inconsistent lengths"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":464,"filename":"binary.63.wasm","text":"data count and data section have inconsistent lengths"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":474,"filename":"binary.64.wasm","text":"data count section required"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":496,"filename":"binary.65.wasm","text":"data count section required"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":515,"filename":"binary.66.wasm","text":"illegal opcode"}</pre>
 <p style="background-color: green">got error: illegal opcode: F3</p>
 <pre>{"type":"assert_malformed","line":541,"filename":"binary.67.wasm","text":"malformed reference type"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":566,"filename":"binary.68.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":590,"filename":"binary.69.wasm"}</pre>
@@ -148,7 +148,7 @@
 <pre>{"type":"assert_malformed","line":622,"filename":"binary.71.wasm","text":"length out of bounds"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_malformed","line":633,"filename":"binary.72.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":643,"filename":"binary.73.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":652,"filename":"binary.74.wasm","text":"malformed import kind"}</pre>
@@ -166,7 +166,7 @@
 <pre>{"type":"assert_malformed","line":717,"filename":"binary.80.wasm","text":"unexpected end of section or function"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_malformed","line":736,"filename":"binary.81.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":760,"filename":"binary.82.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":767,"filename":"binary.83.wasm","text":"unexpected end of section or function"}</pre>
@@ -194,13 +194,13 @@
 <pre>{"type":"assert_malformed","line":867,"filename":"binary.94.wasm","text":"unexpected end of section or function"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_malformed","line":878,"filename":"binary.95.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":888,"filename":"binary.96.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":901,"filename":"binary.97.wasm","text":"length out of bounds"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_malformed","line":922,"filename":"binary.98.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":942,"filename":"binary.99.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":956,"filename":"binary.100.wasm","text":"unexpected end"}</pre>
@@ -208,17 +208,17 @@
 <pre>{"type":"assert_malformed","line":972,"filename":"binary.101.wasm","text":"unexpected end"}</pre>
 <p style="background-color: green">got error: parse_element: expected end</p>
 <pre>{"type":"assert_malformed","line":989,"filename":"binary.102.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":1006,"filename":"binary.103.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":1015,"filename":"binary.104.wasm","text":"unexpected end of section or function"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_malformed","line":1028,"filename":"binary.105.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":1041,"filename":"binary.106.wasm","text":"unexpected end of section or function"}</pre>
 <p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_malformed","line":1055,"filename":"binary.107.wasm","text":"section size mismatch"}</pre>
-<p style="background-color: red">expected malformed</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":1068,"filename":"binary.108.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":1086,"filename":"binary.109.wasm","text":"unexpected end"}</pre>
@@ -226,5 +226,5 @@
 <pre>{"type":"module","line":1119,"filename":"binary.110.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_malformed","line":1133,"filename":"binary.111.wasm","text":"unexpected content after last section"}</pre>
-<p style="background-color: red">expected malformed</p>
-<p>Generated at 2024-03-01T06:18:48</p>
+<p style="background-color: red">expected error</p>
+<p>Generated at 2024-03-01T07:38:00</p>

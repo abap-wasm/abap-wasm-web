@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 73</h3>
-<h3>Warnings: 28</h3>
-<h3>Successes: 31</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 75</h3>
+<h3>Warnings: 21</h3>
+<h3>Successes: 36</h3>
 <hr>
 <h1>linking.wast</h1>
 <pre>{"type":"module","line":3,"filename":"linking.0.wasm"}</pre>
@@ -232,14 +232,14 @@
 <pre>(assert_return (get $G2 "g") (i32.const 5))</pre>
 <p style="background-color: red">exception: invoke: unknown action type, get</p>
 <pre>{"type":"assert_uninstantiable","line":244,"filename":"linking.21.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_unlinkable","line":253,"filename":"linking.22.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
 <pre>{"type":"assert_trap","line":262,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 7)) "uninitialized element")</pre>
 <p style="background-color: red">assert_trap, todo: call todo</p>
 <pre>{"type":"assert_uninstantiable","line":267,"filename":"linking.23.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 7)) (i32.const 0))</pre>
 <p style="background-color: red">exception: call todo</p>
@@ -247,7 +247,7 @@
 <pre>(assert_trap (invoke $Mt "call" (i32.const 8)) "uninitialized element")</pre>
 <p style="background-color: red">assert_trap, todo: call todo</p>
 <pre>{"type":"assert_uninstantiable","line":279,"filename":"linking.24.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 7)) (i32.const 0))</pre>
 <p style="background-color: red">exception: call todo</p>
@@ -293,7 +293,7 @@
 <pre>{"type":"module","line":354,"filename":"linking.32.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_uninstantiable","line":360,"filename":"linking.33.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"module","line":367,"filename":"linking.34.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":375,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
@@ -326,7 +326,7 @@
 <pre>(assert_return (invoke $Mm "load" (i32.const 0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: load</p>
 <pre>{"type":"assert_uninstantiable","line":398,"filename":"linking.36.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"assert_return","line":406,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"97"}]}</pre>
 <pre>(assert_return (invoke $Mm "load" (i32.const 0)) (i32.const 97))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: load</p>
@@ -334,7 +334,7 @@
 <pre>(assert_return (invoke $Mm "load" (i32.const 327670)) (i32.const 0))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: load</p>
 <pre>{"type":"assert_uninstantiable","line":410,"filename":"linking.37.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"assert_return","line":419,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"97"}]}</pre>
 <pre>(assert_return (invoke $Mm "load" (i32.const 0)) (i32.const 97))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: load</p>
@@ -343,11 +343,11 @@
 <pre>{"type":"register","line":433,"as":"Ms"}</pre>
 <p style="background-color: yellow">todo, register</p>
 <pre>{"type":"assert_uninstantiable","line":436,"filename":"linking.39.wasm","text":"unreachable"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"assert_return","line":452,"action":{"type":"invoke","field":"get memory[0]"},"expected":[{"type":"i32","value":"104"}]}</pre>
 <pre>(assert_return (invoke $Ms "get memory[0]") (i32.const 104))  ;; 'h'</pre>
 <p style="background-color: red">error, wrong result, expected 104, got 0</p>
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"get table[0]"},"expected":[{"type":"i32","value":"57005"}]}</pre>
 <pre>(assert_return (invoke $Ms "get table[0]") (i32.const 0xdead))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
-<p>Generated at 2024-03-01T06:19:24</p>
+<p>Generated at 2024-03-01T07:38:36</p>

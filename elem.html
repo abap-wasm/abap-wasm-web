@@ -1,5 +1,5 @@
-<a href="./index.html">Home</a><br><h3>Errors: 53</h3>
-<h3>Warnings: 15</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 65</h3>
+<h3>Warnings: 3</h3>
 <h3>Successes: 31</h3>
 <hr>
 <h1>elem.wast</h1>
@@ -36,9 +36,9 @@
 <pre>(assert_return (invoke "call-9") (i32.const 66))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_invalid","line":171,"filename":"elem.10.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":175,"filename":"elem.11.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":182,"filename":"elem.12.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":187,"filename":"elem.13.wasm"}</pre>
@@ -60,29 +60,29 @@
 <pre>{"type":"module","line":230,"filename":"elem.21.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_uninstantiable","line":239,"filename":"elem.22.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":248,"filename":"elem.23.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":257,"filename":"elem.24.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":266,"filename":"elem.25.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":273,"filename":"elem.26.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":281,"filename":"elem.27.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":290,"filename":"elem.28.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":298,"filename":"elem.29.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":307,"filename":"elem.30.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":315,"filename":"elem.31.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":324,"filename":"elem.32.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":332,"filename":"elem.33.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":342,"filename":"elem.34.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":350,"text":"out of bounds table access","action":{"type":"invoke","field":"init"}}</pre>
@@ -94,47 +94,47 @@
 <pre>(assert_trap (invoke "init") "out of bounds table access")</pre>
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
 <pre>{"type":"assert_invalid","line":365,"filename":"elem.36.wasm","text":"unknown table"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":375,"filename":"elem.37.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":383,"filename":"elem.38.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":391,"filename":"elem.39.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":399,"filename":"elem.40.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":407,"filename":"elem.41.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":416,"filename":"elem.42.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":426,"filename":"elem.43.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":434,"filename":"elem.44.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":442,"filename":"elem.45.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":450,"filename":"elem.46.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":458,"filename":"elem.47.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":467,"filename":"elem.48.wasm","text":"unknown global 0"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":475,"filename":"elem.49.wasm","text":"unknown global 1"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":484,"filename":"elem.50.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":495,"filename":"elem.51.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":503,"filename":"elem.52.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":511,"filename":"elem.53.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":519,"filename":"elem.54.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":527,"filename":"elem.55.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":536,"filename":"elem.56.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":545,"filename":"elem.57.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":556,"action":{"type":"invoke","field":"call-overwritten"},"expected":[{"type":"i32","value":"66"}]}</pre>
@@ -181,13 +181,13 @@
 <pre>(assert_return (invoke $module1 "call-9") (i32.const 70))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: call-9</p>
 <pre>{"type":"assert_invalid","line":626,"filename":"elem.62.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":631,"filename":"elem.63.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":636,"filename":"elem.64.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":645,"filename":"elem.65.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":654,"filename":"elem.66.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":661,"as":"exporter"}</pre>
@@ -227,4 +227,4 @@
 <pre>{"type":"assert_return","line":700,"action":{"type":"invoke","field":"call_imported_elem"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "call_imported_elem") (i32.const 42))</pre>
 <p style="background-color: red">exception: import: unknown global import type</p>
-<p>Generated at 2024-03-01T06:18:53</p>
+<p>Generated at 2024-03-01T07:38:04</p>

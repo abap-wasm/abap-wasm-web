@@ -17,19 +17,19 @@
 <pre>{"type":"action","line":30,"action":{"type":"invoke","field":"four","args":[{"type":"i32","value":"83"}]}}</pre>
 <p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_invalid","line":32,"filename":"func_ptrs.1.wasm","text":"unknown table"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":33,"filename":"func_ptrs.2.wasm","text":"unknown table"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":36,"filename":"func_ptrs.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":40,"filename":"func_ptrs.4.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":44,"filename":"func_ptrs.5.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":48,"filename":"func_ptrs.6.wasm","text":"unknown type"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":49,"filename":"func_ptrs.7.wasm","text":"unknown type"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":51,"filename":"func_ptrs.8.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":71,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
@@ -100,4 +100,4 @@
 <pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "callt" (i32.const 1)) (i32.const 2))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
-<p>Generated at 2024-03-01T06:19:21</p>
+<p>Generated at 2024-03-01T07:38:33</p>

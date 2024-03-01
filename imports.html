@@ -16,7 +16,7 @@
 <pre>(assert_return (invoke "print64" (i64.const 24)))</pre>
 <p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
 <pre>{"type":"assert_invalid","line":89,"filename":"imports.2.wasm","text":"unknown type"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":97,"filename":"imports.3.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"print_i32","args":[{"type":"i32","value":"13"}]}}</pre>
@@ -278,9 +278,9 @@
 <pre>(assert_trap (invoke "load" (i32.const 1000000)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_memory: no linear memory</p>
 <pre>{"type":"assert_invalid","line":483,"filename":"imports.97.wasm","text":"multiple memories"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":487,"filename":"imports.98.wasm","text":"multiple memories"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":491,"filename":"imports.99.wasm","text":"multiple memories"}</pre>
 <p style="background-color: green">got error: multiple memories</p>
 <pre>{"type":"module","line":495,"filename":"imports.100.wasm"}</pre>
@@ -403,4 +403,4 @@
 <p style="background-color: yellow">todo, register</p>
 <pre>{"type":"assert_unlinkable","line":672,"filename":"imports.144.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
-<p>Generated at 2024-03-01T06:19:23</p>
+<p>Generated at 2024-03-01T07:38:35</p>

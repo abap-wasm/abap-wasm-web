@@ -52,11 +52,11 @@
 <pre>(assert_return (invoke "c") (i32.const 42))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":39,"filename":"exports.15.wasm","text":"unknown function"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":43,"filename":"exports.16.wasm","text":"unknown function"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":47,"filename":"exports.17.wasm","text":"unknown function"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":51,"filename":"exports.18.wasm","text":"duplicate export name"}</pre>
 <p style="background-color: green">got error: duplicate export name: a</p>
 <pre>{"type":"assert_invalid","line":55,"filename":"exports.19.wasm","text":"duplicate export name"}</pre>
@@ -101,11 +101,11 @@
 <pre>(assert_return (get $Global "e") (i32.const 42))</pre>
 <p style="background-color: red">exception: invoke: unknown action type, get</p>
 <pre>{"type":"assert_invalid","line":96,"filename":"exports.35.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":100,"filename":"exports.36.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":104,"filename":"exports.37.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":108,"filename":"exports.38.wasm","text":"duplicate export name"}</pre>
 <p style="background-color: green">got error: duplicate export name: a</p>
 <pre>{"type":"assert_invalid","line":112,"filename":"exports.39.wasm","text":"duplicate export name"}</pre>
@@ -147,11 +147,11 @@
 <pre>{"type":"module","line":146,"filename":"exports.57.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_invalid","line":151,"filename":"exports.58.wasm","text":"unknown table"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":155,"filename":"exports.59.wasm","text":"unknown table"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":159,"filename":"exports.60.wasm","text":"unknown table"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":163,"filename":"exports.61.wasm","text":"duplicate export name"}</pre>
 <p style="background-color: green">got error: duplicate export name: a</p>
 <pre>{"type":"assert_invalid","line":167,"filename":"exports.62.wasm","text":"duplicate export name"}</pre>
@@ -191,11 +191,11 @@
 <pre>{"type":"module","line":202,"filename":"exports.79.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_invalid","line":207,"filename":"exports.80.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":211,"filename":"exports.81.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":215,"filename":"exports.82.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":219,"filename":"exports.83.wasm","text":"duplicate export name"}</pre>
 <p style="background-color: green">got error: duplicate export name: a</p>
 <pre>{"type":"assert_invalid","line":228,"filename":"exports.84.wasm","text":"duplicate export name"}</pre>
@@ -204,4 +204,4 @@
 <p style="background-color: green">got error: duplicate export name: a</p>
 <pre>{"type":"assert_invalid","line":236,"filename":"exports.86.wasm","text":"duplicate export name"}</pre>
 <p style="background-color: green">got error: duplicate export name: a</p>
-<p>Generated at 2024-03-01T06:18:53</p>
+<p>Generated at 2024-03-01T07:38:05</p>

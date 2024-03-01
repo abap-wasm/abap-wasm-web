@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 22</h3>
-<h3>Warnings: 14</h3>
-<h3>Successes: 25</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 39</h3>
 <hr>
 <h1>data.wast</h1>
 <pre>{"type":"module","line":5,"filename":"data.0.wasm"}</pre>
@@ -22,9 +22,9 @@
 <pre>{"type":"module","line":78,"filename":"data.8.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_invalid","line":85,"filename":"data.9.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":89,"filename":"data.10.wasm","text":"unknown global"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":96,"filename":"data.11.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":101,"filename":"data.12.wasm"}</pre>
@@ -58,71 +58,71 @@
 <pre>{"type":"module","line":172,"filename":"data.26.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_uninstantiable","line":180,"filename":"data.27.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":188,"filename":"data.28.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":196,"filename":"data.29.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":203,"filename":"data.30.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":210,"filename":"data.31.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":227,"filename":"data.32.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":236,"filename":"data.33.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":243,"filename":"data.34.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"assert_uninstantiable","line":251,"filename":"data.35.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":259,"filename":"data.36.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":267,"filename":"data.37.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":274,"filename":"data.38.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"assert_uninstantiable","line":282,"filename":"data.39.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: Range out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":289,"filename":"data.40.wasm","text":"out of bounds memory access"}</pre>
-<p style="background-color: yellow">todo, assert_uninstantiable</p>
+<p style="background-color: green">got error: instantiate data, no linear memory</p>
 <pre>{"type":"assert_invalid","line":299,"filename":"data.41.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":307,"filename":"data.42.wasm","text":"unknown memory 1"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":320,"filename":"data.43.wasm","text":"unknown memory 0"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":331,"filename":"data.44.wasm","text":"unknown memory 1"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":343,"filename":"data.45.wasm","text":"unknown memory 1"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":365,"filename":"data.46.wasm","text":"unknown memory 1"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":384,"filename":"data.47.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":392,"filename":"data.48.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":400,"filename":"data.49.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":408,"filename":"data.50.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":416,"filename":"data.51.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":425,"filename":"data.52.wasm","text":"type mismatch"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":434,"filename":"data.53.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":442,"filename":"data.54.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":450,"filename":"data.55.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":458,"filename":"data.56.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":466,"filename":"data.57.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":475,"filename":"data.58.wasm","text":"unknown global 0"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":483,"filename":"data.59.wasm","text":"unknown global 1"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":492,"filename":"data.60.wasm","text":"constant expression required"}</pre>
-<p style="background-color: red">expected invalid</p>
-<p>Generated at 2024-03-01T06:18:53</p>
+<p style="background-color: red">expected error</p>
+<p>Generated at 2024-03-01T07:38:04</p>

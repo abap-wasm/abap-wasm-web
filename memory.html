@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 43</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 39</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 36</h3>
+<h3>Successes: 40</h3>
 <hr>
 <h1>memory.wast</h1>
 <pre>{"type":"module","line":3,"filename":"memory.0.wasm"}</pre>
@@ -18,7 +18,7 @@
 <pre>{"type":"assert_invalid","line":10,"filename":"memory.6.wasm","text":"multiple memories"}</pre>
 <p style="background-color: green">got error: multiple memories</p>
 <pre>{"type":"assert_invalid","line":11,"filename":"memory.7.wasm","text":"multiple memories"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":13,"filename":"memory.8.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":14,"action":{"type":"invoke","field":"memsize"},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -35,23 +35,23 @@
 <pre>(assert_return (invoke "memsize") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":20,"filename":"memory.11.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":21,"filename":"memory.12.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":22,"filename":"memory.13.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":25,"filename":"memory.14.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":29,"filename":"memory.15.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":33,"filename":"memory.16.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":37,"filename":"memory.17.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":41,"filename":"memory.18.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":45,"filename":"memory.19.wasm","text":"unknown memory"}</pre>
-<p style="background-color: red">expected invalid</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":51,"filename":"memory.20.wasm","text":"size minimum must not be greater than maximum"}</pre>
 <p style="background-color: green">got error: size minimum must not be greater than maximum</p>
 <pre>{"type":"assert_invalid","line":55,"filename":"memory.21.wasm","text":"memory size must be at most 65536 pages (4GiB)"}</pre>
@@ -82,13 +82,13 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store</p>
 <pre>{"type":"assert_return","line":183,"action":{"type":"invoke","field":"i32_load8_s","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i32_load8_s" (i32.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967295, got 255</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":184,"action":{"type":"invoke","field":"i32_load8_u","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"255"}]}</pre>
 <pre>(assert_return (invoke "i32_load8_u" (i32.const -1)) (i32.const 255))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":185,"action":{"type":"invoke","field":"i32_load16_s","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_s" (i32.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967295, got 65535</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":186,"action":{"type":"invoke","field":"i32_load16_u","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"65535"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_u" (i32.const -1)) (i32.const 65535))</pre>
 <p style="background-color: green">ok, result</p>
@@ -109,7 +109,7 @@
 <p style="background-color: red">error, wrong result, expected 67, got 0</p>
 <pre>{"type":"assert_return","line":194,"action":{"type":"invoke","field":"i32_load8_s","args":[{"type":"i32","value":"878104047"}]},"expected":[{"type":"i32","value":"4294967279"}]}</pre>
 <pre>(assert_return (invoke "i32_load8_s" (i32.const 0x3456cdef)) (i32.const 0xffffffef))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967279, got 239</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":195,"action":{"type":"invoke","field":"i32_load8_u","args":[{"type":"i32","value":"4275856707"}]},"expected":[{"type":"i32","value":"67"}]}</pre>
 <pre>(assert_return (invoke "i32_load8_u" (i32.const 0xfedc6543)) (i32.const 0x43))</pre>
 <p style="background-color: red">error, wrong result, expected 67, got 0</p>
@@ -121,7 +121,7 @@
 <p style="background-color: red">error, wrong result, expected 25923, got 34</p>
 <pre>{"type":"assert_return","line":198,"action":{"type":"invoke","field":"i32_load16_s","args":[{"type":"i32","value":"878104047"}]},"expected":[{"type":"i32","value":"4294954479"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_s" (i32.const 0x3456cdef)) (i32.const 0xffffcdef))</pre>
-<p style="background-color: red">error, wrong result, expected 4294954479, got 52719</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":199,"action":{"type":"invoke","field":"i32_load16_u","args":[{"type":"i32","value":"4275856707"}]},"expected":[{"type":"i32","value":"25923"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_u" (i32.const 0xfedc6543)) (i32.const 0x6543))</pre>
 <p style="background-color: red">error, wrong result, expected 25923, got 34</p>
@@ -206,4 +206,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":239,"filename":"memory.33.wat","text":"duplicate memory"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T06:19:25</p>
+<p>Generated at 2024-03-01T07:38:37</p>

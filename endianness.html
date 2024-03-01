@@ -1,16 +1,16 @@
-<a href="./index.html">Home</a><br><h3>Errors: 53</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 52</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 16</h3>
+<h3>Successes: 17</h3>
 <hr>
 <h1>endianness.wast</h1>
 <pre>{"type":"module","line":1,"filename":"endianness.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":133,"action":{"type":"invoke","field":"i32_load16_s","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_s" (i32.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967295, got 65535</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":134,"action":{"type":"invoke","field":"i32_load16_s","args":[{"type":"i32","value":"4294963054"}]},"expected":[{"type":"i32","value":"4294963054"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_s" (i32.const -4242)) (i32.const -4242))</pre>
-<p style="background-color: red">error, wrong result, expected 4294963054, got 61184</p>
+<p style="background-color: red">error, wrong result, expected 4294963054, got 4294962944</p>
 <pre>{"type":"assert_return","line":135,"action":{"type":"invoke","field":"i32_load16_s","args":[{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "i32_load16_s" (i32.const 42)) (i32.const 42))</pre>
 <p style="background-color: green">ok, result</p>
@@ -209,4 +209,4 @@
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"f64_store","args":[{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64_store" (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-01T06:18:53</p>
+<p>Generated at 2024-03-01T07:38:05</p>
