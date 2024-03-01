@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 70</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 107</h3>
+<h3>Successes: 104</h3>
 <hr>
 <h1>br_table.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br_table.0.wasm"}</pre>
@@ -446,15 +446,12 @@
 <pre>{"type":"assert_return","line":1188,"action":{"type":"invoke","field":"meet-externref","args":[{"type":"i32","value":"0"},{"type":"externref","value":"1"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
 <pre>(assert_return (invoke "meet-externref" (i32.const 0) (ref.extern 1)) (ref.extern 1))</pre>
 <p style="background-color: red">todo, externref check non null</p>
-<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1189,"action":{"type":"invoke","field":"meet-externref","args":[{"type":"i32","value":"1"},{"type":"externref","value":"1"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
 <pre>(assert_return (invoke "meet-externref" (i32.const 1) (ref.extern 1)) (ref.extern 1))</pre>
 <p style="background-color: red">todo, externref check non null</p>
-<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1190,"action":{"type":"invoke","field":"meet-externref","args":[{"type":"i32","value":"2"},{"type":"externref","value":"1"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
 <pre>(assert_return (invoke "meet-externref" (i32.const 2) (ref.extern 1)) (ref.extern 1))</pre>
 <p style="background-color: red">todo, externref check non null</p>
-<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":1193,"filename":"br_table.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":1200,"filename":"br_table.2.wasm","text":"type mismatch"}</pre>
@@ -503,4 +500,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":1387,"filename":"br_table.24.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-01T08:59:04</p>
+<p>Generated at 2024-03-01T12:28:14</p>
