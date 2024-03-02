@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 53</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 49</h3>
 <h3>Warnings: 2</h3>
-<h3>Successes: 36</h3>
+<h3>Successes: 40</h3>
 <hr>
 <h1>call.wast</h1>
 <pre>{"type":"module","line":3,"filename":"call.0.wasm"}</pre>
@@ -67,28 +67,28 @@
 <p style="background-color: red">error, wrong result, expected 3, got 4</p>
 <pre>{"type":"assert_return","line":310,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac" (i64.const 0)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":311,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac" (i64.const 1)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":312,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
 <pre>(assert_return (invoke "fac" (i64.const 5)) (i64.const 120))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":313,"action":{"type":"invoke","field":"fac","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac" (i64.const 25)) (i64.const 7034535277573963776))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":314,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"0"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac-acc" (i64.const 0) (i64.const 1)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":315,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"1"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac-acc" (i64.const 1) (i64.const 1)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":316,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"5"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
 <pre>(assert_return (invoke "fac-acc" (i64.const 5) (i64.const 1)) (i64.const 120))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"fac-acc","args":[{"type":"i64","value":"25"},{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>  (invoke "fac-acc" (i64.const 25) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"fib","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fib" (i64.const 0)) (i64.const 1))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
@@ -106,28 +106,28 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
 <pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
 <pre>(assert_return (invoke "even" (i64.const 0)) (i32.const 44))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
 <pre>(assert_return (invoke "even" (i64.const 1)) (i32.const 99))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"100"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
 <pre>(assert_return (invoke "even" (i64.const 100)) (i32.const 44))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":331,"action":{"type":"invoke","field":"even","args":[{"type":"i64","value":"77"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
 <pre>(assert_return (invoke "even" (i64.const 77)) (i32.const 99))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":332,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
 <pre>(assert_return (invoke "odd" (i64.const 0)) (i32.const 99))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":333,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
 <pre>(assert_return (invoke "odd" (i64.const 1)) (i32.const 44))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":334,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"200"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
 <pre>(assert_return (invoke "odd" (i64.const 200)) (i32.const 99))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":335,"action":{"type":"invoke","field":"odd","args":[{"type":"i64","value":"77"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
 <pre>(assert_return (invoke "odd" (i64.const 77)) (i32.const 44))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_exhaustion","line":337,"text":"call stack exhausted","action":{"type":"invoke","field":"runaway"}}</pre>
 <p style="background-color: yellow">todo, assert_exhaustion</p>
 <pre>{"type":"assert_exhaustion","line":338,"text":"call stack exhausted","action":{"type":"invoke","field":"mutual-runaway"}}</pre>
@@ -255,4 +255,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":516,"filename":"call.18.wasm","text":"unknown function"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-02T09:59:07</p>
+<p>Generated at 2024-03-02T11:07:51</p>

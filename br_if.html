@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 39</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 37</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 79</h3>
+<h3>Successes: 81</h3>
 <hr>
 <h1>br_if.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br_if.0.wasm"}</pre>
@@ -67,13 +67,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":396,"action":{"type":"invoke","field":"as-loop-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-loop-first" (i32.const 0)) (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 3</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":397,"action":{"type":"invoke","field":"as-loop-first","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "as-loop-first" (i32.const 1)) (i32.const 3))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":398,"action":{"type":"invoke","field":"as-loop-mid","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-loop-mid" (i32.const 0)) (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 4</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":399,"action":{"type":"invoke","field":"as-loop-mid","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "as-loop-mid" (i32.const 1)) (i32.const 4))</pre>
 <p style="background-color: green">ok, result</p>
@@ -327,4 +327,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":662,"filename":"br_if.29.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-02T09:59:06</p>
+<p>Generated at 2024-03-02T11:07:51</p>

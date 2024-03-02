@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 45</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 44</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 75</h3>
+<h3>Successes: 76</h3>
 <hr>
 <h1>loop.wast</h1>
 <pre>{"type":"module","line":3,"filename":"loop.0.wasm"}</pre>
@@ -151,22 +151,22 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":492,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "while" (i64.const 0)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":493,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "while" (i64.const 1)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_mul</p>
 <pre>{"type":"assert_return","line":494,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"2"}]},"expected":[{"type":"i64","value":"2"}]}</pre>
 <pre>(assert_return (invoke "while" (i64.const 2)) (i64.const 2))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_mul</p>
 <pre>{"type":"assert_return","line":495,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"3"}]},"expected":[{"type":"i64","value":"6"}]}</pre>
 <pre>(assert_return (invoke "while" (i64.const 3)) (i64.const 6))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_mul</p>
 <pre>{"type":"assert_return","line":496,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
 <pre>(assert_return (invoke "while" (i64.const 5)) (i64.const 120))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_mul</p>
 <pre>{"type":"assert_return","line":497,"action":{"type":"invoke","field":"while","args":[{"type":"i64","value":"20"}]},"expected":[{"type":"i64","value":"2432902008176640000"}]}</pre>
 <pre>(assert_return (invoke "while" (i64.const 20)) (i64.const 2432902008176640000))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_mul</p>
 <pre>{"type":"assert_return","line":499,"action":{"type":"invoke","field":"for","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "for" (i64.const 0)) (i64.const 1))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
@@ -208,7 +208,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":513,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 101)) (f32.const 2601))</pre>
-<p style="background-color: green">ok, result, 11ms</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":514,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 1)) (f32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -229,7 +229,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1166601314"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 100)) (f32.const 4381.54785156))</pre>
-<p style="background-color: red">error, wrong result, expected 1166601314, got 1166601313, 37ms</p>
+<p style="background-color: red">error, wrong result, expected 1166601314, got 1166601313, 34ms</p>
 <pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 101)) (f32.const 2601))</pre>
 <p style="background-color: green">ok, result</p>
@@ -320,4 +320,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":783,"filename":"loop.42.wat","text":"mismatching label"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-02T09:59:43</p>
+<p>Generated at 2024-03-02T11:08:27</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 146</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 145</h3>
 <h3>Warnings: 2</h3>
-<h3>Successes: 22</h3>
+<h3>Successes: 23</h3>
 <hr>
 <h1>call_indirect.wast</h1>
 <pre>{"type":"module","line":3,"filename":"call_indirect.0.wasm"}</pre>
@@ -160,16 +160,16 @@
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":532,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac-i64" (i64.const 0)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":533,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac-i64" (i64.const 1)) (i64.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":534,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"5"}]},"expected":[{"type":"i64","value":"120"}]}</pre>
 <pre>(assert_return (invoke "fac-i64" (i64.const 5)) (i64.const 120))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":535,"action":{"type":"invoke","field":"fac-i64","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-i64" (i64.const 25)) (i64.const 7034535277573963776))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: pop, expected i32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_sub</p>
 <pre>{"type":"assert_return","line":537,"action":{"type":"invoke","field":"fac-i32","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fac-i32" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -475,4 +475,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":1024,"filename":"call_indirect.35.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-02T09:59:07</p>
+<p>Generated at 2024-03-02T11:07:52</p>
