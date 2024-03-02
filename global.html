@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 81</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 57</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 29</h3>
+<h3>Successes: 53</h3>
 <hr>
 <h1>global.wast</h1>
 <pre>{"type":"module","line":3,"filename":"global.0.wasm"}</pre>
@@ -55,13 +55,13 @@
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
 <pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"get-x"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "get-x") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"get-y"},"expected":[{"type":"i64","value":"7"}]}</pre>
 <pre>(assert_return (invoke "get-y") (i64.const 7))</pre>
-<p style="background-color: red">error, wrong result, expected 7, got 18446744073709551601</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":218,"action":{"type":"invoke","field":"get-7"},"expected":[{"type":"f32","value":"1090519040"}]}</pre>
 <pre>(assert_return (invoke "get-7") (f32.const 8))</pre>
-<p style="background-color: red">error, wrong result, expected 1090519040, got 3243245568</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const 9))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -76,13 +76,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":225,"action":{"type":"invoke","field":"get-x"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "get-x") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"get-y"},"expected":[{"type":"i64","value":"7"}]}</pre>
 <pre>(assert_return (invoke "get-y") (i64.const 7))</pre>
-<p style="background-color: red">error, wrong result, expected 7, got 18446744073709551601</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":227,"action":{"type":"invoke","field":"get-7"},"expected":[{"type":"f32","value":"1090519040"}]}</pre>
 <pre>(assert_return (invoke "get-7") (f32.const 8))</pre>
-<p style="background-color: red">error, wrong result, expected 1090519040, got 3243245568</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":228,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const 9))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -91,7 +91,7 @@
 <p style="background-color: red">todo, externref check non null</p>
 <pre>{"type":"assert_return","line":231,"action":{"type":"invoke","field":"as-select-first"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-select-first") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":232,"action":{"type":"invoke","field":"as-select-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-select-mid") (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -100,31 +100,31 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":235,"action":{"type":"invoke","field":"as-loop-first"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-loop-first") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":236,"action":{"type":"invoke","field":"as-loop-mid"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-loop-mid") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":237,"action":{"type":"invoke","field":"as-loop-last"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-loop-last") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":239,"action":{"type":"invoke","field":"as-if-condition"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-if-condition") (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"as-if-then"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-if-then") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":241,"action":{"type":"invoke","field":"as-if-else"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-if-else") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":243,"action":{"type":"invoke","field":"as-br_if-first"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-br_if-first") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":244,"action":{"type":"invoke","field":"as-br_if-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-br_if-last") (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":246,"action":{"type":"invoke","field":"as-br_table-first"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-br_table-first") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":247,"action":{"type":"invoke","field":"as-br_table-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-br_table-last") (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -139,43 +139,43 @@
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
 <pre>{"type":"assert_return","line":253,"action":{"type":"invoke","field":"as-store-first"}}</pre>
 <pre>(assert_return (invoke "as-store-first"))</pre>
-<p style="background-color: red">exception: Range out of bounds</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":254,"action":{"type":"invoke","field":"as-store-last"}}</pre>
 <pre>(assert_return (invoke "as-store-last"))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":255,"action":{"type":"invoke","field":"as-load-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-load-operand") (i32.const 1))</pre>
-<p style="background-color: red">exception: load: out of bounds</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":256,"action":{"type":"invoke","field":"as-memory.grow-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-memory.grow-value") (i32.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: linear_grow, max pages reached</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":258,"action":{"type":"invoke","field":"as-call-value"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-call-value") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":260,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-return-value") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":261,"action":{"type":"invoke","field":"as-drop-operand"}}</pre>
 <pre>(assert_return (invoke "as-drop-operand"))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":262,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-br-value") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":264,"action":{"type":"invoke","field":"as-local.set-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-local.set-value" (i32.const 1)) (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":265,"action":{"type":"invoke","field":"as-local.tee-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-local.tee-value" (i32.const 1)) (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":266,"action":{"type":"invoke","field":"as-global.set-value"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-global.set-value") (i32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 6, got 4294967284</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":268,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "as-unary-operand") (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":269,"action":{"type":"invoke","field":"as-binary-operand"},"expected":[{"type":"i32","value":"36"}]}</pre>
 <pre>(assert_return (invoke "as-binary-operand") (i32.const 36))</pre>
-<p style="background-color: red">error, wrong result, expected 36, got 144</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":270,"action":{"type":"invoke","field":"as-compare-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-compare-operand") (i32.const 1))</pre>
 <p style="background-color: red">error, wrong result, expected 1, got 0</p>
@@ -281,4 +281,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":630,"filename":"global.51.wat","text":"duplicate global"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-02T11:08:24</p>
+<p>Generated at 2024-03-02T13:15:34</p>

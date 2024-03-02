@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 12</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 9</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 76</h3>
+<h3>Successes: 79</h3>
 <hr>
 <h1>nop.wast</h1>
 <pre>{"type":"module","line":3,"filename":"nop.0.wasm"}</pre>
@@ -226,13 +226,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":398,"action":{"type":"invoke","field":"as-global.set-first"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-global.set-first") (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":399,"action":{"type":"invoke","field":"as-global.set-last"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-global.set-last") (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":400,"action":{"type":"invoke","field":"as-global.set-everywhere"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-global.set-everywhere") (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":402,"action":{"type":"invoke","field":"as-load-first","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "as-load-first" (i32.const 100)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -262,4 +262,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":424,"filename":"nop.4.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-02T11:09:19</p>
+<p>Generated at 2024-03-02T13:16:28</p>

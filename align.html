@@ -219,16 +219,16 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":802,"action":{"type":"invoke","field":"f32_align_switch","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"f32","value":"1092616192"}]}</pre>
 <pre>(assert_return (invoke "f32_align_switch" (i32.const 0)) (f32.const 10.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"assert_return","line":803,"action":{"type":"invoke","field":"f32_align_switch","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"f32","value":"1092616192"}]}</pre>
 <pre>(assert_return (invoke "f32_align_switch" (i32.const 1)) (f32.const 10.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"assert_return","line":804,"action":{"type":"invoke","field":"f32_align_switch","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"f32","value":"1092616192"}]}</pre>
 <pre>(assert_return (invoke "f32_align_switch" (i32.const 2)) (f32.const 10.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"assert_return","line":805,"action":{"type":"invoke","field":"f32_align_switch","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"f32","value":"1092616192"}]}</pre>
 <pre>(assert_return (invoke "f32_align_switch" (i32.const 3)) (f32.const 10.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"assert_return","line":807,"action":{"type":"invoke","field":"f64_align_switch","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"4621819117588971520"}]}</pre>
 <pre>(assert_return (invoke "f64_align_switch" (i32.const 0)) (f64.const 10.0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
@@ -363,4 +363,4 @@
 <pre>{"type":"assert_return","line":866,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"65532"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 65532)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-02T11:07:49</p>
+<p>Generated at 2024-03-02T13:14:59</p>

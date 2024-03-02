@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 160</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 159</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 63</h3>
+<h3>Successes: 64</h3>
 <hr>
 <h1>block.wast</h1>
 <pre>{"type":"module","line":3,"filename":"block.0.wasm"}</pre>
@@ -97,7 +97,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":391,"action":{"type":"invoke","field":"as-global.set-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-global.set-value") (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 10</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":392,"action":{"type":"invoke","field":"as-load-operand"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-load-operand") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -501,4 +501,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1489,"filename":"block.170.wat","text":"mismatching label"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-02T11:07:50</p>
+<p>Generated at 2024-03-02T13:15:00</p>

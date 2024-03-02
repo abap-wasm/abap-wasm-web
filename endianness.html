@@ -187,16 +187,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"f32_store","args":[{"type":"f32","value":"3212836864"}]},"expected":[{"type":"f32","value":"3212836864"}]}</pre>
 <pre>(assert_return (invoke "f32_store" (f32.const -1)) (f32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_reinterpret_i32</p>
 <pre>{"type":"assert_return","line":210,"action":{"type":"invoke","field":"f32_store","args":[{"type":"f32","value":"1011494326"}]},"expected":[{"type":"f32","value":"1011494326"}]}</pre>
 <pre>(assert_return (invoke "f32_store" (f32.const 1234e-5)) (f32.const 1234e-5))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_reinterpret_i32</p>
 <pre>{"type":"assert_return","line":211,"action":{"type":"invoke","field":"f32_store","args":[{"type":"f32","value":"1166316389"}]},"expected":[{"type":"f32","value":"1166316389"}]}</pre>
 <pre>(assert_return (invoke "f32_store" (f32.const 4242.4242)) (f32.const 4242.4242))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_reinterpret_i32</p>
 <pre>{"type":"assert_return","line":212,"action":{"type":"invoke","field":"f32_store","args":[{"type":"f32","value":"2139095039"}]},"expected":[{"type":"f32","value":"2139095039"}]}</pre>
 <pre>(assert_return (invoke "f32_store" (f32.const 0x1.fffffep+127)) (f32.const 0x1.fffffep+127))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_reinterpret_i32</p>
 <pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"f64_store","args":[{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"13830554455654793216"}]}</pre>
 <pre>(assert_return (invoke "f64_store" (f64.const -1)) (f64.const -1))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -209,4 +209,4 @@
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"f64_store","args":[{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64_store" (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-02T11:07:54</p>
+<p>Generated at 2024-03-02T13:15:05</p>
