@@ -374,16 +374,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":398,"action":{"type":"invoke","field":"64_good1","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"7523094288207667809"}]}</pre>
 <pre>(assert_return (invoke "64_good1" (i32.const 0)) (i64.const 0x6867666564636261))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 7523094288207667809, got 7523094288207667000</p>
 <pre>{"type":"assert_return","line":399,"action":{"type":"invoke","field":"64_good2","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"7523094288207667809"}]}</pre>
 <pre>(assert_return (invoke "64_good2" (i32.const 0)) (i64.const 0x6867666564636261))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 7523094288207667809, got 7523094288207667000</p>
 <pre>{"type":"assert_return","line":400,"action":{"type":"invoke","field":"64_good3","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"7595434461045744482"}]}</pre>
 <pre>(assert_return (invoke "64_good3" (i32.const 0)) (i64.const 0x6968676665646362))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 7595434461045744482, got 7595434461045745000</p>
 <pre>{"type":"assert_return","line":401,"action":{"type":"invoke","field":"64_good4","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"7667774633883821155"}]}</pre>
 <pre>(assert_return (invoke "64_good4" (i32.const 0)) (i64.const 0x6a69686766656463))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 7667774633883821155, got 7667774633883821000</p>
 <pre>{"type":"assert_return","line":402,"action":{"type":"invoke","field":"64_good5","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"122"}]}</pre>
 <pre>(assert_return (invoke "64_good5" (i32.const 0)) (i64.const 122))</pre>
 <p style="background-color: green">ok, result</p>
@@ -778,4 +778,4 @@
 <pre>{"type":"assert_trap","line":610,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "64_bad" (i32.const 1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds</p>
-<p>Generated at 2024-03-02T13:14:59</p>
+<p>Generated at 2024-03-02T15:14:38</p>

@@ -757,7 +757,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":269,"action":{"type":"invoke","field":"add","args":[{"type":"f32","value":"2139095039"},{"type":"f32","value":"2155872256"}]},"expected":[{"type":"f32","value":"2139095039"}]}</pre>
 <pre>(assert_return (invoke "add" (f32.const 0x1.fffffep+127) (f32.const -0x1p-126)) (f32.const 0x1.fffffep+127))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 20ms</p>
 <pre>{"type":"assert_return","line":270,"action":{"type":"invoke","field":"add","args":[{"type":"f32","value":"2139095039"},{"type":"f32","value":"8388608"}]},"expected":[{"type":"f32","value":"2139095039"}]}</pre>
 <pre>(assert_return (invoke "add" (f32.const 0x1.fffffep+127) (f32.const 0x1p-126)) (f32.const 0x1.fffffep+127))</pre>
 <p style="background-color: green">ok, result</p>
@@ -7531,4 +7531,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":2541,"filename":"f32.13.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-02T13:15:11</p>
+<p>Generated at 2024-03-02T15:14:49</p>

@@ -516,10 +516,10 @@
 <p style="background-color: green">ok, got error: load: out of bounds</p>
 <pre>{"type":"assert_return","line":269,"action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"65528"}]},"expected":[{"type":"i64","value":"7523094288207667809"}]}</pre>
 <pre>(assert_return (invoke "i64.load" (i32.const 0xfff8)) (i64.const 0x6867666564636261))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 7523094288207667809, got 7523094288207667000</p>
 <pre>{"type":"assert_return","line":270,"action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"7523094288207667809"}]}</pre>
 <pre>(assert_return (invoke "i64.load" (i32.const 0)) (i64.const 0x6867666564636261))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 7523094288207667809, got 7523094288207667000</p>
 <pre>{"type":"assert_return","line":274,"action":{"type":"invoke","field":"i64.store","args":[{"type":"i32","value":"65528"},{"type":"i64","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "i64.store" (i32.const 0xfff8) (i64.const 0)))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store</p>
@@ -534,7 +534,7 @@
 <p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_return","line":278,"action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"65528"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load" (i32.const 0xfff8)) (i64.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_load</p>
+<p style="background-color: red">error, wrong result, expected 0, got 7523094288207667000</p>
 <pre>{"type":"assert_trap","line":279,"text":"out of bounds memory access","action":{"type":"invoke","field":"f32.store","args":[{"type":"i32","value":"65533"},{"type":"f32","value":"1301390004"}]}}</pre>
 <pre>(assert_trap (invoke "f32.store" (i32.const 0xfffd) (f32.const 0x12345678)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: Range out of bounds</p>
@@ -547,4 +547,4 @@
 <pre>{"type":"assert_return","line":282,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"65528"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 0xfff8)) (f64.const 0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_load</p>
-<p>Generated at 2024-03-02T13:16:27</p>
+<p>Generated at 2024-03-02T15:15:51</p>
