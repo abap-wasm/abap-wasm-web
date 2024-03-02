@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 76</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 75</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 72</h3>
+<h3>Successes: 73</h3>
 <hr>
 <h1>select.wast</h1>
 <pre>{"type":"module","line":1,"filename":"select.0.wasm"}</pre>
@@ -304,7 +304,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"as-local.set-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-local.set-value" (i32.const 1)) (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 2</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":299,"action":{"type":"invoke","field":"as-local.tee-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-local.tee-value" (i32.const 0)) (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -417,4 +417,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":518,"filename":"select.29.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-01T20:10:10</p>
+<p>Generated at 2024-03-02T10:00:37</p>

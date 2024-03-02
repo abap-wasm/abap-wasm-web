@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 24</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 23</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 60</h3>
+<h3>Successes: 61</h3>
 <hr>
 <h1>return.wast</h1>
 <pre>{"type":"module","line":3,"filename":"return.0.wasm"}</pre>
@@ -82,7 +82,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":257,"action":{"type":"invoke","field":"as-br_table-index"},"expected":[{"type":"i64","value":"9"}]}</pre>
 <pre>(assert_return (invoke "as-br_table-index") (i64.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 18446744073709551615</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":258,"action":{"type":"invoke","field":"as-br_table-value"},"expected":[{"type":"i32","value":"10"}]}</pre>
 <pre>(assert_return (invoke "as-br_table-value") (i32.const 10))</pre>
 <p style="background-color: green">ok, result</p>
@@ -234,4 +234,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":476,"filename":"return.20.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-01T20:10:10</p>
+<p>Generated at 2024-03-02T10:00:36</p>

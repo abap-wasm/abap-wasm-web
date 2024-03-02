@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 104</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 102</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 68</h3>
+<h3>Successes: 70</h3>
 <hr>
 <h1>func.wast</h1>
 <pre>{"type":"module","line":3,"filename":"func.0.wasm"}</pre>
@@ -282,10 +282,10 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":483,"action":{"type":"invoke","field":"f","args":[{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f" (i32.const 42)) (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 42</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":484,"action":{"type":"invoke","field":"g","args":[{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "g" (i32.const 42)) (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 42</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":485,"action":{"type":"invoke","field":"p"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "p") (i32.const 42))</pre>
 <p style="background-color: green">ok, result</p>
@@ -443,4 +443,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":960,"filename":"func.75.wat","text":"duplicate local"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T20:08:11</p>
+<p>Generated at 2024-03-02T09:59:39</p>

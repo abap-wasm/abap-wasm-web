@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 68</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 46</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 106</h3>
+<h3>Successes: 128</h3>
 <hr>
 <h1>br_table.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br_table.0.wasm"}</pre>
@@ -70,19 +70,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1032,"action":{"type":"invoke","field":"singleton","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
 <pre>(assert_return (invoke "singleton" (i32.const 1)) (i32.const 20))</pre>
-<p style="background-color: red">error, wrong result, expected 20, got 22</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1033,"action":{"type":"invoke","field":"singleton","args":[{"type":"i32","value":"11"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
 <pre>(assert_return (invoke "singleton" (i32.const 11)) (i32.const 20))</pre>
-<p style="background-color: red">error, wrong result, expected 20, got 22</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1034,"action":{"type":"invoke","field":"singleton","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
 <pre>(assert_return (invoke "singleton" (i32.const -1)) (i32.const 20))</pre>
-<p style="background-color: red">error, wrong result, expected 20, got 22</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1035,"action":{"type":"invoke","field":"singleton","args":[{"type":"i32","value":"4294967196"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
 <pre>(assert_return (invoke "singleton" (i32.const -100)) (i32.const 20))</pre>
-<p style="background-color: red">error, wrong result, expected 20, got 22</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1036,"action":{"type":"invoke","field":"singleton","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"20"}]}</pre>
 <pre>(assert_return (invoke "singleton" (i32.const 0xffffffff)) (i32.const 20))</pre>
-<p style="background-color: red">error, wrong result, expected 20, got 22</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1038,"action":{"type":"invoke","field":"singleton-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"32"}]}</pre>
 <pre>(assert_return (invoke "singleton-value" (i32.const 0)) (i32.const 32))</pre>
 <p style="background-color: green">ok, result</p>
@@ -103,16 +103,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1045,"action":{"type":"invoke","field":"multiple","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"103"}]}</pre>
 <pre>(assert_return (invoke "multiple" (i32.const 0)) (i32.const 103))</pre>
-<p style="background-color: red">error, wrong result, expected 103, got 104</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1046,"action":{"type":"invoke","field":"multiple","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"102"}]}</pre>
 <pre>(assert_return (invoke "multiple" (i32.const 1)) (i32.const 102))</pre>
-<p style="background-color: red">error, wrong result, expected 102, got 104</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1047,"action":{"type":"invoke","field":"multiple","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"101"}]}</pre>
 <pre>(assert_return (invoke "multiple" (i32.const 2)) (i32.const 101))</pre>
-<p style="background-color: red">error, wrong result, expected 101, got 104</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1048,"action":{"type":"invoke","field":"multiple","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"100"}]}</pre>
 <pre>(assert_return (invoke "multiple" (i32.const 3)) (i32.const 100))</pre>
-<p style="background-color: red">error, wrong result, expected 100, got 104</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1049,"action":{"type":"invoke","field":"multiple","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"104"}]}</pre>
 <pre>(assert_return (invoke "multiple" (i32.const 4)) (i32.const 104))</pre>
 <p style="background-color: green">ok, result</p>
@@ -133,49 +133,49 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1056,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"213"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 0)) (i32.const 213))</pre>
-<p style="background-color: red">error, wrong result, expected 213, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1057,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"212"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 1)) (i32.const 212))</pre>
-<p style="background-color: red">error, wrong result, expected 212, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1058,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"211"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 2)) (i32.const 211))</pre>
-<p style="background-color: red">error, wrong result, expected 211, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1059,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"210"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 3)) (i32.const 210))</pre>
-<p style="background-color: red">error, wrong result, expected 210, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1060,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"214"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 4)) (i32.const 214))</pre>
-<p style="background-color: red">error, wrong result, expected 214, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1061,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"214"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 5)) (i32.const 214))</pre>
-<p style="background-color: red">error, wrong result, expected 214, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1062,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"214"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 6)) (i32.const 214))</pre>
-<p style="background-color: red">error, wrong result, expected 214, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1063,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"214"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 10)) (i32.const 214))</pre>
-<p style="background-color: red">error, wrong result, expected 214, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1064,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"214"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const -1)) (i32.const 214))</pre>
-<p style="background-color: red">error, wrong result, expected 214, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1065,"action":{"type":"invoke","field":"multiple-value","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"214"}]}</pre>
 <pre>(assert_return (invoke "multiple-value" (i32.const 0xffffffff)) (i32.const 214))</pre>
-<p style="background-color: red">error, wrong result, expected 214, got 227</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1067,"action":{"type":"invoke","field":"large","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "large" (i32.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1068,"action":{"type":"invoke","field":"large","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "large" (i32.const 1)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1069,"action":{"type":"invoke","field":"large","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "large" (i32.const 100)) (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1070,"action":{"type":"invoke","field":"large","args":[{"type":"i32","value":"101"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "large" (i32.const 101)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1071,"action":{"type":"invoke","field":"large","args":[{"type":"i32","value":"10000"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "large" (i32.const 10000)) (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1072,"action":{"type":"invoke","field":"large","args":[{"type":"i32","value":"10001"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "large" (i32.const 10001)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -500,4 +500,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":1387,"filename":"br_table.24.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-01T20:07:38</p>
+<p>Generated at 2024-03-02T09:59:07</p>

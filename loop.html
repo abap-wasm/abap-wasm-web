@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 54</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 45</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 66</h3>
+<h3>Successes: 75</h3>
 <hr>
 <h1>loop.wast</h1>
 <pre>{"type":"module","line":3,"filename":"loop.0.wasm"}</pre>
@@ -187,7 +187,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
 <pre>{"type":"assert_return","line":506,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"0"},{"type":"f32","value":"1088421888"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 0) (f32.const 7)) (f32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1088421888</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":507,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 0)) (f32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -199,16 +199,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":510,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1082130432"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 3)) (f32.const 4))</pre>
-<p style="background-color: red">error, wrong result, expected 1082130432, got 1077936128</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":511,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1082130432"}]},"expected":[{"type":"f32","value":"1086324736"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 4)) (f32.const 6))</pre>
-<p style="background-color: red">error, wrong result, expected 1086324736, got 1082130432</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":512,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1159684096"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 100)) (f32.const 2550))</pre>
-<p style="background-color: red">error, wrong result, expected 1159684096, got 1120403456</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":513,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 1) (f32.const 101)) (f32.const 2601))</pre>
-<p style="background-color: red">error, wrong result, expected 1159892992, got 1120534528</p>
+<p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":514,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1065353216"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 1)) (f32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -220,19 +220,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":517,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1073741824"}]},"expected":[{"type":"f32","value":"1077936128"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 2)) (f32.const 3))</pre>
-<p style="background-color: red">error, wrong result, expected 1077936128, got 1073741824</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":518,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1073741824"},{"type":"f32","value":"1077936128"}]},"expected":[{"type":"f32","value":"1082130432"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 2) (f32.const 3)) (f32.const 4))</pre>
-<p style="background-color: red">error, wrong result, expected 1082130432, got 1077936128</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":519,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1082130432"}]},"expected":[{"type":"f32","value":"1092940751"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 4)) (f32.const 10.3095235825))</pre>
-<p style="background-color: red">error, wrong result, expected 1092940751, got 1082130432</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1166601314"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 100)) (f32.const 4381.54785156))</pre>
-<p style="background-color: red">error, wrong result, expected 1166601314, got 1120403456</p>
+<p style="background-color: red">error, wrong result, expected 1166601314, got 1166601313, 37ms</p>
 <pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 101)) (f32.const 2601))</pre>
-<p style="background-color: red">error, wrong result, expected 1159892992, got 1120534528</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":523,"action":{"type":"invoke","field":"type-use"}}</pre>
 <pre>(assert_return (invoke "type-use"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -320,4 +320,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":783,"filename":"loop.42.wat","text":"mismatching label"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-01T20:08:15</p>
+<p>Generated at 2024-03-02T09:59:43</p>
