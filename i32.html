@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 123</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 109</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 337</h3>
+<h3>Successes: 351</h3>
 <hr>
 <h1>i32.wast</h1>
 <pre>{"type":"module","line":3,"filename":"i32.0.wasm"}</pre>
@@ -652,46 +652,46 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":270,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":271,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"127"}]},"expected":[{"type":"i32","value":"127"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const 0x7f)) (i32.const 127))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":272,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"128"}]},"expected":[{"type":"i32","value":"4294967168"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const 0x80)) (i32.const -128))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":273,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"255"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const 0xff)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":274,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"19088640"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const 0x012345_00)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"4275878528"}]},"expected":[{"type":"i32","value":"4294967168"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const 0xfedcba_80)) (i32.const -0x80))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":276,"action":{"type":"invoke","field":"extend8_s","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "extend8_s" (i32.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend8_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":278,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":279,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"32767"}]},"expected":[{"type":"i32","value":"32767"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const 0x7fff)) (i32.const 32767))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":280,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"32768"}]},"expected":[{"type":"i32","value":"4294934528"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const 0x8000)) (i32.const -32768))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":281,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"65535"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const 0xffff)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":282,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"19070976"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const 0x0123_0000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":283,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"4275863552"}]},"expected":[{"type":"i32","value":"4294934528"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const 0xfedc_8000)) (i32.const -0x8000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":284,"action":{"type":"invoke","field":"extend16_s","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "extend16_s" (i32.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_extend16_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":286,"action":{"type":"invoke","field":"eqz","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "eqz" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -1297,4 +1297,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":983,"filename":"i32.85.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-03T08:40:36</p>
+<p>Generated at 2024-03-03T11:08:11</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 33</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 29</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 46</h3>
+<h3>Successes: 50</h3>
 <hr>
 <h1>memory.wast</h1>
 <pre>{"type":"module","line":3,"filename":"memory.0.wasm"}</pre>
@@ -130,22 +130,22 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"i64_load8_s","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_s" (i64.const -1)) (i64.const -1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">error, wrong result, expected 18446744073709551615, got 255</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"i64_load8_u","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"255"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_u" (i64.const -1)) (i64.const 255))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"i64_load16_s","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_s" (i64.const -1)) (i64.const -1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"i64_load16_u","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"65535"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_u" (i64.const -1)) (i64.const 65535))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"i64_load32_s","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_s" (i64.const -1)) (i64.const -1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const -1)) (i64.const 4294967295))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">error, wrong result, expected 4294967295, got 18446744073709551615</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"i64_load8_s","args":[{"type":"i64","value":"100"}]},"expected":[{"type":"i64","value":"100"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_s" (i64.const 100)) (i64.const 100))</pre>
 <p style="background-color: green">ok, result</p>
@@ -166,44 +166,44 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"i64_load8_s","args":[{"type":"i64","value":"18364758543954109763"}]},"expected":[{"type":"i64","value":"67"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_s" (i64.const 0xfedcba9856346543)) (i64.const 0x43))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18364758543954109763"</p>
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"i64_load8_s","args":[{"type":"i64","value":"3771275841602506223"}]},"expected":[{"type":"i64","value":"18446744073709551599"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_s" (i64.const 0x3456436598bacdef)) (i64.const 0xffffffffffffffef))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3771275841602506223"</p>
 <pre>{"type":"assert_return","line":218,"action":{"type":"invoke","field":"i64_load8_u","args":[{"type":"i64","value":"18364758543954109763"}]},"expected":[{"type":"i64","value":"67"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_u" (i64.const 0xfedcba9856346543)) (i64.const 0x43))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18364758543954109763"</p>
 <pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"i64_load8_u","args":[{"type":"i64","value":"3771275841602506223"}]},"expected":[{"type":"i64","value":"239"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_u" (i64.const 0x3456436598bacdef)) (i64.const 0xef))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3771275841602506223"</p>
 <pre>{"type":"assert_return","line":220,"action":{"type":"invoke","field":"i64_load16_s","args":[{"type":"i64","value":"18364758543954109763"}]},"expected":[{"type":"i64","value":"25923"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_s" (i64.const 0xfedcba9856346543)) (i64.const 0x6543))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18364758543954109763"</p>
 <pre>{"type":"assert_return","line":221,"action":{"type":"invoke","field":"i64_load16_s","args":[{"type":"i64","value":"3771275841602506223"}]},"expected":[{"type":"i64","value":"18446744073709538799"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_s" (i64.const 0x3456436598bacdef)) (i64.const 0xffffffffffffcdef))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3771275841602506223"</p>
 <pre>{"type":"assert_return","line":222,"action":{"type":"invoke","field":"i64_load16_u","args":[{"type":"i64","value":"18364758543954109763"}]},"expected":[{"type":"i64","value":"25923"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_u" (i64.const 0xfedcba9856346543)) (i64.const 0x6543))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18364758543954109763"</p>
 <pre>{"type":"assert_return","line":223,"action":{"type":"invoke","field":"i64_load16_u","args":[{"type":"i64","value":"3771275841602506223"}]},"expected":[{"type":"i64","value":"52719"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_u" (i64.const 0x3456436598bacdef)) (i64.const 0xcdef))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3771275841602506223"</p>
 <pre>{"type":"assert_return","line":224,"action":{"type":"invoke","field":"i64_load32_s","args":[{"type":"i64","value":"18364758543954109763"}]},"expected":[{"type":"i64","value":"1446274371"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_s" (i64.const 0xfedcba9856346543)) (i64.const 0x56346543))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18364758543954109763"</p>
 <pre>{"type":"assert_return","line":225,"action":{"type":"invoke","field":"i64_load32_s","args":[{"type":"i64","value":"3771275841602506223"}]},"expected":[{"type":"i64","value":"18446744071976963567"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_s" (i64.const 0x3456436598bacdef)) (i64.const 0xffffffff98bacdef))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3771275841602506223"</p>
 <pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"18364758543954109763"}]},"expected":[{"type":"i64","value":"1446274371"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const 0xfedcba9856346543)) (i64.const 0x56346543))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18364758543954109763"</p>
 <pre>{"type":"assert_return","line":227,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"3771275841602506223"}]},"expected":[{"type":"i64","value":"2562379247"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const 0x3456436598bacdef)) (i64.const 0x98bacdef))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3771275841602506223"</p>
 <pre>{"type":"assert_malformed","line":231,"filename":"memory.31.wat","text":"duplicate memory"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":235,"filename":"memory.32.wat","text":"duplicate memory"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":239,"filename":"memory.33.wat","text":"duplicate memory"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-03T08:40:38</p>
+<p>Generated at 2024-03-03T11:08:13</p>

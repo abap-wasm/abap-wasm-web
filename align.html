@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 10</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 9</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 146</h3>
+<h3>Successes: 147</h3>
 <hr>
 <h1>align.wast</h1>
 <pre>{"type":"module","line":3,"filename":"align.0.wasm"}</pre>
@@ -359,8 +359,8 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":864,"text":"out of bounds memory access","action":{"type":"invoke","field":"store","args":[{"type":"i32","value":"65532"},{"type":"i64","value":"18446744073709551615"}]}}</pre>
 <pre>(assert_trap (invoke "store" (i32.const 65532) (i64.const -1)) "out of bounds memory access")</pre>
-<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: green">ok, got error: Range out of bounds</p>
 <pre>{"type":"assert_return","line":866,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"65532"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 65532)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-03T08:40:07</p>
+<p>Generated at 2024-03-03T11:07:40</p>

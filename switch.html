@@ -52,7 +52,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
 <pre>{"type":"assert_return","line":136,"action":{"type":"invoke","field":"expr","args":[{"type":"i64","value":"18446744073709551606"}]},"expected":[{"type":"i64","value":"100"}]}</pre>
 <pre>(assert_return (invoke "expr" (i64.const -10)) (i64.const 100))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073709551606"</p>
 <pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"arg","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"110"}]}</pre>
 <pre>(assert_return (invoke "arg" (i32.const 0)) (i32.const 110))</pre>
 <p style="background-color: red">error, wrong result, expected 110, got 1100</p>
@@ -85,4 +85,4 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":150,"filename":"switch.1.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-03T08:41:21</p>
+<p>Generated at 2024-03-03T11:08:58</p>
