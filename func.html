@@ -100,7 +100,7 @@
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":304,"action":{"type":"invoke","field":"value-i32-f64"},"expected":[{"type":"i32","value":"77"},{"type":"f64","value":"4619567317775286272"}]}</pre>
 <pre>(assert_return (invoke "value-i32-f64") (i32.const 77) (f64.const 7))</pre>
-<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<p style="background-color: red">assert_return, wrong type, casting failed, got 7C</p>
 <pre>{"type":"assert_return","line":305,"action":{"type":"invoke","field":"value-i32-i32-i32"},"expected":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "value-i32-i32-i32")</pre>
 <p style="background-color: red">error, wrong result, expected 1, got 3</p>
@@ -112,7 +112,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":310,"action":{"type":"invoke","field":"value-block-i32-i64"},"expected":[{"type":"i32","value":"1"},{"type":"i64","value":"2"}]}</pre>
 <pre>(assert_return (invoke "value-block-i32-i64") (i32.const 1) (i64.const 2))</pre>
-<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<p style="background-color: red">assert_return, wrong type, casting failed, got 7E</p>
 <pre>{"type":"assert_return","line":312,"action":{"type":"invoke","field":"return-empty"}}</pre>
 <pre>(assert_return (invoke "return-empty"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -130,7 +130,7 @@
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":317,"action":{"type":"invoke","field":"return-i32-f64"},"expected":[{"type":"i32","value":"78"},{"type":"f64","value":"4635244066603186258"}]}</pre>
 <pre>(assert_return (invoke "return-i32-f64") (i32.const 78) (f64.const 78.78))</pre>
-<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<p style="background-color: red">assert_return, wrong type, casting failed, got 7C</p>
 <pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"return-i32-i32-i32"},"expected":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "return-i32-i32-i32")</pre>
 <p style="background-color: red">error, wrong result, expected 1, got 3</p>
@@ -139,7 +139,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"return-block-i32-i64"},"expected":[{"type":"i32","value":"1"},{"type":"i64","value":"2"}]}</pre>
 <pre>(assert_return (invoke "return-block-i32-i64") (i32.const 1) (i64.const 2))</pre>
-<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<p style="background-color: red">assert_return, wrong type, casting failed, got 7E</p>
 <pre>{"type":"assert_return","line":324,"action":{"type":"invoke","field":"break-empty"}}</pre>
 <pre>(assert_return (invoke "break-empty"))</pre>
 <p style="background-color: red">exception: call(), branching exception, should not happen</p>
@@ -181,7 +181,7 @@
 <p style="background-color: red">exception: call(), branching exception, should not happen</p>
 <pre>{"type":"assert_return","line":340,"action":{"type":"invoke","field":"break-br_if-num-num","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"51"},{"type":"i64","value":"52"}]}</pre>
 <pre>(assert_return (invoke "break-br_if-num-num" (i32.const 0))</pre>
-<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<p style="background-color: red">assert_return, wrong type, casting failed, got 7E</p>
 <pre>{"type":"assert_return","line":343,"action":{"type":"invoke","field":"break-br_if-num-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"},{"type":"i64","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_if-num-num" (i32.const 1))</pre>
 <p style="background-color: red">exception: call(), branching exception, should not happen</p>
@@ -443,4 +443,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":960,"filename":"func.75.wat","text":"duplicate local"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-03T13:06:44</p>
+<p>Generated at 2024-03-03T14:44:47</p>

@@ -49,16 +49,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":52,"action":{"type":"invoke","field":"i64.neg_smax"},"expected":[{"type":"i64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "i64.neg_smax") (i64.const -9223372036854775807))</pre>
-<p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775807</p>
 <pre>{"type":"assert_return","line":53,"action":{"type":"invoke","field":"i64.smin"},"expected":[{"type":"i64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "i64.smin") (i64.const -9223372036854775808))</pre>
-<p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775808</p>
 <pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"i64.alt_smin"},"expected":[{"type":"i64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "i64.alt_smin") (i64.const -9223372036854775808))</pre>
-<p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775808</p>
 <pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"i64.inc_smin"},"expected":[{"type":"i64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "i64.inc_smin") (i64.const -9223372036854775807))</pre>
-<p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775807</p>
 <pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"i64.neg_zero"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.neg_zero") (i64.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -135,4 +135,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":149,"filename":"int_literals.20.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-03T13:06:46</p>
+<p>Generated at 2024-03-03T14:44:49</p>

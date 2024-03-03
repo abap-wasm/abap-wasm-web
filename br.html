@@ -91,7 +91,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":407,"action":{"type":"invoke","field":"as-return-values"},"expected":[{"type":"i32","value":"2"},{"type":"i64","value":"7"}]}</pre>
 <pre>(assert_return (invoke "as-return-values") (i32.const 2) (i64.const 7))</pre>
-<p style="background-color: red">assert_return, wrong type, casting failed</p>
+<p style="background-color: red">assert_return, wrong type, casting failed, got 7E</p>
 <pre>{"type":"assert_return","line":409,"action":{"type":"invoke","field":"as-if-cond"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-if-cond") (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -273,4 +273,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":655,"filename":"br.20.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-03T13:06:15</p>
+<p>Generated at 2024-03-03T14:44:16</p>

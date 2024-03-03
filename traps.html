@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 7</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 6</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 29</h3>
+<h3>Successes: 30</h3>
 <hr>
 <h1>traps.wast</h1>
 <pre>{"type":"module","line":5,"filename":"traps.0.wasm"}</pre>
@@ -22,7 +22,7 @@
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":21,"text":"integer overflow","action":{"type":"invoke","field":"no_dce.i64.div_s","args":[{"type":"i64","value":"9223372036854775808"},{"type":"i64","value":"18446744073709551615"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.div_s" (i64.const 0x8000000000000000) (i64.const -1)) "integer overflow")</pre>
-<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "9223372036854775808"</p>
+<p style="background-color: red">error, expected trap</p>
 <pre>{"type":"module","line":23,"filename":"traps.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":34,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i32.rem_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]}}</pre>
@@ -36,7 +36,7 @@
 <p style="background-color: green">ok, got error: i64.rem_s, division by zero</p>
 <pre>{"type":"assert_trap","line":37,"text":"integer divide by zero","action":{"type":"invoke","field":"no_dce.i64.rem_u","args":[{"type":"i64","value":"1"},{"type":"i64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.rem_u" (i64.const 1) (i64.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_rem_u</p>
+<p style="background-color: green">ok, got error: i64.rem_u, division by zero</p>
 <pre>{"type":"module","line":39,"filename":"traps.2.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":50,"text":"invalid conversion to integer","action":{"type":"invoke","field":"no_dce.i32.trunc_f32_s","args":[{"type":"f32","value":"2143289344"}]}}</pre>
@@ -107,4 +107,4 @@
 <pre>{"type":"assert_trap","line":91,"text":"out of bounds memory access","action":{"type":"invoke","field":"no_dce.f64.load","args":[{"type":"i32","value":"65536"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.f64.load" (i32.const 65536)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds</p>
-<p>Generated at 2024-03-03T13:07:36</p>
+<p>Generated at 2024-03-03T14:45:41</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 35</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 33</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 73</h3>
+<h3>Successes: 75</h3>
 <hr>
 <h1>int_exprs.wast</h1>
 <pre>{"type":"module","line":6,"filename":"int_exprs.0.wasm"}</pre>
@@ -13,10 +13,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"i64.no_fold_cmp_s_offset","args":[{"type":"i64","value":"9223372036854775807"},{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_cmp_s_offset" (i64.const 0x7fffffffffffffff) (i64.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9223372036854775807"</p>
+<p style="background-color: red">error, wrong result, expected 1, got 0</p>
 <pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"i64.no_fold_cmp_u_offset","args":[{"type":"i64","value":"18446744073709551615"},{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_cmp_u_offset" (i64.const 0xffffffffffffffff) (i64.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_lt_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":25,"filename":"int_exprs.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"i64.no_fold_wrap_extend_s","args":[{"type":"i64","value":"4538991236898928"}]},"expected":[{"type":"i64","value":"1079009392"}]}</pre>
@@ -40,10 +40,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"i64.no_fold_shl_shr_s","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_shl_shr_s" (i64.const 0x8000000000000000)) (i64.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9223372036854775808"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_shr_s</p>
 <pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"i64.no_fold_shl_shr_u","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_shl_shr_u" (i64.const 0x8000000000000000)) (i64.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9223372036854775808"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_shr_u</p>
 <pre>{"type":"module","line":63,"filename":"int_exprs.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":75,"action":{"type":"invoke","field":"i32.no_fold_shr_s_shl","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -99,7 +99,7 @@
 <p style="background-color: green">ok, got error: i64.rem_s, division by zero</p>
 <pre>{"type":"assert_trap","line":135,"text":"integer divide by zero","action":{"type":"invoke","field":"i64.no_fold_rem_u_self","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.no_fold_rem_u_self" (i64.const 0)) "integer divide by zero")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_rem_u</p>
+<p style="background-color: green">ok, got error: i64.rem_u, division by zero</p>
 <pre>{"type":"module","line":139,"filename":"int_exprs.8.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":151,"action":{"type":"invoke","field":"i32.no_fold_mul_div_s","args":[{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -110,10 +110,10 @@
 <p style="background-color: red">error, wrong result, expected 0, got 2863311531</p>
 <pre>{"type":"assert_return","line":153,"action":{"type":"invoke","field":"i64.no_fold_mul_div_s","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_mul_div_s" (i64.const 0x8000000000000000)) (i64.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9223372036854775808"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775808</p>
 <pre>{"type":"assert_return","line":154,"action":{"type":"invoke","field":"i64.no_fold_mul_div_u","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_mul_div_u" (i64.const 0x8000000000000000)) (i64.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9223372036854775808"</p>
+<p style="background-color: red">exception: i64.div_u, todo negative numbers</p>
 <pre>{"type":"module","line":158,"filename":"int_exprs.9.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":166,"action":{"type":"invoke","field":"i32.no_fold_div_s_2","args":[{"type":"i32","value":"4294967285"}]},"expected":[{"type":"i32","value":"4294967291"}]}</pre>
@@ -307,5 +307,5 @@
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":350,"text":"integer overflow","action":{"type":"invoke","field":"i64.no_fold_div_neg1","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.no_fold_div_neg1" (i64.const 0x8000000000000000)) "integer overflow")</pre>
-<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "9223372036854775808"</p>
-<p>Generated at 2024-03-03T13:06:46</p>
+<p style="background-color: red">error, expected trap</p>
+<p>Generated at 2024-03-03T14:44:49</p>

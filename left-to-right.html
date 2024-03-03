@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 15</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 8</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 81</h3>
+<h3>Successes: 88</h3>
 <hr>
 <h1>left-to-right.wast</h1>
 <pre>{"type":"module","line":1,"filename":"left-to-right.0.wasm"}</pre>
@@ -52,19 +52,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"i64_and"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_and") (i32.const 0x0102))     (assert_return (invoke "i64_and") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_and</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":189,"action":{"type":"invoke","field":"i32_or"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_or") (i32.const 0x0102))      (assert_return (invoke "i64_or") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":189,"action":{"type":"invoke","field":"i64_or"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_or") (i32.const 0x0102))      (assert_return (invoke "i64_or") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_or</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":190,"action":{"type":"invoke","field":"i32_xor"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_xor") (i32.const 0x0102))     (assert_return (invoke "i64_xor") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":190,"action":{"type":"invoke","field":"i64_xor"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_xor") (i32.const 0x0102))     (assert_return (invoke "i64_xor") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_xor</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":191,"action":{"type":"invoke","field":"i32_shl"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_shl") (i32.const 0x0102))     (assert_return (invoke "i64_shl") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
@@ -112,13 +112,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":198,"action":{"type":"invoke","field":"i64_lt_u"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_lt_u") (i32.const 0x0102))    (assert_return (invoke "i64_lt_u") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_lt_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":199,"action":{"type":"invoke","field":"i32_le_u"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_le_u") (i32.const 0x0102))    (assert_return (invoke "i64_le_u") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":199,"action":{"type":"invoke","field":"i64_le_u"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_le_u") (i32.const 0x0102))    (assert_return (invoke "i64_le_u") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_le_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":200,"action":{"type":"invoke","field":"i32_gt_s"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_gt_s") (i32.const 0x0102))    (assert_return (invoke "i64_gt_s") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
@@ -136,13 +136,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"i64_gt_u"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_gt_u") (i32.const 0x0102))    (assert_return (invoke "i64_gt_u") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"i32_ge_u"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_ge_u") (i32.const 0x0102))    (assert_return (invoke "i64_ge_u") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"i64_ge_u"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_ge_u") (i32.const 0x0102))    (assert_return (invoke "i64_ge_u") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_ge_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"i32_store"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "i32_store") (i32.const 0x0102))   (assert_return (invoke "i64_store") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
@@ -290,4 +290,4 @@
 <pre>{"type":"assert_return","line":233,"action":{"type":"invoke","field":"br_table"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "br_table") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-03T13:06:46</p>
+<p>Generated at 2024-03-03T14:44:49</p>

@@ -22,7 +22,7 @@
 <p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_return","line":107,"action":{"type":"invoke","field":"fac-ssa","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-ssa" (i64.const 25)) (i64.const 7034535277573963776))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_gt_u</p>
+<p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_exhaustion","line":109,"text":"call stack exhausted","action":{"type":"invoke","field":"fac-rec","args":[{"type":"i64","value":"1073741824"}]},"expected":[{"type":"i64"}]}</pre>
 <p style="background-color: yellow">todo, assert_exhaustion</p>
-<p>Generated at 2024-03-03T13:06:40</p>
+<p>Generated at 2024-03-03T14:44:43</p>
