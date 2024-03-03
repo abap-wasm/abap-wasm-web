@@ -73,10 +73,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"mul","args":[{"type":"i32","value":"19088743"},{"type":"i32","value":"1985229328"}]},"expected":[{"type":"i32","value":"898528368"}]}</pre>
 <pre>(assert_return (invoke "mul" (i32.const 0x01234567) (i32.const 0x76543210)) (i32.const 0x358e7470))</pre>
-<p style="background-color: red">error, wrong result, expected 898528368, got 37895532438254700</p>
+<p style="background-color: red">error, wrong result, expected 898528368, got 37895532438254704</p>
 <pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"mul","args":[{"type":"i32","value":"2147483647"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "mul" (i32.const 0x7fffffff) (i32.const 0x7fffffff)) (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 4611686014132420600</p>
+<p style="background-color: red">error, wrong result, expected 1, got 4611686014132420608</p>
 <pre>{"type":"assert_trap","line":64,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
 <p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
@@ -1297,4 +1297,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":983,"filename":"i32.85.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-02T15:15:08</p>
+<p>Generated at 2024-03-03T08:40:36</p>

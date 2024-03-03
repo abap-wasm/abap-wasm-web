@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 6</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 4</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 45</h3>
+<h3>Successes: 47</h3>
 <hr>
 <h1>int_literals.wast</h1>
 <pre>{"type":"module","line":1,"filename":"int_literals.0.wasm"}</pre>
@@ -40,13 +40,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"i64.test"},"expected":[{"type":"i64","value":"913028331277281902"}]}</pre>
 <pre>(assert_return (invoke "i64.test") (i64.const 913028331277281902))</pre>
-<p style="background-color: red">error, wrong result, expected 913028331277281902, got 913028331277281900</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":50,"action":{"type":"invoke","field":"i64.umax"},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64.umax") (i64.const -1))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"i64.smax"},"expected":[{"type":"i64","value":"9223372036854775807"}]}</pre>
 <pre>(assert_return (invoke "i64.smax") (i64.const 9223372036854775807))</pre>
-<p style="background-color: red">error, wrong result, expected 9223372036854775807, got 9223372036854776000</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":52,"action":{"type":"invoke","field":"i64.neg_smax"},"expected":[{"type":"i64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "i64.neg_smax") (i64.const -9223372036854775807))</pre>
 <p style="background-color: red">exception: i64, get_unsigned, value is negative</p>
@@ -135,4 +135,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":149,"filename":"int_literals.20.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-02T15:15:09</p>
+<p>Generated at 2024-03-03T08:40:37</p>

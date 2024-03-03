@@ -157,10 +157,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_return","line":196,"action":{"type":"invoke","field":"i64_store16","args":[{"type":"i64","value":"42"}]},"expected":[{"type":"i64","value":"42"}]}</pre>
 <pre>(assert_return (invoke "i64_store16" (i64.const 42)) (i64.const 42))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store16</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_extend_i32_u</p>
 <pre>{"type":"assert_return","line":197,"action":{"type":"invoke","field":"i64_store16","args":[{"type":"i64","value":"51966"}]},"expected":[{"type":"i64","value":"51966"}]}</pre>
 <pre>(assert_return (invoke "i64_store16" (i64.const 0xCAFE)) (i64.const 0xCAFE))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store16</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_extend_i32_u</p>
 <pre>{"type":"assert_return","line":199,"action":{"type":"invoke","field":"i64_store32","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i64_store32" (i64.const -1)) (i64.const 0xFFFFFFFF))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
@@ -169,10 +169,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_return","line":201,"action":{"type":"invoke","field":"i64_store32","args":[{"type":"i64","value":"42424242"}]},"expected":[{"type":"i64","value":"42424242"}]}</pre>
 <pre>(assert_return (invoke "i64_store32" (i64.const 42424242)) (i64.const 42424242))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_extend_i32_u</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"i64_store32","args":[{"type":"i64","value":"3735931646"}]},"expected":[{"type":"i64","value":"3735931646"}]}</pre>
 <pre>(assert_return (invoke "i64_store32" (i64.const 0xDEADCAFE)) (i64.const 0xDEADCAFE))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store32</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_extend_i32_u</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"i64_store","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64_store" (i64.const -1)) (i64.const -1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
@@ -181,7 +181,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"i64_store","args":[{"type":"i64","value":"2880249322"}]},"expected":[{"type":"i64","value":"2880249322"}]}</pre>
 <pre>(assert_return (invoke "i64_store" (i64.const 0xABAD1DEA)) (i64.const 0xABAD1DEA))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_store</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_extend_i32_u</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"i64_store","args":[{"type":"i64","value":"12370766947463011818"}]},"expected":[{"type":"i64","value":"12370766947463011818"}]}</pre>
 <pre>(assert_return (invoke "i64_store" (i64.const 0xABADCAFEDEAD1DEA)) (i64.const 0xABADCAFEDEAD1DEA))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo</p>
@@ -209,4 +209,4 @@
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"f64_store","args":[{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64_store" (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-02T15:14:43</p>
+<p>Generated at 2024-03-03T08:40:11</p>
