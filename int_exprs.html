@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 33</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 29</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 75</h3>
+<h3>Successes: 79</h3>
 <hr>
 <h1>int_exprs.wast</h1>
 <pre>{"type":"module","line":6,"filename":"int_exprs.0.wasm"}</pre>
@@ -21,15 +21,15 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"i64.no_fold_wrap_extend_s","args":[{"type":"i64","value":"4538991236898928"}]},"expected":[{"type":"i64","value":"1079009392"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_wrap_extend_s" (i64.const 0x0010203040506070)) (i64.const 0x0000000040506070))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"i64.no_fold_wrap_extend_s","args":[{"type":"i64","value":"45230338458316960"}]},"expected":[{"type":"i64","value":"18446744072918986912"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_wrap_extend_s" (i64.const 0x00a0b0c0d0e0f0a0)) (i64.const 0xffffffffd0e0f0a0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -790564704</p>
 <pre>{"type":"module","line":35,"filename":"int_exprs.2.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":40,"action":{"type":"invoke","field":"i64.no_fold_wrap_extend_u","args":[{"type":"i64","value":"4538991236898928"}]},"expected":[{"type":"i64","value":"1079009392"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_wrap_extend_u" (i64.const 0x0010203040506070)) (i64.const 0x0000000040506070))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":44,"filename":"int_exprs.3.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"i32.no_fold_shl_shr_s","args":[{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -43,7 +43,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_shr_s</p>
 <pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"i64.no_fold_shl_shr_u","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_shl_shr_u" (i64.const 0x8000000000000000)) (i64.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":63,"filename":"int_exprs.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":75,"action":{"type":"invoke","field":"i32.no_fold_shr_s_shl","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -57,7 +57,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_shr_s</p>
 <pre>{"type":"assert_return","line":78,"action":{"type":"invoke","field":"i64.no_fold_shr_u_shl","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.no_fold_shr_u_shl" (i64.const 1)) (i64.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_shr_u</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":82,"filename":"int_exprs.5.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":94,"action":{"type":"invoke","field":"i32.no_fold_div_s_mul","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -308,4 +308,4 @@
 <pre>{"type":"assert_trap","line":350,"text":"integer overflow","action":{"type":"invoke","field":"i64.no_fold_div_neg1","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.no_fold_div_neg1" (i64.const 0x8000000000000000)) "integer overflow")</pre>
 <p style="background-color: red">error, expected trap</p>
-<p>Generated at 2024-03-03T18:23:38</p>
+<p>Generated at 2024-03-04T07:01:25</p>

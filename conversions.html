@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 573</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 566</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 46</h3>
+<h3>Successes: 53</h3>
 <hr>
 <h1>conversions.wast</h1>
 <pre>{"type":"module","line":1,"filename":"conversions.0.wasm"}</pre>
@@ -43,13 +43,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const -1)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":52,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"18446744073709451616"}]},"expected":[{"type":"i32","value":"4294867296"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const -100000)) (i32.const -100000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":53,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"2147483648"}]},"expected":[{"type":"i32","value":"2147483648"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 0x80000000)) (i32.const 0x80000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"18446744071562067967"}]},"expected":[{"type":"i32","value":"2147483647"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 0xffffffff7fffffff)) (i32.const 0x7fffffff))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744071562067967"</p>
@@ -64,19 +64,19 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744069414584321"</p>
 <pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"1311768467463790320"}]},"expected":[{"type":"i32","value":"2596069104"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 1311768467463790320)) (i32.const 0x9abcdef0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "1311768467463790320"</p>
 <pre>{"type":"assert_return","line":60,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 0x00000000ffffffff)) (i32.const 0xffffffff))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"4294967296"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 0x0000000100000000)) (i32.const 0x00000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"i32.wrap_i64","args":[{"type":"i64","value":"4294967297"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "i32.wrap_i64" (i64.const 0x0000000100000001)) (i32.const 0x00000001))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":64,"action":{"type":"invoke","field":"i32.trunc_f32_s","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.trunc_f32_s" (f32.const 0.0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_trunc_f32_s</p>
@@ -1834,4 +1834,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":702,"filename":"conversions.25.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-03T18:23:10</p>
+<p>Generated at 2024-03-04T07:00:57</p>

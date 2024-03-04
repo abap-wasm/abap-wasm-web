@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 73</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 71</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 75</h3>
+<h3>Successes: 77</h3>
 <hr>
 <h1>select.wast</h1>
 <pre>{"type":"module","line":1,"filename":"select.0.wasm"}</pre>
@@ -355,10 +355,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":316,"action":{"type":"invoke","field":"as-convert-operand","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "as-convert-operand" (i32.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":317,"action":{"type":"invoke","field":"as-convert-operand","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-convert-operand" (i32.const 1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_wrap_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":320,"filename":"select.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":324,"filename":"select.2.wasm","text":"invalid result arity"}</pre>
@@ -417,4 +417,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":518,"filename":"select.29.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-03T18:24:25</p>
+<p>Generated at 2024-03-04T07:02:13</p>
