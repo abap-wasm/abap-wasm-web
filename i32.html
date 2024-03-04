@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 87</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 83</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 373</h3>
+<h3>Successes: 377</h3>
 <hr>
 <h1>i32.wast</h1>
 <pre>{"type":"module","line":3,"filename":"i32.0.wasm"}</pre>
@@ -61,7 +61,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"mul","args":[{"type":"i32","value":"268435456"},{"type":"i32","value":"4096"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "mul" (i32.const 0x10000000) (i32.const 4096)) (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 1099511627776</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"mul","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "mul" (i32.const 0x80000000) (i32.const 0)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -73,10 +73,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"mul","args":[{"type":"i32","value":"19088743"},{"type":"i32","value":"1985229328"}]},"expected":[{"type":"i32","value":"898528368"}]}</pre>
 <pre>(assert_return (invoke "mul" (i32.const 0x01234567) (i32.const 0x76543210)) (i32.const 0x358e7470))</pre>
-<p style="background-color: red">error, wrong result, expected 898528368, got 37895532438254704</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"mul","args":[{"type":"i32","value":"2147483647"},{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "mul" (i32.const 0x7fffffff) (i32.const 0x7fffffff)) (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 4611686014132420608</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":64,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 1) (i32.const 0)) "integer divide by zero")</pre>
 <p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
@@ -85,7 +85,7 @@
 <p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
 <pre>{"type":"assert_trap","line":66,"text":"integer overflow","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 0x80000000) (i32.const -1)) "integer overflow")</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: i32.div_s, signed integer overflow</p>
 <pre>{"type":"assert_trap","line":67,"text":"integer divide by zero","action":{"type":"invoke","field":"div_s","args":[{"type":"i32","value":"2147483648"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "div_s" (i32.const 0x80000000) (i32.const 0)) "integer divide by zero")</pre>
 <p style="background-color: green">ok, got error: i32.div_s, division by zero</p>
@@ -1297,4 +1297,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":983,"filename":"i32.85.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-04T07:01:24</p>
+<p>Generated at 2024-03-04T17:59:39</p>

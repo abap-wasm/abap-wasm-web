@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 4</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 2</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 47</h3>
+<h3>Successes: 49</h3>
 <hr>
 <h1>int_literals.wast</h1>
 <pre>{"type":"module","line":1,"filename":"int_literals.0.wasm"}</pre>
@@ -52,10 +52,10 @@
 <p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775807</p>
 <pre>{"type":"assert_return","line":53,"action":{"type":"invoke","field":"i64.smin"},"expected":[{"type":"i64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "i64.smin") (i64.const -9223372036854775808))</pre>
-<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775808</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"i64.alt_smin"},"expected":[{"type":"i64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "i64.alt_smin") (i64.const -9223372036854775808))</pre>
-<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775808</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"i64.inc_smin"},"expected":[{"type":"i64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "i64.inc_smin") (i64.const -9223372036854775807))</pre>
 <p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775807</p>
@@ -135,4 +135,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":149,"filename":"int_literals.20.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-04T07:01:25</p>
+<p>Generated at 2024-03-04T17:59:40</p>
