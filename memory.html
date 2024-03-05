@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 25</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 23</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 54</h3>
+<h3>Successes: 56</h3>
 <hr>
 <h1>memory.wast</h1>
 <pre>{"type":"module","line":3,"filename":"memory.0.wasm"}</pre>
@@ -130,7 +130,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"i64_load8_s","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_s" (i64.const -1)) (i64.const -1))</pre>
-<p style="background-color: red">error, wrong result, expected 18446744073709551615, got 255</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"i64_load8_u","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"255"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_u" (i64.const -1)) (i64.const 255))</pre>
 <p style="background-color: green">ok, result</p>
@@ -145,7 +145,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const -1)) (i64.const 4294967295))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967295, got 18446744073709551615</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"i64_load8_s","args":[{"type":"i64","value":"100"}]},"expected":[{"type":"i64","value":"100"}]}</pre>
 <pre>(assert_return (invoke "i64_load8_s" (i64.const 100)) (i64.const 100))</pre>
 <p style="background-color: green">ok, result</p>
@@ -206,4 +206,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":239,"filename":"memory.33.wat","text":"duplicate memory"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-05T07:00:53</p>
+<p>Generated at 2024-03-05T18:14:35</p>

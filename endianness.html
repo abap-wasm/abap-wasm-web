@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 28</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 18</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 41</h3>
+<h3>Successes: 51</h3>
 <hr>
 <h1>endianness.wast</h1>
 <pre>{"type":"module","line":1,"filename":"endianness.0.wasm"}</pre>
@@ -46,7 +46,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":149,"action":{"type":"invoke","field":"i64_load16_s","args":[{"type":"i64","value":"18446744073709547374"}]},"expected":[{"type":"i64","value":"18446744073709547374"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_s" (i64.const -4242)) (i64.const -4242))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073709547374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":150,"action":{"type":"invoke","field":"i64_load16_s","args":[{"type":"i64","value":"42"}]},"expected":[{"type":"i64","value":"42"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_s" (i64.const 42)) (i64.const 42))</pre>
 <p style="background-color: green">ok, result</p>
@@ -58,7 +58,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":154,"action":{"type":"invoke","field":"i64_load16_u","args":[{"type":"i64","value":"18446744073709547374"}]},"expected":[{"type":"i64","value":"61294"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_u" (i64.const -4242)) (i64.const 61294))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073709547374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":155,"action":{"type":"invoke","field":"i64_load16_u","args":[{"type":"i64","value":"42"}]},"expected":[{"type":"i64","value":"42"}]}</pre>
 <pre>(assert_return (invoke "i64_load16_u" (i64.const 42)) (i64.const 42))</pre>
 <p style="background-color: green">ok, result</p>
@@ -70,7 +70,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":159,"action":{"type":"invoke","field":"i64_load32_s","args":[{"type":"i64","value":"18446744073667127374"}]},"expected":[{"type":"i64","value":"18446744073667127374"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_s" (i64.const -42424242)) (i64.const -42424242))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073667127374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":160,"action":{"type":"invoke","field":"i64_load32_s","args":[{"type":"i64","value":"42424242"}]},"expected":[{"type":"i64","value":"42424242"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_s" (i64.const 42424242)) (i64.const 42424242))</pre>
 <p style="background-color: green">ok, result</p>
@@ -79,22 +79,22 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":163,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const -1)) (i64.const 0xFFFFFFFF))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967295, got 18446744073709551615</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":164,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"18446744073667127374"}]},"expected":[{"type":"i64","value":"4252543054"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const -42424242)) (i64.const 4252543054))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073667127374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":165,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"42424242"}]},"expected":[{"type":"i64","value":"42424242"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const 42424242)) (i64.const 42424242))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":166,"action":{"type":"invoke","field":"i64_load32_u","args":[{"type":"i64","value":"2880249322"}]},"expected":[{"type":"i64","value":"2880249322"}]}</pre>
 <pre>(assert_return (invoke "i64_load32_u" (i64.const 0xABAD1DEA)) (i64.const 0xABAD1DEA))</pre>
-<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -1414717974</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"i64_load","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64_load" (i64.const -1)) (i64.const -1))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"i64_load","args":[{"type":"i64","value":"18446744073667127374"}]},"expected":[{"type":"i64","value":"18446744073667127374"}]}</pre>
 <pre>(assert_return (invoke "i64_load" (i64.const -42424242)) (i64.const -42424242))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073667127374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"i64_load","args":[{"type":"i64","value":"2880249322"}]},"expected":[{"type":"i64","value":"2880249322"}]}</pre>
 <pre>(assert_return (invoke "i64_load" (i64.const 0xABAD1DEA)) (i64.const 0xABAD1DEA))</pre>
 <p style="background-color: green">ok, result</p>
@@ -154,7 +154,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":195,"action":{"type":"invoke","field":"i64_store16","args":[{"type":"i64","value":"18446744073709547374"}]},"expected":[{"type":"i64","value":"61294"}]}</pre>
 <pre>(assert_return (invoke "i64_store16" (i64.const -4242)) (i64.const 61294))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073709547374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":196,"action":{"type":"invoke","field":"i64_store16","args":[{"type":"i64","value":"42"}]},"expected":[{"type":"i64","value":"42"}]}</pre>
 <pre>(assert_return (invoke "i64_store16" (i64.const 42)) (i64.const 42))</pre>
 <p style="background-color: green">ok, result</p>
@@ -166,7 +166,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":200,"action":{"type":"invoke","field":"i64_store32","args":[{"type":"i64","value":"18446744073709547374"}]},"expected":[{"type":"i64","value":"4294963054"}]}</pre>
 <pre>(assert_return (invoke "i64_store32" (i64.const -4242)) (i64.const 4294963054))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073709547374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":201,"action":{"type":"invoke","field":"i64_store32","args":[{"type":"i64","value":"42424242"}]},"expected":[{"type":"i64","value":"42424242"}]}</pre>
 <pre>(assert_return (invoke "i64_store32" (i64.const 42424242)) (i64.const 42424242))</pre>
 <p style="background-color: green">ok, result</p>
@@ -178,7 +178,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"i64_store","args":[{"type":"i64","value":"18446744073667127374"}]},"expected":[{"type":"i64","value":"18446744073667127374"}]}</pre>
 <pre>(assert_return (invoke "i64_store" (i64.const -42424242)) (i64.const -42424242))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18446744073667127374"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"i64_store","args":[{"type":"i64","value":"2880249322"}]},"expected":[{"type":"i64","value":"2880249322"}]}</pre>
 <pre>(assert_return (invoke "i64_store" (i64.const 0xABAD1DEA)) (i64.const 0xABAD1DEA))</pre>
 <p style="background-color: green">ok, result</p>
@@ -209,4 +209,4 @@
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"f64_store","args":[{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64_store" (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-05T07:00:24</p>
+<p>Generated at 2024-03-05T18:14:07</p>
