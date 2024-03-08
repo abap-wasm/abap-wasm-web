@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 72</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 70</h3>
 <h3>Warnings: 21</h3>
-<h3>Successes: 39</h3>
+<h3>Successes: 41</h3>
 <hr>
 <h1>linking.wast</h1>
 <pre>{"type":"module","line":3,"filename":"linking.0.wasm"}</pre>
@@ -162,7 +162,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 3)) (i32.const 4))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Nt "Mt.call" (i32.const 3)) (i32.const 4))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: Mt.call</p>
@@ -232,14 +232,14 @@
 <pre>(assert_return (get $G2 "g") (i32.const 5))</pre>
 <p style="background-color: red">exception: invoke: unknown action type, get</p>
 <pre>{"type":"assert_uninstantiable","line":244,"filename":"linking.21.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_unlinkable","line":253,"filename":"linking.22.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
 <pre>{"type":"assert_trap","line":262,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 7)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: get_export_by_name, not found: call</p>
 <pre>{"type":"assert_uninstantiable","line":267,"filename":"linking.23.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke $Mt "call" (i32.const 7)) (i32.const 0))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: call</p>
@@ -350,4 +350,4 @@
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"get table[0]"},"expected":[{"type":"i32","value":"57005"}]}</pre>
 <pre>(assert_return (invoke $Ms "get table[0]") (i32.const 0xdead))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
-<p>Generated at 2024-03-08T15:02:32</p>
+<p>Generated at 2024-03-08T18:20:40</p>

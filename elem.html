@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 65</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 52</h3>
 <h3>Warnings: 3</h3>
-<h3>Successes: 31</h3>
+<h3>Successes: 44</h3>
 <hr>
 <h1>elem.wast</h1>
 <pre>{"type":"module","line":4,"filename":"elem.0.wasm"}</pre>
@@ -31,7 +31,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":167,"action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32","value":"65"}]}</pre>
 <pre>(assert_return (invoke "call-7") (i32.const 65))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: instantiate element section, failed to execute instructions: instantiate 4: todo</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"call-9"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke "call-9") (i32.const 66))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
@@ -60,29 +60,29 @@
 <pre>{"type":"module","line":230,"filename":"elem.21.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_uninstantiable","line":239,"filename":"elem.22.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":248,"filename":"elem.23.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":257,"filename":"elem.24.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":266,"filename":"elem.25.wasm","text":"out of bounds table access"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_uninstantiable","line":273,"filename":"elem.26.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":281,"filename":"elem.27.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_uninstantiable","line":290,"filename":"elem.28.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":298,"filename":"elem.29.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_uninstantiable","line":307,"filename":"elem.30.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: An exception was raised.</p>
 <pre>{"type":"assert_uninstantiable","line":315,"filename":"elem.31.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_uninstantiable","line":324,"filename":"elem.32.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: An exception was raised.</p>
 <pre>{"type":"assert_uninstantiable","line":332,"filename":"elem.33.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: red">expected error</p>
+<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"module","line":342,"filename":"elem.34.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":350,"text":"out of bounds table access","action":{"type":"invoke","field":"init"}}</pre>
@@ -144,7 +144,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":569,"action":{"type":"invoke","field":"call-overwritten-element"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke "call-overwritten-element") (i32.const 66))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"module","line":573,"filename":"elem.59.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":591,"as":"module1"}</pre>
@@ -194,22 +194,22 @@
 <p style="background-color: yellow">todo, register</p>
 <pre>{"type":"assert_return","line":663,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 0)) (ref.null extern))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">error, expected non initial value</p>
 <pre>{"type":"assert_return","line":664,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 1)) (ref.null extern))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">error, expected non initial value</p>
 <pre>{"type":"assert_return","line":666,"action":{"type":"invoke","field":"set","args":[{"type":"i32","value":"0"},{"type":"externref","value":"42"}]}}</pre>
 <pre>(assert_return (invoke $m "set" (i32.const 0) (ref.extern 42)))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":667,"action":{"type":"invoke","field":"set","args":[{"type":"i32","value":"1"},{"type":"externref","value":"137"}]}}</pre>
 <pre>(assert_return (invoke $m "set" (i32.const 1) (ref.extern 137)))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":669,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"42"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 0)) (ref.extern 42))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">todo, externref check non null</p>
 <pre>{"type":"assert_return","line":670,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"137"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 1)) (ref.extern 137))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">todo, externref check non null</p>
 <pre>{"type":"module","line":672,"filename":"elem.67.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":676,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
@@ -227,4 +227,4 @@
 <pre>{"type":"assert_return","line":700,"action":{"type":"invoke","field":"call_imported_elem"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "call_imported_elem") (i32.const 42))</pre>
 <p style="background-color: red">exception: import: unknown global import type</p>
-<p>Generated at 2024-03-08T15:02:04</p>
+<p>Generated at 2024-03-08T18:20:12</p>

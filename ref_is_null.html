@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 12</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 6</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 4</h3>
+<h3>Successes: 8</h3>
 <hr>
 <h1>ref_is_null.wast</h1>
 <pre>{"type":"module","line":1,"filename":"ref_is_null.0.wasm"}</pre>
@@ -15,35 +15,33 @@
 <pre>(assert_return (invoke "externref" (ref.extern 1)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":35,"action":{"type":"invoke","field":"init","args":[{"type":"externref","value":"0"}]}}</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
 <pre>{"type":"assert_return","line":37,"action":{"type":"invoke","field":"funcref-elem","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "funcref-elem" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">exception: zcl_wasm_ref_is_null: initial value popped</p>
 <pre>{"type":"assert_return","line":38,"action":{"type":"invoke","field":"externref-elem","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "externref-elem" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">exception: zcl_wasm_ref_is_null: initial value popped</p>
 <pre>{"type":"assert_return","line":40,"action":{"type":"invoke","field":"funcref-elem","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "funcref-elem" (i32.const 1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":41,"action":{"type":"invoke","field":"externref-elem","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "externref-elem" (i32.const 1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":43,"action":{"type":"invoke","field":"deinit"}}</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_set</p>
 <pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"funcref-elem","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "funcref-elem" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">exception: zcl_wasm_ref_is_null: initial value popped</p>
 <pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"externref-elem","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "externref-elem" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: red">exception: zcl_wasm_ref_is_null: initial value popped</p>
 <pre>{"type":"assert_return","line":48,"action":{"type":"invoke","field":"funcref-elem","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "funcref-elem" (i32.const 1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"externref-elem","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "externref-elem" (i32.const 1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_get</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":52,"filename":"ref_is_null.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":56,"filename":"ref_is_null.2.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-08T15:03:41</p>
+<p>Generated at 2024-03-08T18:21:50</p>
