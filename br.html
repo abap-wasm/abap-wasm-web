@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 29</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 23</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 68</h3>
+<h3>Successes: 74</h3>
 <hr>
 <h1>br.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br.0.wasm"}</pre>
@@ -91,19 +91,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":407,"action":{"type":"invoke","field":"as-return-values"},"expected":[{"type":"i32","value":"2"},{"type":"i64","value":"7"}]}</pre>
 <pre>(assert_return (invoke "as-return-values") (i32.const 2) (i64.const 7))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":409,"action":{"type":"invoke","field":"as-if-cond"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-if-cond") (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":410,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "as-if-then" (i32.const 1) (i32.const 6)) (i32.const 3))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":411,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-if-then" (i32.const 0) (i32.const 6)) (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":412,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "as-if-else" (i32.const 0) (i32.const 6)) (i32.const 4))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":413,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"1"},{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-if-else" (i32.const 1) (i32.const 6)) (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
@@ -217,7 +217,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":463,"action":{"type":"invoke","field":"nested-block-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-block-value") (i32.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":464,"action":{"type":"invoke","field":"nested-br-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-br-value") (i32.const 9))</pre>
 <p style="background-color: green">ok, result</p>
@@ -226,13 +226,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":466,"action":{"type":"invoke","field":"nested-br_if-value-cond"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-br_if-value-cond") (i32.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":467,"action":{"type":"invoke","field":"nested-br_table-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-br_table-value") (i32.const 9))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":468,"action":{"type":"invoke","field":"nested-br_table-value-index"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-br_table-value-index") (i32.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":471,"filename":"br.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":478,"filename":"br.2.wasm","text":"type mismatch"}</pre>
@@ -273,4 +273,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":655,"filename":"br.20.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-08T06:25:57</p>
+<p>Generated at 2024-03-08T11:19:54</p>

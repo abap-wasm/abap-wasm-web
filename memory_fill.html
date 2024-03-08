@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 79</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 66</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 17</h3>
+<h3>Successes: 30</h3>
 <hr>
 <h1>memory_fill.wast</h1>
 <pre>{"type":"module","line":6,"filename":"memory_fill.0.wasm"}</pre>
@@ -8,10 +8,10 @@
 <pre>{"type":"action","line":22,"action":{"type":"invoke","field":"test"}}</pre>
 <pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65280"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 65280) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result, 5342ms</p>
 <pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"65280"},{"type":"i32","value":"65536"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 65280) (i32.const 65536) (i32.const 85))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result, 19ms</p>
 <pre>{"type":"module","line":28,"filename":"memory_fill.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":44,"text":"out of bounds memory access","action":{"type":"invoke","field":"test"}}</pre>
@@ -27,7 +27,7 @@
 <pre>{"type":"action","line":80,"action":{"type":"invoke","field":"test"}}</pre>
 <pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result, 5378ms</p>
 <pre>{"type":"module","line":84,"filename":"memory_fill.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":100,"action":{"type":"invoke","field":"test"}}</pre>
@@ -42,31 +42,31 @@
 <p style="background-color: red">exception: zcl_wasm_memory_fill, refactor to iteration instead of recursion</p>
 <pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"1"},{"type":"i32","value":"65535"},{"type":"i32","value":"170"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 1) (i32.const 65535) (i32.const 170))</pre>
 <p style="background-color: red">error, wrong result, expected 4294967295, got 1</p>
 <pre>{"type":"assert_return","line":142,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"65535"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 65535) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":145,"filename":"memory_fill.7.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":162,"action":{"type":"invoke","field":"test"}}</pre>
 <pre>{"type":"assert_return","line":164,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"18"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 18) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":166,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"18"},{"type":"i32","value":"21"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 18) (i32.const 21) (i32.const 85))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"21"},{"type":"i32","value":"25"},{"type":"i32","value":"170"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 21) (i32.const 25) (i32.const 170))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"25"},{"type":"i32","value":"28"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 25) (i32.const 28) (i32.const 85))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":172,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"28"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 28) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result, 5391ms</p>
 <pre>{"type":"assert_invalid","line":175,"filename":"memory_fill.8.wasm","text":"unknown memory 0"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":181,"filename":"memory_fill.9.wasm","text":"type mismatch"}</pre>
@@ -202,7 +202,7 @@
 <p style="background-color: green">ok, got error: memory_fill: trap</p>
 <pre>{"type":"assert_return","line":641,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":643,"filename":"memory_fill.73.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":660,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65279"},{"type":"i32","value":"37"},{"type":"i32","value":"514"}]}}</pre>
@@ -210,7 +210,7 @@
 <p style="background-color: green">ok, got error: memory_fill: trap</p>
 <pre>{"type":"assert_return","line":663,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":665,"filename":"memory_fill.74.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":682,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65279"},{"type":"i32","value":"37"},{"type":"i32","value":"4294967295"}]}}</pre>
@@ -218,5 +218,5 @@
 <p style="background-color: green">ok, got error: Range out of bounds</p>
 <pre>{"type":"assert_return","line":685,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
-<p>Generated at 2024-03-08T06:26:40</p>
+<p style="background-color: green">ok, result</p>
+<p>Generated at 2024-03-08T11:21:04</p>

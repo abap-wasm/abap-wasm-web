@@ -10,19 +10,19 @@
 <p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_return","line":103,"action":{"type":"invoke","field":"fac-iter","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-iter" (i64.const 25)) (i64.const 7034535277573963776))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"fac-rec-named","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-rec-named" (i64.const 25)) (i64.const 7034535277573963776))</pre>
 <p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_return","line":105,"action":{"type":"invoke","field":"fac-iter-named","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-iter-named" (i64.const 25)) (i64.const 7034535277573963776))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"fac-opt","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-opt" (i64.const 25)) (i64.const 7034535277573963776))</pre>
 <p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000</p>
 <pre>{"type":"assert_return","line":107,"action":{"type":"invoke","field":"fac-ssa","args":[{"type":"i64","value":"25"}]},"expected":[{"type":"i64","value":"7034535277573963776"}]}</pre>
 <pre>(assert_return (invoke "fac-ssa" (i64.const 25)) (i64.const 7034535277573963776))</pre>
-<p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000, 12ms</p>
+<p style="background-color: red">error, wrong result, expected 7034535277573963776, got 15511210043330985984000000, 13ms</p>
 <pre>{"type":"assert_exhaustion","line":109,"text":"call stack exhausted","action":{"type":"invoke","field":"fac-rec","args":[{"type":"i64","value":"1073741824"}]},"expected":[{"type":"i64"}]}</pre>
 <p style="background-color: yellow">todo, assert_exhaustion</p>
-<p>Generated at 2024-03-08T06:26:25</p>
+<p>Generated at 2024-03-08T11:20:22</p>

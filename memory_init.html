@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 89</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 83</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 144</h3>
+<h3>Successes: 150</h3>
 <hr>
 <h1>memory_init.wast</h1>
 <pre>{"type":"module","line":6,"filename":"memory_init.0.wasm"}</pre>
@@ -573,7 +573,7 @@
 <p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
 <pre>{"type":"assert_return","line":836,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":838,"filename":"memory_init.85.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":856,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65527"},{"type":"i32","value":"16"}]}}</pre>
@@ -581,7 +581,7 @@
 <p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
 <pre>{"type":"assert_return","line":859,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":861,"filename":"memory_init.86.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":879,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65472"},{"type":"i32","value":"30"}]}}</pre>
@@ -589,7 +589,7 @@
 <p style="background-color: green">ok, got error: Range out of bounds</p>
 <pre>{"type":"assert_return","line":882,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":884,"filename":"memory_init.87.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":902,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65473"},{"type":"i32","value":"31"}]}}</pre>
@@ -597,7 +597,7 @@
 <p style="background-color: green">ok, got error: Range out of bounds</p>
 <pre>{"type":"assert_return","line":905,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":907,"filename":"memory_init.88.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":925,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65528"},{"type":"i32","value":"4294967040"}]}}</pre>
@@ -605,7 +605,7 @@
 <p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
 <pre>{"type":"assert_return","line":928,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":930,"filename":"memory_init.89.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":948,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"0"},{"type":"i32","value":"4294967292"}]}}</pre>
@@ -613,7 +613,7 @@
 <p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
 <pre>{"type":"assert_return","line":951,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":954,"filename":"memory_init.90.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-08T06:27:16</p>
+<p>Generated at 2024-03-08T11:21:39</p>

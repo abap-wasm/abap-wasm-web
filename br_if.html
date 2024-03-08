@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 37</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 32</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 81</h3>
+<h3>Successes: 86</h3>
 <hr>
 <h1>br_if.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br_if.0.wasm"}</pre>
@@ -127,7 +127,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":421,"action":{"type":"invoke","field":"as-if-then","args":[{"type":"i32","value":"4"},{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "as-if-then" (i32.const 4) (i32.const 1)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":422,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "as-if-else" (i32.const 0) (i32.const 0)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -136,7 +136,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":424,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "as-if-else" (i32.const 0) (i32.const 1)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":425,"action":{"type":"invoke","field":"as-if-else","args":[{"type":"i32","value":"3"},{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "as-if-else" (i32.const 3) (i32.const 1)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -238,7 +238,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":468,"action":{"type":"invoke","field":"nested-block-value","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-block-value" (i32.const 1)) (i32.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":469,"action":{"type":"invoke","field":"nested-br-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke "nested-br-value" (i32.const 0)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
@@ -256,7 +256,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":474,"action":{"type":"invoke","field":"nested-br_if-value-cond","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-br_if-value-cond" (i32.const 1)) (i32.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":475,"action":{"type":"invoke","field":"nested-br_table-value","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke "nested-br_table-value" (i32.const 0)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
@@ -268,7 +268,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":478,"action":{"type":"invoke","field":"nested-br_table-value-index","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "nested-br_table-value-index" (i32.const 1)) (i32.const 9))</pre>
-<p style="background-color: red">error, wrong result, expected 9, got 12</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":481,"filename":"br_if.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":485,"filename":"br_if.2.wasm","text":"type mismatch"}</pre>
@@ -327,4 +327,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":662,"filename":"br_if.29.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-08T06:25:58</p>
+<p>Generated at 2024-03-08T11:19:54</p>
