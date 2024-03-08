@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 18</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 16</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 51</h3>
+<h3>Successes: 53</h3>
 <hr>
 <h1>endianness.wast</h1>
 <pre>{"type":"module","line":1,"filename":"endianness.0.wasm"}</pre>
@@ -100,7 +100,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"i64_load","args":[{"type":"i64","value":"12370766947463011818"}]},"expected":[{"type":"i64","value":"12370766947463011818"}]}</pre>
 <pre>(assert_return (invoke "i64_load" (i64.const 0xABADCAFEDEAD1DEA)) (i64.const 0xABADCAFEDEAD1DEA))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "12370766947463011818"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":173,"action":{"type":"invoke","field":"f32_load","args":[{"type":"f32","value":"3212836864"}]},"expected":[{"type":"f32","value":"3212836864"}]}</pre>
 <pre>(assert_return (invoke "f32_load" (f32.const -1)) (f32.const -1))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_reinterpret_f32</p>
@@ -184,7 +184,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"i64_store","args":[{"type":"i64","value":"12370766947463011818"}]},"expected":[{"type":"i64","value":"12370766947463011818"}]}</pre>
 <pre>(assert_return (invoke "i64_store" (i64.const 0xABADCAFEDEAD1DEA)) (i64.const 0xABADCAFEDEAD1DEA))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "12370766947463011818"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"f32_store","args":[{"type":"f32","value":"3212836864"}]},"expected":[{"type":"f32","value":"3212836864"}]}</pre>
 <pre>(assert_return (invoke "f32_store" (f32.const -1)) (f32.const -1))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_reinterpret_i32</p>
@@ -209,4 +209,4 @@
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"f64_store","args":[{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"9218868437227405311"}]}</pre>
 <pre>(assert_return (invoke "f64_store" (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1.fffffffffffffp+1023))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-08T11:20:00</p>
+<p>Generated at 2024-03-08T15:02:04</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 32</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 31</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 86</h3>
+<h3>Successes: 87</h3>
 <hr>
 <h1>br_if.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br_if.0.wasm"}</pre>
@@ -82,7 +82,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":401,"action":{"type":"invoke","field":"as-loop-last","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "as-loop-last" (i32.const 1)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":403,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-br-value") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -327,4 +327,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":662,"filename":"br_if.29.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-08T11:19:54</p>
+<p>Generated at 2024-03-08T15:01:58</p>

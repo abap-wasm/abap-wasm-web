@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 32</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 29</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 142</h3>
+<h3>Successes: 145</h3>
 <hr>
 <h1>br_table.wast</h1>
 <pre>{"type":"module","line":3,"filename":"br_table.0.wasm"}</pre>
@@ -199,13 +199,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1081,"action":{"type":"invoke","field":"as-loop-first"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "as-loop-first") (i32.const 3))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1082,"action":{"type":"invoke","field":"as-loop-mid"},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "as-loop-mid") (i32.const 4))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1083,"action":{"type":"invoke","field":"as-loop-last"},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke "as-loop-last") (i32.const 5))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1085,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "as-br-value") (i32.const 9))</pre>
 <p style="background-color: green">ok, result</p>
@@ -500,4 +500,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":1387,"filename":"br_table.24.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-08T11:19:55</p>
+<p>Generated at 2024-03-08T15:01:58</p>

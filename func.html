@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 94</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 70</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 78</h3>
+<h3>Successes: 102</h3>
 <hr>
 <h1>func.wast</h1>
 <pre>{"type":"module","line":3,"filename":"func.0.wasm"}</pre>
@@ -142,91 +142,91 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":324,"action":{"type":"invoke","field":"break-empty"}}</pre>
 <pre>(assert_return (invoke "break-empty"))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":325,"action":{"type":"invoke","field":"break-i32"},"expected":[{"type":"i32","value":"79"}]}</pre>
 <pre>(assert_return (invoke "break-i32") (i32.const 79))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":326,"action":{"type":"invoke","field":"break-i64"},"expected":[{"type":"i64","value":"7979"}]}</pre>
 <pre>(assert_return (invoke "break-i64") (i64.const 7979))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":327,"action":{"type":"invoke","field":"break-f32"},"expected":[{"type":"f32","value":"1117768909"}]}</pre>
 <pre>(assert_return (invoke "break-f32") (f32.const 79.9))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: red">error, wrong result, expected 1117768909, got 1117768908</p>
 <pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"break-f64"},"expected":[{"type":"f64","value":"4635315139034805699"}]}</pre>
 <pre>(assert_return (invoke "break-f64") (f64.const 79.79))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"break-i32-f64"},"expected":[{"type":"i32","value":"79"},{"type":"f64","value":"4635315139034805699"}]}</pre>
 <pre>(assert_return (invoke "break-i32-f64") (i32.const 79) (f64.const 79.79))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"break-i32-i32-i32"},"expected":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "break-i32-i32-i32")</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":333,"action":{"type":"invoke","field":"break-block-i32"},"expected":[{"type":"i32","value":"77"}]}</pre>
 <pre>(assert_return (invoke "break-block-i32") (i32.const 77))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":334,"action":{"type":"invoke","field":"break-block-i32-i64"},"expected":[{"type":"i32","value":"1"},{"type":"i64","value":"2"}]}</pre>
 <pre>(assert_return (invoke "break-block-i32-i64") (i32.const 1) (i64.const 2))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":336,"action":{"type":"invoke","field":"break-br_if-empty","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "break-br_if-empty" (i32.const 0)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":337,"action":{"type":"invoke","field":"break-br_if-empty","args":[{"type":"i32","value":"2"}]}}</pre>
 <pre>(assert_return (invoke "break-br_if-empty" (i32.const 2)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":338,"action":{"type":"invoke","field":"break-br_if-num","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_if-num" (i32.const 0)) (i32.const 51))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":339,"action":{"type":"invoke","field":"break-br_if-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"}]}</pre>
 <pre>(assert_return (invoke "break-br_if-num" (i32.const 1)) (i32.const 50))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":340,"action":{"type":"invoke","field":"break-br_if-num-num","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"51"},{"type":"i64","value":"52"}]}</pre>
 <pre>(assert_return (invoke "break-br_if-num-num" (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":343,"action":{"type":"invoke","field":"break-br_if-num-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"},{"type":"i64","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_if-num-num" (i32.const 1))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":347,"action":{"type":"invoke","field":"break-br_table-empty","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-empty" (i32.const 0)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":348,"action":{"type":"invoke","field":"break-br_table-empty","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-empty" (i32.const 1)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":349,"action":{"type":"invoke","field":"break-br_table-empty","args":[{"type":"i32","value":"5"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-empty" (i32.const 5)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":350,"action":{"type":"invoke","field":"break-br_table-empty","args":[{"type":"i32","value":"4294967295"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-empty" (i32.const -1)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":351,"action":{"type":"invoke","field":"break-br_table-num","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"50"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num" (i32.const 0)) (i32.const 50))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":352,"action":{"type":"invoke","field":"break-br_table-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num" (i32.const 1)) (i32.const 50))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":353,"action":{"type":"invoke","field":"break-br_table-num","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"50"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num" (i32.const 10)) (i32.const 50))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":354,"action":{"type":"invoke","field":"break-br_table-num","args":[{"type":"i32","value":"4294967196"}]},"expected":[{"type":"i32","value":"50"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num" (i32.const -100)) (i32.const 50))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":355,"action":{"type":"invoke","field":"break-br_table-num-num","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"50"},{"type":"i64","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num-num" (i32.const 0))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":358,"action":{"type":"invoke","field":"break-br_table-num-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"},{"type":"i64","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num-num" (i32.const 1))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":361,"action":{"type":"invoke","field":"break-br_table-num-num","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"50"},{"type":"i64","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num-num" (i32.const 10))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":364,"action":{"type":"invoke","field":"break-br_table-num-num","args":[{"type":"i32","value":"4294967196"}]},"expected":[{"type":"i32","value":"50"},{"type":"i64","value":"51"}]}</pre>
 <pre>(assert_return (invoke "break-br_table-num-num" (i32.const -100))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":367,"action":{"type":"invoke","field":"break-br_table-nested-empty","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-nested-empty" (i32.const 0)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":368,"action":{"type":"invoke","field":"break-br_table-nested-empty","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-nested-empty" (i32.const 1)))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":369,"action":{"type":"invoke","field":"break-br_table-nested-empty","args":[{"type":"i32","value":"3"}]}}</pre>
 <pre>(assert_return (invoke "break-br_table-nested-empty" (i32.const 3)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -238,7 +238,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":375,"action":{"type":"invoke","field":"break-br_table-nested-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"}]}</pre>
 <pre>  (invoke "break-br_table-nested-num" (i32.const 1)) (i32.const 50)</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":378,"action":{"type":"invoke","field":"break-br_table-nested-num","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"52"}]}</pre>
 <pre>  (invoke "break-br_table-nested-num" (i32.const 2)) (i32.const 52)</pre>
 <p style="background-color: green">ok, result</p>
@@ -250,7 +250,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":388,"action":{"type":"invoke","field":"break-br_table-nested-num-num","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"50"},{"type":"i32","value":"51"}]}</pre>
 <pre>  (invoke "break-br_table-nested-num-num" (i32.const 1))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":392,"action":{"type":"invoke","field":"break-br_table-nested-num-num","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"101"},{"type":"i32","value":"52"}]}</pre>
 <pre>  (invoke "break-br_table-nested-num-num" (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -443,4 +443,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":960,"filename":"func.75.wat","text":"duplicate local"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-08T11:20:25</p>
+<p>Generated at 2024-03-08T15:02:29</p>

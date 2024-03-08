@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 6</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 0</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 44</h3>
+<h3>Successes: 50</h3>
 <hr>
 <h1>unwind.wast</h1>
 <pre>{"type":"module","line":3,"filename":"unwind.0.wasm"}</pre>
@@ -10,22 +10,22 @@
 <p style="background-color: green">ok, got error: instruction zcl_wasm_unreachable</p>
 <pre>{"type":"assert_return","line":213,"action":{"type":"invoke","field":"func-unwind-by-br"}}</pre>
 <pre>(assert_return (invoke "func-unwind-by-br"))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"func-unwind-by-br-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "func-unwind-by-br-value") (i32.const 9))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":215,"action":{"type":"invoke","field":"func-unwind-by-br_if"}}</pre>
 <pre>(assert_return (invoke "func-unwind-by-br_if"))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"func-unwind-by-br_if-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "func-unwind-by-br_if-value") (i32.const 9))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":217,"action":{"type":"invoke","field":"func-unwind-by-br_table"}}</pre>
 <pre>(assert_return (invoke "func-unwind-by-br_table"))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":218,"action":{"type":"invoke","field":"func-unwind-by-br_table-value"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "func-unwind-by-br_table-value") (i32.const 9))</pre>
-<p style="background-color: red">exception: call(), branching exception, should not happen</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"func-unwind-by-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "func-unwind-by-return") (i32.const 9))</pre>
 <p style="background-color: green">ok, result</p>
@@ -152,4 +152,4 @@
 <pre>{"type":"assert_return","line":267,"action":{"type":"invoke","field":"loop-value-after-return"},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "loop-value-after-return") (i32.const 9))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-08T11:21:46</p>
+<p>Generated at 2024-03-08T15:03:46</p>
