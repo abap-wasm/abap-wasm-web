@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 158</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 155</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 65</h3>
+<h3>Successes: 68</h3>
 <hr>
 <h1>block.wast</h1>
 <pre>{"type":"module","line":3,"filename":"block.0.wasm"}</pre>
@@ -148,13 +148,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":413,"action":{"type":"invoke","field":"param-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "param-break") (i32.const 3))</pre>
-<p style="background-color: red">exception: block: todo consume parameters</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":414,"action":{"type":"invoke","field":"params-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "params-break") (i32.const 3))</pre>
-<p style="background-color: red">exception: block: todo consume parameters</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":415,"action":{"type":"invoke","field":"params-id-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "params-id-break") (i32.const 3))</pre>
-<p style="background-color: red">exception: block: todo consume parameters</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":417,"action":{"type":"invoke","field":"effects"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "effects") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -501,4 +501,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1489,"filename":"block.170.wat","text":"mismatching label"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-09T09:45:53</p>
+<p>Generated at 2024-03-09T13:06:11</p>

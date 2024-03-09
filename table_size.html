@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 9</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 2</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 30</h3>
+<h3>Successes: 37</h3>
 <hr>
 <h1>table_size.wast</h1>
 <pre>{"type":"module","line":1,"filename":"table_size.0.wasm"}</pre>
@@ -55,31 +55,31 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"size-t2"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "size-t2") (i32.const 0))</pre>
-<p style="background-color: red">error, wrong result, expected 0, got 3</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"grow-t2","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "grow-t2" (i32.const 1)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"size-t2"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "size-t2") (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 4</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"grow-t2","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "grow-t2" (i32.const 0)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":48,"action":{"type":"invoke","field":"size-t2"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "size-t2") (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 4</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"grow-t2","args":[{"type":"i32","value":"4"}]}}</pre>
 <pre>(assert_return (invoke "grow-t2" (i32.const 4)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":50,"action":{"type":"invoke","field":"size-t2"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "size-t2") (i32.const 1))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 8</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"grow-t2","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "grow-t2" (i32.const 1)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":52,"action":{"type":"invoke","field":"size-t2"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "size-t2") (i32.const 2))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 9</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"size-t3"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "size-t3") (i32.const 3))</pre>
 <p style="background-color: green">ok, result</p>
@@ -106,15 +106,15 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"size-t3"},"expected":[{"type":"i32","value":"7"}]}</pre>
 <pre>(assert_return (invoke "size-t3") (i32.const 7))</pre>
-<p style="background-color: red">error, wrong result, expected 7, got 9</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":63,"action":{"type":"invoke","field":"grow-t3","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_return (invoke "grow-t3" (i32.const 1)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":64,"action":{"type":"invoke","field":"size-t3"},"expected":[{"type":"i32","value":"8"}]}</pre>
 <pre>(assert_return (invoke "size-t3") (i32.const 8))</pre>
-<p style="background-color: red">error, wrong result, expected 8, got 10</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":70,"filename":"table_size.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":79,"filename":"table_size.2.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-09T09:47:52</p>
+<p>Generated at 2024-03-09T13:08:14</p>
