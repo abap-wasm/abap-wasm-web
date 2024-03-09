@@ -61,13 +61,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":377,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":378,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid") (i32.const 2))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":379,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-last") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":381,"action":{"type":"invoke","field":"as-store-first"}}</pre>
 <pre>(assert_return (invoke "as-store-first"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -148,13 +148,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":413,"action":{"type":"invoke","field":"param-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "param-break") (i32.const 3))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: red">exception: block: todo consume parameters</p>
 <pre>{"type":"assert_return","line":414,"action":{"type":"invoke","field":"params-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "params-break") (i32.const 3))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: red">exception: block: todo consume parameters</p>
 <pre>{"type":"assert_return","line":415,"action":{"type":"invoke","field":"params-id-break"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "params-id-break") (i32.const 3))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: red">exception: block: todo consume parameters</p>
 <pre>{"type":"assert_return","line":417,"action":{"type":"invoke","field":"effects"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "effects") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -501,4 +501,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1489,"filename":"block.170.wat","text":"mismatching label"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-09T07:24:23</p>
+<p>Generated at 2024-03-09T09:45:53</p>

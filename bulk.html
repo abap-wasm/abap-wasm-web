@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 51</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 49</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 52</h3>
+<h3>Successes: 54</h3>
 <hr>
 <h1>bulk.wast</h1>
 <pre>{"type":"module","line":2,"filename":"bulk.0.wasm"}</pre>
@@ -186,18 +186,18 @@
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_init</p>
 <pre>{"type":"assert_trap","line":221,"text":"uninitialized element 2","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "call" (i32.const 2))</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"action","line":224,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"2"}]}}</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
 <pre>{"type":"assert_return","line":225,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_trap","line":227,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "call" (i32.const 2)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"action","line":230,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"2"}]}}</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_init</p>
 <pre>{"type":"action","line":233,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"3"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
@@ -246,35 +246,35 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
 <pre>{"type":"assert_return","line":321,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 3)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 4)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":323,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 5)) (i32.const 2))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"action","line":326,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"3"}]}}</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
 <pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">error, wrong result, expected 1, got 0</p>
 <pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 1)) (i32.const 2))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">error, wrong result, expected 2, got 1</p>
 <pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">error, wrong result, expected 0, got 2</p>
 <pre>{"type":"action","line":333,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"2"},{"type":"i32","value":"0"},{"type":"i32","value":"3"}]}}</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
 <pre>{"type":"assert_return","line":335,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">error, wrong result, expected 1, got 2</p>
 <pre>{"type":"assert_return","line":336,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 3)) (i32.const 2))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":337,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 4)) (i32.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"action","line":340,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"6"},{"type":"i32","value":"8"},{"type":"i32","value":"2"}]}}</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_table_copy</p>
 <pre>{"type":"action","line":341,"action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"8"},{"type":"i32","value":"6"},{"type":"i32","value":"2"}]}}</pre>
@@ -289,4 +289,4 @@
 <pre>{"type":"assert_trap","line":350,"text":"out of bounds table access","action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"11"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "copy" (i32.const 0) (i32.const 11) (i32.const 0))</pre>
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_copy</p>
-<p>Generated at 2024-03-09T07:24:24</p>
+<p>Generated at 2024-03-09T09:45:54</p>

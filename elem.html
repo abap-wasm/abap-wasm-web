@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 48</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 42</h3>
 <h3>Warnings: 3</h3>
-<h3>Successes: 48</h3>
+<h3>Successes: 54</h3>
 <hr>
 <h1>elem.wast</h1>
 <pre>{"type":"module","line":4,"filename":"elem.0.wasm"}</pre>
@@ -23,10 +23,10 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":148,"action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32","value":"65"}]}</pre>
 <pre>(assert_return (invoke "call-7") (i32.const 65))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":149,"action":{"type":"invoke","field":"call-9"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke "call-9") (i32.const 66))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":153,"filename":"elem.9.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":167,"action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32","value":"65"}]}</pre>
@@ -34,7 +34,7 @@
 <p style="background-color: red">exception: instantiate element section, failed to execute instructions: instantiate 4: todo</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"call-9"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke "call-9") (i32.const 66))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_invalid","line":171,"filename":"elem.10.wasm","text":"unknown global"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":175,"filename":"elem.11.wasm","text":"unknown global"}</pre>
@@ -139,7 +139,7 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":556,"action":{"type":"invoke","field":"call-overwritten"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke "call-overwritten") (i32.const 66))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":558,"filename":"elem.58.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":569,"action":{"type":"invoke","field":"call-overwritten-element"},"expected":[{"type":"i32","value":"66"}]}</pre>
@@ -151,13 +151,13 @@
 <p style="background-color: yellow">todo, register</p>
 <pre>{"type":"assert_trap","line":593,"text":"uninitialized element","action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $module1 "call-7") "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":594,"action":{"type":"invoke","field":"call-8"},"expected":[{"type":"i32","value":"65"}]}</pre>
 <pre>(assert_return (invoke $module1 "call-8") (i32.const 65))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":595,"action":{"type":"invoke","field":"call-9"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke $module1 "call-9") (i32.const 66))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":597,"filename":"elem.60.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":606,"action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32","value":"67"}]}</pre>
@@ -227,4 +227,4 @@
 <pre>{"type":"assert_return","line":700,"action":{"type":"invoke","field":"call_imported_elem"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "call_imported_elem") (i32.const 42))</pre>
 <p style="background-color: red">exception: import: unknown global import type</p>
-<p>Generated at 2024-03-09T07:24:29</p>
+<p>Generated at 2024-03-09T09:46:06</p>

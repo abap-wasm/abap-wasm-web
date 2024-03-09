@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 50</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 46</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 47</h3>
+<h3>Successes: 51</h3>
 <hr>
 <h1>load.wast</h1>
 <pre>{"type":"module","line":3,"filename":"load.0.wasm"}</pre>
@@ -58,16 +58,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":185,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first") (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":186,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid") (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":187,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-last") (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"as-call_indirect-index"},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-index") (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":190,"action":{"type":"invoke","field":"as-local.set-value"}}</pre>
 <pre>(assert_return (invoke "as-local.set-value"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -234,4 +234,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":560,"filename":"load.59.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-09T07:24:56</p>
+<p>Generated at 2024-03-09T09:46:34</p>

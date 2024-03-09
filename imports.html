@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 31</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 27</h3>
 <h3>Warnings: 75</h3>
-<h3>Successes: 77</h3>
+<h3>Successes: 81</h3>
 <hr>
 <h1>imports.wast</h1>
 <pre>{"type":"module","line":3,"filename":"imports.0.wasm"}</pre>
@@ -156,16 +156,16 @@
 <p style="background-color: green">ok, got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_return","line":351,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"11"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 1)) (i32.const 11))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"assert_return","line":352,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"22"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 2)) (i32.const 22))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"assert_trap","line":353,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "call" (i32.const 3)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"assert_trap","line":354,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "call" (i32.const 100)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"module","line":357,"filename":"imports.61.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":369,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
@@ -173,16 +173,16 @@
 <p style="background-color: green">ok, got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
 <pre>{"type":"assert_return","line":370,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"11"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 1)) (i32.const 11))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"assert_return","line":371,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"22"}]}</pre>
 <pre>(assert_return (invoke "call" (i32.const 2)) (i32.const 22))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: red">exception: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"assert_trap","line":372,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "call" (i32.const 3)) "uninitialized element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"assert_trap","line":373,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"100"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "call" (i32.const 100)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, not found, index 0</p>
 <pre>{"type":"module","line":376,"filename":"imports.62.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":383,"filename":"imports.63.wasm"}</pre>
@@ -403,4 +403,4 @@
 <p style="background-color: yellow">todo, register</p>
 <pre>{"type":"assert_unlinkable","line":672,"filename":"imports.144.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
-<p>Generated at 2024-03-09T07:24:56</p>
+<p>Generated at 2024-03-09T09:46:33</p>

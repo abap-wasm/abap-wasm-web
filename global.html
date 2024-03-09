@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 56</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 53</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 54</h3>
+<h3>Successes: 57</h3>
 <hr>
 <h1>global.wast</h1>
 <pre>{"type":"module","line":3,"filename":"global.0.wasm"}</pre>
@@ -130,13 +130,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":249,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first") (i32.const 6))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":250,"action":{"type":"invoke","field":"as-call_indirect-mid"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid") (i32.const 2))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":251,"text":"undefined element","action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "as-call_indirect-last") "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_return","line":253,"action":{"type":"invoke","field":"as-store-first"}}</pre>
 <pre>(assert_return (invoke "as-store-first"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -281,4 +281,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":630,"filename":"global.51.wat","text":"duplicate global"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-09T07:24:54</p>
+<p>Generated at 2024-03-09T09:46:31</p>

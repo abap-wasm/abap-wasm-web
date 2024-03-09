@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 6</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 2</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 90</h3>
+<h3>Successes: 94</h3>
 <hr>
 <h1>left-to-right.wast</h1>
 <pre>{"type":"module","line":1,"filename":"left-to-right.0.wasm"}</pre>
@@ -172,10 +172,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"i32_call_indirect"},"expected":[{"type":"i32","value":"66052"}]}</pre>
 <pre>(assert_return (invoke "i32_call_indirect") (i32.const 0x010204))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":210,"action":{"type":"invoke","field":"i64_call_indirect"},"expected":[{"type":"i32","value":"66052"}]}</pre>
 <pre>(assert_return (invoke "i64_call_indirect") (i32.const 0x010204))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":211,"action":{"type":"invoke","field":"i32_select"},"expected":[{"type":"i32","value":"66053"}]}</pre>
 <pre>(assert_return (invoke "i32_select") (i32.const 0x010205))  (assert_return (invoke "i64_select") (i32.const 0x010205))</pre>
 <p style="background-color: green">ok, result</p>
@@ -274,10 +274,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":228,"action":{"type":"invoke","field":"f32_call_indirect"},"expected":[{"type":"i32","value":"66052"}]}</pre>
 <pre>(assert_return (invoke "f32_call_indirect") (i32.const 0x010204))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":229,"action":{"type":"invoke","field":"f64_call_indirect"},"expected":[{"type":"i32","value":"66052"}]}</pre>
 <pre>(assert_return (invoke "f64_call_indirect") (i32.const 0x010204))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":230,"action":{"type":"invoke","field":"f32_select"},"expected":[{"type":"i32","value":"66053"}]}</pre>
 <pre>(assert_return (invoke "f32_select") (i32.const 0x010205))  (assert_return (invoke "f64_select") (i32.const 0x010205))</pre>
 <p style="background-color: green">ok, result</p>
@@ -290,4 +290,4 @@
 <pre>{"type":"assert_return","line":233,"action":{"type":"invoke","field":"br_table"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "br_table") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-09T07:24:56</p>
+<p>Generated at 2024-03-09T09:46:33</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 71</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 65</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 77</h3>
+<h3>Successes: 83</h3>
 <hr>
 <h1>select.wast</h1>
 <pre>{"type":"module","line":1,"filename":"select.0.wasm"}</pre>
@@ -241,22 +241,22 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":274,"action":{"type":"invoke","field":"as-call_indirect-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first" (i32.const 0)) (i32.const 3))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"as-call_indirect-first","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first" (i32.const 1)) (i32.const 2))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":276,"action":{"type":"invoke","field":"as-call_indirect-mid","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":277,"action":{"type":"invoke","field":"as-call_indirect-mid","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid" (i32.const 1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":278,"text":"undefined element","action":{"type":"invoke","field":"as-call_indirect-last","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "as-call_indirect-last" (i32.const 0)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_trap","line":279,"text":"undefined element","action":{"type":"invoke","field":"as-call_indirect-last","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "as-call_indirect-last" (i32.const 1)) "undefined element")</pre>
-<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_return","line":281,"action":{"type":"invoke","field":"as-store-first","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_return (invoke "as-store-first" (i32.const 0)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -417,4 +417,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":518,"filename":"select.29.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-09T07:26:06</p>
+<p>Generated at 2024-03-09T09:47:47</p>

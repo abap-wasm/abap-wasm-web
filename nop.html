@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 9</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 4</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 79</h3>
+<h3>Successes: 84</h3>
 <hr>
 <h1>nop.wast</h1>
 <pre>{"type":"module","line":3,"filename":"nop.0.wasm"}</pre>
@@ -193,19 +193,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":384,"action":{"type":"invoke","field":"as-call_indirect-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":385,"action":{"type":"invoke","field":"as-call_indirect-mid1"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid1") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":386,"action":{"type":"invoke","field":"as-call_indirect-mid2"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid2") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":387,"action":{"type":"invoke","field":"as-call_indirect-last"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-last") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":388,"action":{"type":"invoke","field":"as-call_indirect-everywhere"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-everywhere") (i32.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":390,"action":{"type":"invoke","field":"as-local.set-first","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-local.set-first" (i32.const 1)) (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -262,4 +262,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":424,"filename":"nop.4.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-09T07:26:06</p>
+<p>Generated at 2024-03-09T09:47:47</p>

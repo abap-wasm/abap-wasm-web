@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 70</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 66</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 102</h3>
+<h3>Successes: 106</h3>
 <hr>
 <h1>func.wast</h1>
 <pre>{"type":"module","line":3,"filename":"func.0.wasm"}</pre>
@@ -293,16 +293,16 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":551,"action":{"type":"invoke","field":"signature-explicit-reused"}}</pre>
 <pre>(assert_return (invoke "signature-explicit-reused"))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":552,"action":{"type":"invoke","field":"signature-implicit-reused"}}</pre>
 <pre>(assert_return (invoke "signature-implicit-reused"))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":553,"action":{"type":"invoke","field":"signature-explicit-duplicate"}}</pre>
 <pre>(assert_return (invoke "signature-explicit-duplicate"))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":554,"action":{"type":"invoke","field":"signature-implicit-duplicate"}}</pre>
 <pre>(assert_return (invoke "signature-implicit-duplicate"))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_malformed","line":560,"filename":"func.6.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":567,"filename":"func.7.wat","text":"unexpected token"}</pre>
@@ -443,4 +443,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":960,"filename":"func.75.wat","text":"duplicate local"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-09T07:24:53</p>
+<p>Generated at 2024-03-09T09:46:31</p>

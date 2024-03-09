@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 51</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 47</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 46</h3>
+<h3>Successes: 50</h3>
 <hr>
 <h1>local_tee.wast</h1>
 <pre>{"type":"module","line":3,"filename":"local_tee.0.wasm"}</pre>
@@ -100,16 +100,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"as-call_indirect-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-first" (i32.const 0)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":323,"action":{"type":"invoke","field":"as-call_indirect-mid","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-mid" (i32.const 0)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":324,"action":{"type":"invoke","field":"as-call_indirect-last","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-last" (i32.const 0)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":325,"action":{"type":"invoke","field":"as-call_indirect-index","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "as-call_indirect-index" (i32.const 0)) (i32.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_call_indirect</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":327,"action":{"type":"invoke","field":"as-local.set-value"}}</pre>
 <pre>(assert_return (invoke "as-local.set-value"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -252,4 +252,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":637,"filename":"local_tee.41.wasm","text":"unknown local"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-09T07:24:57</p>
+<p>Generated at 2024-03-09T09:46:34</p>

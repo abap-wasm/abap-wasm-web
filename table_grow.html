@@ -115,7 +115,7 @@
 <p style="background-color: red">error, wrong result, expected 4294967295, got 10</p>
 <pre>{"type":"assert_return","line":81,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"65536"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 0x10000)) (i32.const -1))</pre>
-<p style="background-color: red">error, wrong result, expected 4294967295, got 11, 24ms</p>
+<p style="background-color: red">error, wrong result, expected 4294967295, got 11, 21ms</p>
 <pre>{"type":"module","line":84,"filename":"table_grow.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"check-table-null","args":[{"type":"i32","value":"0"},{"type":"i32","value":"9"}]},"expected":[{"type":"funcref","value":"null"}]}</pre>
@@ -141,4 +141,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":169,"filename":"table_grow.11.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-09T07:26:10</p>
+<p>Generated at 2024-03-09T09:47:50</p>
