@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 52</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 48</h3>
 <h3>Warnings: 3</h3>
-<h3>Successes: 44</h3>
+<h3>Successes: 48</h3>
 <hr>
 <h1>elem.wast</h1>
 <pre>{"type":"module","line":4,"filename":"elem.0.wasm"}</pre>
@@ -194,10 +194,10 @@
 <p style="background-color: yellow">todo, register</p>
 <pre>{"type":"assert_return","line":663,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 0)) (ref.null extern))</pre>
-<p style="background-color: red">error, expected non initial value</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":664,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 1)) (ref.null extern))</pre>
-<p style="background-color: red">error, expected non initial value</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":666,"action":{"type":"invoke","field":"set","args":[{"type":"i32","value":"0"},{"type":"externref","value":"42"}]}}</pre>
 <pre>(assert_return (invoke $m "set" (i32.const 0) (ref.extern 42)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -206,10 +206,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":669,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"42"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 0)) (ref.extern 42))</pre>
-<p style="background-color: red">todo, externref check non null</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":670,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"137"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 1)) (ref.extern 137))</pre>
-<p style="background-color: red">todo, externref check non null</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":672,"filename":"elem.67.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":676,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
@@ -227,4 +227,4 @@
 <pre>{"type":"assert_return","line":700,"action":{"type":"invoke","field":"call_imported_elem"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "call_imported_elem") (i32.const 42))</pre>
 <p style="background-color: red">exception: import: unknown global import type</p>
-<p>Generated at 2024-03-08T18:20:12</p>
+<p>Generated at 2024-03-09T07:24:29</p>

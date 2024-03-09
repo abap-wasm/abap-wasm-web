@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 57</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 56</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 53</h3>
+<h3>Successes: 54</h3>
 <hr>
 <h1>global.wast</h1>
 <pre>{"type":"module","line":3,"filename":"global.0.wasm"}</pre>
@@ -88,7 +88,7 @@
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":229,"action":{"type":"invoke","field":"get-mr"},"expected":[{"type":"externref","value":"10"}]}</pre>
 <pre>(assert_return (invoke "get-mr") (ref.extern 10))</pre>
-<p style="background-color: red">todo, externref check non null</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":231,"action":{"type":"invoke","field":"as-select-first"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-select-first") (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
@@ -281,4 +281,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":630,"filename":"global.51.wat","text":"duplicate global"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-08T18:20:37</p>
+<p>Generated at 2024-03-09T07:24:54</p>

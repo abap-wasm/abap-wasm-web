@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 8</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 5</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 7</h3>
+<h3>Successes: 10</h3>
 <hr>
 <h1>table_get.wast</h1>
 <pre>{"type":"module","line":1,"filename":"table_get.0.wasm"}</pre>
@@ -8,13 +8,13 @@
 <pre>{"type":"action","line":24,"action":{"type":"invoke","field":"init","args":[{"type":"externref","value":"1"}]}}</pre>
 <pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke "get-externref" (i32.const 0)) (ref.null extern))</pre>
-<p style="background-color: red">error, expected non initial value</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"externref","value":"1"}]}</pre>
 <pre>(assert_return (invoke "get-externref" (i32.const 1)) (ref.extern 1))</pre>
-<p style="background-color: red">todo, externref check non null</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"get-funcref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"funcref","value":"null"}]}</pre>
 <pre>(assert_return (invoke "get-funcref" (i32.const 0)) (ref.null func))</pre>
-<p style="background-color: red">error, expected non initial value</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"is_null-funcref","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "is_null-funcref" (i32.const 1)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -43,4 +43,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":80,"filename":"table_get.5.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-08T18:21:54</p>
+<p>Generated at 2024-03-09T07:26:09</p>
