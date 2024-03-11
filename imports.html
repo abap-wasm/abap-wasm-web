@@ -1,12 +1,12 @@
-<a href="./index.html">Home</a><br><h3>Errors: 27</h3>
-<h3>Warnings: 75</h3>
-<h3>Successes: 81</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 16</h3>
+<h3>Warnings: 71</h3>
+<h3>Successes: 96</h3>
 <hr>
 <h1>imports.wast</h1>
 <pre>{"type":"module","line":3,"filename":"imports.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":21,"as":"test"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: green">registered</p>
 <pre>{"type":"module","line":26,"filename":"imports.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":85,"action":{"type":"invoke","field":"print32","args":[{"type":"i32","value":"13"}]}}</pre>
@@ -253,30 +253,30 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":466,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: instantiate data, no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":467,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"16"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 10)) (i32.const 16))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":468,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"i32","value":"1048576"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 8)) (i32.const 0x100000))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":469,"text":"out of bounds memory access","action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"1000000"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "load" (i32.const 1000000)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
 <pre>{"type":"module","line":471,"filename":"imports.96.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":477,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: instantiate data, no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":478,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"16"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 10)) (i32.const 16))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":479,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"8"}]},"expected":[{"type":"i32","value":"1048576"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 8)) (i32.const 0x100000))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":480,"text":"out of bounds memory access","action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"1000000"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "load" (i32.const 1000000)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
 <pre>{"type":"assert_invalid","line":483,"filename":"imports.97.wasm","text":"multiple memories"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":487,"filename":"imports.98.wasm","text":"multiple memories"}</pre>
@@ -333,38 +333,38 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":569,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":570,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":571,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 2))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":572,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 1)) (i32.const -1))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: red">error, wrong result, expected 4294967295, got 2</p>
 <pre>{"type":"assert_return","line":573,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 0)) (i32.const 2))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: red">error, wrong result, expected 2, got 3</p>
 <pre>{"type":"module","line":575,"filename":"imports.124.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":579,"as":"grown-memory"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: green">registered</p>
 <pre>{"type":"assert_return","line":580,"action":{"type":"invoke","field":"grow"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke $Mgm "grow") (i32.const 1)) ;; now size is 2</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":581,"filename":"imports.125.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":586,"as":"grown-imported-memory"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: green">registered</p>
 <pre>{"type":"assert_return","line":587,"action":{"type":"invoke","field":"grow"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Mgim1 "grow") (i32.const 2)) ;; now size is 3</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":588,"filename":"imports.126.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":593,"action":{"type":"invoke","field":"size"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke $Mgim2 "size") (i32.const 3))</pre>
-<p style="background-color: red">exception: zcl_wasm_memory: no linear memory</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_malformed","line":599,"filename":"imports.127.wat","text":"import after function"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":603,"filename":"imports.128.wat","text":"import after function"}</pre>
@@ -400,7 +400,7 @@
 <pre>{"type":"module","line":669,"filename":"imports.143.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":670,"as":"not wasm"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: green">registered</p>
 <pre>{"type":"assert_unlinkable","line":672,"filename":"imports.144.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
-<p>Generated at 2024-03-10T12:58:21</p>
+<p>Generated at 2024-03-11T09:59:09</p>

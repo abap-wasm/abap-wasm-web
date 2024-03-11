@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 42</h3>
-<h3>Warnings: 3</h3>
-<h3>Successes: 54</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 43</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 56</h3>
 <hr>
 <h1>elem.wast</h1>
 <pre>{"type":"module","line":4,"filename":"elem.0.wasm"}</pre>
@@ -70,19 +70,19 @@
 <pre>{"type":"assert_uninstantiable","line":273,"filename":"elem.26.wasm","text":"out of bounds table access"}</pre>
 <p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":281,"filename":"elem.27.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
+<p style="background-color: green">got error: import section: no imports provided</p>
 <pre>{"type":"assert_uninstantiable","line":290,"filename":"elem.28.wasm","text":"out of bounds table access"}</pre>
 <p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_uninstantiable","line":298,"filename":"elem.29.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
+<p style="background-color: green">got error: import section: no imports provided</p>
 <pre>{"type":"assert_uninstantiable","line":307,"filename":"elem.30.wasm","text":"out of bounds table access"}</pre>
 <p style="background-color: green">got error: An exception was raised.</p>
 <pre>{"type":"assert_uninstantiable","line":315,"filename":"elem.31.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
+<p style="background-color: green">got error: import section: no imports provided</p>
 <pre>{"type":"assert_uninstantiable","line":324,"filename":"elem.32.wasm","text":"out of bounds table access"}</pre>
 <p style="background-color: green">got error: An exception was raised.</p>
 <pre>{"type":"assert_uninstantiable","line":332,"filename":"elem.33.wasm","text":"out of bounds table access"}</pre>
-<p style="background-color: green">got error: instantiate element section, failed to execute instructions: zcl_wasm_memory: table_set, not found, index 0</p>
+<p style="background-color: green">got error: import section: no imports provided</p>
 <pre>{"type":"module","line":342,"filename":"elem.34.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":350,"text":"out of bounds table access","action":{"type":"invoke","field":"init"}}</pre>
@@ -148,7 +148,7 @@
 <pre>{"type":"module","line":573,"filename":"elem.59.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":591,"as":"module1"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: green">registered</p>
 <pre>{"type":"assert_trap","line":593,"text":"uninitialized element","action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $module1 "call-7") "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -191,7 +191,7 @@
 <pre>{"type":"module","line":654,"filename":"elem.66.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":661,"as":"exporter"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: green">registered</p>
 <pre>{"type":"assert_return","line":663,"action":{"type":"invoke","field":"get","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke $m "get" (i32.const 0)) (ref.null extern))</pre>
 <p style="background-color: green">ok, result</p>
@@ -221,10 +221,10 @@
 <pre>{"type":"module","line":681,"filename":"elem.68.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":688,"as":"module4"}</pre>
-<p style="background-color: yellow">todo, register</p>
+<p style="background-color: red">exception: instantiate_global, failed to execute instructions: todo, execute instruction zcl_wasm_ref_func</p>
 <pre>{"type":"module","line":690,"filename":"elem.69.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":700,"action":{"type":"invoke","field":"call_imported_elem"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "call_imported_elem") (i32.const 42))</pre>
-<p style="background-color: red">exception: import: unknown global import type</p>
-<p>Generated at 2024-03-10T12:57:53</p>
+<p style="background-color: red">exception: import section: module with name module4 not found</p>
+<p>Generated at 2024-03-11T09:58:41</p>
