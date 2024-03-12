@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 16</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 15</h3>
 <h3>Warnings: 71</h3>
-<h3>Successes: 96</h3>
+<h3>Successes: 97</h3>
 <hr>
 <h1>imports.wast</h1>
 <pre>{"type":"module","line":3,"filename":"imports.0.wasm"}</pre>
@@ -14,14 +14,14 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_convert_i32_s</p>
 <pre>{"type":"assert_return","line":86,"action":{"type":"invoke","field":"print64","args":[{"type":"i64","value":"24"}]}}</pre>
 <pre>(assert_return (invoke "print64" (i64.const 24)))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_convert_i64_s</p>
 <pre>{"type":"assert_invalid","line":89,"filename":"imports.2.wasm","text":"unknown type"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":97,"filename":"imports.3.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"print_i32","args":[{"type":"i32","value":"13"}]}}</pre>
 <pre>(assert_return (invoke "print_i32" (i32.const 13)))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":107,"filename":"imports.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":114,"action":{"type":"invoke","field":"print_i32","args":[{"type":"i32","value":"5"},{"type":"i32","value":"11"}]},"expected":[{"type":"i32","value":"16"}]}</pre>
@@ -403,4 +403,4 @@
 <p style="background-color: green">registered</p>
 <pre>{"type":"assert_unlinkable","line":672,"filename":"imports.144.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
-<p>Generated at 2024-03-12T05:57:17</p>
+<p>Generated at 2024-03-12T18:09:41</p>

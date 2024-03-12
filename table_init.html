@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 170</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 140</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 610</h3>
+<h3>Successes: 640</h3>
 <hr>
 <h1>table_init.wast</h1>
 <pre>{"type":"module","line":6,"filename":"table_init.0.wasm"}</pre>
@@ -19,16 +19,16 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 2)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 3)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 4)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 5)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":48,"text":"uninitialized element","action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check" (i32.const 6)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -55,10 +55,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 14)) (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 15)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 16)) (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
@@ -113,16 +113,16 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":102,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 2)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":103,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 3)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 4)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":105,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 5)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":106,"text":"uninitialized element","action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check" (i32.const 6)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -149,10 +149,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":114,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 14)) (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":115,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 15)) (i32.const 9))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 9, got 3</p>
 <pre>{"type":"assert_return","line":116,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 16)) (i32.const 2))</pre>
 <p style="background-color: red">error, wrong result, expected 2, got 6</p>
@@ -207,16 +207,16 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 2)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 3)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 4)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 5)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":172,"text":"uninitialized element","action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check" (i32.const 6)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -243,10 +243,10 @@
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"7"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 14)) (i32.const 7))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 7, got 2</p>
 <pre>{"type":"assert_return","line":181,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 15)) (i32.const 5))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 5, got 3</p>
 <pre>{"type":"assert_return","line":182,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 16)) (i32.const 2))</pre>
 <p style="background-color: red">error, wrong result, expected 2, got 6</p>
@@ -301,16 +301,16 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 2)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":227,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 3)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":228,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 4)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":229,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 5)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":230,"text":"uninitialized element","action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check" (i32.const 6)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -337,10 +337,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":238,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 14)) (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":239,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 15)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 16)) (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
@@ -395,16 +395,16 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":284,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 2)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":285,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 3)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":286,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 4)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":287,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 5)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":288,"text":"uninitialized element","action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check" (i32.const 6)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -431,10 +431,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":296,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 14)) (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":297,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 15)) (i32.const 9))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 9, got 3</p>
 <pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 16)) (i32.const 2))</pre>
 <p style="background-color: red">error, wrong result, expected 2, got 6</p>
@@ -489,16 +489,16 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":350,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 2)) (i32.const 3))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":351,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 3)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":352,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 4)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":353,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 5)) (i32.const 1))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":354,"text":"uninitialized element","action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check" (i32.const 6)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -525,10 +525,10 @@
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_return","line":362,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"14"}]},"expected":[{"type":"i32","value":"7"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 14)) (i32.const 7))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 7, got 2</p>
 <pre>{"type":"assert_return","line":363,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"15"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 15)) (i32.const 5))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 5, got 3</p>
 <pre>{"type":"assert_return","line":364,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"16"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const 16)) (i32.const 2))</pre>
 <p style="background-color: red">error, wrong result, expected 2, got 6</p>
@@ -2225,4 +2225,4 @@
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"module","line":2122,"filename":"table_init.101.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-12T05:58:38</p>
+<p>Generated at 2024-03-12T18:11:01</p>

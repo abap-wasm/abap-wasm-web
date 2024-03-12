@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 53</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 45</h3>
 <h3>Warnings: 12</h3>
-<h3>Successes: 67</h3>
+<h3>Successes: 75</h3>
 <hr>
 <h1>linking.wast</h1>
 <pre>{"type":"module","line":3,"filename":"linking.0.wasm"}</pre>
@@ -14,13 +14,13 @@
 <p style="background-color: red">error, wrong result, expected 2, got 3</p>
 <pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"Mf.call"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Nf "Mf.call") (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"call"},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke $Nf "call") (i32.const 3))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"call Mf.call"},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Nf "call Mf.call") (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":22,"filename":"linking.2.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"register","line":26,"as":"reexport_f"}</pre>
@@ -49,7 +49,7 @@
 <p style="background-color: red">error, wrong result, expected 42, got 43</p>
 <pre>{"type":"assert_return","line":71,"action":{"type":"invoke","field":"Mg.get"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke $Ng "Mg.get") (i32.const 42))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":72,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"43"}]}</pre>
 <pre>(assert_return (invoke $Ng "get") (i32.const 43))</pre>
 <p style="background-color: green">ok, result</p>
@@ -64,7 +64,7 @@
 <p style="background-color: red">exception: get_export_by_name, not found: get_mut</p>
 <pre>{"type":"assert_return","line":77,"action":{"type":"invoke","field":"Mg.get_mut"},"expected":[{"type":"i32","value":"142"}]}</pre>
 <pre>(assert_return (invoke $Ng "Mg.get_mut") (i32.const 142))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":79,"action":{"type":"invoke","field":"set_mut","args":[{"type":"i32","value":"241"}]}}</pre>
 <pre>(assert_return (invoke $Mg "set_mut" (i32.const 241)))</pre>
 <p style="background-color: red">exception: get_export_by_name, not found: set_mut</p>
@@ -79,7 +79,7 @@
 <p style="background-color: red">exception: get_export_by_name, not found: get_mut</p>
 <pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"Mg.get_mut"},"expected":[{"type":"i32","value":"241"}]}</pre>
 <pre>(assert_return (invoke $Ng "Mg.get_mut") (i32.const 241))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: red">error, wrong result, expected 241, got 142</p>
 <pre>{"type":"assert_unlinkable","line":87,"filename":"linking.7.wasm","text":"incompatible import type"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
 <pre>{"type":"assert_unlinkable","line":91,"filename":"linking.8.wasm","text":"incompatible import type"}</pre>
@@ -109,52 +109,52 @@
 <p style="background-color: red">error, wrong result, expected 4, got 5</p>
 <pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Nt "Mt.call" (i32.const 2)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 2)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":171,"action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"4"}]}</pre>
 <pre>(assert_return (invoke $Nt "call Mt.call" (i32.const 2)) (i32.const 4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":173,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 1)) "uninitialized element")</pre>
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":174,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 1)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 1)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":176,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 1)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_trap","line":178,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":179,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 0)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":181,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
 <pre>{"type":"assert_trap","line":183,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 20)) "undefined element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_trap","line":184,"text":"undefined element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 20)) "undefined element")</pre>
-<p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_trap","line":185,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"7"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call" (i32.const 7)) "undefined element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_trap","line":186,"text":"undefined element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 20)) "undefined element")</pre>
-<p style="background-color: green">ok, got error: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"4294967292"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 3)) (i32.const -4))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":189,"text":"indirect call type mismatch","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"4"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call" (i32.const 4)) "indirect call type mismatch")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect type mismatch</p>
@@ -272,7 +272,7 @@
 <p style="background-color: red">error, wrong result, expected 2, got 242</p>
 <pre>{"type":"assert_return","line":337,"action":{"type":"invoke","field":"Mm.load","args":[{"type":"i32","value":"12"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke $Nm "Mm.load" (i32.const 12)) (i32.const 2))</pre>
-<p style="background-color: red">exception: get_code_by_index: negative index, -1</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":338,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"12"}]},"expected":[{"type":"i32","value":"242"}]}</pre>
 <pre>(assert_return (invoke $Nm "load" (i32.const 12)) (i32.const 0xf2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -350,4 +350,4 @@
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"get table[0]"},"expected":[{"type":"i32","value":"57005"}]}</pre>
 <pre>(assert_return (invoke $Ms "get table[0]") (i32.const 0xdead))</pre>
 <p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
-<p>Generated at 2024-03-12T05:57:18</p>
+<p>Generated at 2024-03-12T18:09:42</p>
