@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 729</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 167</h3>
+<h3>Successes: 171</h3>
 <hr>
 <h1>float_exprs.wast</h1>
 <pre>{"type":"module","line":6,"filename":"float_exprs.0.wasm"}</pre>
@@ -1040,9 +1040,13 @@
 <pre>{"type":"module","line":763,"filename":"float_exprs.40.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":784,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"f32","value":"1097963930"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"action","line":785,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"4"},{"type":"f32","value":"1098068787"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"action","line":786,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"8"},{"type":"f32","value":"1098173645"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"action","line":787,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"12"},{"type":"f32","value":"1098278502"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":788,"action":{"type":"invoke","field":"check","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"f32","value":"1097963930"}]}</pre>
 <pre>(assert_return (invoke "check" (i32.const  0)) (f32.const 15.1))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
@@ -2593,4 +2597,4 @@
 <pre>{"type":"assert_return","line":2570,"action":{"type":"invoke","field":"f64.no_fold_conditional_inc","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_conditional_inc" (f64.const -0.0) (f64.const -1.0)) (f64.const -0.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
-<p>Generated at 2024-03-13T04:52:02</p>
+<p>Generated at 2024-03-13T08:40:55</p>

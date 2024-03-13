@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 33</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 36</h3>
+<h3>Successes: 57</h3>
 <hr>
 <h1>float_memory.wast</h1>
 <pre>{"type":"module","line":5,"filename":"float_memory.0.wasm"}</pre>
@@ -12,6 +12,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const nan:0x200000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":17,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -19,6 +20,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":20,"action":{"type":"invoke","field":"f32.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"2141192192"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x7fa00000))</pre>
 <p style="background-color: red">error, wrong result, expected 2141192192, got 41087</p>
@@ -26,6 +28,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const nan:0x200000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":23,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -33,6 +36,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":26,"action":{"type":"invoke","field":"i32.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"2141192192"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x7fa00000))</pre>
 <p style="background-color: green">ok, result</p>
@@ -48,6 +52,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0x4000000000000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_load</p>
 <pre>{"type":"action","line":42,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -63,6 +68,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0x4000000000000))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"action","line":48,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -70,6 +76,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const 0.0))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"action","line":51,"action":{"type":"invoke","field":"i64.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":52,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x7ff4000000000000))</pre>
 <p style="background-color: green">ok, result</p>
@@ -85,6 +92,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const nan:0x200000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":69,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":70,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -92,6 +100,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":72,"action":{"type":"invoke","field":"f32.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":73,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"2141192192"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x7fa00000))</pre>
 <p style="background-color: red">error, wrong result, expected 2141192192, got 41087</p>
@@ -99,6 +108,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const nan:0x200000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":75,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -106,6 +116,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":78,"action":{"type":"invoke","field":"i32.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":79,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"2141192192"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x7fa00000))</pre>
 <p style="background-color: green">ok, result</p>
@@ -121,6 +132,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0x4000000000000))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_load</p>
 <pre>{"type":"action","line":94,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":95,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -136,6 +148,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0x4000000000000))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"action","line":100,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":101,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -143,6 +156,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const 0.0))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"action","line":103,"action":{"type":"invoke","field":"i64.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x7ff4000000000000))</pre>
 <p style="background-color: green">ok, result</p>
@@ -158,6 +172,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const nan:0x500001))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":121,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":122,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -165,6 +180,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":124,"action":{"type":"invoke","field":"f32.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":125,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"2144337921"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x7fd00001))</pre>
 <p style="background-color: red">error, wrong result, expected 2144337921, got 16830591</p>
@@ -172,6 +188,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const nan:0x500001))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":127,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":128,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -179,6 +196,7 @@
 <pre>(assert_return (invoke "f32.load") (f32.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":130,"action":{"type":"invoke","field":"i32.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":131,"action":{"type":"invoke","field":"i32.load"},"expected":[{"type":"i32","value":"2144337921"}]}</pre>
 <pre>(assert_return (invoke "i32.load") (i32.const 0x7fd00001))</pre>
 <p style="background-color: green">ok, result</p>
@@ -194,6 +212,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0xc000000000001))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_load</p>
 <pre>{"type":"action","line":146,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":147,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -209,6 +228,7 @@
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0xc000000000001))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"action","line":152,"action":{"type":"invoke","field":"reset"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":153,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -216,10 +236,11 @@
 <pre>(assert_return (invoke "f64.load") (f64.const 0.0))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"action","line":155,"action":{"type":"invoke","field":"i64.store"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":156,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"9222246136947933185"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x7ffc000000000001))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":157,"action":{"type":"invoke","field":"f64.load"},"expected":[{"type":"f64","value":"9222246136947933185"}]}</pre>
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0xc000000000001))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_load</p>
-<p>Generated at 2024-03-13T04:52:02</p>
+<p>Generated at 2024-03-13T08:40:55</p>

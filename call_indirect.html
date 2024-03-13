@@ -94,7 +94,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":506,"action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"13"}]},"expected":[{"type":"i64","value":"55"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-i64" (i32.const 13)) (i64.const 55))</pre>
-<p style="background-color: green">ok, result, 39ms</p>
+<p style="background-color: green">ok, result, 37ms</p>
 <pre>{"type":"assert_return","line":507,"action":{"type":"invoke","field":"dispatch-structural-i64","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i64","value":"9"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-i64" (i32.const 20)) (i64.const 9))</pre>
 <p style="background-color: green">ok, result</p>
@@ -112,7 +112,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":513,"action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"26"}]},"expected":[{"type":"i32","value":"55"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-i32" (i32.const 26)) (i32.const 55))</pre>
-<p style="background-color: green">ok, result, 29ms</p>
+<p style="background-color: green">ok, result, 25ms</p>
 <pre>{"type":"assert_return","line":514,"action":{"type":"invoke","field":"dispatch-structural-i32","args":[{"type":"i32","value":"19"}]},"expected":[{"type":"i32","value":"9"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-i32" (i32.const 19)) (i32.const 9))</pre>
 <p style="background-color: green">ok, result</p>
@@ -130,7 +130,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"27"}]},"expected":[{"type":"f32","value":"1113325568"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-f32" (i32.const 27)) (f32.const 55.0))</pre>
-<p style="background-color: green">ok, result, 29ms</p>
+<p style="background-color: green">ok, result, 26ms</p>
 <pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"dispatch-structural-f32","args":[{"type":"i32","value":"21"}]},"expected":[{"type":"f32","value":"1091567616"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-f32" (i32.const 21)) (f32.const 9.0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -148,7 +148,7 @@
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_return","line":527,"action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"28"}]},"expected":[{"type":"f64","value":"4632937379169042432"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-f64" (i32.const 28)) (f64.const 55.0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64, 24ms</p>
+<p style="background-color: red">unknown type, assert_return: f64, 19ms</p>
 <pre>{"type":"assert_return","line":528,"action":{"type":"invoke","field":"dispatch-structural-f64","args":[{"type":"i32","value":"22"}]},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "dispatch-structural-f64" (i32.const 22)) (f64.const 9.0))</pre>
 <p style="background-color: red">unknown type, assert_return: f64</p>
@@ -220,7 +220,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":556,"action":{"type":"invoke","field":"fib-i64","args":[{"type":"i64","value":"20"}]},"expected":[{"type":"i64","value":"10946"}]}</pre>
 <pre>(assert_return (invoke "fib-i64" (i64.const 20)) (i64.const 10946))</pre>
-<p style="background-color: green">ok, result, 3079ms</p>
+<p style="background-color: green">ok, result, 3155ms</p>
 <pre>{"type":"assert_return","line":558,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "fib-i32" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -235,7 +235,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":562,"action":{"type":"invoke","field":"fib-i32","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32","value":"10946"}]}</pre>
 <pre>(assert_return (invoke "fib-i32" (i32.const 20)) (i32.const 10946))</pre>
-<p style="background-color: green">ok, result, 2217ms</p>
+<p style="background-color: green">ok, result, 2199ms</p>
 <pre>{"type":"assert_return","line":564,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "fib-f32" (f32.const 0.0)) (f32.const 1.0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -250,7 +250,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":568,"action":{"type":"invoke","field":"fib-f32","args":[{"type":"f32","value":"1101004800"}]},"expected":[{"type":"f32","value":"1177225216"}]}</pre>
 <pre>(assert_return (invoke "fib-f32" (f32.const 20.0)) (f32.const 10946.0))</pre>
-<p style="background-color: green">ok, result, 2152ms</p>
+<p style="background-color: green">ok, result, 2175ms</p>
 <pre>{"type":"assert_return","line":570,"action":{"type":"invoke","field":"fib-f64","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "fib-f64" (f64.const 0.0)) (f64.const 1.0))</pre>
 <p style="background-color: red">exception: unknown type, invoke, f64</p>
@@ -286,7 +286,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":582,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"200"}]},"expected":[{"type":"i32","value":"99"}]}</pre>
 <pre>(assert_return (invoke "odd" (i32.const 200)) (i32.const 99))</pre>
-<p style="background-color: green">ok, result, 18ms</p>
+<p style="background-color: green">ok, result, 19ms</p>
 <pre>{"type":"assert_return","line":583,"action":{"type":"invoke","field":"odd","args":[{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"44"}]}</pre>
 <pre>(assert_return (invoke "odd" (i32.const 77)) (i32.const 44))</pre>
 <p style="background-color: green">ok, result</p>
@@ -326,7 +326,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_return","line":603,"action":{"type":"invoke","field":"as-memory.grow-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-memory.grow-value") (i32.const 1))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 32ms</p>
 <pre>{"type":"assert_return","line":604,"action":{"type":"invoke","field":"as-return-value"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-return-value") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -475,4 +475,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":1024,"filename":"call_indirect.35.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-13T04:51:35</p>
+<p>Generated at 2024-03-13T08:40:29</p>

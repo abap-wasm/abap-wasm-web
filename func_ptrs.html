@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 7</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 28</h3>
+<h3>Successes: 29</h3>
 <hr>
 <h1>func_ptrs.wast</h1>
 <pre>{"type":"module","line":1,"filename":"func_ptrs.0.wasm"}</pre>
@@ -15,6 +15,7 @@
 <pre>(assert_return (invoke "three" (i32.const 13)) (i32.const 11))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":30,"action":{"type":"invoke","field":"four","args":[{"type":"i32","value":"83"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_invalid","line":32,"filename":"func_ptrs.1.wasm","text":"unknown table"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":33,"filename":"func_ptrs.2.wasm","text":"unknown table"}</pre>
@@ -99,4 +100,4 @@
 <pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"callt","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "callt" (i32.const 1)) (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-13T04:52:03</p>
+<p>Generated at 2024-03-13T08:40:57</p>

@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 2</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 3</h3>
+<h3>Successes: 6</h3>
 <hr>
 <h1>memory_redundancy.wast</h1>
 <pre>{"type":"module","line":5,"filename":"memory_redundancy.0.wasm"}</pre>
@@ -9,15 +9,18 @@
 <pre>(assert_return (invoke "test_store_to_load") (i32.const 0x00000080))</pre>
 <p style="background-color: red">error, wrong result, expected 128, got 0</p>
 <pre>{"type":"action","line":60,"action":{"type":"invoke","field":"zero_everything"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"test_redundant_load"},"expected":[{"type":"i32","value":"128"}]}</pre>
 <pre>(assert_return (invoke "test_redundant_load") (i32.const 0x00000080))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":62,"action":{"type":"invoke","field":"zero_everything"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":63,"action":{"type":"invoke","field":"test_dead_store"},"expected":[{"type":"f32","value":"35"}]}</pre>
 <pre>(assert_return (invoke "test_dead_store") (f32.const 0x1.18p-144))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_load</p>
 <pre>{"type":"action","line":64,"action":{"type":"invoke","field":"zero_everything"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":65,"action":{"type":"invoke","field":"malloc_aliasing"},"expected":[{"type":"i32","value":"43"}]}</pre>
 <pre>(assert_return (invoke "malloc_aliasing") (i32.const 43))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-13T04:53:22</p>
+<p>Generated at 2024-03-13T08:42:16</p>

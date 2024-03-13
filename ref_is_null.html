@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 2</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 12</h3>
+<h3>Successes: 14</h3>
 <hr>
 <h1>ref_is_null.wast</h1>
 <pre>{"type":"module","line":1,"filename":"ref_is_null.0.wasm"}</pre>
@@ -15,6 +15,7 @@
 <pre>(assert_return (invoke "externref" (ref.extern 1)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":35,"action":{"type":"invoke","field":"init","args":[{"type":"externref","value":"0"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":37,"action":{"type":"invoke","field":"funcref-elem","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "funcref-elem" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -28,6 +29,7 @@
 <pre>(assert_return (invoke "externref-elem" (i32.const 1)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":43,"action":{"type":"invoke","field":"deinit"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"funcref-elem","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "funcref-elem" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -44,4 +46,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":56,"filename":"ref_is_null.2.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-13T04:53:23</p>
+<p>Generated at 2024-03-13T08:42:17</p>

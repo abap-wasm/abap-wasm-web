@@ -1,11 +1,12 @@
 <a href="./index.html">Home</a><br><h3>Errors: 83</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 150</h3>
+<h3>Successes: 157</h3>
 <hr>
 <h1>memory_init.wast</h1>
 <pre>{"type":"module","line":6,"filename":"memory_init.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":17,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -99,6 +100,7 @@
 <pre>{"type":"module","line":50,"filename":"memory_init.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":61,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":63,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -192,6 +194,7 @@
 <pre>{"type":"module","line":94,"filename":"memory_init.2.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":105,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":107,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -401,6 +404,7 @@
 <pre>{"type":"module","line":240,"filename":"memory_init.11.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":246,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"module","line":248,"filename":"memory_init.12.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":253,"text":"out of bounds memory access","action":{"type":"invoke","field":"test"}}</pre>
@@ -424,6 +428,7 @@
 <pre>{"type":"module","line":276,"filename":"memory_init.16.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":281,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"module","line":283,"filename":"memory_init.17.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":288,"text":"out of bounds memory access","action":{"type":"invoke","field":"test"}}</pre>
@@ -432,9 +437,11 @@
 <pre>{"type":"module","line":290,"filename":"memory_init.18.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":295,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"module","line":297,"filename":"memory_init.19.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":302,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"module","line":304,"filename":"memory_init.20.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":309,"text":"out of bounds memory access","action":{"type":"invoke","field":"test"}}</pre>
@@ -616,4 +623,4 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":954,"filename":"memory_init.90.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-13T04:53:22</p>
+<p>Generated at 2024-03-13T08:42:16</p>

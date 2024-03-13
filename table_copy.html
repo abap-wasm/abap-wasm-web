@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 115</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 1611</h3>
+<h3>Successes: 1613</h3>
 <hr>
 <h1>table_copy.wast</h1>
 <pre>{"type":"module","line":6,"filename":"table_copy.0.wasm"}</pre>
@@ -10,6 +10,7 @@
 <pre>{"type":"module","line":15,"filename":"table_copy.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":45,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_trap","line":46,"text":"uninitialized element","action":{"type":"invoke","field":"check_t0","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check_t0" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -1665,6 +1666,7 @@
 <pre>{"type":"module","line":843,"filename":"table_copy.10.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":873,"action":{"type":"invoke","field":"test"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_trap","line":874,"text":"uninitialized element","action":{"type":"invoke","field":"check_t0","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "check_t0" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
@@ -5106,4 +5108,4 @@
 <pre>{"type":"assert_trap","line":3082,"text":"uninitialized element","action":{"type":"invoke","field":"test","args":[{"type":"i32","value":"127"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "test" (i32.const 127)) "uninitialized element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
-<p>Generated at 2024-03-13T04:53:27</p>
+<p>Generated at 2024-03-13T08:42:21</p>

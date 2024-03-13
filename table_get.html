@@ -1,11 +1,12 @@
 <a href="./index.html">Home</a><br><h3>Errors: 5</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 10</h3>
+<h3>Successes: 11</h3>
 <hr>
 <h1>table_get.wast</h1>
 <pre>{"type":"module","line":1,"filename":"table_get.0.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":24,"action":{"type":"invoke","field":"init","args":[{"type":"externref","value":"1"}]}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"get-externref","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"externref","value":"null"}]}</pre>
 <pre>(assert_return (invoke "get-externref" (i32.const 0)) (ref.null extern))</pre>
 <p style="background-color: green">ok, result</p>
@@ -43,4 +44,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":80,"filename":"table_get.5.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-13T04:53:27</p>
+<p>Generated at 2024-03-13T08:42:21</p>

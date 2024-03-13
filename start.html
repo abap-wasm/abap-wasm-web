@@ -1,6 +1,6 @@
 <a href="./index.html">Home</a><br><h3>Errors: 10</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 6</h3>
+<h3>Successes: 10</h3>
 <hr>
 <h1>start.wast</h1>
 <pre>{"type":"assert_invalid","line":2,"filename":"start.0.wasm","text":"unknown function"}</pre>
@@ -15,10 +15,12 @@
 <pre>(assert_return (invoke "get") (i32.const 68))</pre>
 <p style="background-color: red">error, wrong result, expected 68, got 65</p>
 <pre>{"type":"action","line":46,"action":{"type":"invoke","field":"inc"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"69"}]}</pre>
 <pre>(assert_return (invoke "get") (i32.const 69))</pre>
 <p style="background-color: red">error, wrong result, expected 69, got 66</p>
 <pre>{"type":"action","line":48,"action":{"type":"invoke","field":"inc"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"70"}]}</pre>
 <pre>(assert_return (invoke "get") (i32.const 70))</pre>
 <p style="background-color: red">error, wrong result, expected 70, got 67</p>
@@ -28,10 +30,12 @@
 <pre>(assert_return (invoke "get") (i32.const 68))</pre>
 <p style="background-color: red">error, wrong result, expected 68, got 65</p>
 <pre>{"type":"action","line":75,"action":{"type":"invoke","field":"inc"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"69"}]}</pre>
 <pre>(assert_return (invoke "get") (i32.const 69))</pre>
 <p style="background-color: red">error, wrong result, expected 69, got 66</p>
 <pre>{"type":"action","line":77,"action":{"type":"invoke","field":"inc"}}</pre>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":78,"action":{"type":"invoke","field":"get"},"expected":[{"type":"i32","value":"70"}]}</pre>
 <pre>(assert_return (invoke "get") (i32.const 70))</pre>
 <p style="background-color: red">error, wrong result, expected 70, got 67</p>
@@ -45,4 +49,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":103,"filename":"start.9.wat","text":"multiple start sections"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-13T04:53:24</p>
+<p>Generated at 2024-03-13T08:42:18</p>
