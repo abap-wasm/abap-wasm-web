@@ -229,7 +229,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":520,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120403456"}]},"expected":[{"type":"f32","value":"1166601314"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 100)) (f32.const 4381.54785156))</pre>
-<p style="background-color: red">error, wrong result, expected 1166601314, got 1166601313, 31ms</p>
+<p style="background-color: red">error, wrong result, expected 1166601314, got 1166601313, 35ms</p>
 <pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"nesting","args":[{"type":"f32","value":"1088421888"},{"type":"f32","value":"1120534528"}]},"expected":[{"type":"f32","value":"1159892992"}]}</pre>
 <pre>(assert_return (invoke "nesting" (f32.const 7) (f32.const 101)) (f32.const 2601))</pre>
 <p style="background-color: green">ok, result</p>
@@ -320,4 +320,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":783,"filename":"loop.42.wat","text":"mismatching label"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-12T18:09:42</p>
+<p>Generated at 2024-03-13T04:52:07</p>
