@@ -9,7 +9,7 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65280"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 65280) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 6009ms</p>
+<p style="background-color: green">ok, result, 5932ms</p>
 <pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"65280"},{"type":"i32","value":"65536"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 65280) (i32.const 65536) (i32.const 85))</pre>
 <p style="background-color: green">ok, result, 24ms</p>
@@ -29,7 +29,7 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 6014ms</p>
+<p style="background-color: green">ok, result, 5907ms</p>
 <pre>{"type":"module","line":84,"filename":"memory_fill.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":100,"action":{"type":"invoke","field":"test"}}</pre>
@@ -42,7 +42,7 @@
 <pre>{"type":"module","line":120,"filename":"memory_fill.6.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":136,"action":{"type":"invoke","field":"test"}}</pre>
-<p style="background-color: red">exception: zcl_wasm_memory_fill, refactor to iteration instead of recursion</p>
+<p style="background-color: red">exception: zcl_wasm_memory_fill, too many bytes</p>
 <pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -70,7 +70,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":172,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"28"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 28) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 5993ms</p>
+<p style="background-color: green">ok, result, 5879ms</p>
 <pre>{"type":"assert_invalid","line":175,"filename":"memory_fill.8.wasm","text":"unknown memory 0"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":181,"filename":"memory_fill.9.wasm","text":"type mismatch"}</pre>
@@ -219,8 +219,8 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":682,"text":"out of bounds memory access","action":{"type":"invoke","field":"run","args":[{"type":"i32","value":"65279"},{"type":"i32","value":"37"},{"type":"i32","value":"4294967295"}]}}</pre>
 <pre>(assert_trap (invoke "run" (i32.const 65279) (i32.const 37) (i32.const 4294967295))</pre>
-<p style="background-color: green">ok, got error: linear_set: out of bounds</p>
+<p style="background-color: green">ok, got error: memory_fill: trap</p>
 <pre>{"type":"assert_return","line":685,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-13T08:41:39</p>
+<p>Generated at 2024-03-14T05:12:15</p>
