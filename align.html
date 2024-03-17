@@ -318,7 +318,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":838,"action":{"type":"invoke","field":"i64_align_switch","args":[{"type":"i32","value":"4"},{"type":"i32","value":"0"}]},"expected":[{"type":"i64","value":"10"}]}</pre>
 <pre>(assert_return (invoke "i64_align_switch" (i32.const 4) (i32.const 0)) (i64.const 10))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 13ms</p>
 <pre>{"type":"assert_return","line":839,"action":{"type":"invoke","field":"i64_align_switch","args":[{"type":"i32","value":"4"},{"type":"i32","value":"1"}]},"expected":[{"type":"i64","value":"10"}]}</pre>
 <pre>(assert_return (invoke "i64_align_switch" (i32.const 4) (i32.const 1)) (i64.const 10))</pre>
 <p style="background-color: green">ok, result</p>
@@ -359,8 +359,8 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":864,"text":"out of bounds memory access","action":{"type":"invoke","field":"store","args":[{"type":"i32","value":"65532"},{"type":"i64","value":"18446744073709551615"}]}}</pre>
 <pre>(assert_trap (invoke "store" (i32.const 65532) (i64.const -1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_set: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_set: out of bounds, 65532, 8</p>
 <pre>{"type":"assert_return","line":866,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"65532"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load" (i32.const 65532)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-16T17:25:28</p>
+<p>Generated at 2024-03-17T07:51:41</p>
