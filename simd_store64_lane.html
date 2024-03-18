@@ -1,0 +1,50 @@
+<a href="./index.html">Home</a><br><h3>Errors: 13</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 3</h3>
+<hr>
+<h1>simd_store64_lane.wast</h1>
+<pre>{"type":"module","line":4,"filename":"simd_store64_lane.0.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<pre>{"type":"assert_return","line":79,"action":{"type":"invoke","field":"v128.store64_lane_0","args":[{"type":"i32","value":"0"},{"type":"v128"}]},"expected":[{"type":"i64","value":"506097522914230528"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_0" (i32.const 0)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"v128.store64_lane_1","args":[{"type":"i32","value":"1"},{"type":"v128"}]},"expected":[{"type":"i64","value":"578437695752307201"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_1" (i32.const 1)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":85,"action":{"type":"invoke","field":"v128.store64_lane_0_offset_0","args":[{"type":"v128"}]},"expected":[{"type":"i64","value":"506097522914230528"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_0_offset_0" (v128.const i64x2 506097522914230528 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"v128.store64_lane_1_offset_1","args":[{"type":"v128"}]},"expected":[{"type":"i64","value":"578437695752307201"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_1_offset_1" (v128.const i64x2 0 578437695752307201))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":89,"action":{"type":"invoke","field":"v128.store64_lane_0_align_1","args":[{"type":"i32","value":"0"},{"type":"v128"}]},"expected":[{"type":"i64","value":"506097522914230528"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_0_align_1" (i32.const 0)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":92,"action":{"type":"invoke","field":"v128.store64_lane_0_align_2","args":[{"type":"i32","value":"0"},{"type":"v128"}]},"expected":[{"type":"i64","value":"506097522914230528"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_0_align_2" (i32.const 0)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":95,"action":{"type":"invoke","field":"v128.store64_lane_0_align_4","args":[{"type":"i32","value":"0"},{"type":"v128"}]},"expected":[{"type":"i64","value":"506097522914230528"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_0_align_4" (i32.const 0)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":98,"action":{"type":"invoke","field":"v128.store64_lane_0_align_8","args":[{"type":"i32","value":"0"},{"type":"v128"}]},"expected":[{"type":"i64","value":"506097522914230528"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_0_align_8" (i32.const 0)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":101,"action":{"type":"invoke","field":"v128.store64_lane_1_align_1","args":[{"type":"i32","value":"1"},{"type":"v128"}]},"expected":[{"type":"i64","value":"578437695752307201"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_1_align_1" (i32.const 1)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"v128.store64_lane_1_align_2","args":[{"type":"i32","value":"1"},{"type":"v128"}]},"expected":[{"type":"i64","value":"578437695752307201"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_1_align_2" (i32.const 1)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":107,"action":{"type":"invoke","field":"v128.store64_lane_1_align_4","args":[{"type":"i32","value":"1"},{"type":"v128"}]},"expected":[{"type":"i64","value":"578437695752307201"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_1_align_4" (i32.const 1)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":110,"action":{"type":"invoke","field":"v128.store64_lane_1_align_8","args":[{"type":"i32","value":"1"},{"type":"v128"}]},"expected":[{"type":"i64","value":"578437695752307201"}]}</pre>
+<pre>(assert_return (invoke "v128.store64_lane_1_align_8" (i32.const 1)</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_invalid","line":115,"filename":"simd_store64_lane.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD5B</p>
+<pre>{"type":"assert_invalid","line":121,"filename":"simd_store64_lane.2.wasm","text":"invalid lane index"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD5B</p>
+<pre>{"type":"assert_invalid","line":128,"filename":"simd_store64_lane.3.wasm","text":"alignment must not be larger than natural"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD5B</p>
+<p>Generated at 2024-03-18T15:13:04</p>

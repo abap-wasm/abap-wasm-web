@@ -1,0 +1,101 @@
+<a href="./index.html">Home</a><br><h3>Errors: 31</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 8</h3>
+<hr>
+<h1>simd_load.wast</h1>
+<pre>{"type":"module","line":3,"filename":"simd_load.0.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":11,"action":{"type":"invoke","field":"v128.load"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "v128.load") (v128.const i8x16 0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09 0x0a 0x0b 0x0c 0x0d 0x0e 0x0f))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":12,"action":{"type":"invoke","field":"v128.load"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "v128.load") (v128.const i16x8 0x0100 0x0302 0x0504 0x0706 0x0908 0x0b0a 0x0d0c 0x0f0e))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"v128.load"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "v128.load") (v128.const i32x4 0x03020100 0x07060504 0x0b0a0908 0x0f0e0d0c))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":18,"filename":"simd_load.1.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"as-i8x16_extract_lane_s-value/0"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_extract_lane_s-value/0") (i32.const 0x00))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":26,"filename":"simd_load.2.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"as-i8x16.eq-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16.eq-operand") (v128.const i32x4 0xffffffff 0x00000000 0x00000000 0x00000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":34,"filename":"simd_load.3.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"as-v128.not-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128.not-operand") (v128.const i32x4 0xfcfdfeff 0xf8f9fafb 0xf4f5f6f7 0xf0f1f2f3))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"as-i8x16.all_true-operand"},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16.all_true-operand") (i32.const 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":46,"filename":"simd_load.4.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"as-v128.bitselect-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128.bitselect-operand") (v128.const i32x4 0xabababab 0xaaaaaaaa 0xbbbbbbbb 0xbbaabbaa))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":56,"filename":"simd_load.5.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"as-i8x16.shl-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16.shl-operand") (v128.const i32x4 0x54545454 0x54545454 0x54545454 0x54545454)) ;; 1010 1000 << 1010 1010</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":64,"filename":"simd_load.6.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"as-add/sub-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-add/sub-operand") (v128.const i32x4 2 2 2 2))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":78,"filename":"simd_load.7.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":85,"action":{"type":"invoke","field":"as-f32x4.mul-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4.mul-operand") (v128.const f32x4 256 2 3.6 -2))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":87,"filename":"simd_load.8.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":93,"action":{"type":"invoke","field":"as-f32x4.abs-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4.abs-operand") (v128.const i32x4 0x7fffffff 0x7fffffff 0x7fffffff 0x7fffffff)) ;; 1111 -> 0111</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":95,"filename":"simd_load.9.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":102,"action":{"type":"invoke","field":"as-f32x4.min-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4.min-operand") (v128.const i32x4 0xaaaaaaaa 0xaaaaaaaa 0xaaaaaaaa 0xaaaaaaaa)) ;; signed 1010 < 0010</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":104,"filename":"simd_load.10.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":110,"action":{"type":"invoke","field":"as-i32x4.trunc_sat_f32x4_s-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4.trunc_sat_f32x4_s-operand") (v128.const i32x4 128 1 1 -1)) ;; 128 1.0 1.8 -1 -> 128 1 1 -1</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":112,"filename":"simd_load.11.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":118,"action":{"type":"invoke","field":"as-f32x4.convert_i32x4_u-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4.convert_i32x4_u-operand") (v128.const f32x4 2 2 2 2))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":120,"filename":"simd_load.12.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":127,"action":{"type":"invoke","field":"as-i8x16.swizzle-operand"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return(invoke "as-i8x16.swizzle-operand") (v128.const i8x16 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":129,"filename":"simd_load.13.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_return","line":135,"action":{"type":"invoke","field":"as-br-value"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-br-value") (v128.const i32x4 0x03020100 0x07060504 0x0b0a0908 0x0f0e0d0c))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_malformed","line":141,"filename":"simd_load.14.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":148,"filename":"simd_load.15.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_malformed","line":155,"filename":"simd_load.16.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_invalid","line":166,"filename":"simd_load.17.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_invalid","line":170,"filename":"simd_load.18.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_invalid","line":174,"filename":"simd_load.19.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_invalid","line":182,"filename":"simd_load.20.wasm","text":"unknown local 2"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD00</p>
+<pre>{"type":"assert_invalid","line":186,"filename":"simd_load.21.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD00</p>
+<p>Generated at 2024-03-18T15:13:03</p>

@@ -1,0 +1,534 @@
+<a href="./index.html">Home</a><br><h3>Errors: 162</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 23</h3>
+<hr>
+<h1>simd_splat.wast</h1>
+<pre>{"type":"module","line":3,"filename":"simd_splat.0.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_return","line":12,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 0)) (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 5)) (v128.const i8x16 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":14,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"4294967291"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const -5)) (v128.const i8x16 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5 -5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":15,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"257"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 257)) (v128.const i8x16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":16,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"255"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 0xff)) (v128.const i8x16 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":17,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"4294967168"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const -128)) (v128.const i8x16 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"127"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 127)) (v128.const i8x16 127 127 127 127 127 127 127 127 127 127 127 127 127 127 127 127))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"4294967167"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const -129)) (v128.const i8x16 127 127 127 127 127 127 127 127 127 127 127 127 127 127 127 127))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 128)) (v128.const i8x16 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128 -128))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"65407"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 0xff7f)) (v128.const i8x16 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":22,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 0x80)) (v128.const i8x16 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80 0x80))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":23,"action":{"type":"invoke","field":"i8x16.splat","args":[{"type":"i32","value":"171"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i8x16.splat" (i32.const 0xAB)) (v128.const i32x4 0xABABABAB 0xABABABAB 0xABABABAB 0xABABABAB))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":25,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 0)) (v128.const i16x8 0 0 0 0 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 5)) (v128.const i16x8 5 5 5 5 5 5 5 5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":27,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"4294967291"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const -5)) (v128.const i16x8 -5 -5 -5 -5 -5 -5 -5 -5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":28,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"65537"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 65537)) (v128.const i16x8 1 1 1 1 1 1 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":29,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"65535"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 0xffff)) (v128.const i16x8 -1 -1 -1 -1 -1 -1 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"4294934528"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const -32768)) (v128.const i16x8 -32768 -32768 -32768 -32768 -32768 -32768 -32768 -32768))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":31,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"32767"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 32767)) (v128.const i16x8 32767 32767 32767 32767 32767 32767 32767 32767))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"4294934527"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const -32769)) (v128.const i16x8 32767 32767 32767 32767 32767 32767 32767 32767))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":33,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"32768"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 32768)) (v128.const i16x8 -32768 -32768 -32768 -32768 -32768 -32768 -32768 -32768))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":34,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"4294934527"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 0xffff7fff)) (v128.const i16x8 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":35,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"32768"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 0x8000)) (v128.const i16x8 0x8000 0x8000 0x8000 0x8000 0x8000 0x8000 0x8000 0x8000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":36,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"43981"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 0xABCD)) (v128.const i32x4 0xABCDABCD 0xABCDABCD 0xABCDABCD 0xABCDABCD))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":37,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"12345"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 012345)) (v128.const i16x8 012_345 012_345 012_345 012_345 012_345 012_345 012_345 012_345))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":38,"action":{"type":"invoke","field":"i16x8.splat","args":[{"type":"i32","value":"4660"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i16x8.splat" (i32.const 0x01234)) (v128.const i16x8 0x0_1234 0x0_1234 0x0_1234 0x0_1234 0x0_1234 0x0_1234 0x0_1234 0x0_1234))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":40,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 0)) (v128.const i32x4 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":41,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"5"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 5)) (v128.const i32x4 5 5 5 5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":42,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"4294967291"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const -5)) (v128.const i32x4 -5 -5 -5 -5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 0xffffffff)) (v128.const i32x4 -1 -1 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 4294967295)) (v128.const i32x4 -1 -1 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":45,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"2147483648"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const -2147483648)) (v128.const i32x4 0x80000000 0x80000000 0x80000000 0x80000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"2147483647"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 2147483647)) (v128.const i32x4 0x7fffffff 0x7fffffff 0x7fffffff 0x7fffffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"2147483648"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 2147483648)) (v128.const i32x4 0x80000000 0x80000000 0x80000000 0x80000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":48,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"1234567890"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 01234567890)) (v128.const i32x4 012_3456_7890 012_3456_7890 012_3456_7890 012_3456_7890))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"i32x4.splat","args":[{"type":"i32","value":"305419896"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i32x4.splat" (i32.const 0x012345678)) (v128.const i32x4 0x0_1234_5678 0x0_1234_5678 0x0_1234_5678 0x0_1234_5678))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0.0)) (v128.const f32x4 0.0 0.0 0.0 0.0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":52,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1066192077"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 1.1)) (v128.const f32x4 1.1 1.1 1.1 1.1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":53,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"3213675725"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const -1.1)) (v128.const f32x4 -1.1 -1.1 -1.1 -1.1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2123789977"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 1e38)) (v128.const f32x4 1e38 1e38 1e38 1e38))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"4271273625"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const -1e38)) (v128.const f32x4 -1e38 -1e38 -1e38 -1e38))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2139095039"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0x1.fffffep127)) (v128.const f32x4 0x1.fffffep127 0x1.fffffep127 0x1.fffffep127 0x1.fffffep127))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"4286578687"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const -0x1.fffffep127)) (v128.const f32x4 -0x1.fffffep127 -0x1.fffffep127 -0x1.fffffep127 -0x1.fffffep127))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2130706432"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0x1p127)) (v128.const f32x4 0x1p127 0x1p127 0x1p127 0x1p127))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"4278190080"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const -0x1p127)) (v128.const f32x4 -0x1p127 -0x1p127 -0x1p127 -0x1p127))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":60,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2139095040"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const inf)) (v128.const f32x4 inf inf inf inf))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"4286578688"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const -inf)) (v128.const f32x4 -inf -inf -inf -inf))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":62,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2143289344"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const nan)) (v128.const f32x4 nan nan nan nan))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":63,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2139095041"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const nan:0x1)) (v128.const f32x4 nan:0x1 nan:0x1 nan:0x1 nan:0x1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":64,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"2147483647"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const nan:0x7f_ffff)) (v128.const f32x4 nan:0x7f_ffff nan:0x7f_ffff nan:0x7f_ffff nan:0x7f_ffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":65,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1290500515"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0123456789)) (v128.const f32x4 0123456789 0123456789 0123456789 0123456789))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":66,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1290500515"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0123456789.)) (v128.const f32x4 0123456789. 0123456789. 0123456789. 0123456789.))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":67,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1536271028"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0x0123456789ABCDEF)) (v128.const f32x4 0x0123456789ABCDEF 0x0123456789ABCDEF 0x0123456789ABCDEF 0x0123456789ABCDEF))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":68,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1536271028"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0x0123456789ABCDEF.)) (v128.const f32x4 0x0123456789ABCDEF. 0x0123456789ABCDEF. 0x0123456789ABCDEF. 0x0123456789ABCDEF.))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":69,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1820282235"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0123456789e019)) (v128.const f32x4 0123456789e019 0123456789e019 0123456789e019 0123456789e019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":70,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1820282235"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0123456789.e+019)) (v128.const f32x4 0123456789.e+019 0123456789.e+019 0123456789.e+019 0123456789.e+019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":71,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1695654580"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0x0123456789ABCDEFp019)) (v128.const f32x4 0x0123456789ABCDEFp019 0x0123456789ABCDEFp019 0x0123456789ABCDEFp019 0x0123456789ABCDEFp019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":72,"action":{"type":"invoke","field":"f32x4.splat","args":[{"type":"f32","value":"1376887476"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f32x4.splat" (f32.const 0x0123456789ABCDEF.p-019)) (v128.const f32x4 0x0123456789ABCDEF.p-019 0x0123456789ABCDEF.p-019 0x0123456789ABCDEF.p-019 0x0123456789ABCDEF.p-019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":74,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 0)) (v128.const i64x2 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":75,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const -0)) (v128.const i64x2 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":76,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 1)) (v128.const i64x2 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":77,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const -1)) (v128.const i64x2 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":78,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const -9223372036854775808)) (v128.const i64x2 -9223372036854775808 -9223372036854775808))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":79,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const -9223372036854775808)) (v128.const i64x2 9223372036854775808 9223372036854775808))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":80,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"9223372036854775807"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 9223372036854775807)) (v128.const i64x2 9223372036854775807 9223372036854775807))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":81,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 18446744073709551615)) (v128.const i64x2 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"9223372036854775807"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 0x7fffffffffffffff)) (v128.const i64x2 0x7fffffffffffffff 0x7fffffffffffffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 0xffffffffffffffff)) (v128.const i64x2 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":84,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const -0x8000000000000000)) (v128.const i64x2 -0x8000000000000000 -0x8000000000000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":85,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const -0x8000000000000000)) (v128.const i64x2 0x8000000000000000 0x8000000000000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":86,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"1234567890123456789"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 01234567890123456789)) (v128.const i64x2 01_234_567_890_123_456_789 01_234_567_890_123_456_789))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"i64x2.splat","args":[{"type":"i64","value":"1311768467294899695"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.splat" (i64.const 0x01234567890ABcdef)) (v128.const i64x2 0x0_1234_5678_90AB_cdef 0x0_1234_5678_90AB_cdef))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":89,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0.0)) (v128.const f64x2 0.0 0.0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":90,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0.0)) (v128.const f64x2 -0.0 -0.0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":91,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4607632778762754458"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 1.1)) (v128.const f64x2 1.1 1.1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":92,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"13831004815617530266"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -1.1)) (v128.const f64x2 -1.1 -1.1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":93,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x0.0000000000001p-1022)) (v128.const f64x2 0x0.0000000000001p-1022 0x0.0000000000001p-1022))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":94,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0x0.0000000000001p-1022)) (v128.const f64x2 -0x0.0000000000001p-1022 -0x0.0000000000001p-1022))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":95,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x1p-1022)) (v128.const f64x2 0x1p-1022 0x1p-1022))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":96,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0x1p-1022)) (v128.const f64x2 -0x1p-1022 -0x1p-1022))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":97,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x1p-1)) (v128.const f64x2 0x1p-1 0x1p-1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":98,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0x1p-1)) (v128.const f64x2 -0x1p-1 -0x1p-1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":99,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x1p+0)) (v128.const f64x2 0x1p+0 0x1p+0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":100,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0x1p+0)) (v128.const f64x2 -0x1p+0 -0x1p+0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":101,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x1.921fb54442d18p+2)) (v128.const f64x2 0x1.921fb54442d18p+2 0x1.921fb54442d18p+2))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":102,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0x1.921fb54442d18p+2)) (v128.const f64x2 -0x1.921fb54442d18p+2 -0x1.921fb54442d18p+2))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":103,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x1.fffffffffffffp+1023)) (v128.const f64x2 0x1.fffffffffffffp+1023 0x1.fffffffffffffp+1023))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -0x1.fffffffffffffp+1023)) (v128.const f64x2 -0x1.fffffffffffffp+1023 -0x1.fffffffffffffp+1023))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":105,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const inf)) (v128.const f64x2 inf inf))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -inf)) (v128.const f64x2 -inf -inf))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":107,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const nan)) (v128.const f64x2 nan nan))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":108,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -nan)) (v128.const f64x2 -nan -nan))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":109,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const nan:0x4000000000000)) (v128.const f64x2 nan:0x4000000000000 nan:0x4000000000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":110,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const -nan:0x4000000000000)) (v128.const f64x2 -nan:0x4000000000000 -nan:0x4000000000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":111,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4728057454347157504"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0123456789)) (v128.const f64x2 0123456789 0123456789))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":112,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4728057454347157504"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0123456789.)) (v128.const f64x2 0123456789. 0123456789.))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":113,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4968090884938317023"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x0123456789ABCDEFabcdef)) (v128.const f64x2 0x0123456789ABCDEFabcdef 0x0123456789ABCDEFabcdef))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":114,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4968090884938317023"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x0123456789ABCDEFabcdef.)) (v128.const f64x2 0x0123456789ABCDEFabcdef. 0x0123456789ABCDEFabcdef.))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":115,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"5012481849648092922"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0123456789e019)) (v128.const f64x2 0123456789e019 0123456789e019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":116,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"5012481849648092922"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0123456789e+019)) (v128.const f64x2 0123456789e+019 0123456789e+019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":117,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"5053659277858356447"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x0123456789ABCDEFabcdef.p019)) (v128.const f64x2 0x0123456789ABCDEFabcdef.p019 0x0123456789ABCDEFabcdef.p019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":118,"action":{"type":"invoke","field":"f64x2.splat","args":[{"type":"f64","value":"4882522492018277599"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "f64x2.splat" (f64.const 0x0123456789ABCDEFabcdef.p-019)) (v128.const f64x2 0x0123456789ABCDEFabcdef.p-019 0x0123456789ABCDEFabcdef.p-019))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_malformed","line":122,"filename":"simd_splat.1.wat","text":"unknown operator"}</pre>
+<p style="background-color: green">got error: unexpected magic number</p>
+<pre>{"type":"assert_invalid","line":127,"filename":"simd_splat.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_invalid","line":128,"filename":"simd_splat.3.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_invalid","line":129,"filename":"simd_splat.4.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_invalid","line":130,"filename":"simd_splat.5.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD10</p>
+<pre>{"type":"assert_invalid","line":131,"filename":"simd_splat.6.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD10</p>
+<pre>{"type":"assert_invalid","line":132,"filename":"simd_splat.7.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD10</p>
+<pre>{"type":"assert_invalid","line":133,"filename":"simd_splat.8.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD11</p>
+<pre>{"type":"assert_invalid","line":134,"filename":"simd_splat.9.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD11</p>
+<pre>{"type":"assert_invalid","line":135,"filename":"simd_splat.10.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD11</p>
+<pre>{"type":"assert_invalid","line":136,"filename":"simd_splat.11.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD13</p>
+<pre>{"type":"assert_invalid","line":137,"filename":"simd_splat.12.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD13</p>
+<pre>{"type":"assert_invalid","line":138,"filename":"simd_splat.13.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD13</p>
+<pre>{"type":"assert_invalid","line":139,"filename":"simd_splat.14.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD12</p>
+<pre>{"type":"assert_invalid","line":140,"filename":"simd_splat.15.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD12</p>
+<pre>{"type":"assert_invalid","line":141,"filename":"simd_splat.16.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD14</p>
+<pre>{"type":"assert_invalid","line":142,"filename":"simd_splat.17.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD14</p>
+<pre>{"type":"module","line":148,"filename":"simd_splat.18.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_return","line":166,"action":{"type":"invoke","field":"as-v128_store-operand-1","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_store-operand-1" (i32.const 1)) (v128.const i8x16 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":167,"action":{"type":"invoke","field":"as-v128_store-operand-2","args":[{"type":"i32","value":"256"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_store-operand-2" (i32.const 256)) (v128.const i16x8 0x100 0x100 0x100 0x100 0x100 0x100 0x100 0x100))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"as-v128_store-operand-3","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_store-operand-3" (i32.const 0xffffffff)) (v128.const i32x4 -1 -1 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":169,"action":{"type":"invoke","field":"as-v128_store-operand-4","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_store-operand-4" (i64.const 1)) (v128.const i64x2 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":170,"action":{"type":"invoke","field":"as-v128_store-operand-5","args":[{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_store-operand-5" (f64.const -0x1p+0)) (v128.const f64x2 -0x1p+0 -0x1p+0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":172,"filename":"simd_splat.19.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_return","line":292,"action":{"type":"invoke","field":"as-i8x16_extract_lane_s-operand-first","args":[{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"42"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_extract_lane_s-operand-first" (i32.const 42)) (i32.const 42))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":293,"action":{"type":"invoke","field":"as-i8x16_extract_lane_s-operand-last","args":[{"type":"i32","value":"4294967254"}]},"expected":[{"type":"i32","value":"4294967254"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_extract_lane_s-operand-last" (i32.const -42)) (i32.const -42))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":294,"action":{"type":"invoke","field":"as-i16x8_extract_lane_s-operand-first","args":[{"type":"i32","value":"4294934527"}]},"expected":[{"type":"i32","value":"32767"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_extract_lane_s-operand-first" (i32.const 0xffff7fff)) (i32.const 32767))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":295,"action":{"type":"invoke","field":"as-i16x8_extract_lane_s-operand-last","args":[{"type":"i32","value":"32768"}]},"expected":[{"type":"i32","value":"4294934528"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_extract_lane_s-operand-last" (i32.const 0x8000)) (i32.const -32768))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":296,"action":{"type":"invoke","field":"as-i32x4_extract_lane_s-operand-first","args":[{"type":"i32","value":"2147483647"}]},"expected":[{"type":"i32","value":"2147483647"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_extract_lane_s-operand-first" (i32.const 0x7fffffff)) (i32.const 2147483647))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":297,"action":{"type":"invoke","field":"as-i32x4_extract_lane_s-operand-last","args":[{"type":"i32","value":"2147483648"}]},"expected":[{"type":"i32","value":"2147483648"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_extract_lane_s-operand-last" (i32.const 0x80000000)) (i32.const -2147483648))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"as-f32x4_extract_lane_s-operand-first","args":[{"type":"f32","value":"1069547520"}]},"expected":[{"type":"f32","value":"1069547520"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_extract_lane_s-operand-first" (f32.const 1.5)) (f32.const 1.5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":299,"action":{"type":"invoke","field":"as-f32x4_extract_lane_s-operand-last","args":[{"type":"f32","value":"3196059648"}]},"expected":[{"type":"f32","value":"3196059648"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_extract_lane_s-operand-last" (f32.const -0.25)) (f32.const -0.25))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":300,"action":{"type":"invoke","field":"as-v8x16_swizzle-operands","args":[{"type":"i32","value":"1"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v8x16_swizzle-operands" (i32.const 1) (i32.const -1)) (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":301,"action":{"type":"invoke","field":"as-i64x2_extract_lane-operand-last","args":[{"type":"i64","value":"18446744073709551574"}]},"expected":[{"type":"i64","value":"18446744073709551574"}]}</pre>
+<pre>(assert_return (invoke "as-i64x2_extract_lane-operand-last" (i64.const -42)) (i64.const -42))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":302,"action":{"type":"invoke","field":"as-i64x2_extract_lane-operand-first","args":[{"type":"i64","value":"42"}]},"expected":[{"type":"i64","value":"42"}]}</pre>
+<pre>(assert_return (invoke "as-i64x2_extract_lane-operand-first" (i64.const 42)) (i64.const 42))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":303,"action":{"type":"invoke","field":"as-f64x2_extract_lane-operand-first","args":[{"type":"f64","value":"4609434218613702656"}]},"expected":[{"type":"f64","value":"4609434218613702656"}]}</pre>
+<pre>(assert_return (invoke "as-f64x2_extract_lane-operand-first" (f64.const 1.5)) (f64.const 1.5))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":304,"action":{"type":"invoke","field":"as-f64x2_extract_lane-operand-last","args":[{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"13830554455654793216"}]}</pre>
+<pre>(assert_return (invoke "as-f64x2_extract_lane-operand-last" (f64.const -0x1p+0)) (f64.const -0x1p+0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":306,"action":{"type":"invoke","field":"as-i8x16_add_sub-operands","args":[{"type":"i32","value":"3"},{"type":"i32","value":"2"},{"type":"i32","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_add_sub-operands" (i32.const 3) (i32.const 2) (i32.const 1)) (v128.const i8x16 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":307,"action":{"type":"invoke","field":"as-i16x8_add_sub_mul-operands","args":[{"type":"i32","value":"257"},{"type":"i32","value":"128"},{"type":"i32","value":"16"},{"type":"i32","value":"16"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_add_sub_mul-operands" (i32.const 257) (i32.const 128) (i32.const 16) (i32.const 16)) (v128.const i16x8 129 129 129 129 129 129 129 129))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":308,"action":{"type":"invoke","field":"as-i32x4_add_sub_mul-operands","args":[{"type":"i32","value":"65535"},{"type":"i32","value":"65537"},{"type":"i32","value":"256"},{"type":"i32","value":"256"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_add_sub_mul-operands" (i32.const 65535) (i32.const 65537) (i32.const 256) (i32.const 256)) (v128.const i32x4 0x10000 0x10000 0x10000 0x10000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":309,"action":{"type":"invoke","field":"as-i64x2_add_sub_mul-operands","args":[{"type":"i64","value":"2147483647"},{"type":"i64","value":"4294967297"},{"type":"i64","value":"65536"},{"type":"i64","value":"65536"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i64x2_add_sub_mul-operands" (i64.const 0x7fffffff) (i64.const 0x1_0000_0001) (i64.const 65536) (i64.const 65536)) (v128.const i64x2 0x8000_0000 0x8000_0000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":310,"action":{"type":"invoke","field":"as-f64x2_add_sub_mul-operands","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"4604930618986332160"},{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f64x2_add_sub_mul-operands" (f64.const 0x1p-1) (f64.const 0.75) (f64.const 0x1p-1) (f64.const 0.5)) (v128.const f64x2 0x1p+0 0x1p+0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":312,"action":{"type":"invoke","field":"as-i8x16_add_sat_s-operands","args":[{"type":"i32","value":"127"},{"type":"i32","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_add_sat_s-operands" (i32.const 0x7f) (i32.const 1)) (v128.const i8x16 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f 0x7f))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":313,"action":{"type":"invoke","field":"as-i16x8_add_sat_s-operands","args":[{"type":"i32","value":"32767"},{"type":"i32","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_add_sat_s-operands" (i32.const 0x7fff) (i32.const 1)) (v128.const i16x8 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff 0x7fff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":314,"action":{"type":"invoke","field":"as-i8x16_sub_sat_u-operands","args":[{"type":"i32","value":"127"},{"type":"i32","value":"255"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_sub_sat_u-operands" (i32.const 0x7f) (i32.const 0xff)) (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":315,"action":{"type":"invoke","field":"as-i16x8_sub_sat_u-operands","args":[{"type":"i32","value":"32767"},{"type":"i32","value":"65535"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_sub_sat_u-operands" (i32.const 0x7fff) (i32.const 0xffff)) (v128.const i16x8 0 0 0 0 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":317,"action":{"type":"invoke","field":"as-i8x16_shr_s-operand","args":[{"type":"i32","value":"240"},{"type":"i32","value":"3"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_shr_s-operand" (i32.const 0xf0) (i32.const 3)) (v128.const i8x16 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"as-i16x8_shr_s-operand","args":[{"type":"i32","value":"256"},{"type":"i32","value":"4"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_shr_s-operand" (i32.const 0x100) (i32.const 4)) (v128.const i16x8 16 16 16 16 16 16 16 16))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":319,"action":{"type":"invoke","field":"as-i32x4_shr_s-operand","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"16"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_shr_s-operand" (i32.const -1) (i32.const 16)) (v128.const i32x4 -1 -1 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":321,"action":{"type":"invoke","field":"as-v128_and-operands","args":[{"type":"i32","value":"17"},{"type":"i32","value":"255"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_and-operands" (i32.const 0x11) (i32.const 0xff)) (v128.const i8x16 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17 17))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"as-v128_or-operands","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65535"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_or-operands" (i32.const 0) (i32.const 0xffff)) (v128.const i16x8 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":323,"action":{"type":"invoke","field":"as-v128_xor-operands","args":[{"type":"i32","value":"4042322160"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-v128_xor-operands" (i32.const 0xf0f0f0f0) (i32.const 0xffffffff)) (v128.const i32x4 0xf0f0f0f 0xf0f0f0f 0xf0f0f0f 0xf0f0f0f))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":325,"action":{"type":"invoke","field":"as-i8x16_all_true-operand","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_all_true-operand" (i32.const 0)) (i32.const 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":326,"action":{"type":"invoke","field":"as-i16x8_all_true-operand","args":[{"type":"i32","value":"65535"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_all_true-operand" (i32.const 0xffff)) (i32.const 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":327,"action":{"type":"invoke","field":"as-i32x4_all_true-operand1","args":[{"type":"i32","value":"4042322160"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_all_true-operand1" (i32.const 0xf0f0f0f0)) (i32.const 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"as-i32x4_all_true-operand2","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_all_true-operand2" (i64.const -1)) (i32.const 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"as-i8x16_eq-operands","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i8x16_eq-operands" (i32.const 1) (i32.const 2)) (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":331,"action":{"type":"invoke","field":"as-i16x8_eq-operands","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"65535"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i16x8_eq-operands" (i32.const -1) (i32.const 65535)) (v128.const i16x8 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff 0xffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":332,"action":{"type":"invoke","field":"as-i32x4_eq-operands1","args":[{"type":"i32","value":"4294967295"},{"type":"i32","value":"4294967295"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_eq-operands1" (i32.const -1) (i32.const 0xffffffff)) (v128.const i32x4 0xffffffff 0xffffffff 0xffffffff 0xffffffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":333,"action":{"type":"invoke","field":"as-f32x4_eq-operands","args":[{"type":"f32","value":"0"},{"type":"f32","value":"2147483648"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_eq-operands" (f32.const +0.0) (f32.const -0.0)) (v128.const i32x4 0xffffffff 0xffffffff 0xffffffff 0xffffffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":334,"action":{"type":"invoke","field":"as-i32x4_eq-operands2","args":[{"type":"i64","value":"1"},{"type":"i64","value":"2"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_eq-operands2" (i64.const 1) (i64.const 2)) (v128.const i64x2 0xffffffff00000000 0xffffffff00000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":335,"action":{"type":"invoke","field":"as-f64x2_eq-operands","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f64x2_eq-operands" (f64.const +0.0) (f64.const -0.0)) (v128.const i64x2 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":337,"action":{"type":"invoke","field":"as-f32x4_abs-operand","args":[{"type":"f32","value":"3213885440"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_abs-operand" (f32.const -1.125)) (v128.const f32x4 1.125 1.125 1.125 1.125))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":338,"action":{"type":"invoke","field":"as-f32x4_min-operands","args":[{"type":"f32","value":"1048576000"},{"type":"f32","value":"7136238"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_min-operands" (f32.const 0.25) (f32.const 1e-38)) (v128.const f32x4 1e-38 1e-38 1e-38 1e-38))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":339,"action":{"type":"invoke","field":"as-f32x4_div-operands","args":[{"type":"f32","value":"1065353216"},{"type":"f32","value":"1090519040"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_div-operands" (f32.const 1.0) (f32.const 8.0)) (v128.const f32x4 0.125 0.125 0.125 0.125))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":341,"action":{"type":"invoke","field":"as-f32x4_convert_s_i32x4-operand","args":[{"type":"i32","value":"12345"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-f32x4_convert_s_i32x4-operand" (i32.const 12345)) (v128.const f32x4 12345.0 12345.0 12345.0 12345.0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":342,"action":{"type":"invoke","field":"as-i32x4_trunc_s_f32x4_sat-operand","args":[{"type":"f32","value":"1066192077"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-i32x4_trunc_s_f32x4_sat-operand" (f32.const 1.1)) (v128.const i32x4 1 1 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"module","line":347,"filename":"simd_splat.20.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<pre>{"type":"assert_return","line":371,"action":{"type":"invoke","field":"as-br-value1","args":[{"type":"i32","value":"171"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-br-value1" (i32.const 0xAB)) (v128.const i8x16 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB 0xAB))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":372,"action":{"type":"invoke","field":"as-return-value1","args":[{"type":"i32","value":"43981"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-return-value1" (i32.const 0xABCD)) (v128.const i16x8 0xABCD 0xABCD 0xABCD 0xABCD 0xABCD 0xABCD 0xABCD 0xABCD))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":373,"action":{"type":"invoke","field":"as-local_set-value1","args":[{"type":"i32","value":"65536"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-local_set-value1" (i32.const 0x10000)) (v128.const i32x4 0x10000 0x10000 0x10000 0x10000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":374,"action":{"type":"invoke","field":"as-global_set-value1","args":[{"type":"f32","value":"1065353216"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-global_set-value1" (f32.const 1.0)) (v128.const f32x4 1.0 1.0 1.0 1.0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":375,"action":{"type":"invoke","field":"as-br-value2","args":[{"type":"i64","value":"43981"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-br-value2" (i64.const 0xABCD)) (v128.const i64x2 0xABCD 0xABCD))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":376,"action":{"type":"invoke","field":"as-return-value2","args":[{"type":"i64","value":"43981"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-return-value2" (i64.const 0xABCD)) (v128.const i64x2 0xABCD 0xABCD))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":377,"action":{"type":"invoke","field":"as-local_set-value2","args":[{"type":"i64","value":"65536"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-local_set-value2" (i64.const 0x10000)) (v128.const i64x2 0x10000 0x10000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":378,"action":{"type":"invoke","field":"as-global_set-value2","args":[{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "as-global_set-value2" (f64.const 1.0)) (v128.const f64x2 1.0 1.0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_invalid","line":384,"filename":"simd_splat.21.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD0F</p>
+<pre>{"type":"assert_invalid","line":392,"filename":"simd_splat.22.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD10</p>
+<pre>{"type":"assert_invalid","line":400,"filename":"simd_splat.23.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD11</p>
+<pre>{"type":"assert_invalid","line":408,"filename":"simd_splat.24.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD13</p>
+<pre>{"type":"assert_invalid","line":416,"filename":"simd_splat.25.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD12</p>
+<pre>{"type":"assert_invalid","line":424,"filename":"simd_splat.26.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FD14</p>
+<p>Generated at 2024-03-18T15:13:04</p>

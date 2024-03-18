@@ -1,0 +1,77 @@
+<a href="./index.html">Home</a><br><h3>Errors: 23</h3>
+<h3>Warnings: 0</h3>
+<h3>Successes: 2</h3>
+<hr>
+<h1>simd_i64x2_arith2.wast</h1>
+<pre>{"type":"module","line":3,"filename":"simd_i64x2_arith2.0.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FDC0</p>
+<pre>{"type":"assert_return","line":8,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 1 1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":10,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":12,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 18446744073709551615 18446744073709551615))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":14,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 0xffffffffffffffff 0xffffffffffffffff))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":16,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 9223372036854775808 9223372036854775808))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -9223372036854775808 -9223372036854775808))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -0x8000000000000000 -0x8000000000000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":22,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 0x8000000000000000 0x8000000000000000))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 01_2_3 01_2_3))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -01_2_3 -01_2_3))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":28,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 0x80 0x80))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":30,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -0x80 -0x80))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":32,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 0x0_8_0 0x0_8_0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":34,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -0x0_8_0 -0x0_8_0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":38,"action":{"type":"invoke","field":"i64x2.abs_with_const_0"},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs_with_const_0") (v128.const i64x2 9223372036854775808 9223372036854775807))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -9223372036854775808 9223372036854775807))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -0 -0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 +0 0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":51,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 -0 -0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_return","line":53,"action":{"type":"invoke","field":"i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs" (v128.const i64x2 +0 +0))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<pre>{"type":"assert_invalid","line":59,"filename":"simd_i64x2_arith2.1.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FDC0</p>
+<pre>{"type":"assert_invalid","line":64,"filename":"simd_i64x2_arith2.2.wasm","text":"type mismatch"}</pre>
+<p style="background-color: green">got error: SIMD opcodes not supported, FDC0</p>
+<pre>{"type":"module","line":73,"filename":"simd_i64x2_arith2.3.wasm"}</pre>
+<p style="background-color: red">exception: SIMD opcodes not supported, FDC0</p>
+<pre>{"type":"assert_return","line":77,"action":{"type":"invoke","field":"i64x2.abs-i64x2.abs","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
+<pre>(assert_return (invoke "i64x2.abs-i64x2.abs" (v128.const i64x2 -1 -1))</pre>
+<p style="background-color: red">exception: assert_return: nothing loaded</p>
+<p>Generated at 2024-03-18T15:12:56</p>
