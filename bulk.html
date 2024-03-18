@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 49</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 46</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 68</h3>
+<h3>Successes: 71</h3>
 <hr>
 <h1>bulk.wast</h1>
 <pre>{"type":"module","line":2,"filename":"bulk.0.wasm"}</pre>
@@ -135,10 +135,10 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":130,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"187"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 0)) (i32.const 0xbb))</pre>
-<p style="background-color: red">error, wrong result, expected 187, got 170</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":131,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 1)) (i32.const 0xcc))</pre>
-<p style="background-color: red">error, wrong result, expected 204, got 187</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":132,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 2)) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -146,7 +146,7 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_trap","line":138,"text":"out of bounds memory access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"65534"},{"type":"i32","value":"0"},{"type":"i32","value":"3"}]}}</pre>
 <pre>(assert_trap (invoke "init" (i32.const 0xfffe) (i32.const 0) (i32.const 3))</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_init: out of bounds memory access</p>
 <pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"load8_u","args":[{"type":"i32","value":"65534"}]},"expected":[{"type":"i32","value":"204"}]}</pre>
 <pre>(assert_return (invoke "load8_u" (i32.const 0xfffe)) (i32.const 0xcc))</pre>
 <p style="background-color: green">ok, result</p>
@@ -159,10 +159,10 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_trap","line":148,"text":"out of bounds memory access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"65537"},{"type":"i32","value":"0"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "init" (i32.const 0x10001) (i32.const 0) (i32.const 0))</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_memory_copy: out of bounds memory access</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_init: out of bounds memory access</p>
 <pre>{"type":"assert_trap","line":150,"text":"out of bounds memory access","action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"i32","value":"5"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "init" (i32.const 0) (i32.const 5) (i32.const 0))</pre>
-<p style="background-color: red">error, expected trap</p>
+<p style="background-color: green">ok, got error: zcl_wasm_memory_init: out of bounds memory access</p>
 <pre>{"type":"module","line":154,"filename":"bulk.5.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":168,"action":{"type":"invoke","field":"init_passive","args":[{"type":"i32","value":"1"}]}}</pre>
@@ -303,4 +303,4 @@
 <pre>{"type":"assert_trap","line":350,"text":"out of bounds table access","action":{"type":"invoke","field":"copy","args":[{"type":"i32","value":"0"},{"type":"i32","value":"11"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "copy" (i32.const 0) (i32.const 11) (i32.const 0))</pre>
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_table_copy</p>
-<p>Generated at 2024-03-17T07:51:43</p>
+<p>Generated at 2024-03-18T12:57:10</p>
