@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_f64x2_cmp.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_f64x2_cmp.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD47</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD47</p>
 <pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"f64x2.eq","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "f64x2.eq" (v128.const f64x2 0x1p-1074 0x1p-1074)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -7956,43 +7956,43 @@
 <pre>{"type":"assert_malformed","line":7959,"filename":"simd_f64x2_cmp.6.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":7962,"filename":"simd_f64x2_cmp.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD47</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD47</p>
 <pre>{"type":"assert_invalid","line":7963,"filename":"simd_f64x2_cmp.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD48</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD48</p>
 <pre>{"type":"assert_invalid","line":7964,"filename":"simd_f64x2_cmp.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD49</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD49</p>
 <pre>{"type":"assert_invalid","line":7965,"filename":"simd_f64x2_cmp.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD4B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4B</p>
 <pre>{"type":"assert_invalid","line":7966,"filename":"simd_f64x2_cmp.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD4A</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4A</p>
 <pre>{"type":"assert_invalid","line":7967,"filename":"simd_f64x2_cmp.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD4C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4C</p>
 <pre>{"type":"assert_invalid","line":7972,"filename":"simd_f64x2_cmp.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD47</p>
 <pre>{"type":"assert_invalid","line":7980,"filename":"simd_f64x2_cmp.14.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD47</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD47</p>
 <pre>{"type":"assert_invalid","line":7988,"filename":"simd_f64x2_cmp.15.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD48</p>
 <pre>{"type":"assert_invalid","line":7996,"filename":"simd_f64x2_cmp.16.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD48</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD48</p>
 <pre>{"type":"assert_invalid","line":8004,"filename":"simd_f64x2_cmp.17.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD49</p>
 <pre>{"type":"assert_invalid","line":8012,"filename":"simd_f64x2_cmp.18.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD49</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD49</p>
 <pre>{"type":"assert_invalid","line":8020,"filename":"simd_f64x2_cmp.19.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4B</p>
 <pre>{"type":"assert_invalid","line":8028,"filename":"simd_f64x2_cmp.20.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD4B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4B</p>
 <pre>{"type":"assert_invalid","line":8036,"filename":"simd_f64x2_cmp.21.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4A</p>
 <pre>{"type":"assert_invalid","line":8044,"filename":"simd_f64x2_cmp.22.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD4A</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4A</p>
 <pre>{"type":"assert_invalid","line":8052,"filename":"simd_f64x2_cmp.23.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4C</p>
 <pre>{"type":"assert_invalid","line":8060,"filename":"simd_f64x2_cmp.24.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD4C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD4C</p>
 <pre>{"type":"module","line":8069,"filename":"simd_f64x2_cmp.25.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD47</p>
 <pre>{"type":"assert_return","line":8325,"action":{"type":"invoke","field":"f64x2.eq-in-block"}}</pre>
 <pre>(assert_return (invoke "f64x2.eq-in-block"))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -8032,4 +8032,4 @@
 <pre>{"type":"assert_return","line":8337,"action":{"type":"invoke","field":"as-param"}}</pre>
 <pre>(assert_return (invoke "as-param"))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
-<p>Generated at 2024-03-18T15:12:37</p>
+<p>Generated at 2024-03-18T17:22:53</p>

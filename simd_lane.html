@@ -1,10 +1,10 @@
-<a href="./index.html">Home</a><br><h3>Errors: 286</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 290</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 189</h3>
+<h3>Successes: 185</h3>
 <hr>
 <h1>simd_lane.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_lane.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD15</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_return","line":81,"action":{"type":"invoke","field":"i8x16_extract_lane_s-first","args":[{"type":"v128"}]},"expected":[{"type":"i32","value":"127"}]}</pre>
 <pre>(assert_return (invoke "i8x16_extract_lane_s-first" (v128.const i8x16 127 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)) (i32.const 127))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -731,131 +731,131 @@
 <pre>{"type":"assert_malformed","line":428,"filename":"simd_lane.28.wat","text":"malformed lane index"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":432,"filename":"simd_lane.29.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_invalid","line":433,"filename":"simd_lane.30.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_invalid","line":434,"filename":"simd_lane.31.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD16</p>
 <pre>{"type":"assert_invalid","line":435,"filename":"simd_lane.32.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD16</p>
 <pre>{"type":"assert_invalid","line":436,"filename":"simd_lane.33.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD18</p>
 <pre>{"type":"assert_invalid","line":437,"filename":"simd_lane.34.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD18</p>
 <pre>{"type":"assert_invalid","line":438,"filename":"simd_lane.35.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD19</p>
 <pre>{"type":"assert_invalid","line":439,"filename":"simd_lane.36.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD19</p>
 <pre>{"type":"assert_invalid","line":440,"filename":"simd_lane.37.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":441,"filename":"simd_lane.38.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":442,"filename":"simd_lane.39.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1F</p>
 <pre>{"type":"assert_invalid","line":443,"filename":"simd_lane.40.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1F</p>
 <pre>{"type":"assert_invalid","line":444,"filename":"simd_lane.41.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_invalid","line":445,"filename":"simd_lane.42.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_invalid","line":446,"filename":"simd_lane.43.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_invalid","line":447,"filename":"simd_lane.44.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_invalid","line":448,"filename":"simd_lane.45.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":449,"filename":"simd_lane.46.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":450,"filename":"simd_lane.47.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":451,"filename":"simd_lane.48.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":452,"filename":"simd_lane.49.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1D</p>
 <pre>{"type":"assert_invalid","line":453,"filename":"simd_lane.50.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1D</p>
 <pre>{"type":"assert_invalid","line":454,"filename":"simd_lane.51.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD21</p>
 <pre>{"type":"assert_invalid","line":455,"filename":"simd_lane.52.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD21</p>
 <pre>{"type":"assert_invalid","line":456,"filename":"simd_lane.53.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_invalid","line":457,"filename":"simd_lane.54.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_invalid","line":458,"filename":"simd_lane.55.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD22</p>
 <pre>{"type":"assert_invalid","line":459,"filename":"simd_lane.56.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD22</p>
 <pre>{"type":"assert_invalid","line":463,"filename":"simd_lane.57.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD18</p>
 <pre>{"type":"assert_invalid","line":464,"filename":"simd_lane.58.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD19</p>
 <pre>{"type":"assert_invalid","line":465,"filename":"simd_lane.59.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":466,"filename":"simd_lane.60.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1F</p>
 <pre>{"type":"assert_invalid","line":467,"filename":"simd_lane.61.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_invalid","line":468,"filename":"simd_lane.62.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":469,"filename":"simd_lane.63.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":470,"filename":"simd_lane.64.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1D</p>
 <pre>{"type":"assert_invalid","line":471,"filename":"simd_lane.65.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD21</p>
 <pre>{"type":"assert_invalid","line":472,"filename":"simd_lane.66.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_invalid","line":473,"filename":"simd_lane.67.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD22</p>
 <pre>{"type":"assert_invalid","line":477,"filename":"simd_lane.68.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD15</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_invalid","line":478,"filename":"simd_lane.69.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD16</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD16</p>
 <pre>{"type":"assert_invalid","line":479,"filename":"simd_lane.70.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD15</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_invalid","line":480,"filename":"simd_lane.71.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD16</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD16</p>
 <pre>{"type":"assert_invalid","line":481,"filename":"simd_lane.72.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1B</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":482,"filename":"simd_lane.73.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1F</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1F</p>
 <pre>{"type":"assert_invalid","line":483,"filename":"simd_lane.74.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD17</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_invalid","line":484,"filename":"simd_lane.75.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1A</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_invalid","line":485,"filename":"simd_lane.76.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":486,"filename":"simd_lane.77.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD20</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":487,"filename":"simd_lane.78.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1D</p>
 <pre>{"type":"assert_invalid","line":488,"filename":"simd_lane.79.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD21</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD21</p>
 <pre>{"type":"assert_invalid","line":489,"filename":"simd_lane.80.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":490,"filename":"simd_lane.81.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD20</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":494,"filename":"simd_lane.82.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_invalid","line":495,"filename":"simd_lane.83.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_invalid","line":496,"filename":"simd_lane.84.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":497,"filename":"simd_lane.85.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":499,"filename":"simd_lane.86.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_invalid","line":500,"filename":"simd_lane.87.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD22</p>
 <pre>{"type":"assert_invalid","line":503,"filename":"simd_lane.88.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0E</p>
 <pre>{"type":"assert_invalid","line":505,"filename":"simd_lane.89.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0E</p>
 <pre>{"type":"assert_invalid","line":507,"filename":"simd_lane.90.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0D</p>
 <pre>{"type":"assert_invalid","line":510,"filename":"simd_lane.91.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0D</p>
 <pre>{"type":"assert_malformed","line":515,"filename":"simd_lane.92.wat","text":"invalid lane length"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":518,"filename":"simd_lane.93.wat","text":"invalid lane length"}</pre>
@@ -865,7 +865,7 @@
 <pre>{"type":"assert_malformed","line":525,"filename":"simd_lane.95.wat","text":"malformed lane index"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":529,"filename":"simd_lane.96.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0D</p>
 <pre>{"type":"assert_malformed","line":536,"filename":"simd_lane.97.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":537,"filename":"simd_lane.98.wat","text":"unknown operator"}</pre>
@@ -947,7 +947,7 @@
 <pre>{"type":"assert_malformed","line":620,"filename":"simd_lane.136.wat","text":"malformed lane index"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"module","line":628,"filename":"simd_lane.137.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD15</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_return","line":674,"action":{"type":"invoke","field":"i8x16_extract_lane_s","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i8x16_extract_lane_s" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0) (v128.const i8x16 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1)) (v128.const i8x16 -1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -1003,7 +1003,7 @@
 <pre>(assert_return (invoke "as-v8x16_shuffle-operands"</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":703,"filename":"simd_lane.138.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD15</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_return","line":750,"action":{"type":"invoke","field":"as-i8x16_splat-operand","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "as-i8x16_splat-operand" (v128.const i8x16 0xff 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)) (v128.const i8x16 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -1062,7 +1062,7 @@
 <pre>(assert_return (invoke "shuffle-as-i8x16_any_true-operands"</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":799,"filename":"simd_lane.139.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD17</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_return","line":821,"action":{"type":"invoke","field":"as-v128_store-operand-1","args":[{"type":"v128"},{"type":"i32","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "as-v128_store-operand-1" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0) (i32.const 1)) (v128.const i8x16 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -1082,7 +1082,7 @@
 <pre>(assert_return (invoke "as-v128_store-operand-6" (v128.const f64x2 0 0) (f64.const 3.14)) (v128.const f64x2 3.14 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":830,"filename":"simd_lane.140.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_return","line":858,"action":{"type":"invoke","field":"as-if-condition-value","args":[{"type":"v128"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "as-if-condition-value" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -1122,109 +1122,109 @@
 <pre>{"type":"assert_malformed","line":883,"filename":"simd_lane.147.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"module","line":887,"filename":"simd_lane.148.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"module","line":888,"filename":"simd_lane.149.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD18</p>
 <pre>{"type":"module","line":889,"filename":"simd_lane.150.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD19</p>
 <pre>{"type":"module","line":890,"filename":"simd_lane.151.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">loaded</p>
 <pre>{"type":"module","line":891,"filename":"simd_lane.152.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD21</p>
 <pre>{"type":"module","line":892,"filename":"simd_lane.153.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"module","line":893,"filename":"simd_lane.154.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_malformed","line":897,"filename":"simd_lane.155.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":902,"filename":"simd_lane.156.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":910,"filename":"simd_lane.157.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD15</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD15</p>
 <pre>{"type":"assert_malformed","line":918,"filename":"simd_lane.158.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":926,"filename":"simd_lane.159.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":934,"filename":"simd_lane.160.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD19</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD19</p>
 <pre>{"type":"assert_malformed","line":942,"filename":"simd_lane.161.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":950,"filename":"simd_lane.162.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":958,"filename":"simd_lane.163.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1B</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_malformed","line":966,"filename":"simd_lane.164.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":974,"filename":"simd_lane.165.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":982,"filename":"simd_lane.166.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1D</p>
 <pre>{"type":"assert_malformed","line":990,"filename":"simd_lane.167.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":998,"filename":"simd_lane.168.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1006,"filename":"simd_lane.169.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1F</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1F</p>
 <pre>{"type":"assert_malformed","line":1014,"filename":"simd_lane.170.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1022,"filename":"simd_lane.171.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1030,"filename":"simd_lane.172.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD21</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD21</p>
 <pre>{"type":"assert_malformed","line":1038,"filename":"simd_lane.173.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1046,"filename":"simd_lane.174.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1054,"filename":"simd_lane.175.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD17</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_invalid","line":1062,"filename":"simd_lane.176.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD17</p>
 <pre>{"type":"assert_malformed","line":1070,"filename":"simd_lane.177.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1078,"filename":"simd_lane.178.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1086,"filename":"simd_lane.179.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1A</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_invalid","line":1094,"filename":"simd_lane.180.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1A</p>
 <pre>{"type":"assert_malformed","line":1102,"filename":"simd_lane.181.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1110,"filename":"simd_lane.182.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1118,"filename":"simd_lane.183.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_invalid","line":1126,"filename":"simd_lane.184.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1C</p>
 <pre>{"type":"assert_malformed","line":1134,"filename":"simd_lane.185.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1142,"filename":"simd_lane.186.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1150,"filename":"simd_lane.187.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD20</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_invalid","line":1158,"filename":"simd_lane.188.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD20</p>
 <pre>{"type":"assert_malformed","line":1166,"filename":"simd_lane.189.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1174,"filename":"simd_lane.190.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1182,"filename":"simd_lane.191.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD1E</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_invalid","line":1190,"filename":"simd_lane.192.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD1E</p>
 <pre>{"type":"assert_malformed","line":1198,"filename":"simd_lane.193.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1206,"filename":"simd_lane.194.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1214,"filename":"simd_lane.195.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD22</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD22</p>
 <pre>{"type":"assert_invalid","line":1222,"filename":"simd_lane.196.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD22</p>
 <pre>{"type":"assert_malformed","line":1230,"filename":"simd_lane.197.wat","text":"unexpected token"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1238,"filename":"simd_lane.198.wat","text":"invalid lane length"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1249,"filename":"simd_lane.199.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0D</p>
 <pre>{"type":"assert_malformed","line":1259,"filename":"simd_lane.200.wat","text":"invalid lane length"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-18T15:13:03</p>
+<p>Generated at 2024-03-18T17:23:19</p>

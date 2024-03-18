@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_i16x8_extmul_i8x16.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_i16x8_extmul_i8x16.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD9C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD9C</p>
 <pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"i16x8.extmul_low_i8x16_s","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i16x8.extmul_low_i8x16_s" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -318,27 +318,27 @@
 <pre>(assert_return (invoke "i16x8.extmul_high_i8x16_u" (v128.const i8x16 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":333,"filename":"simd_i16x8_extmul_i8x16.1.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9C</p>
 <pre>{"type":"assert_invalid","line":334,"filename":"simd_i16x8_extmul_i8x16.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9D</p>
 <pre>{"type":"assert_invalid","line":335,"filename":"simd_i16x8_extmul_i8x16.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9E</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9E</p>
 <pre>{"type":"assert_invalid","line":336,"filename":"simd_i16x8_extmul_i8x16.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9F</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9F</p>
 <pre>{"type":"assert_invalid","line":341,"filename":"simd_i16x8_extmul_i8x16.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9C</p>
 <pre>{"type":"assert_invalid","line":349,"filename":"simd_i16x8_extmul_i8x16.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9C</p>
 <pre>{"type":"assert_invalid","line":357,"filename":"simd_i16x8_extmul_i8x16.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9D</p>
 <pre>{"type":"assert_invalid","line":365,"filename":"simd_i16x8_extmul_i8x16.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9D</p>
 <pre>{"type":"assert_invalid","line":373,"filename":"simd_i16x8_extmul_i8x16.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9E</p>
 <pre>{"type":"assert_invalid","line":381,"filename":"simd_i16x8_extmul_i8x16.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9E</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9E</p>
 <pre>{"type":"assert_invalid","line":389,"filename":"simd_i16x8_extmul_i8x16.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9F</p>
 <pre>{"type":"assert_invalid","line":397,"filename":"simd_i16x8_extmul_i8x16.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD9F</p>
-<p>Generated at 2024-03-18T15:12:51</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD9F</p>
+<p>Generated at 2024-03-18T17:23:07</p>

@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_store16_lane.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_store16_lane.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD59</p>
 <pre>{"type":"assert_return","line":193,"action":{"type":"invoke","field":"v128.store16_lane_0","args":[{"type":"i32","value":"0"},{"type":"v128"}]},"expected":[{"type":"i64","value":"256"}]}</pre>
 <pre>(assert_return (invoke "v128.store16_lane_0" (i32.const 0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -102,9 +102,9 @@
 <pre>(assert_return (invoke "v128.store16_lane_7_align_2" (i32.const 7)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":283,"filename":"simd_store16_lane.1.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD59</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD59</p>
 <pre>{"type":"assert_invalid","line":289,"filename":"simd_store16_lane.2.wasm","text":"invalid lane index"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD59</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD59</p>
 <pre>{"type":"assert_invalid","line":296,"filename":"simd_store16_lane.3.wasm","text":"alignment must not be larger than natural"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD59</p>
-<p>Generated at 2024-03-18T15:13:04</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD59</p>
+<p>Generated at 2024-03-18T17:23:21</p>

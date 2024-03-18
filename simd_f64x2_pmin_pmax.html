@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_f64x2_pmin_pmax.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_f64x2_pmin_pmax.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDF6</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDF6</p>
 <pre>{"type":"assert_return","line":9,"action":{"type":"invoke","field":"f64x2.pmin","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "f64x2.pmin" (v128.const f64x2 0x0p+0 0x0p+0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -11638,15 +11638,15 @@
 <pre>{"type":"assert_malformed","line":11636,"filename":"simd_f64x2_pmin_pmax.8.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":11639,"filename":"simd_f64x2_pmin_pmax.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF6</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF6</p>
 <pre>{"type":"assert_invalid","line":11640,"filename":"simd_f64x2_pmin_pmax.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF7</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF7</p>
 <pre>{"type":"assert_invalid","line":11645,"filename":"simd_f64x2_pmin_pmax.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF6</p>
 <pre>{"type":"assert_invalid","line":11653,"filename":"simd_f64x2_pmin_pmax.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF6</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF6</p>
 <pre>{"type":"assert_invalid","line":11661,"filename":"simd_f64x2_pmin_pmax.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF7</p>
 <pre>{"type":"assert_invalid","line":11669,"filename":"simd_f64x2_pmin_pmax.14.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF7</p>
-<p>Generated at 2024-03-18T15:12:48</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF7</p>
+<p>Generated at 2024-03-18T17:23:04</p>

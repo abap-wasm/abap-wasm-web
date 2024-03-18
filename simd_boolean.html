@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_boolean.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_boolean.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD53</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"i8x16.any_true","args":[{"type":"v128"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i8x16.any_true" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -243,7 +243,7 @@
 <pre>(assert_return (invoke "i64x2.bitmask" (v128.const i64x2 -1 0xF))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":188,"filename":"simd_boolean.1.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD53</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_return","line":472,"action":{"type":"invoke","field":"i8x16_any_true_as_if_cond","args":[{"type":"v128"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i8x16_any_true_as_if_cond" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -785,17 +785,17 @@
 <pre>(assert_return (invoke "i32x4_all_true_with_v128.bitselect" (v128.const i32x4 0xAA 0xAA 0xAA 0xAA)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":995,"filename":"simd_boolean.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_invalid","line":996,"filename":"simd_boolean.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD63</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD63</p>
 <pre>{"type":"assert_invalid","line":997,"filename":"simd_boolean.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_invalid","line":998,"filename":"simd_boolean.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD83</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD83</p>
 <pre>{"type":"assert_invalid","line":999,"filename":"simd_boolean.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_invalid","line":1000,"filename":"simd_boolean.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA3</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA3</p>
 <pre>{"type":"assert_malformed","line":1004,"filename":"simd_boolean.8.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":1005,"filename":"simd_boolean.9.wat","text":"unknown operator"}</pre>
@@ -805,15 +805,15 @@
 <pre>{"type":"assert_malformed","line":1007,"filename":"simd_boolean.11.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1012,"filename":"simd_boolean.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_invalid","line":1020,"filename":"simd_boolean.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD63</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD63</p>
 <pre>{"type":"assert_invalid","line":1028,"filename":"simd_boolean.14.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_invalid","line":1036,"filename":"simd_boolean.15.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD83</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD83</p>
 <pre>{"type":"assert_invalid","line":1044,"filename":"simd_boolean.16.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD53</p>
 <pre>{"type":"assert_invalid","line":1052,"filename":"simd_boolean.17.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA3</p>
-<p>Generated at 2024-03-18T15:11:54</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA3</p>
+<p>Generated at 2024-03-18T17:22:08</p>

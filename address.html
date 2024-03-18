@@ -229,7 +229,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":192,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_good5","args":[{"type":"i32","value":"65508"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "32_good5" (i32.const 65508)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2</p>
 <pre>{"type":"assert_trap","line":194,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_good3","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "8u_good3" (i32.const -1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: load: out of bounds</p>
@@ -250,34 +250,34 @@
 <p style="background-color: green">ok, got error: load: out of bounds</p>
 <pre>{"type":"assert_trap","line":201,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "8u_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":202,"text":"out of bounds memory access","action":{"type":"invoke","field":"8s_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "8s_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":203,"text":"out of bounds memory access","action":{"type":"invoke","field":"16u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "16u_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":204,"text":"out of bounds memory access","action":{"type":"invoke","field":"16s_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "16s_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":205,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "32_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":207,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "8u_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":208,"text":"out of bounds memory access","action":{"type":"invoke","field":"8s_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "8s_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":209,"text":"out of bounds memory access","action":{"type":"invoke","field":"16u_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "16u_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":210,"text":"out of bounds memory access","action":{"type":"invoke","field":"16s_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "16s_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":211,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "32_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_malformed","line":214,"filename":"address.1.wat","text":"i32 constant"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"module","line":223,"filename":"address.2.wasm"}</pre>
@@ -596,7 +596,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":486,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_good5","args":[{"type":"i32","value":"65504"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "64_good5" (i32.const 65504)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2</p>
 <pre>{"type":"assert_trap","line":488,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_good3","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "8u_good3" (i32.const -1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: load: out of bounds</p>
@@ -620,46 +620,46 @@
 <p style="background-color: green">ok, got error: load: out of bounds</p>
 <pre>{"type":"assert_trap","line":496,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "8u_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":497,"text":"out of bounds memory access","action":{"type":"invoke","field":"8s_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "8s_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":498,"text":"out of bounds memory access","action":{"type":"invoke","field":"16u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "16u_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":499,"text":"out of bounds memory access","action":{"type":"invoke","field":"16s_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "16s_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":500,"text":"out of bounds memory access","action":{"type":"invoke","field":"32u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "32u_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":501,"text":"out of bounds memory access","action":{"type":"invoke","field":"32s_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "32s_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":502,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "64_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":504,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "8u_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":505,"text":"out of bounds memory access","action":{"type":"invoke","field":"8s_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "8s_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":506,"text":"out of bounds memory access","action":{"type":"invoke","field":"16u_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "16u_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":507,"text":"out of bounds memory access","action":{"type":"invoke","field":"16s_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "16s_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"assert_trap","line":508,"text":"out of bounds memory access","action":{"type":"invoke","field":"32u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "32u_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":509,"text":"out of bounds memory access","action":{"type":"invoke","field":"32s_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "32s_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":510,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "64_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"module","line":514,"filename":"address.3.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":538,"action":{"type":"invoke","field":"32_good1","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
@@ -706,7 +706,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":554,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_good5","args":[{"type":"i32","value":"65525"}]},"expected":[{"type":"f32"}]}</pre>
 <pre>(assert_trap (invoke "32_good5" (i32.const 65525)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2</p>
 <pre>{"type":"assert_trap","line":556,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_good3","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"f32"}]}</pre>
 <pre>(assert_trap (invoke "32_good3" (i32.const -1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: load: out of bounds</p>
@@ -715,10 +715,10 @@
 <p style="background-color: green">ok, got error: load: out of bounds</p>
 <pre>{"type":"assert_trap","line":559,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "32_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":560,"text":"out of bounds memory access","action":{"type":"invoke","field":"32_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "32_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
 <pre>{"type":"module","line":564,"filename":"address.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":588,"action":{"type":"invoke","field":"64_good1","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
@@ -765,7 +765,7 @@
 <p style="background-color: red">unknown type, assert_return: f64</p>
 <pre>{"type":"assert_trap","line":604,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_good5","args":[{"type":"i32","value":"65511"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "64_good5" (i32.const 65511)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2</p>
 <pre>{"type":"assert_trap","line":606,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_good3","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "64_good3" (i32.const -1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: load: out of bounds</p>
@@ -774,8 +774,8 @@
 <p style="background-color: green">ok, got error: load: out of bounds</p>
 <pre>{"type":"assert_trap","line":609,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "64_bad" (i32.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536</p>
 <pre>{"type":"assert_trap","line":610,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "64_bad" (i32.const 1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
-<p>Generated at 2024-03-18T15:09:54</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537</p>
+<p>Generated at 2024-03-18T17:20:03</p>

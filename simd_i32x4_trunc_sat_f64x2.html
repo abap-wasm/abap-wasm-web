@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_i32x4_trunc_sat_f64x2.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_i32x4_trunc_sat_f64x2.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDFC</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDFC</p>
 <pre>{"type":"assert_return","line":10,"action":{"type":"invoke","field":"i32x4.trunc_sat_f64x2_s_zero","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i32x4.trunc_sat_f64x2_s_zero" (v128.const f64x2 0.0 0.0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -312,11 +312,11 @@
 <pre>(assert_return (invoke "i32x4.trunc_sat_f64x2_u_zero" (v128.const f64x2 01234567890.0 01234567890.0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":218,"filename":"simd_i32x4_trunc_sat_f64x2.1.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFC</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFC</p>
 <pre>{"type":"assert_invalid","line":219,"filename":"simd_i32x4_trunc_sat_f64x2.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFD</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFD</p>
 <pre>{"type":"assert_invalid","line":224,"filename":"simd_i32x4_trunc_sat_f64x2.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFC</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFC</p>
 <pre>{"type":"assert_invalid","line":232,"filename":"simd_i32x4_trunc_sat_f64x2.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFD</p>
-<p>Generated at 2024-03-18T15:12:55</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFD</p>
+<p>Generated at 2024-03-18T17:23:12</p>

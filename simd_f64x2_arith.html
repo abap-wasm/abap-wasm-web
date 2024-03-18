@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_f64x2_arith.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_f64x2_arith.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDF0</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDF0</p>
 <pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"f64x2.add","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "f64x2.add" (v128.const f64x2 0x0p+0 0x0p+0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -5358,7 +5358,7 @@
 <pre>(assert_return (invoke "f64x2.neg" (v128.const f64x2 0x0123456789ABCDEFabcdef.0123456789ABCDEFabcdefp-019 0x0123456789ABCDEFabcdef.0123456789ABCDEFabcdefp-019))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":5279,"filename":"simd_f64x2_arith.1.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDF0</p>
 <pre>{"type":"assert_return","line":5294,"action":{"type":"invoke","field":"f64x2_add_arith"},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "f64x2_add_arith") (v128.const f64x2 nan:arithmetic 2.0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -5378,39 +5378,39 @@
 <pre>(assert_return (invoke "f64x2_sub_arith") (v128.const f64x2 nan:canonical -2.0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":5302,"filename":"simd_f64x2_arith.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDED</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDED</p>
 <pre>{"type":"assert_invalid","line":5303,"filename":"simd_f64x2_arith.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDEF</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDEF</p>
 <pre>{"type":"assert_invalid","line":5304,"filename":"simd_f64x2_arith.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF0</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF0</p>
 <pre>{"type":"assert_invalid","line":5305,"filename":"simd_f64x2_arith.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF1</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF1</p>
 <pre>{"type":"assert_invalid","line":5306,"filename":"simd_f64x2_arith.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF2</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF2</p>
 <pre>{"type":"assert_invalid","line":5307,"filename":"simd_f64x2_arith.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF3</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF3</p>
 <pre>{"type":"assert_invalid","line":5312,"filename":"simd_f64x2_arith.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDED</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDED</p>
 <pre>{"type":"assert_invalid","line":5320,"filename":"simd_f64x2_arith.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDEF</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDEF</p>
 <pre>{"type":"assert_invalid","line":5328,"filename":"simd_f64x2_arith.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF0</p>
 <pre>{"type":"assert_invalid","line":5336,"filename":"simd_f64x2_arith.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF0</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF0</p>
 <pre>{"type":"assert_invalid","line":5344,"filename":"simd_f64x2_arith.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF1</p>
 <pre>{"type":"assert_invalid","line":5352,"filename":"simd_f64x2_arith.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF1</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF1</p>
 <pre>{"type":"assert_invalid","line":5360,"filename":"simd_f64x2_arith.14.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF2</p>
 <pre>{"type":"assert_invalid","line":5368,"filename":"simd_f64x2_arith.15.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF2</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF2</p>
 <pre>{"type":"assert_invalid","line":5376,"filename":"simd_f64x2_arith.16.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF3</p>
 <pre>{"type":"assert_invalid","line":5384,"filename":"simd_f64x2_arith.17.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDF3</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDF3</p>
 <pre>{"type":"module","line":5393,"filename":"simd_f64x2_arith.18.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDF1</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDF1</p>
 <pre>{"type":"assert_return","line":5428,"action":{"type":"invoke","field":"add-sub","args":[{"type":"v128"},{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "add-sub" (v128.const f64x2 1.125 1.125)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -5459,4 +5459,4 @@
 <pre>{"type":"assert_return","line":5481,"action":{"type":"invoke","field":"sub-sqrt","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "sub-sqrt" (v128.const f64x2 2.25 2.25)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
-<p>Generated at 2024-03-18T15:12:30</p>
+<p>Generated at 2024-03-18T17:22:46</p>

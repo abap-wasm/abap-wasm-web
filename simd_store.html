@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_store.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_store.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_return","line":40,"action":{"type":"invoke","field":"v128.store_i8x16"},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "v128.store_i8x16") (v128.const i8x16 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -30,7 +30,7 @@
 <pre>(assert_return (invoke "v128.store_f32x4") (v128.const f32x4 0 1 2 3))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":52,"filename":"simd_store.1.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_return","line":89,"action":{"type":"invoke","field":"as-block-value"}}</pre>
 <pre>(assert_return (invoke "as-block-value"))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -65,15 +65,15 @@
 <pre>{"type":"assert_malformed","line":117,"filename":"simd_store.4.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":128,"filename":"simd_store.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_invalid","line":132,"filename":"simd_store.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_invalid","line":136,"filename":"simd_store.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_invalid","line":144,"filename":"simd_store.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_invalid","line":152,"filename":"simd_store.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_invalid","line":160,"filename":"simd_store.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0B</p>
-<p>Generated at 2024-03-18T15:13:04</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0B</p>
+<p>Generated at 2024-03-18T17:23:21</p>

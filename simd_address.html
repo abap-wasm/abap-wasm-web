@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_address.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_address.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_return","line":53,"action":{"type":"invoke","field":"load_data_1","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "load_data_1" (i32.const 0)) (v128.const i32x4 0x03020100 0x07060504 0x11100908 0x15141312))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -126,21 +126,21 @@
 <pre>(assert_trap (invoke "store_data_6" (i32.const 65535)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":104,"filename":"simd_address.1.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":110,"text":"out of bounds memory access","action":{"type":"invoke","field":"v128.load_offset_65521"}}</pre>
 <pre>(assert_trap (invoke "v128.load_offset_65521") "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: assert_return: nothing loaded</p>
+<p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_malformed","line":113,"filename":"simd_address.2.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"module","line":122,"filename":"simd_address.3.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD0B</p>
 <pre>{"type":"assert_trap","line":128,"text":"out of bounds memory access","action":{"type":"invoke","field":"v128.store_offset_65521"}}</pre>
 <pre>(assert_trap (invoke "v128.store_offset_65521") "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: assert_return: nothing loaded</p>
+<p style="background-color: green">ok, got error: get_export_by_name, not found: v128.store_offset_65521</p>
 <pre>{"type":"assert_malformed","line":131,"filename":"simd_address.4.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":144,"filename":"simd_address.5.wat","text":"i32 constant"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":152,"filename":"simd_address.6.wat","text":"i32 constant"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-18T15:11:52</p>
+<p>Generated at 2024-03-18T17:22:06</p>

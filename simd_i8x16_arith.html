@@ -1,10 +1,10 @@
-<a href="./index.html">Home</a><br><h3>Errors: 123</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 126</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 8</h3>
+<h3>Successes: 5</h3>
 <hr>
 <h1>simd_i8x16_arith.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_i8x16_arith.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD6E</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD6E</p>
 <pre>{"type":"assert_return","line":12,"action":{"type":"invoke","field":"i8x16.add","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i8x16.add" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -357,23 +357,23 @@
 <pre>(assert_return (invoke "i8x16.neg" (v128.const i8x16 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":354,"filename":"simd_i8x16_arith.1.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD61</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD61</p>
 <pre>{"type":"assert_invalid","line":355,"filename":"simd_i8x16_arith.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6E</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6E</p>
 <pre>{"type":"assert_invalid","line":356,"filename":"simd_i8x16_arith.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD71</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":361,"filename":"simd_i8x16_arith.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD61</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD61</p>
 <pre>{"type":"assert_invalid","line":369,"filename":"simd_i8x16_arith.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6E</p>
 <pre>{"type":"assert_invalid","line":377,"filename":"simd_i8x16_arith.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6E</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6E</p>
 <pre>{"type":"assert_invalid","line":385,"filename":"simd_i8x16_arith.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":393,"filename":"simd_i8x16_arith.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD71</p>
+<p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":402,"filename":"simd_i8x16_arith.9.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD71</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD6E</p>
 <pre>{"type":"assert_return","line":413,"action":{"type":"invoke","field":"add-sub","args":[{"type":"v128"},{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "add-sub" (v128.const i8x16 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -386,4 +386,4 @@
 <pre>{"type":"assert_return","line":424,"action":{"type":"invoke","field":"sub-neg","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "sub-neg" (v128.const i8x16 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
-<p>Generated at 2024-03-18T15:12:57</p>
+<p>Generated at 2024-03-18T17:23:14</p>

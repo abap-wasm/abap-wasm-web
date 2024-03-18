@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_bit_shift.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_bit_shift.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD6B</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD6B</p>
 <pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"i8x16.shl","args":[{"type":"v128"},{"type":"i32","value":"1"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i8x16.shl" (v128.const i8x16 -128 -64 0 1 2 3 4 5 6 7 8 9 0x0A 0x0B 0x0C 0x0D)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -567,7 +567,7 @@
 <pre>(assert_return (invoke "i64x2.shr_s_65" (v128.const i64x2 1 0x0F))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":658,"filename":"simd_bit_shift.1.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD00</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD6B</p>
 <pre>{"type":"assert_return","line":949,"action":{"type":"invoke","field":"i8x16.shl-in-block"}}</pre>
 <pre>(assert_return (invoke "i8x16.shl-in-block"))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -641,29 +641,29 @@
 <pre>(assert_return (invoke "nested-i64x2.shr_u"))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":976,"filename":"simd_bit_shift.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6B</p>
 <pre>{"type":"assert_invalid","line":977,"filename":"simd_bit_shift.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6C</p>
 <pre>{"type":"assert_invalid","line":978,"filename":"simd_bit_shift.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6D</p>
 <pre>{"type":"assert_invalid","line":979,"filename":"simd_bit_shift.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8B</p>
 <pre>{"type":"assert_invalid","line":980,"filename":"simd_bit_shift.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8C</p>
 <pre>{"type":"assert_invalid","line":981,"filename":"simd_bit_shift.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8D</p>
 <pre>{"type":"assert_invalid","line":982,"filename":"simd_bit_shift.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAB</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAB</p>
 <pre>{"type":"assert_invalid","line":983,"filename":"simd_bit_shift.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAC</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAC</p>
 <pre>{"type":"assert_invalid","line":984,"filename":"simd_bit_shift.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAD</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAD</p>
 <pre>{"type":"assert_invalid","line":985,"filename":"simd_bit_shift.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCB</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCB</p>
 <pre>{"type":"assert_invalid","line":986,"filename":"simd_bit_shift.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCC</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCC</p>
 <pre>{"type":"assert_invalid","line":987,"filename":"simd_bit_shift.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCD</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCD</p>
 <pre>{"type":"assert_malformed","line":991,"filename":"simd_bit_shift.14.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":992,"filename":"simd_bit_shift.15.wat","text":"unknown operator"}</pre>
@@ -695,27 +695,27 @@
 <pre>{"type":"assert_malformed","line":1005,"filename":"simd_bit_shift.28.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":1010,"filename":"simd_bit_shift.29.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6B</p>
 <pre>{"type":"assert_invalid","line":1018,"filename":"simd_bit_shift.30.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6B</p>
 <pre>{"type":"assert_invalid","line":1026,"filename":"simd_bit_shift.31.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD6B</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD6B</p>
 <pre>{"type":"assert_invalid","line":1034,"filename":"simd_bit_shift.32.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8D</p>
 <pre>{"type":"assert_invalid","line":1042,"filename":"simd_bit_shift.33.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8D</p>
 <pre>{"type":"assert_invalid","line":1050,"filename":"simd_bit_shift.34.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8D</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8D</p>
 <pre>{"type":"assert_invalid","line":1058,"filename":"simd_bit_shift.35.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAC</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAC</p>
 <pre>{"type":"assert_invalid","line":1066,"filename":"simd_bit_shift.36.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAC</p>
 <pre>{"type":"assert_invalid","line":1074,"filename":"simd_bit_shift.37.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAC</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAC</p>
 <pre>{"type":"assert_invalid","line":1082,"filename":"simd_bit_shift.38.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCB</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCB</p>
 <pre>{"type":"assert_invalid","line":1090,"filename":"simd_bit_shift.39.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCD</p>
 <pre>{"type":"assert_invalid","line":1098,"filename":"simd_bit_shift.40.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCC</p>
-<p>Generated at 2024-03-18T15:11:53</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCC</p>
+<p>Generated at 2024-03-18T17:22:07</p>

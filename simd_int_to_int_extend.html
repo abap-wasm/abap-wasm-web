@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_int_to_int_extend.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_int_to_int_extend.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD88</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD88</p>
 <pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"i16x8.extend_high_i8x16_s","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i16x8.extend_high_i8x16_s" (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -690,51 +690,51 @@
 <pre>(assert_return (invoke "i64x2.extend_low_i32x4_u" (v128.const i32x4 -1 -1 -2147483648 -2147483648))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":488,"filename":"simd_int_to_int_extend.1.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD88</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD88</p>
 <pre>{"type":"assert_invalid","line":489,"filename":"simd_int_to_int_extend.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8A</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8A</p>
 <pre>{"type":"assert_invalid","line":490,"filename":"simd_int_to_int_extend.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD87</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD87</p>
 <pre>{"type":"assert_invalid","line":491,"filename":"simd_int_to_int_extend.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD89</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD89</p>
 <pre>{"type":"assert_invalid","line":492,"filename":"simd_int_to_int_extend.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA8</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA8</p>
 <pre>{"type":"assert_invalid","line":493,"filename":"simd_int_to_int_extend.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAA</p>
 <pre>{"type":"assert_invalid","line":494,"filename":"simd_int_to_int_extend.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA7</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA7</p>
 <pre>{"type":"assert_invalid","line":495,"filename":"simd_int_to_int_extend.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA9</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA9</p>
 <pre>{"type":"assert_invalid","line":496,"filename":"simd_int_to_int_extend.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC8</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC8</p>
 <pre>{"type":"assert_invalid","line":497,"filename":"simd_int_to_int_extend.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCA</p>
 <pre>{"type":"assert_invalid","line":498,"filename":"simd_int_to_int_extend.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC7</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC7</p>
 <pre>{"type":"assert_invalid","line":499,"filename":"simd_int_to_int_extend.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC9</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC9</p>
 <pre>{"type":"assert_invalid","line":504,"filename":"simd_int_to_int_extend.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD88</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD88</p>
 <pre>{"type":"assert_invalid","line":512,"filename":"simd_int_to_int_extend.14.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8A</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8A</p>
 <pre>{"type":"assert_invalid","line":520,"filename":"simd_int_to_int_extend.15.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD87</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD87</p>
 <pre>{"type":"assert_invalid","line":528,"filename":"simd_int_to_int_extend.16.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD89</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD89</p>
 <pre>{"type":"assert_invalid","line":536,"filename":"simd_int_to_int_extend.17.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA8</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA8</p>
 <pre>{"type":"assert_invalid","line":544,"filename":"simd_int_to_int_extend.18.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDAA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDAA</p>
 <pre>{"type":"assert_invalid","line":552,"filename":"simd_int_to_int_extend.19.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA7</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA7</p>
 <pre>{"type":"assert_invalid","line":560,"filename":"simd_int_to_int_extend.20.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDA9</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDA9</p>
 <pre>{"type":"assert_invalid","line":568,"filename":"simd_int_to_int_extend.21.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC8</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC8</p>
 <pre>{"type":"assert_invalid","line":576,"filename":"simd_int_to_int_extend.22.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCA</p>
 <pre>{"type":"assert_invalid","line":584,"filename":"simd_int_to_int_extend.23.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC7</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC7</p>
 <pre>{"type":"assert_invalid","line":592,"filename":"simd_int_to_int_extend.24.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC9</p>
-<p>Generated at 2024-03-18T15:13:02</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC9</p>
+<p>Generated at 2024-03-18T17:23:19</p>

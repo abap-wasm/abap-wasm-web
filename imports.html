@@ -262,7 +262,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":469,"text":"out of bounds memory access","action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"1000000"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "load" (i32.const 1000000)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 16</p>
 <pre>{"type":"module","line":471,"filename":"imports.96.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":477,"action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
@@ -276,7 +276,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":480,"text":"out of bounds memory access","action":{"type":"invoke","field":"load","args":[{"type":"i32","value":"1000000"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "load" (i32.const 1000000)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: linear_get: out of bounds</p>
+<p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 16</p>
 <pre>{"type":"assert_invalid","line":483,"filename":"imports.97.wasm","text":"multiple memories"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":487,"filename":"imports.98.wasm","text":"multiple memories"}</pre>
@@ -403,4 +403,4 @@
 <p style="background-color: green">registered</p>
 <pre>{"type":"assert_unlinkable","line":672,"filename":"imports.144.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
-<p>Generated at 2024-03-18T15:10:36</p>
+<p>Generated at 2024-03-18T17:20:45</p>

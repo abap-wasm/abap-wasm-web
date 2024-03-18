@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_i16x8_sat_arith.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_i16x8_sat_arith.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD8F</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD8F</p>
 <pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"i16x8.add_sat_s","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i16x8.add_sat_s" (v128.const i16x8 0 0 0 0 0 0 0 0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -602,31 +602,31 @@
 <pre>{"type":"assert_malformed","line":618,"filename":"simd_i16x8_sat_arith.4.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":623,"filename":"simd_i16x8_sat_arith.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8F</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8F</p>
 <pre>{"type":"assert_invalid","line":624,"filename":"simd_i16x8_sat_arith.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD90</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD90</p>
 <pre>{"type":"assert_invalid","line":625,"filename":"simd_i16x8_sat_arith.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD92</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD92</p>
 <pre>{"type":"assert_invalid","line":626,"filename":"simd_i16x8_sat_arith.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD93</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD93</p>
 <pre>{"type":"assert_invalid","line":631,"filename":"simd_i16x8_sat_arith.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8F</p>
 <pre>{"type":"assert_invalid","line":639,"filename":"simd_i16x8_sat_arith.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD8F</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD8F</p>
 <pre>{"type":"assert_invalid","line":647,"filename":"simd_i16x8_sat_arith.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD90</p>
 <pre>{"type":"assert_invalid","line":655,"filename":"simd_i16x8_sat_arith.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD90</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD90</p>
 <pre>{"type":"assert_invalid","line":663,"filename":"simd_i16x8_sat_arith.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD92</p>
 <pre>{"type":"assert_invalid","line":671,"filename":"simd_i16x8_sat_arith.14.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD92</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD92</p>
 <pre>{"type":"assert_invalid","line":679,"filename":"simd_i16x8_sat_arith.15.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD93</p>
 <pre>{"type":"assert_invalid","line":687,"filename":"simd_i16x8_sat_arith.16.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD93</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD93</p>
 <pre>{"type":"module","line":696,"filename":"simd_i16x8_sat_arith.17.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD92</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD92</p>
 <pre>{"type":"assert_return","line":715,"action":{"type":"invoke","field":"sat-add_s-sub_s","args":[{"type":"v128"},{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "sat-add_s-sub_s" (v128.const i16x8 16384 16384 16384 16384 16384 16384 16384 16384)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -651,4 +651,4 @@
 <pre>{"type":"assert_return","line":740,"action":{"type":"invoke","field":"sat-sub_u-neg","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "sat-sub_u-neg" (v128.const i16x8 32767 32767 32767 32767 32767 32767 32767 32767)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
-<p>Generated at 2024-03-18T15:12:52</p>
+<p>Generated at 2024-03-18T17:23:08</p>

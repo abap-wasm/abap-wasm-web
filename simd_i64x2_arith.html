@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_i64x2_arith.wast</h1>
 <pre>{"type":"module","line":4,"filename":"simd_i64x2_arith.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDCE</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDCE</p>
 <pre>{"type":"assert_return","line":13,"action":{"type":"invoke","field":"i64x2.add","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "i64x2.add" (v128.const i64x2 0 0)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -546,29 +546,29 @@
 <pre>(assert_return (invoke "i64x2.neg" (v128.const i64x2 0xffffffffffffffff 0xffffffffffffffff))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":546,"filename":"simd_i64x2_arith.1.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC1</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC1</p>
 <pre>{"type":"assert_invalid","line":547,"filename":"simd_i64x2_arith.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCE</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCE</p>
 <pre>{"type":"assert_invalid","line":548,"filename":"simd_i64x2_arith.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDD1</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDD1</p>
 <pre>{"type":"assert_invalid","line":549,"filename":"simd_i64x2_arith.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDD5</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDD5</p>
 <pre>{"type":"assert_invalid","line":554,"filename":"simd_i64x2_arith.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDC1</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDC1</p>
 <pre>{"type":"assert_invalid","line":562,"filename":"simd_i64x2_arith.6.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCE</p>
 <pre>{"type":"assert_invalid","line":570,"filename":"simd_i64x2_arith.7.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDCE</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDCE</p>
 <pre>{"type":"assert_invalid","line":578,"filename":"simd_i64x2_arith.8.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDD1</p>
 <pre>{"type":"assert_invalid","line":586,"filename":"simd_i64x2_arith.9.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDD1</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDD1</p>
 <pre>{"type":"assert_invalid","line":594,"filename":"simd_i64x2_arith.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDD5</p>
 <pre>{"type":"assert_invalid","line":602,"filename":"simd_i64x2_arith.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDD5</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDD5</p>
 <pre>{"type":"module","line":611,"filename":"simd_i64x2_arith.12.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDD1</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDD1</p>
 <pre>{"type":"assert_return","line":628,"action":{"type":"invoke","field":"add-sub","args":[{"type":"v128"},{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "add-sub" (v128.const i64x2 0 1)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -590,4 +590,4 @@
 <pre>{"type":"assert_return","line":650,"action":{"type":"invoke","field":"sub-neg","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "sub-neg" (v128.const i64x2 0 1)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
-<p>Generated at 2024-03-18T15:12:56</p>
+<p>Generated at 2024-03-18T17:23:12</p>

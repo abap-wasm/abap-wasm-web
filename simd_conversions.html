@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_conversions.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_conversions.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDFA</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDFA</p>
 <pre>{"type":"assert_return","line":35,"action":{"type":"invoke","field":"f64x2.promote_low_f32x4","args":[{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "f64x2.promote_low_f32x4" (v128.const f32x4 0.0 0.0 0.0 0.0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -705,23 +705,23 @@
 <pre>{"type":"assert_malformed","line":695,"filename":"simd_conversions.30.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":702,"filename":"simd_conversions.31.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFA</p>
 <pre>{"type":"assert_invalid","line":703,"filename":"simd_conversions.32.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFA</p>
 <pre>{"type":"assert_invalid","line":704,"filename":"simd_conversions.33.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFB</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFB</p>
 <pre>{"type":"assert_invalid","line":705,"filename":"simd_conversions.34.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFB</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFB</p>
 <pre>{"type":"assert_invalid","line":707,"filename":"simd_conversions.35.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD65</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD65</p>
 <pre>{"type":"assert_invalid","line":708,"filename":"simd_conversions.36.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD66</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD66</p>
 <pre>{"type":"assert_invalid","line":709,"filename":"simd_conversions.37.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD85</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD85</p>
 <pre>{"type":"assert_invalid","line":710,"filename":"simd_conversions.38.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD85</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD85</p>
 <pre>{"type":"module","line":715,"filename":"simd_conversions.39.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FDAE</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FDAE</p>
 <pre>{"type":"assert_return","line":758,"action":{"type":"invoke","field":"f32x4_convert_i32x4_s_add","args":[{"type":"v128"},{"type":"v128"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "f32x4_convert_i32x4_s_add" (v128.const i32x4 1 2 3 4)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -780,23 +780,23 @@
 <pre>(assert_return (invoke "i32x4_high_extend_narrow_us" (v128.const i32x4 -0x80000000 -0x7fffffff 0x7fffffff 0x8000000)</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":821,"filename":"simd_conversions.40.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFA</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFA</p>
 <pre>{"type":"assert_invalid","line":829,"filename":"simd_conversions.41.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FDFB</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FDFB</p>
 <pre>{"type":"assert_invalid","line":837,"filename":"simd_conversions.42.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD65</p>
 <pre>{"type":"assert_invalid","line":845,"filename":"simd_conversions.43.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD65</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD65</p>
 <pre>{"type":"assert_invalid","line":853,"filename":"simd_conversions.44.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD66</p>
 <pre>{"type":"assert_invalid","line":861,"filename":"simd_conversions.45.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD66</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD66</p>
 <pre>{"type":"assert_invalid","line":869,"filename":"simd_conversions.46.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD85</p>
 <pre>{"type":"assert_invalid","line":877,"filename":"simd_conversions.47.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD85</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD85</p>
 <pre>{"type":"assert_invalid","line":885,"filename":"simd_conversions.48.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD86</p>
 <pre>{"type":"assert_invalid","line":893,"filename":"simd_conversions.49.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD86</p>
-<p>Generated at 2024-03-18T15:11:56</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD86</p>
+<p>Generated at 2024-03-18T17:22:10</p>

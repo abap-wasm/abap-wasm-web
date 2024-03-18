@@ -4,7 +4,7 @@
 <hr>
 <h1>simd_load_splat.wast</h1>
 <pre>{"type":"module","line":3,"filename":"simd_load_splat.0.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD07</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD07</p>
 <pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"v128.load8_splat","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "v128.load8_splat" (i32.const 0)) (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -306,7 +306,7 @@
 <pre>(assert_trap (invoke "v64x2.offset65529" (i32.const 1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: assert_return: nothing loaded</p>
 <pre>{"type":"module","line":158,"filename":"simd_load_splat.1.wasm"}</pre>
-<p style="background-color: red">exception: SIMD opcodes not supported, FD07</p>
+<p style="background-color: red">exception: Unknown SIMD instruction, FD07</p>
 <pre>{"type":"assert_return","line":198,"action":{"type":"invoke","field":"v128.load8_splat-in-block"},"expected":[{"type":"v128"}]}</pre>
 <pre>(assert_return (invoke "v128.load8_splat-in-block") (v128.const i8x16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
@@ -344,13 +344,13 @@
 <pre>(assert_return (invoke "v128.load64_splat-extract_lane_s-operand") (i32.const 0))</pre>
 <p style="background-color: red">exception: assert_return: nothing loaded</p>
 <pre>{"type":"assert_invalid","line":214,"filename":"simd_load_splat.2.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD07</p>
 <pre>{"type":"assert_invalid","line":215,"filename":"simd_load_splat.3.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD08</p>
 <pre>{"type":"assert_invalid","line":216,"filename":"simd_load_splat.4.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD09</p>
 <pre>{"type":"assert_invalid","line":217,"filename":"simd_load_splat.5.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0C</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0A</p>
 <pre>{"type":"assert_malformed","line":222,"filename":"simd_load_splat.6.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":223,"filename":"simd_load_splat.7.wat","text":"unknown operator"}</pre>
@@ -360,11 +360,11 @@
 <pre>{"type":"assert_malformed","line":225,"filename":"simd_load_splat.9.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_invalid","line":231,"filename":"simd_load_splat.10.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD07</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD07</p>
 <pre>{"type":"assert_invalid","line":239,"filename":"simd_load_splat.11.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD08</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD08</p>
 <pre>{"type":"assert_invalid","line":247,"filename":"simd_load_splat.12.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD09</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD09</p>
 <pre>{"type":"assert_invalid","line":255,"filename":"simd_load_splat.13.wasm","text":"type mismatch"}</pre>
-<p style="background-color: green">got error: SIMD opcodes not supported, FD0A</p>
-<p>Generated at 2024-03-18T15:13:03</p>
+<p style="background-color: green">got error: Unknown SIMD instruction, FD0A</p>
+<p>Generated at 2024-03-18T17:23:20</p>
