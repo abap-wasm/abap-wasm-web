@@ -121,25 +121,25 @@
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":174,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 1)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect: null reference, 0, 1</p>
 <pre>{"type":"assert_return","line":175,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 1)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":176,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"1"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 1)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect: null reference, 0, 1</p>
 <pre>{"type":"assert_trap","line":178,"text":"uninitialized element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 0)) "uninitialized element")</pre>
 <p style="background-color: red">error, expected trap</p>
 <pre>{"type":"assert_trap","line":179,"text":"uninitialized element","action":{"type":"invoke","field":"Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "Mt.call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect: null reference, 0, 0</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke $Nt "call" (i32.const 0)) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":181,"text":"uninitialized element","action":{"type":"invoke","field":"call Mt.call","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Nt "call Mt.call" (i32.const 0)) "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect: null reference, 0, 0</p>
 <pre>{"type":"assert_trap","line":183,"text":"undefined element","action":{"type":"invoke","field":"call","args":[{"type":"i32","value":"20"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $Mt "call" (i32.const 20)) "undefined element")</pre>
 <p style="background-color: green">ok, got error: zcl_wasm_memory: table_get, out of bounds</p>
@@ -349,5 +349,5 @@
 <p style="background-color: red">error, wrong result, expected 104, got 0</p>
 <pre>{"type":"assert_return","line":453,"action":{"type":"invoke","field":"get table[0]"},"expected":[{"type":"i32","value":"57005"}]}</pre>
 <pre>(assert_return (invoke $Ms "get table[0]") (i32.const 0xdead))</pre>
-<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
-<p>Generated at 2024-03-19T12:30:41</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect: null reference, 0, 0</p>
+<p>Generated at 2024-03-20T08:01:09</p>

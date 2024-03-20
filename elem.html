@@ -34,7 +34,7 @@
 <p style="background-color: red">exception: instantiate element section, failed to execute instructions: instantiate 4: todo</p>
 <pre>{"type":"assert_return","line":168,"action":{"type":"invoke","field":"call-9"},"expected":[{"type":"i32","value":"66"}]}</pre>
 <pre>(assert_return (invoke "call-9") (i32.const 66))</pre>
-<p style="background-color: red">exception: zcl_wasm_call_indirect null reference</p>
+<p style="background-color: red">exception: zcl_wasm_call_indirect: null reference, 0, 9</p>
 <pre>{"type":"assert_invalid","line":171,"filename":"elem.10.wasm","text":"unknown global"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":175,"filename":"elem.11.wasm","text":"unknown global"}</pre>
@@ -151,7 +151,7 @@
 <p style="background-color: green">registered</p>
 <pre>{"type":"assert_trap","line":593,"text":"uninitialized element","action":{"type":"invoke","field":"call-7"},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke $module1 "call-7") "uninitialized element")</pre>
-<p style="background-color: green">ok, got error: zcl_wasm_call_indirect null reference</p>
+<p style="background-color: green">ok, got error: zcl_wasm_call_indirect: null reference, 0, 7</p>
 <pre>{"type":"assert_return","line":594,"action":{"type":"invoke","field":"call-8"},"expected":[{"type":"i32","value":"65"}]}</pre>
 <pre>(assert_return (invoke $module1 "call-8") (i32.const 65))</pre>
 <p style="background-color: green">ok, result</p>
@@ -227,4 +227,4 @@
 <pre>{"type":"assert_return","line":700,"action":{"type":"invoke","field":"call_imported_elem"},"expected":[{"type":"i32","value":"42"}]}</pre>
 <pre>(assert_return (invoke "call_imported_elem") (i32.const 42))</pre>
 <p style="background-color: red">exception: import section: module with name module4 not found</p>
-<p>Generated at 2024-03-19T12:30:12</p>
+<p>Generated at 2024-03-20T08:00:40</p>
