@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 4</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 8</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 32</h3>
+<h3>Successes: 28</h3>
 <hr>
 <h1>traps.wast</h1>
 <pre>{"type":"module","line":5,"filename":"traps.0.wasm"}</pre>
@@ -47,10 +47,10 @@
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i32_trunc_f32_u</p>
 <pre>{"type":"assert_trap","line":52,"text":"invalid conversion to integer","action":{"type":"invoke","field":"no_dce.i32.trunc_f64_s","args":[{"type":"f64","value":"9221120237041090560"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i32.trunc_f64_s" (f64.const nan)) "invalid conversion to integer")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_trap","line":53,"text":"invalid conversion to integer","action":{"type":"invoke","field":"no_dce.i32.trunc_f64_u","args":[{"type":"f64","value":"9221120237041090560"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i32.trunc_f64_u" (f64.const nan)) "invalid conversion to integer")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_trap","line":54,"text":"invalid conversion to integer","action":{"type":"invoke","field":"no_dce.i64.trunc_f32_s","args":[{"type":"f32","value":"2143289344"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.trunc_f32_s" (f32.const nan)) "invalid conversion to integer")</pre>
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_trunc_f32_s</p>
@@ -59,10 +59,10 @@
 <p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_i64_trunc_f32_u</p>
 <pre>{"type":"assert_trap","line":56,"text":"invalid conversion to integer","action":{"type":"invoke","field":"no_dce.i64.trunc_f64_s","args":[{"type":"f64","value":"9221120237041090560"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.trunc_f64_s" (f64.const nan)) "invalid conversion to integer")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_trap","line":57,"text":"invalid conversion to integer","action":{"type":"invoke","field":"no_dce.i64.trunc_f64_u","args":[{"type":"f64","value":"9221120237041090560"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.i64.trunc_f64_u" (f64.const nan)) "invalid conversion to integer")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"module","line":59,"filename":"traps.3.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":78,"text":"out of bounds memory access","action":{"type":"invoke","field":"no_dce.i32.load","args":[{"type":"i32","value":"65536"}]}}</pre>
@@ -107,4 +107,4 @@
 <pre>{"type":"assert_trap","line":91,"text":"out of bounds memory access","action":{"type":"invoke","field":"no_dce.f64.load","args":[{"type":"i32","value":"65536"}]}}</pre>
 <pre>(assert_trap (invoke "no_dce.f64.load" (i32.const 65536)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2, 65536</p>
-<p>Generated at 2024-03-20T08:04:28</p>
+<p>Generated at 2024-03-22T15:02:00</p>

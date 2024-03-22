@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 66</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 63</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 106</h3>
+<h3>Successes: 109</h3>
 <hr>
 <h1>func.wast</h1>
 <pre>{"type":"module","line":3,"filename":"func.0.wasm"}</pre>
@@ -16,7 +16,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":245,"action":{"type":"invoke","field":"type-use-4","args":[{"type":"i32","value":"1"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>  (invoke "type-use-4" (i32.const 1) (f64.const 1) (i32.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":248,"action":{"type":"invoke","field":"type-use-5"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "type-use-5") (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -25,7 +25,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":251,"action":{"type":"invoke","field":"type-use-7","args":[{"type":"i32","value":"1"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>  (invoke "type-use-7" (i32.const 1) (f64.const 1) (i32.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":255,"action":{"type":"invoke","field":"local-first-i32"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "local-first-i32") (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -37,7 +37,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":258,"action":{"type":"invoke","field":"local-first-f64"},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "local-first-f64") (f64.const 0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":259,"action":{"type":"invoke","field":"local-second-i32"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "local-second-i32") (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -49,7 +49,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":262,"action":{"type":"invoke","field":"local-second-f64"},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "local-second-f64") (f64.const 0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":263,"action":{"type":"invoke","field":"local-mixed"},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "local-mixed") (f64.const 0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_neg</p>
@@ -64,7 +64,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":275,"action":{"type":"invoke","field":"param-first-f64","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"4613937818241073152"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
 <pre>  (invoke "param-first-f64" (f64.const 2) (f64.const 3)) (f64.const 2)</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4613937818241073152"</p>
 <pre>{"type":"assert_return","line":278,"action":{"type":"invoke","field":"param-second-i32","args":[{"type":"i32","value":"2"},{"type":"i32","value":"3"}]},"expected":[{"type":"i32","value":"3"}]}</pre>
 <pre>  (invoke "param-second-i32" (i32.const 2) (i32.const 3)) (i32.const 3)</pre>
 <p style="background-color: green">ok, result</p>
@@ -76,10 +76,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":287,"action":{"type":"invoke","field":"param-second-f64","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"4613937818241073152"}]},"expected":[{"type":"f64","value":"4613937818241073152"}]}</pre>
 <pre>  (invoke "param-second-f64" (f64.const 2) (f64.const 3)) (f64.const 3)</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4613937818241073152"</p>
 <pre>{"type":"assert_return","line":291,"action":{"type":"invoke","field":"param-mixed","args":[{"type":"f32","value":"1065353216"},{"type":"i32","value":"2"},{"type":"i64","value":"3"},{"type":"i32","value":"4"},{"type":"f64","value":"4617878467915022336"},{"type":"i32","value":"6"}]},"expected":[{"type":"f64","value":"4617878467915022336"}]}</pre>
 <pre>  (invoke "param-mixed"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4617878467915022336"</p>
 <pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"empty"}}</pre>
 <pre>(assert_return (invoke "empty"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -97,10 +97,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":303,"action":{"type":"invoke","field":"value-f64"},"expected":[{"type":"f64","value":"4635172994171566817"}]}</pre>
 <pre>(assert_return (invoke "value-f64") (f64.const 77.77))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4635172994171566817, got 688393376576</p>
 <pre>{"type":"assert_return","line":304,"action":{"type":"invoke","field":"value-i32-f64"},"expected":[{"type":"i32","value":"77"},{"type":"f64","value":"4619567317775286272"}]}</pre>
 <pre>(assert_return (invoke "value-i32-f64") (i32.const 77) (f64.const 7))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4619567317775286272, got 7232</p>
 <pre>{"type":"assert_return","line":305,"action":{"type":"invoke","field":"value-i32-i32-i32"},"expected":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "value-i32-i32-i32")</pre>
 <p style="background-color: green">ok, result</p>
@@ -127,10 +127,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":316,"action":{"type":"invoke","field":"return-f64"},"expected":[{"type":"f64","value":"4635244066603186258"}]}</pre>
 <pre>(assert_return (invoke "return-f64") (f64.const 78.78))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4635244066603186258, got 553710080832</p>
 <pre>{"type":"assert_return","line":317,"action":{"type":"invoke","field":"return-i32-f64"},"expected":[{"type":"i32","value":"78"},{"type":"f64","value":"4635244066603186258"}]}</pre>
 <pre>(assert_return (invoke "return-i32-f64") (i32.const 78) (f64.const 78.78))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4635244066603186258, got 553710080832</p>
 <pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"return-i32-i32-i32"},"expected":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "return-i32-i32-i32")</pre>
 <p style="background-color: green">ok, result</p>
@@ -154,10 +154,10 @@
 <p style="background-color: red">error, wrong result, expected 1117768909, got 1117768908</p>
 <pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"break-f64"},"expected":[{"type":"f64","value":"4635315139034805699"}]}</pre>
 <pre>(assert_return (invoke "break-f64") (f64.const 79.79))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4635315139034805699, got 277292929856</p>
 <pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"break-i32-f64"},"expected":[{"type":"i32","value":"79"},{"type":"f64","value":"4635315139034805699"}]}</pre>
 <pre>(assert_return (invoke "break-i32-f64") (i32.const 79) (f64.const 79.79))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4635315139034805699, got 277292929856</p>
 <pre>{"type":"assert_return","line":330,"action":{"type":"invoke","field":"break-i32-i32-i32"},"expected":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"3"}]}</pre>
 <pre>(assert_return (invoke "break-i32-i32-i32")</pre>
 <p style="background-color: green">ok, result</p>
@@ -259,7 +259,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":401,"action":{"type":"invoke","field":"large-sig","args":[{"type":"i32","value":"0"},{"type":"i64","value":"1"},{"type":"f32","value":"1073741824"},{"type":"f32","value":"1077936128"},{"type":"i32","value":"4"},{"type":"f64","value":"4617315517961601024"},{"type":"f32","value":"1086324736"},{"type":"i32","value":"7"},{"type":"i32","value":"8"},{"type":"i32","value":"9"},{"type":"f32","value":"1092616192"},{"type":"f64","value":"4622382067542392832"},{"type":"f64","value":"4622945017495814144"},{"type":"f64","value":"4623507967449235456"},{"type":"i32","value":"14"},{"type":"i32","value":"15"},{"type":"f32","value":"1098907648"}]},"expected":[{"type":"f64","value":"4617315517961601024"},{"type":"f32","value":"1073741824"},{"type":"i32","value":"0"},{"type":"i32","value":"8"},{"type":"i32","value":"7"},{"type":"i64","value":"1"},{"type":"f32","value":"1077936128"},{"type":"i32","value":"9"},{"type":"i32","value":"4"},{"type":"f32","value":"1086324736"},{"type":"f64","value":"4623507967449235456"},{"type":"f64","value":"4622382067542392832"},{"type":"i32","value":"15"},{"type":"f32","value":"1098907648"},{"type":"i32","value":"14"},{"type":"f64","value":"4622945017495814144"}]}</pre>
 <pre>  (invoke "large-sig"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4617315517961601024"</p>
 <pre>{"type":"assert_return","line":414,"action":{"type":"invoke","field":"init-local-i32"},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "init-local-i32") (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -271,7 +271,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":417,"action":{"type":"invoke","field":"init-local-f64"},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "init-local-f64") (f64.const 0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":422,"filename":"func.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_invalid","line":436,"filename":"func.2.wasm","text":"unknown type"}</pre>
@@ -443,4 +443,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":960,"filename":"func.75.wat","text":"duplicate local"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-20T08:01:06</p>
+<p>Generated at 2024-03-22T14:58:36</p>

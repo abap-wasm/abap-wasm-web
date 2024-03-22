@@ -28,7 +28,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1015,"action":{"type":"invoke","field":"type-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
 <pre>(assert_return (invoke "type-f64-value") (f64.const 4))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4616189618054758400, got 4160</p>
 <pre>{"type":"assert_return","line":1017,"action":{"type":"invoke","field":"empty","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"22"}]}</pre>
 <pre>(assert_return (invoke "empty" (i32.const 0)) (i32.const 22))</pre>
 <p style="background-color: green">ok, result</p>
@@ -500,4 +500,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":1387,"filename":"br_table.24.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-20T08:00:22</p>
+<p>Generated at 2024-03-22T14:57:52</p>

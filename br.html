@@ -40,10 +40,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":384,"action":{"type":"invoke","field":"type-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
 <pre>(assert_return (invoke "type-f64-value") (f64.const 4))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4616189618054758400, got 4160</p>
 <pre>{"type":"assert_return","line":385,"action":{"type":"invoke","field":"type-f64-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"},{"type":"f64","value":"4617315517961601024"}]}</pre>
 <pre>(assert_return (invoke "type-f64-f64-value") (f64.const 4) (f64.const 5))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4616189618054758400, got 4160</p>
 <pre>{"type":"assert_return","line":387,"action":{"type":"invoke","field":"as-block-first"}}</pre>
 <pre>(assert_return (invoke "as-block-first"))</pre>
 <p style="background-color: green">ok, result</p>
@@ -273,4 +273,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":655,"filename":"br.20.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-20T08:00:21</p>
+<p>Generated at 2024-03-22T14:57:51</p>

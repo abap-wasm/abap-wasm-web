@@ -9,7 +9,7 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65280"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 65280) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 5654ms</p>
+<p style="background-color: green">ok, result, 5519ms</p>
 <pre>{"type":"assert_return","line":26,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"65280"},{"type":"i32","value":"65536"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 65280) (i32.const 65536) (i32.const 85))</pre>
 <p style="background-color: green">ok, result, 23ms</p>
@@ -29,7 +29,7 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 5671ms</p>
+<p style="background-color: green">ok, result, 5593ms</p>
 <pre>{"type":"module","line":84,"filename":"memory_fill.4.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":100,"action":{"type":"invoke","field":"test"}}</pre>
@@ -48,7 +48,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"1"},{"type":"i32","value":"65535"},{"type":"i32","value":"170"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 1) (i32.const 65535) (i32.const 170))</pre>
-<p style="background-color: green">ok, result, 5735ms</p>
+<p style="background-color: green">ok, result, 5563ms</p>
 <pre>{"type":"assert_return","line":142,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"65535"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 65535) (i32.const 65536) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -70,7 +70,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":172,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"28"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 28) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 5647ms</p>
+<p style="background-color: green">ok, result, 5530ms</p>
 <pre>{"type":"assert_invalid","line":175,"filename":"memory_fill.8.wasm","text":"unknown memory 0"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":181,"filename":"memory_fill.9.wasm","text":"type mismatch"}</pre>
@@ -223,4 +223,4 @@
 <pre>{"type":"assert_return","line":685,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"1"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 1) (i32.const 0))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-20T08:02:34</p>
+<p>Generated at 2024-03-22T15:00:05</p>

@@ -28,13 +28,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":232,"action":{"type":"invoke","field":"type-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
 <pre>(assert_return (invoke "type-f64-value") (f64.const 4))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4616189618054758400, got 4160</p>
 <pre>{"type":"assert_return","line":234,"action":{"type":"invoke","field":"nullary"}}</pre>
 <pre>(assert_return (invoke "nullary"))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":235,"action":{"type":"invoke","field":"unary"},"expected":[{"type":"f64","value":"4613937818241073152"}]}</pre>
 <pre>(assert_return (invoke "unary") (f64.const 3))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4613937818241073152, got 2112</p>
 <pre>{"type":"assert_return","line":237,"action":{"type":"invoke","field":"as-func-first"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-func-first") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -234,4 +234,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":476,"filename":"return.20.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-20T08:03:11</p>
+<p>Generated at 2024-03-22T15:00:41</p>

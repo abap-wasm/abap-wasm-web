@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 3</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 19</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 179</h3>
+<h3>Successes: 163</h3>
 <hr>
 <h1>memory_trap.wast</h1>
 <pre>{"type":"module","line":1,"filename":"memory_trap.0.wasm"}</pre>
@@ -144,52 +144,52 @@
 <p style="background-color: green">ok, got error: i32 store: out of bounds</p>
 <pre>{"type":"assert_trap","line":143,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65536"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0x10000) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":144,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65535"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xffff) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":145,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65534"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfffe) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":146,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65533"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfffd) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":147,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65532"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfffc) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":148,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65531"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfffb) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":149,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65530"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfffa) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":150,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65529"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfff9) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":151,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967295"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -1) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":152,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967294"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -2) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":153,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967293"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -3) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":154,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967292"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -4) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":155,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967291"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -5) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":156,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967290"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -6) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":157,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967289"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -7) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":158,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"4294967288"},{"type":"f64","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const -8) (f64.const 0)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: todo, execute instruction zcl_wasm_f64_store</p>
 <pre>{"type":"assert_trap","line":159,"text":"out of bounds memory access","action":{"type":"invoke","field":"i32.store8","args":[{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "i32.store8" (i32.const 0x10000) (i32.const 0)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_set: out of bounds, 65536, 1</p>
@@ -372,28 +372,28 @@
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2</p>
 <pre>{"type":"assert_trap","line":219,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":220,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967294"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -2)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":221,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967293"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -3)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":222,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967292"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -4)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":223,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967291"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -5)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":224,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967290"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -6)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":225,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967289"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -7)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":226,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"4294967288"}]},"expected":[{"type":"f64"}]}</pre>
 <pre>(assert_trap (invoke "f64.load" (i32.const -8)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_f64_load: out of bounds</p>
 <pre>{"type":"assert_trap","line":227,"text":"out of bounds memory access","action":{"type":"invoke","field":"i32.load8_s","args":[{"type":"i32","value":"65536"}]},"expected":[{"type":"i32"}]}</pre>
 <pre>(assert_trap (invoke "i32.load8_s" (i32.const 0x10000)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2, 65536</p>
@@ -543,8 +543,8 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_trap","line":281,"text":"out of bounds memory access","action":{"type":"invoke","field":"f64.store","args":[{"type":"i32","value":"65529"},{"type":"f64","value":"4878018892390247374"}]}}</pre>
 <pre>(assert_trap (invoke "f64.store" (i32.const 0xfff9) (f64.const 0x1234567890abcdef)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: unknown type, invoke, f64</p>
+<p style="background-color: red">assert_trap, todo: i64, from_unsigned, value too long, todo, "4878018892390247374"</p>
 <pre>{"type":"assert_return","line":282,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"65528"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 0xfff8)) (f64.const 0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
-<p>Generated at 2024-03-20T08:03:10</p>
+<p style="background-color: green">ok, result</p>
+<p>Generated at 2024-03-22T15:00:40</p>

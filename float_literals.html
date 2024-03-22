@@ -223,39 +223,39 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":180,"action":{"type":"invoke","field":"f64-dec-sep1"},"expected":[{"type":"f64","value":"4696837146684686336"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep1") (f64.const 1000000))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4696837146684686336, got 2156146241</p>
 <pre>{"type":"assert_return","line":181,"action":{"type":"invoke","field":"f64-dec-sep2"},"expected":[{"type":"f64","value":"4652007308841189376"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep2") (f64.const 1000))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4652007308841189376, got 4230976</p>
 <pre>{"type":"assert_return","line":182,"action":{"type":"invoke","field":"f64-dec-sep3"},"expected":[{"type":"f64","value":"4652034942576659200"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep3") (f64.const 1003.141592))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4652034942576659200, got 962632191808</p>
 <pre>{"type":"assert_return","line":183,"action":{"type":"invoke","field":"f64-dec-sep4"},"expected":[{"type":"f64","value":"2796837019126844485"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep4") (f64.const 99e-123))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 2796837019126844485, got 276813369382</p>
 <pre>{"type":"assert_return","line":184,"action":{"type":"invoke","field":"f64-dec-sep5"},"expected":[{"type":"f64","value":"5027061507362119324"}]}</pre>
 <pre>(assert_return (invoke "f64-dec-sep5") (f64.const 122000.11354e23))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 5027061507362119324, got 415784878917</p>
 <pre>{"type":"assert_return","line":185,"action":{"type":"invoke","field":"f64-hex-sep1"},"expected":[{"type":"f64","value":"4838519794133185330"}]}</pre>
 <pre>(assert_return (invoke "f64-hex-sep1") (f64.const 0xaf00f00009999))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4838519794133185330, got 518006083</p>
 <pre>{"type":"assert_return","line":186,"action":{"type":"invoke","field":"f64-hex-sep2"},"expected":[{"type":"f64","value":"4682231715257647104"}]}</pre>
 <pre>(assert_return (invoke "f64-hex-sep2") (f64.const 0x1aa0f))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4682231715257647104, got 4037081664</p>
 <pre>{"type":"assert_return","line":187,"action":{"type":"invoke","field":"f64-hex-sep3"},"expected":[{"type":"f64","value":"4675897489574114112"}]}</pre>
 <pre>(assert_return (invoke "f64-hex-sep3") (f64.const 0xa0ff.f141a59a))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4675897489574114112, got 141702456384</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"f64-hex-sep4"},"expected":[{"type":"f64","value":"4701195061021376512"}]}</pre>
 <pre>(assert_return (invoke "f64-hex-sep4") (f64.const 0xf0P+13))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4701195061021376512, got 15937</p>
 <pre>{"type":"assert_return","line":189,"action":{"type":"invoke","field":"f64-hex-sep5"},"expected":[{"type":"f64","value":"4806880140420149248"}]}</pre>
 <pre>(assert_return (invoke "f64-hex-sep5") (f64.const 0x2af00a.1f3eep23))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4806880140420149248, got 91796802</p>
 <pre>{"type":"module","line":192,"filename":"float_literals.1.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":201,"action":{"type":"invoke","field":"4294967249"},"expected":[{"type":"f64","value":"4751297606777307136"}]}</pre>
 <pre>(assert_return (invoke "4294967249") (f64.const 4294967249))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4751297606777307136, got 966367637313</p>
 <pre>{"type":"assert_malformed","line":204,"filename":"float_literals.2.wat","text":"unknown operator"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":208,"filename":"float_literals.3.wat","text":"unknown operator"}</pre>
@@ -412,4 +412,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":513,"filename":"float_literals.79.wat","text":"constant out of range"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-20T08:01:04</p>
+<p>Generated at 2024-03-22T14:58:35</p>

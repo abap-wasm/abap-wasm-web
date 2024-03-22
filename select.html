@@ -16,7 +16,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":186,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"4611686018427387904"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const 1) (f64.const 2) (i32.const 1)) (f64.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":188,"action":{"type":"invoke","field":"select-i32","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "select-i32" (i32.const 1) (i32.const 2) (i32.const 0)) (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -55,28 +55,28 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":202,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"9221120237041090560"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const nan) (f64.const 1) (i32.const 1)) (f64.const nan))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":203,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"9218868437227537156"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"9218868437227537156"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const nan:0x20304) (f64.const 1) (i32.const 1)) (f64.const nan:0x20304))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":204,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"9221120237041090560"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const nan) (f64.const 1) (i32.const 0)) (f64.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":205,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"9218868437227537156"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const nan:0x20304) (f64.const 1) (i32.const 0)) (f64.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9221120237041090560"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const 2) (f64.const nan) (i32.const 1)) (f64.const 2))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9218868437227537156"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const 2) (f64.const nan:0x20304) (i32.const 1)) (f64.const 2))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":208,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9221120237041090560"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const 2) (f64.const nan) (i32.const 0)) (f64.const nan))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":209,"action":{"type":"invoke","field":"select-f64","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9218868437227537156"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"9218868437227537156"}]}</pre>
 <pre>(assert_return (invoke "select-f64" (f64.const 2) (f64.const nan:0x20304) (i32.const 0)) (f64.const nan:0x20304))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":211,"action":{"type":"invoke","field":"select-i32-t","args":[{"type":"i32","value":"1"},{"type":"i32","value":"2"},{"type":"i32","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "select-i32-t" (i32.const 1) (i32.const 2) (i32.const 1)) (i32.const 1))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_select_star</p>
@@ -88,7 +88,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_select_star</p>
 <pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"4607182418800017408"},{"type":"f64","value":"4611686018427387904"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const 1) (f64.const 2) (i32.const 1)) (f64.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":215,"action":{"type":"invoke","field":"select-funcref","args":[{"type":"funcref","value":"null"},{"type":"funcref","value":"null"},{"type":"i32","value":"1"}]},"expected":[{"type":"funcref","value":"null"}]}</pre>
 <pre>(assert_return (invoke "select-funcref" (ref.null func) (ref.null func) (i32.const 1)) (ref.null func))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_select_star</p>
@@ -139,28 +139,28 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_select_star</p>
 <pre>{"type":"assert_return","line":234,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"9221120237041090560"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const nan) (f64.const 1) (i32.const 1)) (f64.const nan))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":235,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"9218868437227537156"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"9218868437227537156"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const nan:0x20304) (f64.const 1) (i32.const 1)) (f64.const nan:0x20304))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":236,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"9221120237041090560"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const nan) (f64.const 1) (i32.const 0)) (f64.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":237,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"9218868437227537156"},{"type":"f64","value":"4607182418800017408"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const nan:0x20304) (f64.const 1) (i32.const 0)) (f64.const 1))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":238,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9221120237041090560"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const 2) (f64.const nan) (i32.const 1)) (f64.const 2))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":239,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9218868437227537156"},{"type":"i32","value":"1"}]},"expected":[{"type":"f64","value":"4611686018427387904"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const 2) (f64.const nan:0x20304) (i32.const 1)) (f64.const 2))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":240,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9221120237041090560"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const 2) (f64.const nan) (i32.const 0)) (f64.const nan))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":241,"action":{"type":"invoke","field":"select-f64-t","args":[{"type":"f64","value":"4611686018427387904"},{"type":"f64","value":"9218868437227537156"},{"type":"i32","value":"0"}]},"expected":[{"type":"f64","value":"9218868437227537156"}]}</pre>
 <pre>(assert_return (invoke "select-f64-t" (f64.const 2) (f64.const nan:0x20304) (i32.const 0)) (f64.const nan:0x20304))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227537156"</p>
 <pre>{"type":"assert_return","line":243,"action":{"type":"invoke","field":"as-select-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-select-first" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -417,4 +417,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":518,"filename":"select.29.wasm"}</pre>
 <p style="background-color: green">loaded</p>
-<p>Generated at 2024-03-20T08:03:11</p>
+<p>Generated at 2024-03-22T15:00:41</p>

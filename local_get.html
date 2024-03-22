@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 20</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 19</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 16</h3>
+<h3>Successes: 17</h3>
 <hr>
 <h1>local_get.wast</h1>
 <pre>{"type":"module","line":3,"filename":"local_get.0.wasm"}</pre>
@@ -16,7 +16,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":112,"action":{"type":"invoke","field":"type-local-f64"},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "type-local-f64") (f64.const 0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":114,"action":{"type":"invoke","field":"type-param-i32","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "type-param-i32" (i32.const 2)) (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -28,7 +28,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":117,"action":{"type":"invoke","field":"type-param-f64","args":[{"type":"f64","value":"4617878467915022336"}]},"expected":[{"type":"f64","value":"4617878467915022336"}]}</pre>
 <pre>(assert_return (invoke "type-param-f64" (f64.const 5.5)) (f64.const 5.5))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4617878467915022336"</p>
 <pre>{"type":"assert_return","line":119,"action":{"type":"invoke","field":"as-block-value","args":[{"type":"i32","value":"6"}]},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "as-block-value" (i32.const 6)) (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
@@ -58,10 +58,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":133,"action":{"type":"invoke","field":"type-mixed","args":[{"type":"i64","value":"1"},{"type":"f32","value":"1074580685"},{"type":"f64","value":"4614613358185178726"},{"type":"i32","value":"4"},{"type":"i32","value":"5"}]}}</pre>
 <pre>  (invoke "type-mixed"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4614613358185178726"</p>
 <pre>{"type":"assert_return","line":139,"action":{"type":"invoke","field":"read","args":[{"type":"i64","value":"1"},{"type":"f32","value":"1073741824"},{"type":"f64","value":"4614613358185178726"},{"type":"i32","value":"4"},{"type":"i32","value":"5"}]},"expected":[{"type":"f64","value":"4630094481904264806"}]}</pre>
 <pre>  (invoke "read"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4614613358185178726"</p>
 <pre>{"type":"assert_invalid","line":149,"filename":"local_get.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":153,"filename":"local_get.2.wasm","text":"type mismatch"}</pre>
@@ -94,4 +94,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":223,"filename":"local_get.16.wasm","text":"unknown local"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-20T08:01:09</p>
+<p>Generated at 2024-03-22T14:58:40</p>

@@ -34,13 +34,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":206,"action":{"type":"invoke","field":"get-4"},"expected":[{"type":"f64","value":"13839561654909534208"}]}</pre>
 <pre>(assert_return (invoke "get-4") (f64.const -4))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 13839561654909534208, got 4288</p>
 <pre>{"type":"assert_return","line":207,"action":{"type":"invoke","field":"get-7"},"expected":[{"type":"f32","value":"3243245568"}]}</pre>
 <pre>(assert_return (invoke "get-7") (f32.const -13))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":208,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"13847442954257432576"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const -14))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 13847442954257432576, got 11456</p>
 <pre>{"type":"assert_return","line":210,"action":{"type":"invoke","field":"set-x","args":[{"type":"i32","value":"6"}]}}</pre>
 <pre>(assert_return (invoke "set-x" (i32.const 6)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -52,7 +52,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":214,"action":{"type":"invoke","field":"set-8","args":[{"type":"f64","value":"4621256167635550208"}]}}</pre>
 <pre>(assert_return (invoke "set-8" (f64.const 9)))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4621256167635550208"</p>
 <pre>{"type":"assert_return","line":216,"action":{"type":"invoke","field":"get-x"},"expected":[{"type":"i32","value":"6"}]}</pre>
 <pre>(assert_return (invoke "get-x") (i32.const 6))</pre>
 <p style="background-color: green">ok, result</p>
@@ -64,13 +64,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":219,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const 9))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4621256167635550208, got 11456</p>
 <pre>{"type":"assert_return","line":221,"action":{"type":"invoke","field":"set-7","args":[{"type":"f32","value":"1090519040"}]}}</pre>
 <pre>(assert_return (invoke "set-7" (f32.const 8)))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":222,"action":{"type":"invoke","field":"set-8","args":[{"type":"f64","value":"4621256167635550208"}]}}</pre>
 <pre>(assert_return (invoke "set-8" (f64.const 9)))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4621256167635550208"</p>
 <pre>{"type":"assert_return","line":223,"action":{"type":"invoke","field":"set-mr","args":[{"type":"externref","value":"10"}]}}</pre>
 <pre>(assert_return (invoke "set-mr" (ref.extern 10)))</pre>
 <p style="background-color: green">ok, result</p>
@@ -85,7 +85,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":228,"action":{"type":"invoke","field":"get-8"},"expected":[{"type":"f64","value":"4621256167635550208"}]}</pre>
 <pre>(assert_return (invoke "get-8") (f64.const 9))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4621256167635550208, got 11456</p>
 <pre>{"type":"assert_return","line":229,"action":{"type":"invoke","field":"get-mr"},"expected":[{"type":"externref","value":"10"}]}</pre>
 <pre>(assert_return (invoke "get-mr") (ref.extern 10))</pre>
 <p style="background-color: green">ok, result</p>
@@ -281,4 +281,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":630,"filename":"global.51.wat","text":"duplicate global"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-20T08:01:06</p>
+<p>Generated at 2024-03-22T14:58:37</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 47</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 46</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 50</h3>
+<h3>Successes: 51</h3>
 <hr>
 <h1>local_tee.wast</h1>
 <pre>{"type":"module","line":3,"filename":"local_tee.0.wasm"}</pre>
@@ -16,7 +16,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":283,"action":{"type":"invoke","field":"type-local-f64"},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "type-local-f64") (f64.const 0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":285,"action":{"type":"invoke","field":"type-param-i32","args":[{"type":"i32","value":"2"}]},"expected":[{"type":"i32","value":"10"}]}</pre>
 <pre>(assert_return (invoke "type-param-i32" (i32.const 2)) (i32.const 10))</pre>
 <p style="background-color: green">ok, result</p>
@@ -28,7 +28,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":288,"action":{"type":"invoke","field":"type-param-f64","args":[{"type":"f64","value":"4617878467915022336"}]},"expected":[{"type":"f64","value":"4623057607486498406"}]}</pre>
 <pre>(assert_return (invoke "type-param-f64" (f64.const 5.5)) (f64.const 12.2))</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4617878467915022336"</p>
 <pre>{"type":"assert_return","line":290,"action":{"type":"invoke","field":"as-block-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-block-first" (i32.const 0)) (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -163,13 +163,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":348,"action":{"type":"invoke","field":"type-mixed","args":[{"type":"i64","value":"1"},{"type":"f32","value":"1074580685"},{"type":"f64","value":"4614613358185178726"},{"type":"i32","value":"4"},{"type":"i32","value":"5"}]}}</pre>
 <pre>  (invoke "type-mixed"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4614613358185178726"</p>
 <pre>{"type":"assert_return","line":354,"action":{"type":"invoke","field":"write","args":[{"type":"i64","value":"1"},{"type":"f32","value":"1073741824"},{"type":"f64","value":"4614613358185178726"},{"type":"i32","value":"4"},{"type":"i32","value":"5"}]},"expected":[{"type":"i64","value":"56"}]}</pre>
 <pre>  (invoke "write"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4614613358185178726"</p>
 <pre>{"type":"assert_return","line":361,"action":{"type":"invoke","field":"result","args":[{"type":"i64","value":"18446744073709551615"},{"type":"f32","value":"3221225472"},{"type":"f64","value":"13837985395039954534"},{"type":"i32","value":"4294967292"},{"type":"i32","value":"4294967291"}]},"expected":[{"type":"f64","value":"4630094481904264806"}]}</pre>
 <pre>  (invoke "result"</pre>
-<p style="background-color: red">exception: unknown type, invoke, f64</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13837985395039954534"</p>
 <pre>{"type":"assert_invalid","line":371,"filename":"local_tee.1.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":375,"filename":"local_tee.2.wasm","text":"type mismatch"}</pre>
@@ -252,4 +252,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":637,"filename":"local_tee.41.wasm","text":"unknown local"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-20T08:01:09</p>
+<p>Generated at 2024-03-22T14:58:40</p>

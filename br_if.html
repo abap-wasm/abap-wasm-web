@@ -28,7 +28,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":380,"action":{"type":"invoke","field":"type-f64-value"},"expected":[{"type":"f64","value":"4616189618054758400"}]}</pre>
 <pre>(assert_return (invoke "type-f64-value") (f64.const 4))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4616189618054758400, got 4160</p>
 <pre>{"type":"assert_return","line":382,"action":{"type":"invoke","field":"as-block-first","args":[{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"2"}]}</pre>
 <pre>(assert_return (invoke "as-block-first" (i32.const 0)) (i32.const 2))</pre>
 <p style="background-color: green">ok, result</p>
@@ -214,7 +214,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":459,"action":{"type":"invoke","field":"as-unary-operand"},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "as-unary-operand") (f64.const 1.0))</pre>
-<p style="background-color: red">unknown type, assert_return: f64</p>
+<p style="background-color: red">error, wrong result, expected 4607182418800017408, got 61503</p>
 <pre>{"type":"assert_return","line":460,"action":{"type":"invoke","field":"as-binary-left"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "as-binary-left") (i32.const 1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -327,4 +327,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":662,"filename":"br_if.29.wasm","text":"unknown label"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-20T08:00:22</p>
+<p>Generated at 2024-03-22T14:57:51</p>
