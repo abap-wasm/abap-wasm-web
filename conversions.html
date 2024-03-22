@@ -1609,7 +1609,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_demote_f64</p>
 <pre>{"type":"assert_return","line":612,"action":{"type":"invoke","field":"f32.demote_f64","args":[{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f32","value":"2147483648"}]}</pre>
 <pre>(assert_return (invoke "f32.demote_f64" (f64.const -0x1p-1022)) (f32.const -0.0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_demote_f64</p>
 <pre>{"type":"assert_return","line":613,"action":{"type":"invoke","field":"f32.demote_f64","args":[{"type":"f64","value":"3931642474694443008"}]},"expected":[{"type":"f32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f32.demote_f64" (f64.const 0x1.0p-150)) (f32.const 0.0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "3931642474694443008"</p>
@@ -1834,4 +1834,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":702,"filename":"conversions.25.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-22T14:58:10</p>
+<p>Generated at 2024-03-22T17:07:39</p>

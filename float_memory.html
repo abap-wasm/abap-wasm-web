@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 21</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 18</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 69</h3>
+<h3>Successes: 72</h3>
 <hr>
 <h1>float_memory.wast</h1>
 <pre>{"type":"module","line":5,"filename":"float_memory.0.wasm"}</pre>
@@ -60,13 +60,13 @@
 <pre>(assert_return (invoke "f64.load") (f64.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":45,"action":{"type":"invoke","field":"f64.store"}}</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":46,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x7ff4000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 0</p>
+<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 61567</p>
 <pre>{"type":"assert_return","line":47,"action":{"type":"invoke","field":"f64.load"},"expected":[{"type":"f64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0x4000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 0</p>
+<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 61567</p>
 <pre>{"type":"action","line":48,"action":{"type":"invoke","field":"reset"}}</pre>
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":49,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
@@ -140,13 +140,13 @@
 <pre>(assert_return (invoke "f64.load") (f64.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":97,"action":{"type":"invoke","field":"f64.store"}}</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":98,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x7ff4000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 0</p>
+<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 61567</p>
 <pre>{"type":"assert_return","line":99,"action":{"type":"invoke","field":"f64.load"},"expected":[{"type":"f64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0x4000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 0</p>
+<p style="background-color: red">error, wrong result, expected 9219994337134247936, got 61567</p>
 <pre>{"type":"action","line":100,"action":{"type":"invoke","field":"reset"}}</pre>
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":101,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
@@ -220,13 +220,13 @@
 <pre>(assert_return (invoke "f64.load") (f64.const 0.0))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"action","line":149,"action":{"type":"invoke","field":"f64.store"}}</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
+<p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":150,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"9222246136947933185"}]}</pre>
 <pre>(assert_return (invoke "i64.load") (i64.const 0x7ffc000000000001))</pre>
-<p style="background-color: red">error, wrong result, expected 9222246136947933185, got 0</p>
+<p style="background-color: red">error, wrong result, expected 9222246136947933185, got 61567</p>
 <pre>{"type":"assert_return","line":151,"action":{"type":"invoke","field":"f64.load"},"expected":[{"type":"f64","value":"9222246136947933185"}]}</pre>
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0xc000000000001))</pre>
-<p style="background-color: red">error, wrong result, expected 9222246136947933185, got 0</p>
+<p style="background-color: red">error, wrong result, expected 9222246136947933185, got 61567</p>
 <pre>{"type":"action","line":152,"action":{"type":"invoke","field":"reset"}}</pre>
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":153,"action":{"type":"invoke","field":"i64.load"},"expected":[{"type":"i64","value":"0"}]}</pre>
@@ -243,4 +243,4 @@
 <pre>{"type":"assert_return","line":157,"action":{"type":"invoke","field":"f64.load"},"expected":[{"type":"f64","value":"9222246136947933185"}]}</pre>
 <pre>(assert_return (invoke "f64.load") (f64.const nan:0xc000000000001))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-22T14:58:35</p>
+<p>Generated at 2024-03-22T17:08:04</p>

@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 354</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 353</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 10</h3>
+<h3>Successes: 11</h3>
 <hr>
 <h1>f64_bitwise.wast</h1>
 <pre>{"type":"module","line":4,"filename":"f64_bitwise.0.wasm"}</pre>
@@ -31,25 +31,25 @@
 <p style="background-color: red">error, wrong result, expected 0, got 1</p>
 <pre>{"type":"assert_return","line":18,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0p+0) (f64.const -0x1p-1022)) (f64.const -0x0p+0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":19,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0p+0) (f64.const 0x1p-1022)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">error, wrong result, expected 0, got 4503599627370496</p>
 <pre>{"type":"assert_return","line":20,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0p+0) (f64.const -0x1p-1022)) (f64.const -0x0p+0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":21,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"0"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0p+0) (f64.const 0x1p-1022)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">error, wrong result, expected 0, got 4503599627370496</p>
 <pre>{"type":"assert_return","line":22,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0p+0) (f64.const -0x1p-1)) (f64.const -0x0p+0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":23,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0p+0) (f64.const 0x1p-1)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":24,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"0"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0p+0) (f64.const -0x1p-1)) (f64.const -0x0p+0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":25,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"0"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0p+0) (f64.const 0x1p-1)) (f64.const 0x0p+0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -139,25 +139,25 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":54,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0.0000000000001p-1022) (f64.const -0x1p-1022)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":55,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0.0000000000001p-1022) (f64.const 0x1p-1022)) (f64.const 0x0.0000000000001p-1022))</pre>
 <p style="background-color: red">error, wrong result, expected 1, got 4503599627370496</p>
 <pre>{"type":"assert_return","line":56,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0.0000000000001p-1022) (f64.const -0x1p-1022)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":57,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"1"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0.0000000000001p-1022) (f64.const 0x1p-1022)) (f64.const 0x0.0000000000001p-1022))</pre>
 <p style="background-color: red">error, wrong result, expected 1, got 4503599627370496</p>
 <pre>{"type":"assert_return","line":58,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0.0000000000001p-1022) (f64.const -0x1p-1)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":59,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x0.0000000000001p-1022) (f64.const 0x1p-1)) (f64.const 0x0.0000000000001p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":60,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"1"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0.0000000000001p-1022) (f64.const -0x1p-1)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":61,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"1"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x0.0000000000001p-1022) (f64.const 0x1p-1)) (f64.const 0x0.0000000000001p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -223,10 +223,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x0p+0)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">error, wrong result, expected 9227875636482146304, got 9223372036854775808</p>
 <pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x0p+0)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">error, wrong result, expected 4503599627370496, got 0</p>
 <pre>{"type":"assert_return","line":84,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x0p+0)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">error, wrong result, expected 9227875636482146304, got 9223372036854775808</p>
@@ -235,10 +235,10 @@
 <p style="background-color: red">error, wrong result, expected 4503599627370496, got 0</p>
 <pre>{"type":"assert_return","line":86,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x0.0000000000001p-1022)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">error, wrong result, expected 9227875636482146304, got 9223372036854775809</p>
 <pre>{"type":"assert_return","line":87,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"1"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x0.0000000000001p-1022)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">error, wrong result, expected 4503599627370496, got 1</p>
 <pre>{"type":"assert_return","line":88,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x0.0000000000001p-1022)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">error, wrong result, expected 9227875636482146304, got 9223372036854775809</p>
@@ -247,34 +247,34 @@
 <p style="background-color: red">error, wrong result, expected 4503599627370496, got 1</p>
 <pre>{"type":"assert_return","line":90,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x1p-1022)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":91,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x1p-1022)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":92,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x1p-1022)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":93,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const 0x1p-1022)) (f64.const 0x1p-1022))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":94,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x1p-1)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":95,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x1p-1)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":96,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x1p-1)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":97,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const 0x1p-1)) (f64.const 0x1p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":98,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x1p+0)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":99,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x1p+0)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":100,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x1p+0)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
@@ -283,10 +283,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":102,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x1.921fb54442d18p+2)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":103,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x1.921fb54442d18p+2)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":104,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x1.921fb54442d18p+2)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
@@ -295,10 +295,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":106,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -0x1.fffffffffffffp+1023)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":107,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":108,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -0x1.fffffffffffffp+1023)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
@@ -307,10 +307,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":110,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -inf)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
 <pre>{"type":"assert_return","line":111,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const inf)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":112,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -inf)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
@@ -319,10 +319,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":114,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const -nan)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":115,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1022) (f64.const nan)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":116,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1022) (f64.const -nan)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
@@ -331,10 +331,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":118,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x0p+0)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">error, wrong result, expected 13826050856027422720, got 9223372036854775808</p>
 <pre>{"type":"assert_return","line":119,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x0p+0)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">error, wrong result, expected 4602678819172646912, got 0</p>
 <pre>{"type":"assert_return","line":120,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x0p+0)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -343,10 +343,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":122,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x0.0000000000001p-1022)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">error, wrong result, expected 13826050856027422720, got 9223372036854775809</p>
 <pre>{"type":"assert_return","line":123,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"1"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x0.0000000000001p-1022)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">error, wrong result, expected 4602678819172646912, got 1</p>
 <pre>{"type":"assert_return","line":124,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x0.0000000000001p-1022)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -355,10 +355,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":126,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x1p-1022)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405312</p>
 <pre>{"type":"assert_return","line":127,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x1p-1022)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">error, wrong result, expected 4602678819172646912, got 4503599627370496</p>
 <pre>{"type":"assert_return","line":128,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x1p-1022)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -367,10 +367,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":130,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x1p-1)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128896</p>
 <pre>{"type":"assert_return","line":131,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x1p-1)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":132,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x1p-1)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -379,10 +379,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":134,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x1p+0)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":135,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x1p+0)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":136,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x1p+0)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -391,10 +391,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x1.921fb54442d18p+2)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":139,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x1.921fb54442d18p+2)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x1.921fb54442d18p+2)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -403,10 +403,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":142,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -0x1.fffffffffffffp+1023)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":143,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const 0x1.fffffffffffffp+1023)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":144,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -0x1.fffffffffffffp+1023)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -415,10 +415,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":146,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -inf)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
 <pre>{"type":"assert_return","line":147,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const inf)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":148,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -inf)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -427,10 +427,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":150,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const -nan)) (f64.const -0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":151,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const -0x1p-1) (f64.const nan)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":152,"action":{"type":"invoke","field":"copysign","args":[{"type":"f64","value":"4602678819172646912"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "copysign" (f64.const 0x1p-1) (f64.const -nan)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -991,13 +991,13 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_abs</p>
 <pre>{"type":"assert_return","line":338,"action":{"type":"invoke","field":"abs","args":[{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "abs" (f64.const -0x1p-1022)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_abs</p>
 <pre>{"type":"assert_return","line":339,"action":{"type":"invoke","field":"abs","args":[{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "abs" (f64.const 0x1p-1022)) (f64.const 0x1p-1022))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_abs</p>
 <pre>{"type":"assert_return","line":340,"action":{"type":"invoke","field":"abs","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "abs" (f64.const -0x1p-1)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_abs</p>
 <pre>{"type":"assert_return","line":341,"action":{"type":"invoke","field":"abs","args":[{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "abs" (f64.const 0x1p-1)) (f64.const 0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -1045,13 +1045,13 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
 <pre>{"type":"assert_return","line":356,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const -0x1p-1022)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9227875636482146304"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
 <pre>{"type":"assert_return","line":357,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const 0x1p-1022)) (f64.const -0x1p-1022))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
 <pre>{"type":"assert_return","line":358,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const -0x1p-1)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
 <pre>{"type":"assert_return","line":359,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const 0x1p-1)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -1091,4 +1091,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":376,"filename":"f64_bitwise.3.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-22T14:58:28</p>
+<p>Generated at 2024-03-22T17:07:57</p>

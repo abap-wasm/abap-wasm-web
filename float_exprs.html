@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 711</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 709</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 189</h3>
+<h3>Successes: 191</h3>
 <hr>
 <h1>float_exprs.wast</h1>
 <pre>{"type":"module","line":6,"filename":"float_exprs.0.wasm"}</pre>
@@ -976,7 +976,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4609434218613702656"</p>
 <pre>{"type":"assert_return","line":735,"action":{"type":"invoke","field":"f64.i32.no_fold_trunc_u_convert_s","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.i32.no_fold_trunc_u_convert_s" (f64.const -0.5)) (f64.const 0.0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_trunc_f64_u</p>
 <pre>{"type":"assert_return","line":736,"action":{"type":"invoke","field":"f64.i32.no_fold_trunc_s_convert_u","args":[{"type":"f64","value":"4609434218613702656"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.i32.no_fold_trunc_s_convert_u" (f64.const 1.5)) (f64.const 1.0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4609434218613702656"</p>
@@ -988,7 +988,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4609434218613702656"</p>
 <pre>{"type":"assert_return","line":739,"action":{"type":"invoke","field":"f64.i32.no_fold_trunc_u_convert_u","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.i32.no_fold_trunc_u_convert_u" (f64.const -0.5)) (f64.const 0.0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_trunc_f64_u</p>
 <pre>{"type":"assert_return","line":741,"action":{"type":"invoke","field":"f32.i64.no_fold_trunc_s_convert_s","args":[{"type":"f32","value":"1069547520"}]},"expected":[{"type":"f32","value":"1065353216"}]}</pre>
 <pre>(assert_return (invoke "f32.i64.no_fold_trunc_s_convert_s" (f32.const 1.5)) (f32.const 1.0))</pre>
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_trunc_f32_s</p>
@@ -1024,7 +1024,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4609434218613702656"</p>
 <pre>{"type":"assert_return","line":753,"action":{"type":"invoke","field":"f64.i64.no_fold_trunc_u_convert_s","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.i64.no_fold_trunc_u_convert_s" (f64.const -0.5)) (f64.const 0.0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_trunc_f64_u</p>
 <pre>{"type":"assert_return","line":754,"action":{"type":"invoke","field":"f64.i64.no_fold_trunc_s_convert_u","args":[{"type":"f64","value":"4609434218613702656"}]},"expected":[{"type":"f64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "f64.i64.no_fold_trunc_s_convert_u" (f64.const 1.5)) (f64.const 1.0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4609434218613702656"</p>
@@ -1036,7 +1036,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4609434218613702656"</p>
 <pre>{"type":"assert_return","line":757,"action":{"type":"invoke","field":"f64.i64.no_fold_trunc_u_convert_u","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.i64.no_fold_trunc_u_convert_u" (f64.const -0.5)) (f64.const 0.0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13826050856027422720"</p>
+<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_trunc_f64_u</p>
 <pre>{"type":"module","line":763,"filename":"float_exprs.40.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":784,"action":{"type":"invoke","field":"init","args":[{"type":"i32","value":"0"},{"type":"f32","value":"1097963930"}]}}</pre>
@@ -1797,19 +1797,19 @@
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1430,"action":{"type":"invoke","field":"f64.simple_x4_sum","args":[{"type":"i32","value":"0"},{"type":"i32","value":"32"},{"type":"i32","value":"64"}]}}</pre>
 <pre>(assert_return (invoke "f64.simple_x4_sum" (i32.const 0) (i32.const 32) (i32.const 64)))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1431,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"64"}]},"expected":[{"type":"f64","value":"2"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 64)) (f64.const 0x0.0000000000001p-1021))</pre>
-<p style="background-color: red">error, wrong result, expected 2, got 0</p>
+<p style="background-color: red">error, wrong result, expected 2, got 4097</p>
 <pre>{"type":"assert_return","line":1432,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"72"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 72)) (f64.const 0x0p+0))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: red">error, wrong result, expected 0, got 4611686018427392001</p>
 <pre>{"type":"assert_return","line":1433,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"80"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 80)) (f64.const 0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">error, wrong result, expected 1, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1434,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"88"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 88)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">error, wrong result, expected 9223372036854775809, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"module","line":1439,"filename":"float_exprs.61.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1530,"action":{"type":"invoke","field":"f32.kahan_sum","args":[{"type":"i32","value":"0"},{"type":"i32","value":"256"}]},"expected":[{"type":"f32","value":"4085779725"}]}</pre>
@@ -2597,4 +2597,4 @@
 <pre>{"type":"assert_return","line":2570,"action":{"type":"invoke","field":"f64.no_fold_conditional_inc","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_conditional_inc" (f64.const -0.0) (f64.const -1.0)) (f64.const -0.0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
-<p>Generated at 2024-03-22T14:58:35</p>
+<p>Generated at 2024-03-22T17:08:04</p>

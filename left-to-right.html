@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 2</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 1</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 94</h3>
+<h3>Successes: 95</h3>
 <hr>
 <h1>left-to-right.wast</h1>
 <pre>{"type":"module","line":1,"filename":"left-to-right.0.wasm"}</pre>
@@ -265,7 +265,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":226,"action":{"type":"invoke","field":"f64_store"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "f32_store") (i32.const 0x0102))   (assert_return (invoke "f64_store") (i32.const 0x0102))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_store</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":227,"action":{"type":"invoke","field":"f32_call"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "f32_call") (i32.const 0x0102))    (assert_return (invoke "f64_call") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
@@ -290,4 +290,4 @@
 <pre>{"type":"assert_return","line":233,"action":{"type":"invoke","field":"br_table"},"expected":[{"type":"i32","value":"258"}]}</pre>
 <pre>(assert_return (invoke "br_table") (i32.const 0x0102))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-22T14:58:39</p>
+<p>Generated at 2024-03-22T17:08:08</p>
