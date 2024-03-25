@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 15</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 14</h3>
 <h3>Warnings: 71</h3>
-<h3>Successes: 97</h3>
+<h3>Successes: 98</h3>
 <hr>
 <h1>imports.wast</h1>
 <pre>{"type":"module","line":3,"filename":"imports.0.wasm"}</pre>
@@ -14,7 +14,7 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_convert_i32_s</p>
 <pre>{"type":"assert_return","line":86,"action":{"type":"invoke","field":"print64","args":[{"type":"i64","value":"24"}]}}</pre>
 <pre>(assert_return (invoke "print64" (i64.const 24)))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_convert_i64_s</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_invalid","line":89,"filename":"imports.2.wasm","text":"unknown type"}</pre>
 <p style="background-color: red">expected error</p>
 <pre>{"type":"module","line":97,"filename":"imports.3.wasm"}</pre>
@@ -403,4 +403,4 @@
 <p style="background-color: green">registered</p>
 <pre>{"type":"assert_unlinkable","line":672,"filename":"imports.144.wasm","text":"unknown import"}</pre>
 <p style="background-color: yellow">todo, assert_unlinkable</p>
-<p>Generated at 2024-03-22T17:08:07</p>
+<p>Generated at 2024-03-25T14:59:18</p>
