@@ -1033,25 +1033,25 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":352,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const -0x0p+0)) (f64.const 0x0p+0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775680</p>
 <pre>{"type":"assert_return","line":353,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const 0x0p+0)) (f64.const -0x0p+0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">error, wrong result, expected 9223372036854775808, got 128</p>
 <pre>{"type":"assert_return","line":354,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const -0x0.0000000000001p-1022)) (f64.const 0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9223372036854775679</p>
 <pre>{"type":"assert_return","line":355,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"1"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const 0x0.0000000000001p-1022)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">error, wrong result, expected 9223372036854775809, got 129</p>
 <pre>{"type":"assert_return","line":356,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"f64","value":"4503599627370496"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const -0x1p-1022)) (f64.const 0x1p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -9218868437227405184</p>
 <pre>{"type":"assert_return","line":357,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"f64","value":"9227875636482146304"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const 0x1p-1022)) (f64.const -0x1p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">error, wrong result, expected 9227875636482146304, got 4503599627370624</p>
 <pre>{"type":"assert_return","line":358,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"f64","value":"4602678819172646912"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const -0x1p-1)) (f64.const 0x1p-1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_neg</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4620693217682128768</p>
 <pre>{"type":"assert_return","line":359,"action":{"type":"invoke","field":"neg","args":[{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"f64","value":"13826050856027422720"}]}</pre>
 <pre>(assert_return (invoke "neg" (f64.const 0x1p-1)) (f64.const -0x1p-1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
@@ -1091,4 +1091,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":376,"filename":"f64_bitwise.3.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-25T14:59:07</p>
+<p>Generated at 2024-03-26T06:52:20</p>

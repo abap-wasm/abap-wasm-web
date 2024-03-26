@@ -617,7 +617,7 @@
 <p style="background-color: green">ok, got error: load: out of bounds</p>
 <pre>{"type":"assert_trap","line":494,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_good3","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "64_good3" (i32.const -1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -1</p>
 <pre>{"type":"assert_trap","line":496,"text":"out of bounds memory access","action":{"type":"invoke","field":"8u_bad","args":[{"type":"i32","value":"0"}]}}</pre>
 <pre>(assert_trap (invoke "8u_bad" (i32.const 0)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65536, 4294967295</p>
@@ -778,4 +778,4 @@
 <pre>{"type":"assert_trap","line":610,"text":"out of bounds memory access","action":{"type":"invoke","field":"64_bad","args":[{"type":"i32","value":"1"}]}}</pre>
 <pre>(assert_trap (invoke "64_bad" (i32.const 1)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 65537, 4294967296</p>
-<p>Generated at 2024-03-25T14:58:28</p>
+<p>Generated at 2024-03-26T06:51:41</p>

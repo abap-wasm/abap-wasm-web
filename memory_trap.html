@@ -300,28 +300,28 @@
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2</p>
 <pre>{"type":"assert_trap","line":195,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -1)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -1</p>
 <pre>{"type":"assert_trap","line":196,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967294"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -2)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -2</p>
 <pre>{"type":"assert_trap","line":197,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967293"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -3)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -3</p>
 <pre>{"type":"assert_trap","line":198,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967292"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -4)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -4</p>
 <pre>{"type":"assert_trap","line":199,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967291"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -5)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -5</p>
 <pre>{"type":"assert_trap","line":200,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967290"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -6)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -6</p>
 <pre>{"type":"assert_trap","line":201,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967289"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -7)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -7</p>
 <pre>{"type":"assert_trap","line":202,"text":"out of bounds memory access","action":{"type":"invoke","field":"i64.load","args":[{"type":"i32","value":"4294967288"}]},"expected":[{"type":"i64"}]}</pre>
 <pre>(assert_trap (invoke "i64.load" (i32.const -8)) "out of bounds memory access")</pre>
-<p style="background-color: green">ok, got error: load: out of bounds</p>
+<p style="background-color: green">ok, got error: zcl_wasm_i64_load: out of bounds -8</p>
 <pre>{"type":"assert_trap","line":203,"text":"out of bounds memory access","action":{"type":"invoke","field":"f32.load","args":[{"type":"i32","value":"65536"}]},"expected":[{"type":"f32"}]}</pre>
 <pre>(assert_trap (invoke "f32.load" (i32.const 0x10000)) "out of bounds memory access")</pre>
 <p style="background-color: green">ok, got error: linear_get: out of bounds, getting page 2, 65536</p>
@@ -547,4 +547,4 @@
 <pre>{"type":"assert_return","line":282,"action":{"type":"invoke","field":"f64.load","args":[{"type":"i32","value":"65528"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.load" (i32.const 0xfff8)) (f64.const 0))</pre>
 <p style="background-color: green">ok, result</p>
-<p>Generated at 2024-03-25T15:01:20</p>
+<p>Generated at 2024-03-26T06:54:31</p>

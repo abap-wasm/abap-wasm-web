@@ -79,7 +79,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":181,"action":{"type":"invoke","field":"cast"},"expected":[{"type":"f64","value":"4631107791820423168"}]}</pre>
 <pre>(assert_return (invoke "cast") (f64.const 42.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: red">error, wrong result, expected 4631107791820423168, got 0</p>
 <pre>{"type":"assert_return","line":183,"action":{"type":"invoke","field":"i32_load8_s","args":[{"type":"i32","value":"4294967295"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "i32_load8_s" (i32.const -1)) (i32.const -1))</pre>
 <p style="background-color: green">ok, result</p>
@@ -206,4 +206,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":239,"filename":"memory.33.wat","text":"duplicate memory"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-25T14:59:19</p>
+<p>Generated at 2024-03-26T06:52:32</p>

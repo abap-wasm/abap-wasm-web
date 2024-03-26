@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 589</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 578</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 30</h3>
+<h3>Successes: 41</h3>
 <hr>
 <h1>conversions.wast</h1>
 <pre>{"type":"module","line":1,"filename":"conversions.0.wasm"}</pre>
@@ -1660,22 +1660,22 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_f32_reinterpret_i32</p>
 <pre>{"type":"assert_return","line":631,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"0"}]},"expected":[{"type":"f64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const 0)) (f64.const 0.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":632,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"1"}]},"expected":[{"type":"f64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const 1)) (f64.const 0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":633,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"18446744073709551615"}]},"expected":[{"type":"f64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const -1)) (f64.const -nan:0xfffffffffffff))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":634,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"9223372036854775808"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const 0x8000000000000000)) (f64.const -0.0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":635,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"1234567890"}]},"expected":[{"type":"f64","value":"1234567890"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const 1234567890)) (f64.const 0x0.00000499602d2p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":636,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"9223372036854775809"}]},"expected":[{"type":"f64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const -9223372036854775807)) (f64.const -0x0.0000000000001p-1022))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_f64_reinterpret_i64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":637,"action":{"type":"invoke","field":"f64.reinterpret_i64","args":[{"type":"i64","value":"9218868437227405312"}]},"expected":[{"type":"f64","value":"9218868437227405312"}]}</pre>
 <pre>(assert_return (invoke "f64.reinterpret_i64" (i64.const 0x7ff0000000000000)) (f64.const inf))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -1741,19 +1741,19 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_reinterpret_f32</p>
 <pre>{"type":"assert_return","line":660,"action":{"type":"invoke","field":"i64.reinterpret_f64","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "i64.reinterpret_f64" (f64.const 0.0)) (i64.const 0))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":661,"action":{"type":"invoke","field":"i64.reinterpret_f64","args":[{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "i64.reinterpret_f64" (f64.const -0.0)) (i64.const 0x8000000000000000))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":662,"action":{"type":"invoke","field":"i64.reinterpret_f64","args":[{"type":"f64","value":"1"}]},"expected":[{"type":"i64","value":"1"}]}</pre>
 <pre>(assert_return (invoke "i64.reinterpret_f64" (f64.const 0x0.0000000000001p-1022)) (i64.const 1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":663,"action":{"type":"invoke","field":"i64.reinterpret_f64","args":[{"type":"f64","value":"18446744073709551615"}]},"expected":[{"type":"i64","value":"18446744073709551615"}]}</pre>
 <pre>(assert_return (invoke "i64.reinterpret_f64" (f64.const -nan:0xfffffffffffff)) (i64.const -1))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":664,"action":{"type":"invoke","field":"i64.reinterpret_f64","args":[{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i64","value":"9223372036854775809"}]}</pre>
 <pre>(assert_return (invoke "i64.reinterpret_f64" (f64.const -0x0.0000000000001p-1022)) (i64.const 0x8000000000000001))</pre>
-<p style="background-color: red">exception: todo, execute instruction zcl_wasm_i64_reinterpret_f64</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":665,"action":{"type":"invoke","field":"i64.reinterpret_f64","args":[{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i64","value":"4607182418800017408"}]}</pre>
 <pre>(assert_return (invoke "i64.reinterpret_f64" (f64.const 1.0)) (i64.const 4607182418800017408))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
@@ -1834,4 +1834,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":702,"filename":"conversions.25.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-25T14:58:49</p>
+<p>Generated at 2024-03-26T06:52:02</p>
