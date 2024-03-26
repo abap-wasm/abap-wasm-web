@@ -497,7 +497,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":391,"action":{"type":"invoke","field":"f64.no_fold_div_0","args":[{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"18442240474082181120"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_div_0" (f64.const -inf)) (f64.const -inf))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":392,"action":{"type":"invoke","field":"f64.no_fold_div_0","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"nan:canonical"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_div_0" (f64.const 0)) (f64.const nan:canonical))</pre>
 <p style="background-color: red">error, wrong result, expected nan:canonical, got 0</p>
@@ -547,7 +547,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":417,"action":{"type":"invoke","field":"f64.no_fold_div_neg0","args":[{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"9218868437227405312"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_div_neg0" (f64.const -inf)) (f64.const inf))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":418,"action":{"type":"invoke","field":"f64.no_fold_div_neg0","args":[{"type":"f64","value":"0"}]},"expected":[{"type":"f64","value":"nan:canonical"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_div_neg0" (f64.const 0)) (f64.const nan:canonical))</pre>
 <p style="background-color: red">error, wrong result, expected nan:canonical, got 128</p>
@@ -1708,7 +1708,7 @@
 <p style="background-color: red">exception: Division by zero.</p>
 <pre>{"type":"assert_return","line":1304,"action":{"type":"invoke","field":"f64.no_fold_recip_recip","args":[{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"18442240474082181120"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_recip_recip" (f64.const -inf)) (f64.const -inf))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1305,"action":{"type":"invoke","field":"f64.no_fold_recip_recip","args":[{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"f64","value":"9218868437227405312"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_recip_recip" (f64.const inf)) (f64.const inf))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -1929,7 +1929,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1662,"action":{"type":"invoke","field":"f64.no_fold_add_neg","args":[{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"f64","value":"nan:canonical"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_add_neg" (f64.const -inf)) (f64.const nan:canonical))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"module","line":1666,"filename":"float_exprs.67.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_return","line":1680,"action":{"type":"invoke","field":"f32.no_fold_6x_via_add","args":[{"type":"f32","value":"4046243078"}]},"expected":[{"type":"f32","value":"4068578245"}]}</pre>
@@ -2216,13 +2216,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":1897,"action":{"type":"invoke","field":"f64.recoding_eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4613937818241073152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.recoding_eq" (f64.const -inf) (f64.const 3.0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4613937818241073152"</p>
 <pre>{"type":"assert_return","line":1898,"action":{"type":"invoke","field":"f64.recoding_le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4613937818241073152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.recoding_le" (f64.const -inf) (f64.const 3.0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4613937818241073152"</p>
 <pre>{"type":"assert_return","line":1899,"action":{"type":"invoke","field":"f64.recoding_lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4613937818241073152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.recoding_lt" (f64.const -inf) (f64.const 3.0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4613937818241073152"</p>
 <pre>{"type":"assert_return","line":1901,"action":{"type":"invoke","field":"f64.recoding_eq","args":[{"type":"f64","value":"0"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "f64.recoding_eq" (f64.const 0x0p+0) (f64.const 0x1p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
@@ -2597,4 +2597,4 @@
 <pre>{"type":"assert_return","line":2570,"action":{"type":"invoke","field":"f64.no_fold_conditional_inc","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"f64","value":"9223372036854775808"}]}</pre>
 <pre>(assert_return (invoke "f64.no_fold_conditional_inc" (f64.const -0.0) (f64.const -1.0)) (f64.const -0.0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
-<p>Generated at 2024-03-26T12:56:03</p>
+<p>Generated at 2024-03-26T15:03:51</p>

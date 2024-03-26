@@ -1,6 +1,6 @@
-<a href="./index.html">Home</a><br><h3>Errors: 69</h3>
+<a href="./index.html">Home</a><br><h3>Errors: 64</h3>
 <h3>Warnings: 0</h3>
-<h3>Successes: 94</h3>
+<h3>Successes: 99</h3>
 <hr>
 <h1>float_literals.wast</h1>
 <pre>{"type":"module","line":3,"filename":"float_literals.0.wasm"}</pre>
@@ -100,16 +100,16 @@
 <p style="background-color: red">exception: todo, execute instruction zcl_wasm_i32_reinterpret_f32</p>
 <pre>{"type":"assert_return","line":137,"action":{"type":"invoke","field":"f64.nan"},"expected":[{"type":"i64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "f64.nan") (i64.const 0x7ff8000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9221120237041090560, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":138,"action":{"type":"invoke","field":"f64.positive_nan"},"expected":[{"type":"i64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "f64.positive_nan") (i64.const 0x7ff8000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9221120237041090560, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":139,"action":{"type":"invoke","field":"f64.negative_nan"},"expected":[{"type":"i64","value":"18444492273895866368"}]}</pre>
 <pre>(assert_return (invoke "f64.negative_nan") (i64.const 0xfff8000000000000))</pre>
 <p style="background-color: red">error, wrong result, expected 18444492273895866368, got 61695</p>
 <pre>{"type":"assert_return","line":140,"action":{"type":"invoke","field":"f64.plain_nan"},"expected":[{"type":"i64","value":"9221120237041090560"}]}</pre>
 <pre>(assert_return (invoke "f64.plain_nan") (i64.const 0x7ff8000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9221120237041090560, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":141,"action":{"type":"invoke","field":"f64.informally_known_as_plain_snan"},"expected":[{"type":"i64","value":"9219994337134247936"}]}</pre>
 <pre>(assert_return (invoke "f64.informally_known_as_plain_snan") (i64.const 0x7ff4000000000000))</pre>
 <p style="background-color: red">error, wrong result, expected 9219994337134247936, got 61567</p>
@@ -127,13 +127,13 @@
 <p style="background-color: red">error, wrong result, expected 18442992325002076997, got 61695</p>
 <pre>{"type":"assert_return","line":146,"action":{"type":"invoke","field":"f64.infinity"},"expected":[{"type":"i64","value":"9218868437227405312"}]}</pre>
 <pre>(assert_return (invoke "f64.infinity") (i64.const 0x7ff0000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9218868437227405312, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":147,"action":{"type":"invoke","field":"f64.positive_infinity"},"expected":[{"type":"i64","value":"9218868437227405312"}]}</pre>
 <pre>(assert_return (invoke "f64.positive_infinity") (i64.const 0x7ff0000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 9218868437227405312, got 0</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":148,"action":{"type":"invoke","field":"f64.negative_infinity"},"expected":[{"type":"i64","value":"18442240474082181120"}]}</pre>
 <pre>(assert_return (invoke "f64.negative_infinity") (i64.const 0xfff0000000000000))</pre>
-<p style="background-color: red">error, wrong result, expected 18442240474082181120, got 0</p>
+<p style="background-color: red">exception: i64, todo get_unsigned, value is negative: -4503599627370496</p>
 <pre>{"type":"assert_return","line":149,"action":{"type":"invoke","field":"f64.zero"},"expected":[{"type":"i64","value":"0"}]}</pre>
 <pre>(assert_return (invoke "f64.zero") (i64.const 0))</pre>
 <p style="background-color: green">ok, result</p>
@@ -412,4 +412,4 @@
 <p style="background-color: green">got error: unexpected magic number</p>
 <pre>{"type":"assert_malformed","line":513,"filename":"float_literals.79.wat","text":"constant out of range"}</pre>
 <p style="background-color: green">got error: unexpected magic number</p>
-<p>Generated at 2024-03-26T12:56:03</p>
+<p>Generated at 2024-03-26T15:03:51</p>

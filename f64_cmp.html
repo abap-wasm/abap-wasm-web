@@ -91,13 +91,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":41,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x0p+0) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":42,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x0p+0) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"0"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const 0x0p+0) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":44,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const 0x0p+0) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -211,13 +211,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":81,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":82,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x0.0000000000001p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":83,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"1"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const 0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":84,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const 0x0.0000000000001p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -331,13 +331,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":121,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x1p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":122,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x1p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":123,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const 0x1p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":124,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const 0x1p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -451,7 +451,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":161,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x1p-1) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":162,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -0x1p-1) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -847,10 +847,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":293,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x0p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":294,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x0p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":295,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x0p+0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -859,10 +859,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":297,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":298,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x0.0000000000001p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":299,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -871,10 +871,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":301,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x1p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":302,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x1p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":303,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x1p-1022)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -883,10 +883,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":305,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x1p-1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":306,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x1p-1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":307,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x1p-1)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -895,10 +895,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":309,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x1p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":310,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x1p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":311,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x1p+0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -907,10 +907,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":313,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":314,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x1.921fb54442d18p+2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":315,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -919,10 +919,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":317,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":318,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const 0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":319,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -931,10 +931,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":321,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":322,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":323,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -943,16 +943,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":325,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":326,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const -nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18443366373989023744"</p>
 <pre>{"type":"assert_return","line":327,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":328,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const -inf) (f64.const nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9219994337134247936"</p>
 <pre>{"type":"assert_return","line":329,"action":{"type":"invoke","field":"eq","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "eq" (f64.const inf) (f64.const -nan)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -1291,13 +1291,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":441,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x0p+0) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":442,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x0p+0) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":443,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"0"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const 0x0p+0) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":444,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const 0x0p+0) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -1411,13 +1411,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":481,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":482,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x0.0000000000001p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":483,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"1"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const 0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":484,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const 0x0.0000000000001p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -1531,13 +1531,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":521,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x1p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":522,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x1p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":523,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const 0x1p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":524,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const 0x1p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -1651,7 +1651,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":561,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x1p-1) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":562,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -0x1p-1) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2047,10 +2047,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":693,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x0p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":694,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x0p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":695,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x0p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2059,10 +2059,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":697,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":698,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x0.0000000000001p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":699,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2071,10 +2071,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":701,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x1p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":702,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x1p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":703,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x1p-1022)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2083,10 +2083,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":705,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x1p-1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":706,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x1p-1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":707,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x1p-1)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2095,10 +2095,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":709,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x1p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":710,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x1p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":711,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x1p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2107,10 +2107,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":713,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":714,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x1.921fb54442d18p+2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":715,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2119,10 +2119,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":717,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":718,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const 0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":719,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2131,10 +2131,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":721,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":722,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":723,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2143,16 +2143,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":725,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -nan)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":726,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const -nan:0x4000000000000)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18443366373989023744"</p>
 <pre>{"type":"assert_return","line":727,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const nan)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":728,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const -inf) (f64.const nan:0x4000000000000)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9219994337134247936"</p>
 <pre>{"type":"assert_return","line":729,"action":{"type":"invoke","field":"ne","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ne" (f64.const inf) (f64.const -nan)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2491,13 +2491,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":841,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x0p+0) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":842,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x0p+0) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":843,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"0"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const 0x0p+0) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":844,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const 0x0p+0) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2611,13 +2611,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":881,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":882,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x0.0000000000001p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":883,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"1"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const 0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":884,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const 0x0.0000000000001p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2731,13 +2731,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":921,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x1p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":922,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x1p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":923,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const 0x1p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":924,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const 0x1p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -2851,7 +2851,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":961,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x1p-1) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":962,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -0x1p-1) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3247,10 +3247,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1093,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x0p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1094,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x0p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1095,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x0p+0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3259,10 +3259,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1097,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1098,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x0.0000000000001p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1099,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3271,10 +3271,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1101,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x1p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1102,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x1p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1103,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x1p-1022)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3283,10 +3283,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1105,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x1p-1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1106,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x1p-1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":1107,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x1p-1)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3295,10 +3295,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1109,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x1p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":1110,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x1p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":1111,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x1p+0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3307,10 +3307,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1113,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":1114,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x1.921fb54442d18p+2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":1115,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3319,10 +3319,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1117,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":1118,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const 0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1119,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3331,10 +3331,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1121,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1122,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1123,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3343,16 +3343,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1125,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":1126,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const -nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18443366373989023744"</p>
 <pre>{"type":"assert_return","line":1127,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":1128,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const -inf) (f64.const nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9219994337134247936"</p>
 <pre>{"type":"assert_return","line":1129,"action":{"type":"invoke","field":"lt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "lt" (f64.const inf) (f64.const -nan)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3691,13 +3691,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1241,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x0p+0) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1242,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x0p+0) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1243,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"0"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const 0x0p+0) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1244,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const 0x0p+0) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3811,13 +3811,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1281,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1282,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x0.0000000000001p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1283,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"1"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const 0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1284,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const 0x0.0000000000001p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -3931,13 +3931,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1321,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x1p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1322,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x1p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1323,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const 0x1p-1022) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1324,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const 0x1p-1022) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4051,7 +4051,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":1361,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x1p-1) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1362,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -0x1p-1) (f64.const inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4447,10 +4447,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1493,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x0p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1494,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"0"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x0p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1495,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x0p+0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4459,10 +4459,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1497,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1498,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"1"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x0.0000000000001p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1499,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4471,10 +4471,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1501,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x1p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1502,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x1p-1022)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1503,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x1p-1022)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4483,10 +4483,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1505,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x1p-1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1506,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x1p-1)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":1507,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x1p-1)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4495,10 +4495,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1509,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x1p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":1510,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x1p+0)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":1511,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x1p+0)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4507,10 +4507,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1513,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":1514,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x1.921fb54442d18p+2)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":1515,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4519,10 +4519,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1517,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":1518,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const 0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1519,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4531,10 +4531,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1521,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1522,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1523,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4543,16 +4543,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1525,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":1526,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const -nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18443366373989023744"</p>
 <pre>{"type":"assert_return","line":1527,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":1528,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const -inf) (f64.const nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9219994337134247936"</p>
 <pre>{"type":"assert_return","line":1529,"action":{"type":"invoke","field":"le","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "le" (f64.const inf) (f64.const -nan)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -4891,13 +4891,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1641,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x0p+0) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1642,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x0p+0) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1643,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"0"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const 0x0p+0) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1644,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const 0x0p+0) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5011,13 +5011,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1681,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1682,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x0.0000000000001p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1683,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"1"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const 0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1684,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const 0x0.0000000000001p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5131,13 +5131,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1721,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x1p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1722,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x1p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1723,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const 0x1p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1724,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const 0x1p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5251,7 +5251,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":1761,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x1p-1) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1762,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -0x1p-1) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5647,10 +5647,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1893,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x0p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1894,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x0p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1895,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x0p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5659,10 +5659,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1897,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1898,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x0.0000000000001p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1899,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5671,10 +5671,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1901,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x1p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1902,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x1p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1903,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x1p-1022)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5683,10 +5683,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1905,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x1p-1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1906,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x1p-1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":1907,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x1p-1)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5695,10 +5695,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1909,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x1p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":1910,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x1p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":1911,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x1p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5707,10 +5707,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1913,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":1914,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x1.921fb54442d18p+2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":1915,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5719,10 +5719,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1917,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":1918,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const 0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":1919,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5731,10 +5731,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1921,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":1922,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1923,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -5743,16 +5743,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":1925,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":1926,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const -nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18443366373989023744"</p>
 <pre>{"type":"assert_return","line":1927,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":1928,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const -inf) (f64.const nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9219994337134247936"</p>
 <pre>{"type":"assert_return","line":1929,"action":{"type":"invoke","field":"gt","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "gt" (f64.const inf) (f64.const -nan)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6091,13 +6091,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":2041,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x0p+0) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2042,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9223372036854775808"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x0p+0) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2043,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"0"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const 0x0p+0) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2044,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"0"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const 0x0p+0) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6211,13 +6211,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":2081,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2082,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9223372036854775809"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x0.0000000000001p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2083,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"1"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const 0x0.0000000000001p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2084,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"1"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const 0x0.0000000000001p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6331,13 +6331,13 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":2121,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x1p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2122,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9227875636482146304"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x1p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2123,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const 0x1p-1022) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2124,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"4503599627370496"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const 0x1p-1022) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6451,7 +6451,7 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":2161,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x1p-1) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2162,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"13826050856027422720"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -0x1p-1) (f64.const inf)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6847,10 +6847,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":2293,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x0p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2294,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"0"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x0p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2295,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775808"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x0p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6859,10 +6859,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2297,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2298,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"1"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x0.0000000000001p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2299,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9223372036854775809"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x0.0000000000001p-1022)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6871,10 +6871,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2301,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x1p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2302,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4503599627370496"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x1p-1022)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2303,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"9227875636482146304"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x1p-1022)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6883,10 +6883,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2305,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x1p-1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2306,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4602678819172646912"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x1p-1)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4602678819172646912"</p>
 <pre>{"type":"assert_return","line":2307,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13826050856027422720"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x1p-1)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6895,10 +6895,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2309,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x1p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13830554455654793216"</p>
 <pre>{"type":"assert_return","line":2310,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4607182418800017408"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x1p+0)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4607182418800017408"</p>
 <pre>{"type":"assert_return","line":2311,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13830554455654793216"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x1p+0)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6907,10 +6907,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2313,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "13842132293034192152"</p>
 <pre>{"type":"assert_return","line":2314,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"4618760256179416344"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x1.921fb54442d18p+2)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "4618760256179416344"</p>
 <pre>{"type":"assert_return","line":2315,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"13842132293034192152"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x1.921fb54442d18p+2)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6919,10 +6919,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2317,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181119"</p>
 <pre>{"type":"assert_return","line":2318,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405311"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const 0x1.fffffffffffffp+1023)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405311"</p>
 <pre>{"type":"assert_return","line":2319,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181119"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -0x1.fffffffffffffp+1023)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6931,10 +6931,10 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2321,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -inf)) (i32.const 1))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: f64: error trying to get value for special</p>
 <pre>{"type":"assert_return","line":2322,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9218868437227405312"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const inf)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2323,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18442240474082181120"}]},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -inf)) (i32.const 1))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -6943,16 +6943,16 @@
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
 <pre>{"type":"assert_return","line":2325,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18444492273895866368"</p>
 <pre>{"type":"assert_return","line":2326,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"18443366373989023744"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const -nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18443366373989023744"</p>
 <pre>{"type":"assert_return","line":2327,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9221120237041090560"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const nan)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9221120237041090560"</p>
 <pre>{"type":"assert_return","line":2328,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"18442240474082181120"},{"type":"f64","value":"9219994337134247936"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const -inf) (f64.const nan:0x4000000000000)) (i32.const 0))</pre>
-<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "18442240474082181120"</p>
+<p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9219994337134247936"</p>
 <pre>{"type":"assert_return","line":2329,"action":{"type":"invoke","field":"ge","args":[{"type":"f64","value":"9218868437227405312"},{"type":"f64","value":"18444492273895866368"}]},"expected":[{"type":"i32","value":"0"}]}</pre>
 <pre>(assert_return (invoke "ge" (f64.const inf) (f64.const -nan)) (i32.const 0))</pre>
 <p style="background-color: red">exception: i64, from_unsigned, value too long, todo, "9218868437227405312"</p>
@@ -7217,4 +7217,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":2422,"filename":"f64_cmp.6.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-26T12:56:01</p>
+<p>Generated at 2024-03-26T15:03:49</p>
