@@ -16,7 +16,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":10,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"4"}]}}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 4)))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 12ms</p>
 <pre>{"type":"assert_return","line":11,"action":{"type":"invoke","field":"size"},"expected":[{"type":"i32","value":"5"}]}</pre>
 <pre>(assert_return (invoke "size") (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
@@ -74,7 +74,7 @@
 <p style="background-color: red">error, wrong result, expected 1, got 4</p>
 <pre>{"type":"assert_return","line":42,"action":{"type":"invoke","field":"grow","args":[{"type":"i32","value":"4"}]}}</pre>
 <pre>(assert_return (invoke "grow" (i32.const 4)))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":43,"action":{"type":"invoke","field":"size"},"expected":[{"type":"i32","value":"1"}]}</pre>
 <pre>(assert_return (invoke "size") (i32.const 1))</pre>
 <p style="background-color: red">error, wrong result, expected 1, got 8</p>
@@ -123,4 +123,4 @@
 <p style="background-color: red">expected error</p>
 <pre>{"type":"assert_invalid","line":78,"filename":"memory_size.5.wasm","text":"type mismatch"}</pre>
 <p style="background-color: red">expected error</p>
-<p>Generated at 2024-03-28T06:51:13</p>
+<p>Generated at 2024-03-28T09:58:09</p>
