@@ -12473,7 +12473,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":4786,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"20"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 20) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 3629ms</p>
+<p style="background-color: green">ok, result, 3618ms</p>
 <pre>{"type":"module","line":4789,"filename":"memory_copy.84.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":4806,"action":{"type":"invoke","field":"test"}}</pre>
@@ -12486,7 +12486,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":4812,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"21"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 21) (i32.const 65536) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 3626ms</p>
+<p style="background-color: green">ok, result, 3619ms</p>
 <pre>{"type":"module","line":4815,"filename":"memory_copy.85.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"assert_trap","line":4819,"text":"out of bounds memory access","action":{"type":"invoke","field":"test"}}</pre>
@@ -12513,10 +12513,10 @@
 <p style="background-color: green">action done</p>
 <pre>{"type":"assert_return","line":4859,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"0"},{"type":"i32","value":"32768"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 0) (i32.const 32768) (i32.const 85))</pre>
-<p style="background-color: green">ok, result, 1830ms</p>
+<p style="background-color: green">ok, result, 1824ms</p>
 <pre>{"type":"assert_return","line":4861,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"32768"},{"type":"i32","value":"65536"},{"type":"i32","value":"170"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 32768) (i32.const 65536) (i32.const 170))</pre>
-<p style="background-color: green">ok, result, 1820ms</p>
+<p style="background-color: green">ok, result, 1830ms</p>
 <pre>{"type":"module","line":4863,"filename":"memory_copy.90.wasm"}</pre>
 <p style="background-color: green">loaded</p>
 <pre>{"type":"action","line":4867,"action":{"type":"invoke","field":"test"}}</pre>
@@ -12553,10 +12553,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5119,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"124"},{"type":"i32","value":"1517"},{"type":"i32","value":"9"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 124) (i32.const 1517) (i32.const 9))</pre>
-<p style="background-color: green">ok, result, 78ms</p>
+<p style="background-color: green">ok, result, 77ms</p>
 <pre>{"type":"assert_return","line":5121,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"1517"},{"type":"i32","value":"2132"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 1517) (i32.const 2132) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 34ms</p>
+<p style="background-color: green">ok, result, 33ms</p>
 <pre>{"type":"assert_return","line":5123,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"2132"},{"type":"i32","value":"2827"},{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 2132) (i32.const 2827) (i32.const 10))</pre>
 <p style="background-color: green">ok, result, 39ms</p>
@@ -12577,7 +12577,7 @@
 <p style="background-color: green">ok, result, 34ms</p>
 <pre>{"type":"assert_return","line":5135,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"4651"},{"type":"i32","value":"5057"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 4651) (i32.const 5057) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 21ms</p>
+<p style="background-color: green">ok, result, 22ms</p>
 <pre>{"type":"assert_return","line":5137,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"5057"},{"type":"i32","value":"5109"},{"type":"i32","value":"99"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 5057) (i32.const 5109) (i32.const 99))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12586,19 +12586,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5141,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"5291"},{"type":"i32","value":"5524"},{"type":"i32","value":"72"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 5291) (i32.const 5524) (i32.const 72))</pre>
-<p style="background-color: green">ok, result, 13ms</p>
+<p style="background-color: green">ok, result, 12ms</p>
 <pre>{"type":"assert_return","line":5143,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"5524"},{"type":"i32","value":"5691"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 5524) (i32.const 5691) (i32.const 92))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5145,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"5691"},{"type":"i32","value":"6552"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 5691) (i32.const 6552) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 49ms</p>
+<p style="background-color: green">ok, result, 47ms</p>
 <pre>{"type":"assert_return","line":5147,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"6552"},{"type":"i32","value":"7133"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 6552) (i32.const 7133) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 32ms</p>
+<p style="background-color: green">ok, result, 33ms</p>
 <pre>{"type":"assert_return","line":5149,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"7133"},{"type":"i32","value":"7665"},{"type":"i32","value":"99"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 7133) (i32.const 7665) (i32.const 99))</pre>
-<p style="background-color: green">ok, result, 28ms</p>
+<p style="background-color: green">ok, result, 29ms</p>
 <pre>{"type":"assert_return","line":5151,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"7665"},{"type":"i32","value":"8314"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 7665) (i32.const 8314) (i32.const 0))</pre>
 <p style="background-color: green">ok, result, 35ms</p>
@@ -12613,13 +12613,13 @@
 <p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":5159,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"8979"},{"type":"i32","value":"9373"},{"type":"i32","value":"79"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 8979) (i32.const 9373) (i32.const 79))</pre>
-<p style="background-color: green">ok, result, 22ms</p>
+<p style="background-color: green">ok, result, 23ms</p>
 <pre>{"type":"assert_return","line":5161,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"9373"},{"type":"i32","value":"9518"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 9373) (i32.const 9518) (i32.const 95))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5163,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"9518"},{"type":"i32","value":"9934"},{"type":"i32","value":"59"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 9518) (i32.const 9934) (i32.const 59))</pre>
-<p style="background-color: green">ok, result, 23ms</p>
+<p style="background-color: green">ok, result, 22ms</p>
 <pre>{"type":"assert_return","line":5165,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"9934"},{"type":"i32","value":"10087"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 9934) (i32.const 10087) (i32.const 77))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12637,28 +12637,28 @@
 <p style="background-color: green">ok, result, 50ms</p>
 <pre>{"type":"assert_return","line":5175,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"11148"},{"type":"i32","value":"11356"},{"type":"i32","value":"74"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 11148) (i32.const 11356) (i32.const 74))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 12ms</p>
 <pre>{"type":"assert_return","line":5177,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"11356"},{"type":"i32","value":"11380"},{"type":"i32","value":"93"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 11356) (i32.const 11380) (i32.const 93))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5179,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"11380"},{"type":"i32","value":"11939"},{"type":"i32","value":"74"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 11380) (i32.const 11939) (i32.const 74))</pre>
-<p style="background-color: green">ok, result, 31ms</p>
+<p style="background-color: green">ok, result, 30ms</p>
 <pre>{"type":"assert_return","line":5181,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"11939"},{"type":"i32","value":"12159"},{"type":"i32","value":"68"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 11939) (i32.const 12159) (i32.const 68))</pre>
-<p style="background-color: green">ok, result, 11ms</p>
+<p style="background-color: green">ok, result, 13ms</p>
 <pre>{"type":"assert_return","line":5183,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"12159"},{"type":"i32","value":"12575"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 12159) (i32.const 12575) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 24ms</p>
+<p style="background-color: green">ok, result, 23ms</p>
 <pre>{"type":"assert_return","line":5185,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"12575"},{"type":"i32","value":"12969"},{"type":"i32","value":"79"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 12575) (i32.const 12969) (i32.const 79))</pre>
-<p style="background-color: green">ok, result, 22ms</p>
+<p style="background-color: green">ok, result, 20ms</p>
 <pre>{"type":"assert_return","line":5187,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"12969"},{"type":"i32","value":"13114"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 12969) (i32.const 13114) (i32.const 95))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5189,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"13114"},{"type":"i32","value":"14133"},{"type":"i32","value":"59"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 13114) (i32.const 14133) (i32.const 59))</pre>
-<p style="background-color: green">ok, result, 56ms</p>
+<p style="background-color: green">ok, result, 57ms</p>
 <pre>{"type":"assert_return","line":5191,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"14133"},{"type":"i32","value":"14404"},{"type":"i32","value":"76"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 14133) (i32.const 14404) (i32.const 76))</pre>
 <p style="background-color: green">ok, result, 14ms</p>
@@ -12676,7 +12676,7 @@
 <p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":5201,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"14777"},{"type":"i32","value":"15124"},{"type":"i32","value":"59"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 14777) (i32.const 15124) (i32.const 59))</pre>
-<p style="background-color: green">ok, result, 19ms</p>
+<p style="background-color: green">ok, result, 20ms</p>
 <pre>{"type":"assert_return","line":5203,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"15124"},{"type":"i32","value":"15126"},{"type":"i32","value":"36"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 15124) (i32.const 15126) (i32.const 36))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12685,16 +12685,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5207,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"15192"},{"type":"i32","value":"15871"},{"type":"i32","value":"96"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 15192) (i32.const 15871) (i32.const 96))</pre>
-<p style="background-color: green">ok, result, 37ms</p>
+<p style="background-color: green">ok, result, 38ms</p>
 <pre>{"type":"assert_return","line":5209,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"15871"},{"type":"i32","value":"15998"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 15871) (i32.const 15998) (i32.const 95))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5211,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"15998"},{"type":"i32","value":"17017"},{"type":"i32","value":"59"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 15998) (i32.const 17017) (i32.const 59))</pre>
-<p style="background-color: green">ok, result, 58ms</p>
+<p style="background-color: green">ok, result, 55ms</p>
 <pre>{"type":"assert_return","line":5213,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"17017"},{"type":"i32","value":"17288"},{"type":"i32","value":"76"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 17017) (i32.const 17288) (i32.const 76))</pre>
-<p style="background-color: green">ok, result, 15ms</p>
+<p style="background-color: green">ok, result, 14ms</p>
 <pre>{"type":"assert_return","line":5215,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"17288"},{"type":"i32","value":"17312"},{"type":"i32","value":"57"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 17288) (i32.const 17312) (i32.const 57))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12706,7 +12706,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5221,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"17464"},{"type":"i32","value":"17661"},{"type":"i32","value":"89"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 17464) (i32.const 17661) (i32.const 89))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":5223,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"17661"},{"type":"i32","value":"17727"},{"type":"i32","value":"59"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 17661) (i32.const 17727) (i32.const 59))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12718,10 +12718,10 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5229,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"17893"},{"type":"i32","value":"18553"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 17893) (i32.const 18553) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 41ms</p>
+<p style="background-color: green">ok, result, 37ms</p>
 <pre>{"type":"assert_return","line":5231,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"18553"},{"type":"i32","value":"18744"},{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 18553) (i32.const 18744) (i32.const 42))</pre>
-<p style="background-color: green">ok, result</p>
+<p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":5233,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"18744"},{"type":"i32","value":"18801"},{"type":"i32","value":"76"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 18744) (i32.const 18801) (i32.const 76))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12745,7 +12745,7 @@
 <p style="background-color: green">ok, result, 47ms</p>
 <pre>{"type":"assert_return","line":5247,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"20403"},{"type":"i32","value":"21274"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 20403) (i32.const 21274) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 49ms</p>
+<p style="background-color: green">ok, result, 50ms</p>
 <pre>{"type":"assert_return","line":5249,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"21274"},{"type":"i32","value":"21364"},{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 21274) (i32.const 21364) (i32.const 100))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12757,7 +12757,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5255,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"21492"},{"type":"i32","value":"22051"},{"type":"i32","value":"74"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 21492) (i32.const 22051) (i32.const 74))</pre>
-<p style="background-color: green">ok, result, 31ms</p>
+<p style="background-color: green">ok, result, 32ms</p>
 <pre>{"type":"assert_return","line":5257,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"22051"},{"type":"i32","value":"22480"},{"type":"i32","value":"68"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 22051) (i32.const 22480) (i32.const 68))</pre>
 <p style="background-color: green">ok, result, 24ms</p>
@@ -12790,7 +12790,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5277,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"24515"},{"type":"i32","value":"24900"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 24515) (i32.const 24900) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 22ms</p>
+<p style="background-color: green">ok, result, 20ms</p>
 <pre>{"type":"assert_return","line":5279,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"24900"},{"type":"i32","value":"25136"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 24900) (i32.const 25136) (i32.const 95))</pre>
 <p style="background-color: green">ok, result, 14ms</p>
@@ -12805,16 +12805,16 @@
 <p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":5287,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"25613"},{"type":"i32","value":"25830"},{"type":"i32","value":"96"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 25613) (i32.const 25830) (i32.const 96))</pre>
-<p style="background-color: green">ok, result, 12ms</p>
+<p style="background-color: green">ok, result, 13ms</p>
 <pre>{"type":"assert_return","line":5289,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"25830"},{"type":"i32","value":"26446"},{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 25830) (i32.const 26446) (i32.const 100))</pre>
-<p style="background-color: green">ok, result, 33ms</p>
+<p style="background-color: green">ok, result, 35ms</p>
 <pre>{"type":"assert_return","line":5291,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"26446"},{"type":"i32","value":"26517"},{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 26446) (i32.const 26517) (i32.const 10))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5293,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"26517"},{"type":"i32","value":"27468"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 26517) (i32.const 27468) (i32.const 92))</pre>
-<p style="background-color: green">ok, result, 54ms</p>
+<p style="background-color: green">ok, result, 57ms</p>
 <pre>{"type":"assert_return","line":5295,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"27468"},{"type":"i32","value":"27503"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 27468) (i32.const 27503) (i32.const 95))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12823,13 +12823,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5299,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"27573"},{"type":"i32","value":"28245"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 27573) (i32.const 28245) (i32.const 92))</pre>
-<p style="background-color: green">ok, result, 36ms</p>
+<p style="background-color: green">ok, result, 37ms</p>
 <pre>{"type":"assert_return","line":5301,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"28245"},{"type":"i32","value":"28280"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 28245) (i32.const 28280) (i32.const 95))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5303,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"28280"},{"type":"i32","value":"29502"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 28280) (i32.const 29502) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 69ms</p>
+<p style="background-color: green">ok, result, 68ms</p>
 <pre>{"type":"assert_return","line":5305,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"29502"},{"type":"i32","value":"29629"},{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 29502) (i32.const 29629) (i32.const 42))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12838,16 +12838,16 @@
 <p style="background-color: green">ok, result, 41ms</p>
 <pre>{"type":"assert_return","line":5309,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"30387"},{"type":"i32","value":"30646"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 30387) (i32.const 30646) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 15ms</p>
+<p style="background-color: green">ok, result, 16ms</p>
 <pre>{"type":"assert_return","line":5311,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"30646"},{"type":"i32","value":"31066"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 30646) (i32.const 31066) (i32.const 92))</pre>
-<p style="background-color: green">ok, result, 24ms</p>
+<p style="background-color: green">ok, result, 23ms</p>
 <pre>{"type":"assert_return","line":5313,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"31066"},{"type":"i32","value":"31131"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 31066) (i32.const 31131) (i32.const 77))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5315,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"31131"},{"type":"i32","value":"31322"},{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 31131) (i32.const 31322) (i32.const 42))</pre>
-<p style="background-color: green">ok, result, 11ms</p>
+<p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5317,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"31322"},{"type":"i32","value":"31379"},{"type":"i32","value":"76"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 31322) (i32.const 31379) (i32.const 76))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12868,22 +12868,22 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5329,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"31649"},{"type":"i32","value":"31978"},{"type":"i32","value":"72"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 31649) (i32.const 31978) (i32.const 72))</pre>
-<p style="background-color: green">ok, result, 19ms</p>
+<p style="background-color: green">ok, result, 18ms</p>
 <pre>{"type":"assert_return","line":5331,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"31978"},{"type":"i32","value":"32145"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 31978) (i32.const 32145) (i32.const 92))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5333,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"32145"},{"type":"i32","value":"32530"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 32145) (i32.const 32530) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 21ms</p>
+<p style="background-color: green">ok, result, 22ms</p>
 <pre>{"type":"assert_return","line":5335,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"32530"},{"type":"i32","value":"32766"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 32530) (i32.const 32766) (i32.const 95))</pre>
-<p style="background-color: green">ok, result, 12ms</p>
+<p style="background-color: green">ok, result, 14ms</p>
 <pre>{"type":"assert_return","line":5337,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"32766"},{"type":"i32","value":"32812"},{"type":"i32","value":"85"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 32766) (i32.const 32812) (i32.const 85))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5339,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"32812"},{"type":"i32","value":"33056"},{"type":"i32","value":"68"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 32812) (i32.const 33056) (i32.const 68))</pre>
-<p style="background-color: green">ok, result, 14ms</p>
+<p style="background-color: green">ok, result, 12ms</p>
 <pre>{"type":"assert_return","line":5341,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"33056"},{"type":"i32","value":"33660"},{"type":"i32","value":"89"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 33056) (i32.const 33660) (i32.const 89))</pre>
 <p style="background-color: green">ok, result, 34ms</p>
@@ -12901,7 +12901,7 @@
 <p style="background-color: green">ok, result, 46ms</p>
 <pre>{"type":"assert_return","line":5351,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"34603"},{"type":"i32","value":"35218"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 34603) (i32.const 35218) (i32.const 0))</pre>
-<p style="background-color: green">ok, result, 34ms</p>
+<p style="background-color: green">ok, result, 35ms</p>
 <pre>{"type":"assert_return","line":5353,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"35218"},{"type":"i32","value":"35372"},{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 35218) (i32.const 35372) (i32.const 10))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12922,7 +12922,7 @@
 <p style="background-color: green">ok, result, 51ms</p>
 <pre>{"type":"assert_return","line":5365,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"36547"},{"type":"i32","value":"36755"},{"type":"i32","value":"74"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 36547) (i32.const 36755) (i32.const 74))</pre>
-<p style="background-color: green">ok, result, 12ms</p>
+<p style="background-color: green">ok, result, 11ms</p>
 <pre>{"type":"assert_return","line":5367,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"36755"},{"type":"i32","value":"36767"},{"type":"i32","value":"93"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 36755) (i32.const 36767) (i32.const 93))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12934,16 +12934,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5373,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"36839"},{"type":"i32","value":"37444"},{"type":"i32","value":"96"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 36839) (i32.const 37444) (i32.const 96))</pre>
-<p style="background-color: green">ok, result, 34ms</p>
+<p style="background-color: green">ok, result, 33ms</p>
 <pre>{"type":"assert_return","line":5375,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"37444"},{"type":"i32","value":"38060"},{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 37444) (i32.const 38060) (i32.const 100))</pre>
-<p style="background-color: green">ok, result, 35ms</p>
+<p style="background-color: green">ok, result, 33ms</p>
 <pre>{"type":"assert_return","line":5377,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"38060"},{"type":"i32","value":"38131"},{"type":"i32","value":"10"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 38060) (i32.const 38131) (i32.const 10))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5379,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"38131"},{"type":"i32","value":"39082"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 38131) (i32.const 39082) (i32.const 92))</pre>
-<p style="background-color: green">ok, result, 54ms</p>
+<p style="background-color: green">ok, result, 52ms</p>
 <pre>{"type":"assert_return","line":5381,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"39082"},{"type":"i32","value":"39117"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 39082) (i32.const 39117) (i32.const 95))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12958,7 +12958,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5389,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"39894"},{"type":"i32","value":"40257"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 39894) (i32.const 40257) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 20ms</p>
+<p style="background-color: green">ok, result, 19ms</p>
 <pre>{"type":"assert_return","line":5391,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"40257"},{"type":"i32","value":"40344"},{"type":"i32","value":"89"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 40257) (i32.const 40344) (i32.const 89))</pre>
 <p style="background-color: green">ok, result</p>
@@ -12967,19 +12967,19 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5395,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"40371"},{"type":"i32","value":"40804"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 40371) (i32.const 40804) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 25ms</p>
+<p style="background-color: green">ok, result, 24ms</p>
 <pre>{"type":"assert_return","line":5397,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"40804"},{"type":"i32","value":"40909"},{"type":"i32","value":"5"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 40804) (i32.const 40909) (i32.const 5))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5399,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"40909"},{"type":"i32","value":"42259"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 40909) (i32.const 42259) (i32.const 92))</pre>
-<p style="background-color: green">ok, result, 76ms</p>
+<p style="background-color: green">ok, result, 75ms</p>
 <pre>{"type":"assert_return","line":5401,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"42259"},{"type":"i32","value":"42511"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 42259) (i32.const 42511) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 15ms</p>
+<p style="background-color: green">ok, result, 14ms</p>
 <pre>{"type":"assert_return","line":5403,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"42511"},{"type":"i32","value":"42945"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 42511) (i32.const 42945) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 25ms</p>
+<p style="background-color: green">ok, result, 22ms</p>
 <pre>{"type":"assert_return","line":5405,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"42945"},{"type":"i32","value":"43115"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 42945) (i32.const 43115) (i32.const 77))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13003,13 +13003,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5419,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"43466"},{"type":"i32","value":"44129"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 43466) (i32.const 44129) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 38ms</p>
+<p style="background-color: green">ok, result, 37ms</p>
 <pre>{"type":"assert_return","line":5421,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"44129"},{"type":"i32","value":"44958"},{"type":"i32","value":"96"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 44129) (i32.const 44958) (i32.const 96))</pre>
-<p style="background-color: green">ok, result, 46ms</p>
+<p style="background-color: green">ok, result, 47ms</p>
 <pre>{"type":"assert_return","line":5423,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"44958"},{"type":"i32","value":"45570"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 44958) (i32.const 45570) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 33ms</p>
+<p style="background-color: green">ok, result, 34ms</p>
 <pre>{"type":"assert_return","line":5425,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"45570"},{"type":"i32","value":"45575"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 45570) (i32.const 45575) (i32.const 92))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13036,7 +13036,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5441,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"46654"},{"type":"i32","value":"47515"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 46654) (i32.const 47515) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 47ms</p>
+<p style="background-color: green">ok, result, 49ms</p>
 <pre>{"type":"assert_return","line":5443,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"47515"},{"type":"i32","value":"47620"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 47515) (i32.const 47620) (i32.const 77))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13048,7 +13048,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5449,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"47951"},{"type":"i32","value":"48632"},{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 47951) (i32.const 48632) (i32.const 100))</pre>
-<p style="background-color: green">ok, result, 37ms</p>
+<p style="background-color: green">ok, result, 36ms</p>
 <pre>{"type":"assert_return","line":5451,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"48632"},{"type":"i32","value":"48699"},{"type":"i32","value":"97"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 48632) (i32.const 48699) (i32.const 97))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13057,7 +13057,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5455,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"48703"},{"type":"i32","value":"49764"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 48703) (i32.const 49764) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 61ms</p>
+<p style="background-color: green">ok, result, 59ms</p>
 <pre>{"type":"assert_return","line":5457,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"49764"},{"type":"i32","value":"49955"},{"type":"i32","value":"42"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 49764) (i32.const 49955) (i32.const 42))</pre>
 <p style="background-color: green">ok, result, 11ms</p>
@@ -13078,13 +13078,13 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5469,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"50115"},{"type":"i32","value":"50370"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 50115) (i32.const 50370) (i32.const 83))</pre>
-<p style="background-color: green">ok, result, 15ms</p>
+<p style="background-color: green">ok, result, 16ms</p>
 <pre>{"type":"assert_return","line":5471,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"50370"},{"type":"i32","value":"51358"},{"type":"i32","value":"92"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 50370) (i32.const 51358) (i32.const 92))</pre>
 <p style="background-color: green">ok, result, 56ms</p>
 <pre>{"type":"assert_return","line":5473,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"51358"},{"type":"i32","value":"51610"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 51358) (i32.const 51610) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 15ms</p>
+<p style="background-color: green">ok, result, 14ms</p>
 <pre>{"type":"assert_return","line":5475,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"51610"},{"type":"i32","value":"51776"},{"type":"i32","value":"83"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 51610) (i32.const 51776) (i32.const 83))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13093,16 +13093,16 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5479,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"51833"},{"type":"i32","value":"52895"},{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 51833) (i32.const 52895) (i32.const 100))</pre>
-<p style="background-color: green">ok, result, 60ms</p>
+<p style="background-color: green">ok, result, 59ms</p>
 <pre>{"type":"assert_return","line":5481,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"52895"},{"type":"i32","value":"53029"},{"type":"i32","value":"97"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 52895) (i32.const 53029) (i32.const 97))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5483,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"53029"},{"type":"i32","value":"53244"},{"type":"i32","value":"68"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 53029) (i32.const 53244) (i32.const 68))</pre>
-<p style="background-color: green">ok, result, 13ms</p>
+<p style="background-color: green">ok, result, 12ms</p>
 <pre>{"type":"assert_return","line":5485,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"53244"},{"type":"i32","value":"54066"},{"type":"i32","value":"100"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 53244) (i32.const 54066) (i32.const 100))</pre>
-<p style="background-color: green">ok, result, 46ms</p>
+<p style="background-color: green">ok, result, 44ms</p>
 <pre>{"type":"assert_return","line":5487,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"54066"},{"type":"i32","value":"54133"},{"type":"i32","value":"97"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 54066) (i32.const 54133) (i32.const 97))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13138,7 +13138,7 @@
 <p style="background-color: green">ok, result, 47ms</p>
 <pre>{"type":"assert_return","line":5509,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"57048"},{"type":"i32","value":"58183"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 57048) (i32.const 58183) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 63ms</p>
+<p style="background-color: green">ok, result, 64ms</p>
 <pre>{"type":"assert_return","line":5511,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"58183"},{"type":"i32","value":"58202"},{"type":"i32","value":"41"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 58183) (i32.const 58202) (i32.const 41))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13153,7 +13153,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5519,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"58855"},{"type":"i32","value":"59089"},{"type":"i32","value":"95"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 58855) (i32.const 59089) (i32.const 95))</pre>
-<p style="background-color: green">ok, result, 13ms</p>
+<p style="background-color: green">ok, result, 12ms</p>
 <pre>{"type":"assert_return","line":5521,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"59089"},{"type":"i32","value":"59145"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 59089) (i32.const 59145) (i32.const 77))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13165,7 +13165,7 @@
 <p style="background-color: green">ok, result, 26ms</p>
 <pre>{"type":"assert_return","line":5527,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"60134"},{"type":"i32","value":"60502"},{"type":"i32","value":"89"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 60134) (i32.const 60502) (i32.const 89))</pre>
-<p style="background-color: green">ok, result, 20ms</p>
+<p style="background-color: green">ok, result, 21ms</p>
 <pre>{"type":"assert_return","line":5529,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"60502"},{"type":"i32","value":"60594"},{"type":"i32","value":"59"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 60502) (i32.const 60594) (i32.const 59))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13225,7 +13225,7 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5567,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"63775"},{"type":"i32","value":"64311"},{"type":"i32","value":"77"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 63775) (i32.const 64311) (i32.const 77))</pre>
-<p style="background-color: green">ok, result, 31ms</p>
+<p style="background-color: green">ok, result, 30ms</p>
 <pre>{"type":"assert_return","line":5569,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"64311"},{"type":"i32","value":"64331"},{"type":"i32","value":"26"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 64311) (i32.const 64331) (i32.const 26))</pre>
 <p style="background-color: green">ok, result</p>
@@ -13234,11 +13234,11 @@
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5573,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"64518"},{"type":"i32","value":"64827"},{"type":"i32","value":"11"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 64518) (i32.const 64827) (i32.const 11))</pre>
-<p style="background-color: green">ok, result, 18ms</p>
+<p style="background-color: green">ok, result, 16ms</p>
 <pre>{"type":"assert_return","line":5575,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"64827"},{"type":"i32","value":"64834"},{"type":"i32","value":"26"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 64827) (i32.const 64834) (i32.const 26))</pre>
 <p style="background-color: green">ok, result</p>
 <pre>{"type":"assert_return","line":5577,"action":{"type":"invoke","field":"checkRange","args":[{"type":"i32","value":"64834"},{"type":"i32","value":"65536"},{"type":"i32","value":"0"}]},"expected":[{"type":"i32","value":"4294967295"}]}</pre>
 <pre>(assert_return (invoke "checkRange" (i32.const 64834) (i32.const 65536) (i32.const 0))</pre>
 <p style="background-color: green">ok, result, 40ms</p>
-<p>Generated at 2024-04-01T07:41:27</p>
+<p>Generated at 2024-05-27T10:44:15</p>
