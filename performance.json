@@ -1,1 +1,1 @@
-[{"DESCRIPTION":"Memory read","TIME":808},{"DESCRIPTION":"Memory write","TIME":141},{"DESCRIPTION":"i32.rotl","TIME":3320},{"DESCRIPTION":"i32.load","TIME":1276},{"DESCRIPTION":"i32.store","TIME":379}]
+[{"DESCRIPTION":"Memory read","TIME":829},{"DESCRIPTION":"Memory write","TIME":142},{"DESCRIPTION":"i32.rotl","TIME":3550},{"DESCRIPTION":"i32.load","TIME":1300},{"DESCRIPTION":"i32.store","TIME":324}]
